@@ -1,0 +1,11 @@
+horizontal-navs:
+  - name: Home
+    link: /
+  - name: About
+    link: /about
+  - name: Blog
+    link: /blog
+  - name: Work
+    link: /work
+  - name: Contact
+    link: /contact

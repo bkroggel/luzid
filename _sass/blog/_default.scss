@@ -1,0 +1,118 @@
+// defaults for BLOG
+// navigation
+.bk-burger {
+  position: relative;
+  .bk-burger-line {
+    background-color: $dark-color;
+    height: 2px;
+    width: 35px;
+    &:first-of-type {
+      margin-bottom: 10px;
+    }
+    &:last-of-type {
+      margin-top: 10px;
+    }
+  }
+}
+
+.bk-blog-nav {
+  @include display_flex;
+  @include align-items(center);
+  @include justify-content(space-between);
+  margin: 100px 40px 30px 40px;
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  @include media-query($xtra-small){
+    margin: 100px 60px 30px 60px;
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  };
+  @include media-query($medium){
+    margin: 100px 120px 30px 60px;
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  };
+}
+
+.bk-blog-sidebar {
+  padding: 60px 50px 0 60px;
+  p.about {
+    max-width: 200px;
+  }
+  ul.bk-blog-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  img {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+
+.bk-blog-info-nav li {
+  &:nth-of-type(2),
+  &:nth-of-type(4),
+  &:nth-of-type(5),
+  &:last-of-type {
+    margin-bottom: 1em;
+  }
+}
+
+.bk-blog {
+  background-color: rgb(239, 239, 239);
+  width: 100%;
+  display: flex;
+  &__navigation {
+      display: none;
+  }
+  @include media-query($medium){
+    &__navigation {
+        display: block;
+        width: calc(100% / 3);
+    }
+    &__content {
+      display: block;
+      width: calc(100% / 3 * 2);
+      padding: 80px 0 100px 0;
+    }
+  };
+  .overview-posts {
+    max-width: 700px;
+    margin: 100px 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    h1.posts-title {
+      max-width: 70%;
+    }
+  }
+  .bk-blog-thumbnail {
+    display: flex;
+    width: 100%;
+    &__img {
+      width: 40%;
+      background-size: cover;
+    }
+    &__content {
+      width: calc(60% - 0px);
+      padding-left: 20px;
+    }
+  }
+  .bk-blog-thumbnail_2 {
+    img {
+      width: 40%;
+      height: 172px;
+      object-fit: cover;
+      float: left;
+      margin: 0 20px 20px 0;
+    }
+  }
+}

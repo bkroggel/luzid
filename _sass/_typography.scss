@@ -1,25 +1,75 @@
-a {
-  font-family: "Open Sans";
+a,
+p {
+  font-family: $sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   &:hover,
   &:active,
-  &:visited {
+  &:visited,
+  &:focus {
     text-decoration: none;
     color: inherit;
   }
 }
 
 .bk-hor-nav {
-  color: $dark-color;
-  a {
-    color: $dark-color;
-    &:hover,
-    &:active,
-    &:visited {
-      text-decoration: none;
-      color: $dark-color;
+  @include link-mix($dark-color);
+}
+
+.bk-blog-info {
+  @include link-mix($darkest-color);
+  &--mini p,
+  &--mini a {
+    font-size: 0.75em;
+  }
+  p.about {
+    font-weight: 300;
+    a {
+      font-size: 1em;
+      text-decoration: underline;
+      font-weight: 300;
     }
   }
+  #back-button {
+    font-weight: 700;
+  }
+  .copyright p {
+    font-size: 0.56em;
+    color: $dark-color;
+    font-weight: 300;
+  }
+}
+
+// -------------
+// Blog Post styles
+// -------------
+
+// Time: Posted on...
+.overview-posts h3,
+.overview-posts time {
+  font-family: $sans-serif;
+  font-weight: 400;
+  font-size: 0.6em;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1em;
+  text-transform: uppercase;
+  display: inline;
+  color: $dark-color;
+}
+
+// Heading
+.overview-posts h1.posts-title,
+.overview-posts a.blog-posts--title {
+  font-family: $serif;
+  font-weight: 400;
+}
+
+a.blog-posts--title {
+  @include link-mix($darkest-color);
+}
+
+.overview-posts h1.posts-title {
+  font-size: 2.25em;
 }

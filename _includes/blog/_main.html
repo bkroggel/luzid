@@ -1,0 +1,10 @@
+<section class="bk-blog">
+  <div class="bk-blog__navigation">
+    {% include navigation/_blog-nav.html %}
+  </div>
+  <div class="bk-blog__content">
+    {% for post in site.posts %}
+      {% include blog/_overview-posts.html %}
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+title: Website
+author: Bastian Kroggel
+date: 2015-12-24 18:32:00 +0200
+tags: [work, about]
+showcase: My personal website which contains my blog, a showcase about my work and some information about the person behind the project. This post collects most of the resources that are implemented in this site and gets updated regularly.
+project_date: 2015
+thumbnail:
+  img: /assets/img/page/blog/2015/December/main-website.jpg
+  stlye: classic
+---
+![Website on MacBook Screen](/assets/img/page/blog/2015/December/main-website-mockup.jpg)
+{:.img100}
+
+Was lange Zeit auf meinem Rechner vor sich hin schlummerte, ist endlich bereit den Schritt an die frische Luft zu tun und den kleinen Zeh vorsichtig in das nasse Kühl der Öffentlichkeit zu strecken.
+<!-- more -->
+
+![Underconstruction Bastian Kroggel](/assets/img/page/blog/2015/December/underconstruction.jpg)
+{:.left50}
+[bastiankroggel.com](http://bastiankroggel.com) ist online. Und das nicht nur mit der [schnöden, verheißungsvollen Nachricht](https://github.com/bkroggel/home), dass etwas im Gange sei - nein - jetzt in vollem Glanz und ganzer Pracht.
+
+Über einzelne Aspekte werde ich (wie [hier](/2015/12/24/Hallo-Welt-und-ein-README.html) angekündigt) mich sicherlich noch an anderer Stelle ausführlicher auslassen, dennoch möchte ich nachfolgend ein paar der Objekte und Materialien hervorheben, die es in meinen Augen wirklich verdient haben in den Vordergrund gerückt zu werden.
+
+Sich von der weihnachtlichen Stimmung tragen lassen, dass funtkioniert auch in Punkto WebDesign:
+
+## [Snowfall](https://github.com/loktar00/JQuery-Snowfall)
+Außerordentlich leicht und einfach in der Handhabung ist das "Snowfall JQuery-Plugin" aus dem Hause [Loktar](https://github.com/loktar00). Ich bin zugegebenermaßen (noch) nicht der ganz große Held im JavaScript Segment, aber mit einer schlichten und dennoch mehr als verständlichen Dokumentation kann im Prinzip nichts schief gehen. Einzigstes Manko der Aktion und gleichzeitig mahnende Worte:  
+Man sollte sich gut überlegen, ob man seinen Besuchern ein Schnegestöber der allerfeinsten Güteklasse präsentiert oder doch nach dem weniger ist mehr Prinzip agieren möchte. So schön das Spektakel auch ist, man bedenke den entsprechend Hohen Aufwand, den der Rechner im Hintergrund zu bewältigen hat. Darunter leidet gerne die Performance (jap...es geht auch am Smartphone...aber eben in Maßen genießen) und die UserExperience gleich mit. Wem das nicht egal ist, der hält sich - frei nach Da Vinci - an die Einfachheit als höchstes aller Gefühle.  
+[Github](https://github.com/loktar00/JQuery-Snowfall) • [Hompage](http://www.somethinghitme.com/2012/12/08/snowfall-1-6/)
+
+## [Papai Noel - der Weihnachtsmann](http://codepen.io/igordesouzamorais/pen/MYyVXQ)
+Kudos auch an [Igor de souza morais](http://codepen.io/igordesouzamorais/), dessen Pen [Papai Noel 2014](http://codepen.io/igordesouzamorais/pen/MYyVXQ) den weihnachtlich-winterlichen Auftritt der Seite komplettiert. Eine wirklich schöne Arbeit, die sich wunderbar mit dem Snowfall-Plugin verbinden lässt.
+
+## [Twitter-Post-Fetcher](http://www.jasonmayes.com/projects/twitterApi)
+
+Das Project von [Jason Mayes](http://www.jasonmayes.com/) erlaubt die Implementierung eines Twitter-Feeds in die eigene Website. Während das offizielle Widget aus dem Hause Twitter nur sehr eingeschränkt anpassbar ist, was das Aussehen und die angezeigten Elemente betrifft, bieten die meisten Drittanbieter-Applikationen nur einen Abruf der Tweets über eine API Schnittstelle. Da diese Verbindung allerdings zwangsläufig eine serverseitige Authentifizierung verlangt, ist eine solche Lösung im Umfeld von statischen Seiten, wie dem hier verwendeten Grundgerüst auf Basis des [Jekyll Static Site Generators](http://jekyllrb.com/), nicht ohne weiteres umsetzbar.  
+Der [Twitter-Post-Fetcher](http://www.jasonmayes.com/projects/twitterApi) setzt an genau diesem Problem an und erlaubt einen rein Javascript basierten Tweet-Zugriff ohne dass ein serverseitiger Prozess von Nöten wäre.  
+Einen weitaus ausführlicheren Post von mir, der auch ein klein wenig in die Verwendung dieser Komponente einführt findet sich unter folgendem [Link](http://www.bastiankroggel.com/2016/03/25/The-static-way-of-presenting-your-tweets.html).  
+[Github](https://github.com/jasonmayes/Twitter-Post-Fetcher) • [Hompage](http://www.jasonmayes.com/)
+
+*Fürs erste ist es das nun - mehr folgt aber bestimmt. Soviel sei schonmal gesagt, es gibt durchaus noch den ein oder anderen Punt, den es näher zu beleuchten gibt, der Post wird also aktualisiert*
+<hr>
+Weitere Ideen, brennende Fragen oder doch böse Meinungen, die losgelassen werden müssen? Jederzeit gerne! Einfach ab damit in Richtung [ContactPage](/contact/) und schnell in meine Inbox.

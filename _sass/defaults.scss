@@ -1,6 +1,21 @@
+// general defaults and variables (mixins)
+
 $main-color: #EFEFEF;
 $dark-color: #A2A2A2;
+$darkest-color: rgb(0,0,0);
 
+$sans-serif: "Open Sans", "Source Sans Pro", "Helvetica Neue",Arial,sans-serif;
+$serif: "Charter", "Times New Roman", Times, serif;
+
+// device width (use bootstrap)
+//$xtra-large: none !default;
+$large: 1199px !default;
+$medium: 991px !default;
+$small: 767px !default;
+$xtra-small: 575px !default;
+
+
+// mixins for flexbox
 @mixin display_flex {
   display: -webkit-box;
   display: -moz-box;
@@ -17,15 +32,42 @@ $dark-color: #A2A2A2;
 }
 
 @mixin justify-content($justify) {
-  justify-content: $justify;
 -webkit-justify-content: $justify;
 -moz-justify-content: $justify;
 -ms-justify-content: $justify;
 justify-content: $justify;
 }
 
+// mixin for media-querys
+@mixin media-query($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+// color mixin for links
+@mixin link-mix($mixin-color) {
+  color: $mixin-color;
+  a {
+    color: $mixin-color;
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      text-decoration: none;
+      color: $mixin-color;
+    }
+  }
+}
+
+// fix for js-links not showing up while hovering over them
+.js-hover:hover {
+  cursor: pointer;
+}
+
 @import
   "typography_base",
   "typography",
-  "home/nav"
+  "home/nav",
+  "blog/default"
 ;

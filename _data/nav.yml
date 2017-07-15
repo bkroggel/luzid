@@ -9,3 +9,19 @@ horizontal-navs:
     link: /work
   - name: Contact
     link: /contact
+
+blog-navs:
+  - name: Blog
+    link: /blog
+  - name: About me
+    link: /about
+  - name: Archive
+    link: /blog/archive
+  - name: Tags
+    link: /blog/tags
+  - name: Contact
+    link: /contact
+  - name: Imprint
+    link: /imprint
+  - name: Privcy Policy
+    link: /pp

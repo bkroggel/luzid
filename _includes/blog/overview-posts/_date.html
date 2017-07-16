@@ -1,0 +1,5 @@
+<div class="bk-blog-posts__date">
+  <h3>Posted</h3>
+  <time class="timeago" datetime="{{post.date | date: "%Y-%m-%dT%H:%M:%S%z"}}"></time>
+  <h3>on {% assign d = post.date | date: "%-d" %}{{ post.date | date: "%b %d" }} · {{ post.date | date: "%Y" }}</h3>
+</div>

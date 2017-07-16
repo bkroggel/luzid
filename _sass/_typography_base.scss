@@ -95,6 +95,13 @@
 @font-face {
   font-family:'Open Sans';
   font-style:normal;
+  font-weight:600;
+  src:local('Open Sans Regular'),url(//brick.a.ssl.fastly.net/fonts/opensans/600.woff) format('woff');
+}
+
+@font-face {
+  font-family:'Open Sans';
+  font-style:normal;
   font-weight:700;
   src:local('Open Sans Bold'),url(//brick.a.ssl.fastly.net/fonts/opensans/700.woff) format('woff');
 }

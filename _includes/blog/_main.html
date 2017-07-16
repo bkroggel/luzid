@@ -3,7 +3,7 @@
     {% include navigation/_blog-nav.html %}
   </div>
   <div class="bk-blog__content">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       {% include blog/_overview-posts.html %}
     {% endfor %}
   </div>

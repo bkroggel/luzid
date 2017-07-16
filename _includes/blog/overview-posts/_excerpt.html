@@ -1,0 +1,23 @@
+<div class="blog-posts--content blog-posts--overview-content">
+  {% if post.thumbnail.img and post.thumbnail.style == "big" %}
+    <div class="bk-blog-thumbnail">
+      <div class="bk-blog-thumbnail__img" style="background: url({{ post.thumbnail.img }}) no-repeat center">
+      </div>
+      <div class="bk-blog-thumbnail__content">
+        <p>{{ post.content | markdownify | strip_html | truncate: 700 }}</p>
+      </div>
+    </div>
+  {% elsif post.thumbnail.img and post.thumbnail.style == "classic" %}
+    <div class="bk-blog-thumbnail_2">
+      <img src="{{post.thumbnail.img}}" alt="">
+      <p>{{ post.content | markdownify | strip_html | truncate: 700 }}</p>
+    </div>
+  {% elsif post.thumbnail.img %}
+    <div class="bk-blog-thumbnail_2">
+      <img src="{{post.thumbnail.img}}" alt="">
+      <p>{{ post.content | markdownify | strip_html | truncate: 700 }}</p>
+    </div>
+  {% else %}
+    {{post.excerpt}}
+  {% endif %}
+</div>

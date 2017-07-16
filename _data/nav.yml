@@ -25,3 +25,30 @@ blog-navs:
     link: /imprint
   - name: Privcy Policy
     link: /pp
+
+footer:
+  1_navs:
+    - name: Home
+      link: /
+    - name: About
+      link: /about
+    - name: Blog
+      link: /blog
+    - name: Contact
+      link: /contact
+  2_navs:
+    - name: Twitter
+      link: /
+    - name: CodePen
+      link: /
+    - name: GitHub
+      link: /
+    - name: LinkedIn
+      link: /
+  3_navs:
+    - name: Contact
+      link: /
+    - name: Privacy Policy
+      link: /
+    - name: Imprint
+      link: /

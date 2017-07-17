@@ -66,54 +66,6 @@ footer {
   margin-bottom: 5px;
 }
 
-.footer-info {
-  width: 100%;
-  display: flex;
-  height: 100px;
-}
-
-.svg-container__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  svg {
-    width: 40px;
-    fill: $dark-color;
-  }
-}
-
-.svg-container__name {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  svg {
-    height: 17px;
-    width: 227px;
-    fill: $darkest-color;
-    margin-left: 50px;
-  }
-}
-
-.acknowledgement-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 20px;
-}
-
-.footer__acknowledgement {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.end-mark {
-  height: 0.40em;
-  width: 0.45em;
-  background-color: $darkest-color;
-  margin: 0 0 4px 4px;
-}
-
 .footer__blank {
   width: 100px;
 }
@@ -126,6 +78,5 @@ footer {
   width: calc(100% - 100px);
 }
 
-.footer-info>.footer__gray {
-  width: calc((100% - 100px) /2);
-}
+@import "home/footer/_footer-link.scss";
+@import "home/footer/_footer-info.scss";

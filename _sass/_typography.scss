@@ -126,8 +126,17 @@ footer a {
 }
 
 .footer__acknowledgement p {
-  font-size: 0.56em;
+  font-size: 0.4em;
   line-height: 1.7em;
+  a {
+    line-height: 1em;
+  }
+  @include media-query($medium){
+    font-size: 0.56em;
+    a {
+      line-height: 1em;
+    }
+  };
 }
 
 .footer__acknowledgement a {

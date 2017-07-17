@@ -3,7 +3,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  //height: 100px;
   @include media-query($medium){
     flex-wrap: nowrap;
     height: 100px;

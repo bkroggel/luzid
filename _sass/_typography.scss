@@ -109,10 +109,23 @@ footer p,
 footer a {
   font-family: $sans-serif;
   font-weight: 300;
-  font-size: 0.8rem;
-  line-height: 1.3rem;
+  font-size: 0.6rem;
+  line-height: 0.9rem;
   margin: 0;
   @include link-mix($darkest-color);
+  @include media-query($small){
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  };
+}
+
+.column_2 li,
+.column_3 li,
+.column_4 li {
+  line-height: 0.6rem;
+  @include media-query($small){
+    line-height: 0.8rem;
+  };
 }
 
 .footer__acknowledgement a,

@@ -1,0 +1,118 @@
+.footer-link {
+  width: 100%;
+  display: flex;
+}
+
+.footer-link .link-section {
+  width: 90%;
+  margin: 0;
+  border-bottom: 1px solid $darkest-color;
+  @include media-query($medium){
+    width: calc(100% - 70px); // 50px because of margin left; 20px because of right spacing
+    margin: 0 0 0 50px;
+  };
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  li {
+    list-style: none;
+  }
+  .column_2,
+  .column_3 {
+    ul {
+      height: 100%;
+    }
+  }
+  .column_4, {
+    ul {
+      height: calc(100% / 4 * 3);
+    }
+  }
+}
+
+.footer-link>.footer__gray {
+  width: 100%;
+  background-color: $main-color;
+  //--
+  display: flex;
+  justify-content: center;
+  @include media-query($medium){
+    width: calc(100% - 100px);
+    justify-content: flex-start;
+  };
+}
+
+.footer-link>.footer__blank {
+  width: 0px;
+  @include media-query($medium){
+    width: 100px;
+  };
+}
+
+.columns-frame {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 60px 0 30px 0;
+  @include media-query($xtra-small){
+    margin: 120px 0 30px 0;
+    max-width: $medium;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.column_1 {
+  width: 100%;
+  @include media-query($xtra-small){
+    width: auto;
+  }
+  .c1_info {
+    display: flex;
+    max-width: 300px;
+    @include media-query($medium){
+      max-width: 400px;
+    };
+  }
+  .c1_info__title {
+    display: none;
+    @include media-query($medium){
+      margin-right: 60px;
+      min-width: 40px;
+      display: block;
+    };
+  }
+}
+
+.column_2,
+.column_3,
+.column_4 {
+  margin: 20px 0 0 0;
+  @include media-query($xtra-small){
+    margin: 0 0 0 30px;
+  }
+}
+
+.column_1 .c1_info:first-of-type {
+  margin-bottom: 5px;
+}
+
+.column_2 {
+  width: 30%;
+  min-width: 50px;
+  @include media-query($xtra-small){
+    width: auto;
+  }
+}
+
+.column_4 {
+  width: 100%;
+  @include media-query($xtra-small){
+    width: auto;
+  }
+}

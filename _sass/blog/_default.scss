@@ -19,13 +19,13 @@
   @include display_flex;
   @include align-items(center);
   @include justify-content(space-between);
-  margin: 100px 40px 30px 40px;
+  margin: 100px 30px 30px;
   svg {
     width: 40px;
     height: 40px;
   }
   @include media-query($xtra-small){
-    margin: 100px 60px 30px 60px;
+    margin: 100px 60px 30px;
     svg {
       width: 50px;
       height: 50px;
@@ -70,19 +70,26 @@
   background-color: rgb(239, 239, 239);
   min-height: 800px;
   width: 100%;
-  display: flex;
+  @include display_flex;
   &__navigation {
       display: none;
   }
+  &__content {
+    margin: 0 auto;
+    padding: 80px 30px 50px;
+  }
+  @include media-query($xtra-small){
+    &__content {
+      padding: 80px 60px 50px;
+    }
+  };
   @include media-query($medium){
     &__navigation {
         display: block;
         width: calc(100% / 3);
     }
     &__content {
-      display: block;
       width: calc(100% / 3 * 2);
-      padding: 80px 0 50px 0;
     }
   };
   .overview-posts {
@@ -98,6 +105,9 @@
   }
   .bk-overview-posts__frame {
     max-width: 700px;
+    @include media-query($medium){
+      margin-right: 60px;
+    }
   }
   .bk-blog-posts__date {
     margin: 0 0 6px 0;

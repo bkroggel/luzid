@@ -47,7 +47,8 @@ p {
 
 // Time: Posted on...
 .overview-posts h3,
-.overview-posts time {
+.overview-posts time,
+#blog-nav-dropdown p {
   font-family: $sans-serif;
   font-weight: 400;
   font-size: 0.6em;
@@ -57,6 +58,14 @@ p {
   text-transform: uppercase;
   display: inline;
   color: $dark-color;
+}
+
+#blog-nav-dropdown span {
+  color: $dark-color;
+}
+
+#blog-nav-dropdown p {
+  vertical-align: middle;
 }
 
 // Heading

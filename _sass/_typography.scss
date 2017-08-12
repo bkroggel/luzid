@@ -118,14 +118,14 @@ footer p,
 footer a {
   font-family: $sans-serif;
   font-weight: 300;
-  font-size: 0.6rem;
-  line-height: 0.9rem;
+  font-size: 0.7rem;
+  line-height: 1.1rem;
   margin: 0;
   @include link-mix($darkest-color);
-  @include media-query($small){
-    font-size: 0.8rem;
-    line-height: 1.3rem;
-  };
+  // @include media-query($small){
+  //   font-size: 0.8rem;
+  //   line-height: 1.3rem;
+  // };
 }
 
 .column_2 li,
@@ -145,6 +145,9 @@ footer a {
   font-size: 1em;
   @include link-mix ($darkest-color);
   text-align: right;
+  @include media-query($medium){
+    @include link-mix (white);
+  };
 }
 
 .footer__acknowledgement p {
@@ -163,4 +166,7 @@ footer a {
 
 .footer__acknowledgement a {
   border-bottom: 1px solid $darkest-color;
+  @include media-query($medium){
+    border-bottom: 1px solid white;
+  };
 }

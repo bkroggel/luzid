@@ -1,6 +1,9 @@
 .footer-link {
   width: 100%;
   display: flex;
+  @include media-query($medium){
+    border-top: 1px solid $main-color;
+  }
 }
 
 .footer-link .link-section {
@@ -10,6 +13,7 @@
   @include media-query($medium){
     width: calc(100% - 70px); // 50px because of margin left; 20px because of right spacing
     margin: 0 0 0 50px;
+    border: none;
   };
   ul {
     margin: 0;
@@ -44,6 +48,7 @@
   @include media-query($medium){
     width: calc(100% - 100px);
     justify-content: flex-start;
+    background: none;
   };
 }
 

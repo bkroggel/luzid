@@ -1,0 +1,67 @@
+{% assign tags_content = '' %}
+
+{% assign post = page %}
+{% if post.tags.size > 0 %}
+  {% for post_tag in post.tags %}
+    {% for data_tag in site.data.tags %}
+      {% if data_tag.slug == post_tag %}
+        {% assign tag = data_tag %}
+      {% endif %}
+    {% endfor %}
+    {% if tag %}
+      {% capture tags_content_temp %}{{tags_content}}<a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% endcapture %}
+      {% assign tags_content = tags_content_temp %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign tags_content = '' %}
+{% endif %}
+
+
+<section class="bk-article-title">
+
+
+  <div class="bk-article-title__row">
+    <div class="bk-side-space article-column">
+    </div>
+    <div class="bk-article-main article-column">
+      {% include article/_date.html %}
+    </div>
+    <div class="bk-side-space article-column">
+    </div>
+  </div>
+
+  <div class="bk-article-title__row">
+    <div class="bk-side-space article-column">
+      {% include svg/_icon.html %}
+    </div>
+    <div class="bk-article-main article-column bk-title-frame">
+      <h1>{{page.title}}</h1>
+    </div>
+    <div class="bk-side-space article-column">
+    </div>
+  </div>
+
+  <div class="bk-article-title__row">
+    <div class="bk-side-space article-column">
+    </div>
+    <div class="bk-article-main article-column">
+      <div class="bk-blog-posts--tags">
+        <p>
+          {{ tags_content | replace: '/blog/tag/work/', '/work/' }}
+        </p>
+      </div>
+      <div class="article-author-img">
+        <img src="{{ site.data.author.[page.author].img }}" alt="{{site.admin_user}}">
+      </div>
+      <div class="article-author-id">
+        <h2>Author</h2>
+        <h3>{{page.author}}</h3>
+      </div>
+    </div>
+    <div class="bk-side-space article-column">
+    </div>
+  </div>
+
+
+</section>

@@ -38,6 +38,16 @@ plugins: [jekyll-paginate]
 sass:
   style: compressed
 
+#default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

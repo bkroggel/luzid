@@ -48,7 +48,9 @@ p {
 // Time: Posted on...
 .overview-posts h3,
 .overview-posts time,
-#blog-nav-dropdown p {
+#blog-nav-dropdown p,
+.bk-article-title h3,
+.bk-article-title time {
   font-family: $sans-serif;
   font-weight: 400;
   font-size: 0.6em;

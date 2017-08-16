@@ -38,6 +38,14 @@ $xtra-small: 575px !default;
 justify-content: $justify;
 }
 
+@mixin direction_column {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 // mixin for media-querys
 @mixin media-query($device) {
   @media screen and (min-width: $device) {

@@ -1,0 +1,28 @@
+.bk-article-title h1 {
+  // Titel in der individuellen Artikel-Ansicht
+  font-family: $serif;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.bk-article-title .article-author-id h2,
+.bk-article-title .article-author-id h3 {
+  font-family: $sans-serif;
+  font-size: 12px;
+  margin: 0;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bk-article-title .article-author-id h2 {
+  color: $dark-color;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.bk-article-title .article-author-id h3 {
+  color: $darkest-color;
+  font-weight: 700;
+  letter-spacing: 1px;
+}

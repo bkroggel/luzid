@@ -1,0 +1,39 @@
+<footer>
+  <div class="bk-footer-1">
+    <div class="bk-footer-1__sec1">
+
+      <div class="bk-footer-1__sec1__top">
+        <div class="footer-line"></div>
+        <ul>
+          {% for 1_nav in site.data.nav.footer.1_navs %}<li><a href="{{1_nav.link}}">{{1_nav.name}}</a></li>{% endfor %}
+        </ul>
+      </div>
+      <div class="bk-footer-logo">
+        {% include svg/_icon.html %}
+        {% include svg/_name.html %}
+      </div>
+
+    </div>
+
+    <div class="bk-footer-1__sec2">
+      <h3>Thanks for beeing awesome !</h3>
+      <div class="bk-footer-1__social">
+        <p>
+          <a href="#">Twitter</a>
+          <a href="#">Github</a>
+          <a href="#">LinkedIn</a>
+        </p>
+      </div>
+      <p class="desc">{{site.description}}</p>
+    </div>
+
+    <div class="bk-footer-1__sec3">
+
+    </div>
+  </div>
+
+  <div class="bk-footer-2">
+    <p>All rights reserved © 2015 - 2017 Bastian Kroggel</p>
+  </div>
+
+</footer>

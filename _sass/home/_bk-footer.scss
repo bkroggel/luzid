@@ -7,6 +7,10 @@ footer {
   background: $dark-color;
   @include justify-content(space-between);
   padding: 0 20px;
+  flex-wrap: wrap;
+  @include media-query($small){
+    flex-wrap: nowrap;
+  };
 }
 
 .bk-footer-2 {
@@ -16,20 +20,46 @@ footer {
 }
 
 .bk-footer-1__sec1 {
-  width: 25%;
+  width: 50%;
+  order: 4;
+  @include media-query($small){
+    width: 25%;
+    order: 1;
+  };
 }
 
-.bk-footer-1__sec1__top {
-  height: calc(100% - 45px);
+.bk-footer-1__sec1,
+.bk-footer-1__sec3 {
+  @include display_flex;
+  @include direction_column;
+}
+
+.bk-footer-1__sec1__top,
+.bk-footer-1__sec3__top {
+  //height: calc(100% - 45px);
   position: relative;
   @include display_flex;
   @include align-items(center);
+  flex-grow: 2;
+}
+
+.bk-footer-1__sec3__top {
+  @include justify-content(flex-end);
+  //height: calc(100% - 36px);
+}
+
+.bk-footer-1__sec1__top ul,
+.bk-footer-1__sec3__top ul {
+  list-style: none;
+  padding: 0;
 }
 
 .bk-footer-1__sec1__top ul {
-  list-style: none;
   margin:0 0 0 22px;
-  padding: 0;
+}
+.bk-footer-1__sec3__top ul {
+  margin:0 22px 0 0;
+  text-align: right;
 }
 
 .bk-footer-logo {
@@ -57,20 +87,36 @@ footer {
   position: absolute;
   top: 0;
   bottom: 0;
+}
+
+.bk-footer-1__sec1__top .footer-line {
   margin-left: 12px;
 }
 
+.bk-footer-1__sec3__top .footer-line {
+  right: 0;
+  margin-right: 12px;
+}
+
 .bk-footer-1__sec2 {
-  width: 50%;
+  width: calc(100% - 66px);
   max-width: 400px;
   @include display_flex;
   @include direction_column;
   @include align-items(center);
   padding: 40px 0;
+  order: 2;
+  @include media-query($small){
+    width: 50%;
+  };
 }
 
 .bk-footer-1__sec3 {
-  width: 25%;
+  width: 50%;
+  order: 5;
+  @include media-query($small){
+    width: 25%;
+  };
 }
 
 .bk-footer-1__social {
@@ -79,16 +125,39 @@ footer {
 
 .bk-footer-1__social p {
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   a {
     border: 1px solid white;
     border-radius: 20px;
-    margin: 0 3px;
+    margin: 3px;
     padding: 3px 15px;
-    &:first-of-type {
-      margin-left: 0;
-    }
-    &:last-of-type {
-      margin-right: 0;
-    }
+  }
+  @include media-query($small){
+    display: block;
+  };
+}
+
+.bk-footer__acknowledgement {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 12px 10px 0;
+  width: auto;
+}
+
+.bk-footer-1__mobile-line {
+  width: 13px;
+  display: flex;
+  &.bk-footer-1__left-line {
+    border-right: 1px solid white;
+    order: 1;
+  }
+  &.bk-footer-1__right-line {
+    border-left: 1px solid white;
+    order: 3;
+  }
+  @include media-query($small){
+    display: none;
   }
 }

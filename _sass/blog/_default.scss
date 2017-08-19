@@ -35,7 +35,7 @@
   @include display_flex;
   @include align-items(center);
   @include justify-content(space-between);
-  width: 100%;
+  //width: calc(100% - 60px);
   padding: 0 30px;
   height: 70px;
   background-color: white;

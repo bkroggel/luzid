@@ -180,35 +180,67 @@ $pages-item-active-color:   white !default;
 }
 
 .bk-pagination {
+  border-top: 1px solid $slightly-darker;
+  width: 900px;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
   @include media-query($medium){
-    margin-left: calc(100% / 3);
     margin-top: 50px;
     margin-bottom: 150px;
   };
 }
 
-.pagination-item,
-a.pagination-item {
-  border: 1px solid $dark-color;
-  border-radius: 20px;
-  margin: 0 3px;
-  padding: 3px 15px;
+.bk-pagination ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: -1px;
 }
 
-.current-page .pagination-item,
-.current-page .pagination-item span {
-  background-color: $main-color;
-  border-color: $darkest-color;
+.bk-pagination ul>li>a,
+.bk-pagination ul>li>span {
+  float: left;
+  padding: 11px 15px;
+  line-height: 19px;
+  text-decoration: none;
+  color: $dark-color;
+  border-top: 1px solid $slightly-darker;
+}
+
+.bk-pagination ul>li>a:hover,
+.bk-pagination ul>li>span:hover {
   color: $darkest-color;
+  border-color: $darkest-color;
+}
+
+.current-page .pagination-item {
+  cursor: default;
+  border-top: 1px solid $darkest-color;
+  color: $darkest-color;
+
 }
 
 .pagination-item,
 a.pagination-item,
 .pages-indicator span {
   color: $dark-color;
-  font-family: "Open Sans","Source Sans Pro","Helvetica Neue",Arial,sans-serif;
-  font-weight: 600;
+  font-family: $sans-serif;
+  font-weight: 300;
   font-size: 0.8em;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+}
+
+.bk-pagination ul li.next a:after {
+  content:"\27F6";
+  font-weight: 300;
+  margin-left: 5px;
+  vertical-align: top;
+}
+
+.bk-pagination ul li.previous a:before {
+  content:"\27F5";
+  font-weight: 300;
+  margin-right: 5px;
+  vertical-align: top;
 }

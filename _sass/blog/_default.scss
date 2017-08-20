@@ -69,6 +69,7 @@
   background-color: rgb(239, 239, 239);
   min-height: 800px;
   width: 100%;
+  border-bottom: 1px solid $slightly-darker;
   @include display_flex;
   flex-direction: column;
   &__navigation {

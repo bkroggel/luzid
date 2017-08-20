@@ -45,24 +45,157 @@
     font-family: $sans-serif;
     font-weight: 300;
   }
+  a {
+    @include link-mix($blog-font-color);
+    border-bottom: 1px solid $blog-font-color;
+  }
+  h1,
+  h1>a,
+  h2,
+  h2>a,
+  h3,
+  h3>a {
+    font-family: $serif;
+    border-bottom: none;
+  }
+  h4,
+  h4>a,
+  h5,
+  h5>a,
+  h6,
+  h6>a {
+    font-family: $sans-serif;
+    border-bottom: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 10px;
+    + p {
+      margin-top: 10px;
+    }
+    a:before {
+      content: '\f0c1';
+      font-family: FontAwesome;
+      font-size: 0.6em;
+      vertical-align: middle;
+      margin-right: 7px;
+      opacity: 0.4;
+    }
+  }
 }
 
 .bk-blog-content p {
   color: $blog-font-color;
   line-height: 1.8em;
+  .highlighted {
+    background-color: $highlighted-color;
+  }
+  em {
+    color: $blog-font-color;
+  }
+  strong {
+    font-weight: 600;
+  }
+  sup a {
+    border: none;
+    font-size: 1em;
+  }
+}
+
+pre {
+  white-space: pre-wrap;
+  margin-top: 20px;
+  background: none;
+  border: none;
+  border-top: 1px solid $dark-color;
+  border-bottom: 1px solid $dark-color;
+  padding: 20px;
+}
+
+.bk-blog-content p>code {
+  color: $darkest-color;
+  background: none;
+}
+
+.bk-blog-content h1 + p,
+.bk-blog-content h2 + p {
+  margin-top: 10px;
+}
+
+.bk-blog-content h1,
+.bk-blog-content h1>a,
+.bk-blog-content h2,
+.bk-blog-content h2>a {
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 10px;
+  max-width: 80%;
+}
+
+.bk-blog-content h1,
+.bk-blog-content h1>a {
+  font-size: 2rem;
+}
+
+.bk-blog-content h2,
+.bk-blog-content h2>a {
+  font-size: 1.375rem;
+  color: $main-color;
+}
+
+.bk-blog-content h2 {
+  background-color: $dark-color;
+  margin: 0;
+  padding: 10px 20px 10px 10px;
+  margin-left: -10px;
+  display: inline-block;
+  margin-top: 30px;
+  max-width: 60%;
+}
+
+.bk-blog-content h1:after {
+  content: "";
+  width: 30%;
+  height: 1px;
+  position: absolute;
+  border-bottom: 1px solid black;
+  bottom: 0px;
+  left: 0;
+}
+
+.bk-blog-content h3 {
+  font-size: 1.375em;
+  font-style: italic;
+  max-width: 80%;
+}
+
+.bk-blog-content h4,
+.bk-blog-content h4>a {
+  font-size: 1.375rem;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  width: 60%;
 }
 
 .bk-blog-content h5,
+.bk-blog-content h5>a,
 .bk-blog-content h6,
+.bk-blog-content h6>a,
 span.info {
-  font-family: $sans-serif;
   font-weight: 600;
   font-size: 0.6em;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  line-height: 2em;
 }
 
 .bk-blog-content h6,
+.bk-blog-content h6>a,
 span.info {
   line-height: 1.8em;
   float: left;
@@ -85,4 +218,98 @@ span.info:after {
   font-weight: 300;
   margin-left: 3px;
   color: #696969;
+}
+
+.footnotes {
+  position:relative;
+  margin-top: 40px;
+  padding-top: 15px;
+  p {
+    font-size: 1.1em;
+    margin-bottom: 7px;
+    .reversefootnote {
+      font-size: 0.7em;
+      vertical-align: text-top;
+    }
+  }
+  ol {
+    font-size: 0.7em;
+    font-family: $sans-serif;
+    font-weight: 300;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 1px;
+    background-color: $dark-color;
+  }
+}
+
+p.info {
+  padding-left: 20px;
+  border-left: 1px solid $dark-color;
+  position: relative;
+  &:before {
+    content: "information";
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $dark-color;
+    position: absolute;
+    left: 2px;
+    top: 0px;
+    transform-origin: bottom left;
+    transform: rotate(270deg) translateX(-82%);
+  }
+}
+
+p.quote {
+  font-family: $serif;
+  font-size: 2.8em;
+  line-height: 1.2em;
+  width: 160%;
+  text-align: center;
+  margin: 50px -30%;
+  position: relative;
+  &:before {
+    content: open-quote;
+    position: absolute;
+    left: -0.4em;
+    top: 0em;
+    font-size: 3em;
+  }
+  &:after {
+    content: close-quote;
+    position: absolute;
+    right: -0.4em;
+    bottom: -0.45em;
+    font-size: 3em;
+  }
+}
+
+.bk-blog-content blockquote p {
+  opacity: 0.7;
+  padding-left: 20px;
+  margin: 40px 0 40px 30px;
+  border-left: 3px solid $dark-color;
+}
+
+// Liste
+.bk-blog-content ul,
+.bk-blog-content ol {
+  font-family: $sans-serif;
+  font-weight: 300;
+}
+
+.bk-blog-content ul {
+  list-style: none;
+  padding: 0 0 0 15px;
+  li {
+    &:before {
+      content: '|';
+      margin-right: 5px;
+    }
+  }
 }

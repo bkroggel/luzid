@@ -1,13 +1,19 @@
 // general defaults and variables (mixins)
-
 $main-color: #EFEFEF;
 $dark-color: #A2A2A2;
 $slightly-darker: #dadada;
 $darkest-color: rgb(0,0,0);
 $blog-font-color: #4e4e4e;
+$highlighted-color: #ffa4f8;
 
 $sans-serif: "Open Sans", "Source Sans Pro", "Helvetica Neue",Arial,sans-serif;
 $serif: "Charter", "Times New Roman", Times, serif;
+
+::selection {
+  background: $highlighted-color;
+  color: #fff;
+  text-shadow: none;
+}
 
 // device width (use bootstrap)
 //$xtra-large: none !default;
@@ -82,5 +88,6 @@ justify-content: $justify;
   "home/footer",
   "home/bk-footer",
   "blog/default",
-  "blog/pagination"
+  "blog/pagination",
+  "minima/syntax-highlighting.scss"
 ;

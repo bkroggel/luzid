@@ -182,11 +182,13 @@ $pages-item-active-color:   white !default;
 .bk-pagination {
   border-top: 1px solid $slightly-darker;
   width: 900px;
-  max-width: 100%;
+  max-width: 90%;
   padding: 0;
   margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
   @include media-query($medium){
-    margin-top: 50px;
+
     margin-bottom: 150px;
   };
 }

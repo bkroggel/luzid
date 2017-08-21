@@ -2,7 +2,11 @@
   // Titel in der individuellen Artikel-Ansicht
   font-family: $serif;
   font-weight: 400;
-  font-size: 48px;
+  width: 100%;
+  font-size: 2.5em;
+  @include media-query($small){
+    font-size: 3em;
+  };
 }
 
 .bk-article-title .article-author-id h2,
@@ -54,17 +58,17 @@
   h2,
   h2>a,
   h3,
-  h3>a {
-    font-family: $serif;
-    border-bottom: none;
-  }
-  h4,
-  h4>a,
+  h3>a,
   h5,
   h5>a,
   h6,
   h6>a {
     font-family: $sans-serif;
+    border-bottom: none;
+  }
+  h4,
+  h4>a {
+    font-family: $serif;
     border-bottom: none;
   }
   h1,
@@ -88,9 +92,21 @@
   }
 }
 
+.bk-blog-content p,
+.bk-blog-content ul,
+.bk-blog-content ol {
+  line-height: 1.8em;
+  font-size: 0.85em;
+  @include media-query($small){
+    font-size: 1em;
+  };
+  a {
+    font-size: 1em;
+  }
+}
+
 .bk-blog-content p {
   color: $blog-font-color;
-  line-height: 1.8em;
   .highlighted {
     background-color: $highlighted-color;
   }
@@ -106,6 +122,15 @@
   }
 }
 
+h1 + div>pre,
+h2 + div>pre,
+h3 + div>pre,
+h4 + div>pre,
+h5 + div>pre,
+h6 + div>pre {
+  margin-top: 0px;
+}
+
 pre {
   white-space: pre-wrap;
   margin-top: 20px;
@@ -114,11 +139,35 @@ pre {
   border-top: 1px solid $dark-color;
   border-bottom: 1px solid $dark-color;
   padding: 20px;
+  line-height: 1em;
+  font-size: 0.8em;
+  line-height: 1.5em;
 }
 
 .bk-blog-content p>code {
   color: $darkest-color;
   background: none;
+  font-size: 1em;
+  padding: 2px 3px;
+}
+
+.bk-blog-content h1,
+.bk-blog-content h1>a {
+  font-size: 1.175rem;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding-bottom: 10px;
+  width: 85%;
+  @include media-query($small){
+    font-size: 1.375rem;
+  };
+  @include media-query($medium){
+    width: 75%;
+    margin-left: -5%;
+    font-size: 1.375rem;
+  };
 }
 
 .bk-blog-content h1 + p,
@@ -126,60 +175,56 @@ pre {
   margin-top: 10px;
 }
 
-.bk-blog-content h1,
-.bk-blog-content h1>a,
-.bk-blog-content h2,
-.bk-blog-content h2>a {
-  font-weight: 400;
-  position: relative;
-  padding-bottom: 10px;
-  max-width: 80%;
-}
-
-.bk-blog-content h1,
-.bk-blog-content h1>a {
-  font-size: 2rem;
-}
-
-.bk-blog-content h2,
-.bk-blog-content h2>a {
-  font-size: 1.375rem;
-  color: $main-color;
-}
-
-.bk-blog-content h2 {
-  background-color: $dark-color;
-  margin: 0;
-  padding: 10px 20px 10px 10px;
-  margin-left: -10px;
-  display: inline-block;
-  margin-top: 30px;
-  max-width: 60%;
-}
 
 .bk-blog-content h1:after {
   content: "";
-  width: 30%;
+  width: 40%;
   height: 1px;
   position: absolute;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $dark-color;
   bottom: 0px;
   left: 0;
 }
 
-.bk-blog-content h3 {
-  font-size: 1.375em;
-  font-style: italic;
-  max-width: 80%;
+.bk-blog-content h2,
+.bk-blog-content h2>a {
+  font-size: 1rem;
+  @include media-query($small){
+    font-size: 1.375rem;
+  };
 }
 
-.bk-blog-content h4,
-.bk-blog-content h4>a {
-  font-size: 1.375rem;
-  font-weight: 300;
-  line-height: 1.4;
-  letter-spacing: 0.05em;
-  width: 60%;
+.bk-blog-content h4 {
+  font-style: italic;
+}
+
+.bk-blog-content {
+  h2,
+  h3,
+  h4,
+  h5 {
+    width: 85%;
+    @include media-query($medium){
+      width: 70%;
+    };
+  }
+  h2,
+  h2>a,
+  h3,
+  h3>a {
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+  }
+  h3,
+  h3>a,
+  h4,
+  h4>a {
+    font-size: 0.9rem;
+    @include media-query($small){
+      font-size: 1rem;
+    };
+  }
 }
 
 .bk-blog-content h5,
@@ -201,8 +246,11 @@ span.info {
   float: left;
   display: block;
   margin: 0px;
-  padding-top: 5px;
+  padding-top: 2px;
   margin-right: 4px;
+  @include media-query($small){
+    padding-top: 5px;
+  };
 }
 
 span.info {
@@ -222,8 +270,11 @@ span.info:after {
 
 .footnotes {
   position:relative;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-top: 15px;
+  @include media-query($medium){
+    margin-top: 40px;
+  };
   p {
     font-size: 1.1em;
     margin-bottom: 7px;
@@ -248,31 +299,24 @@ span.info:after {
   }
 }
 
-p.info {
-  padding-left: 20px;
-  border-left: 1px solid $dark-color;
-  position: relative;
-  &:before {
-    content: "information";
-    text-transform: uppercase;
-    font-weight: 300;
-    color: $dark-color;
-    position: absolute;
-    left: 2px;
-    top: 0px;
-    transform-origin: bottom left;
-    transform: rotate(270deg) translateX(-82%);
-  }
-}
-
 p.quote {
   font-family: $serif;
-  font-size: 2.8em;
+  font-size: 1.2em;
   line-height: 1.2em;
-  width: 160%;
+  width: 80%;
+  margin: 50px 10%;
   text-align: center;
-  margin: 50px -30%;
   position: relative;
+  @include media-query($medium){
+    width: 140%;
+    margin: 50px -20%;
+    font-size: 1.8em;
+  };
+  @include media-query($large){
+    width: 150%;
+    margin: 50px -25%;
+    font-size: 2.8em;
+  };
   &:before {
     content: open-quote;
     position: absolute;
@@ -289,11 +333,18 @@ p.quote {
   }
 }
 
+blockquote { //overwriting ukit
+  font-size: 1em;
+}
+
 .bk-blog-content blockquote p {
   opacity: 0.7;
   padding-left: 20px;
-  margin: 40px 0 40px 30px;
+  margin: 40px 0 40px 15px;
   border-left: 3px solid $dark-color;
+  @include media-query($medium){
+    margin: 40px 0 40px 30px;
+  };
 }
 
 // Liste
@@ -310,6 +361,75 @@ p.quote {
     &:before {
       content: '|';
       margin-right: 5px;
+    }
+  }
+}
+
+.bk-blog-content hr {
+  border-top: 1px solid $dark-color;
+}
+
+p.info,
+p.update,
+p.test {
+  padding-left: 7px;
+  border-left: 1px solid $dark-color;
+  position: relative;
+  margin-left: 17px;
+  @include media-query($small){
+    margin-left: 0;
+    padding-left: 20px;
+  };
+  &:before {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $dark-color;
+    line-height: 1em;
+    position: absolute;
+    right: calc(100% + 20px);
+    top: 0;
+    transform: rotate(270deg);
+    transform-origin: right top;
+    white-space: nowrap;
+    margin-top: 8px;
+  }
+}
+
+p.info {
+  &:before {
+    content: "information";
+  }
+  + p.info {
+    margin-top: -20px;
+    padding-top: 1em;
+    &:before {
+      content: "";
+    }
+  }
+}
+
+p.test {
+  &:before {
+    content: "test";
+  }
+  + p.test {
+    margin-top: -20px;
+    padding-top: 1em;
+    &:before {
+      content: "";
+    }
+  }
+}
+
+p.update {
+  &:before {
+    content: "update";
+  }
+  + p.update {
+    margin-top: -20px;
+    padding-top: 1em;
+    &:before {
+      content: "";
     }
   }
 }

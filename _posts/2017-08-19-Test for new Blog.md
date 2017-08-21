@@ -7,6 +7,8 @@ tags: [about, english]
 
 Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae sem eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. Aliquam ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci. Vivamus quam nibh, tristique id tortor ac, volutpat vehicula ex. <span>Nulla ante eros, elementum at mattis eget, lacinia id erat.</span>{:.highlighted} Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae sem eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. Aliquam ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci. Vivamus quam nibh, tristique id tortor ac, volutpat vehicula ex. Nulla ante eros, elementum at mattis eget, lacinia id erat.
 
+<!-- more -->
+
 # Das ist eine Level I Überschrift
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut ante fermentum nisi efficitur elementum ut sit amet leo. Suspendisse vulputate nulla enim, vel bibendum purus ultrices eget. Quisque nec laoreet nisi. Sed nisi odio, mollis et porta vel, facilisis quis diam. Praesent hendrerit nulla vel odio imperdiet mattis.  
 
@@ -19,7 +21,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 #### Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas?
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut ante fermentum nisi efficitur elementum ut sit amet leo. Suspendisse vulputate nulla enim, vel bibendum purus ultrices eget. Quisque nec laoreet nisi. Sed nisi odio, mollis et porta vel, facilisis quis diam. Praesent hendrerit nulla vel odio imperdiet mattis.  
 
-##### Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas? Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas? Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas?
+##### Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas?
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut ante fermentum nisi efficitur elementum ut sit amet leo. Suspendisse vulputate nulla enim, vel bibendum purus ultrices eget. Quisque nec laoreet nisi. Sed nisi odio, mollis et porta vel, facilisis quis diam. Praesent hendrerit nulla vel odio imperdiet mattis.  
 
 ###### Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas?
@@ -53,7 +55,7 @@ Morbi euismod tellus ac feugiat finibus. Sed pellentesque ligula justo, quis feu
 2. ist jetzt
 3. eine Aufzählung
 
-<mail@bastiankroggel.com>
+<mail@bastiankroggel>
 
 ###### Lorena
 Integer sed tempus diam, et tempus elit. Praesent molestie lectus vel tempus aliquam. Etiam nec bibendum libero, cursus eleifend magna. Proin quis vehicula neque. Etiam molestie urna sem, vel cursus augue aliquam at. Suspendisse ut pretium dolor. In arcu nunc, congue id dolor nec, suscipit pellentesque mi. Donec purus nibh, convallis a turpis in, mattis dictum lorem. Nunc mattis pellentesque turpis sit amet tincidunt. In ac porttitor nibh. Aliquam a vehicula tellus. Aliquam lacus lorem, scelerisque vel dapibus nec, auctor in justo.
@@ -66,5 +68,21 @@ Mauris nec mi a urna mollis vulputate. Maecenas mi lorem, feugiat quis elit vel,
 {:.quote}
 
 Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
+Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
+
+Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
+
+Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
+Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
+{:.info}
+
+Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
+{:.info}
+
+Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
+
+---
+
+Und jetzt packe ich hier einfach nochmal ein bischen Text dazu, damit wir sehen, was damit alles möglich ist. Ich würde mich an der Stelle freuen, wenn man den Markdown Mode noch optimieren könnte und er in Atom automatisch aktiviert wird.
 
 [^1]: funktioniert das so?

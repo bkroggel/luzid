@@ -4,10 +4,12 @@ $dark-color: #A2A2A2;
 $slightly-darker: #dadada;
 $darkest-color: rgb(0,0,0);
 $blog-font-color: #4e4e4e;
+$blog-font-color_small: rgb(0,0,0);
 $highlighted-color: #ffa4f8;
 
-$sans-serif: "Open Sans", "Source Sans Pro", "Helvetica Neue",Arial,sans-serif;
+$sans-serif: "Open Sans", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 $serif: "Charter", "Times New Roman", Times, serif;
+$reading: "Roboto", "Helvetica Neue", Arial, sans-serif;
 
 ::selection {
   background: $highlighted-color;

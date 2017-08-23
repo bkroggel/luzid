@@ -13,7 +13,7 @@ thumbnail:
 {:.cover}
 
 [Website](http://www.ppe-conference.com) der ersten PPE-Conference des Sociology, Politics and Economics Lehrstuhl der [Zeppelin Universität Friedrichshafen](http://www.zu.de).  
-Sohl Design-Prozess (der Website) als auch Entwicklung entstanden im Team-Work aus "einer Hand" und sind somit (hoffentlich) in ein konsistenten Bild übergegangen. Maßgebliche Vorgaben bzw. Anforderungen begrenzten sich lediglich auf Inhalt, Farbgebung und entsprechendes, bereits entwickelte Logo Grafik.
+Sowohl Design-Prozess (der Website) als auch Entwicklung entstanden im Team-Work aus "einer Hand" und sind somit (hoffentlich) in ein konsistenten Bild übergegangen. Maßgebliche Vorgaben bzw. Anforderungen begrenzten sich lediglich auf Inhalt, Farbgebung und entsprechendes, bereits entwickelte Logo Grafik.
 <!-- more -->
 
 Zurückgegriffen wurde dabei einerseits auf häufig Verwendung findenden Lösungen wie [Bootstrap](http://getbootstrap.com/), [jQuery](https://jquery.org/) oder der Icon-Lösung [FontAwesome](http://fontawesome.io/), andererseits aber auch kleinere, möglicherweise weniger bekannte jQuery-Plugin's, die nachfolgend kurz Erwähnung finden sollen.

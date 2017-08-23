@@ -3,9 +3,10 @@
   font-family: $serif;
   font-weight: 400;
   width: 100%;
-  font-size: 2.5em;
+  font-size: 2rem;
+  margin: 0;
   @include media-query($small){
-    font-size: 3em;
+    font-size: 3rem;
   };
 }
 
@@ -43,15 +44,19 @@
 
 // Typography for BLOG
 
-.bk-blog-content {
+.bk-blog-style {
   p,
   a {
-    font-family: $sans-serif;
+    font-family: $reading;
     font-weight: 300;
   }
   a {
-    @include link-mix($blog-font-color);
-    border-bottom: 1px solid $blog-font-color;
+    @include link-mix($blog-font-color_small);
+    border-bottom: 1px solid $blog-font-color_small;
+    @include media-query($small){
+      @include link-mix($blog-font-color);
+      border-bottom: 1px solid $blog-font-color;
+    };
   }
   h1,
   h1>a,
@@ -82,7 +87,7 @@
       margin-top: 10px;
     }
     a:before {
-      content: '\f0c1';
+      content: "\f08e";
       font-family: FontAwesome;
       font-size: 0.6em;
       vertical-align: middle;
@@ -92,33 +97,31 @@
   }
 }
 
-.bk-blog-content p,
-.bk-blog-content ul,
-.bk-blog-content ol {
-  line-height: 1.8em;
-  font-size: 0.85em;
+.bk-blog-style p,
+.bk-blog-style ul,
+.bk-blog-style ol,
+.bk-blog-style a,
+.bk-blog-style p>code,
+.bk-blog-style p em {
+  color: $blog-font-color_small;
+  line-height: 1.9em;
+  font-size: 1.02rem;
+  letter-spacing: 0.015em;
   @include media-query($small){
-    font-size: 1em;
+    color: $blog-font-color;
   };
-  a {
-    font-size: 1em;
-  }
 }
 
-.bk-blog-content p {
-  color: $blog-font-color;
+.bk-blog-style p {
   .highlighted {
     background-color: $highlighted-color;
-  }
-  em {
-    color: $blog-font-color;
   }
   strong {
     font-weight: 600;
   }
   sup a {
     border: none;
-    font-size: 1em;
+    font-size: 0.7rem;
   }
 }
 
@@ -136,24 +139,24 @@ pre {
   margin-top: 20px;
   background: none;
   border: none;
-  border-top: 1px solid $dark-color;
-  border-bottom: 1px solid $dark-color;
+  // border-top: 1px solid $dark-color;
+  // border-bottom: 1px solid $dark-color;
+  // border-left: 1px solid $dark-color;
   padding: 20px;
-  line-height: 1em;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   line-height: 1.5em;
+  border-radius: 0;
 }
 
-.bk-blog-content p>code {
-  color: $darkest-color;
+.bk-blog-style p>code {
+  color: $blog-font-color;
   background: none;
-  font-size: 1em;
   padding: 2px 3px;
 }
 
-.bk-blog-content h1,
-.bk-blog-content h1>a {
-  font-size: 1.175rem;
+.bk-blog-style h1,
+.bk-blog-style h1>a {
+  font-size: 1.275rem;
   font-weight: 300;
   line-height: 1.4;
   letter-spacing: 0.05em;
@@ -164,41 +167,42 @@ pre {
     font-size: 1.375rem;
   };
   @include media-query($medium){
-    width: 75%;
-    margin-left: -5%;
+    width: 72%;
+    margin-left: -2%;
     font-size: 1.375rem;
   };
 }
 
-.bk-blog-content h1 + p,
-.bk-blog-content h2 + p {
+.bk-blog-style h1 + p,
+.bk-blog-style h2 + p {
   margin-top: 10px;
 }
 
 
-.bk-blog-content h1:after {
+.bk-blog-style h1:after {
   content: "";
-  width: 40%;
+  width: 105%;
   height: 1px;
   position: absolute;
-  border-bottom: 1px solid $dark-color;
+  border-bottom: 6px solid $dark-color;
   bottom: 0px;
   left: 0;
+  opacity: 0.3;
 }
 
-.bk-blog-content h2,
-.bk-blog-content h2>a {
-  font-size: 1rem;
+.bk-blog-style h2,
+.bk-blog-style h2>a {
+  font-size: 1.1rem;
   @include media-query($small){
     font-size: 1.375rem;
   };
 }
 
-.bk-blog-content h4 {
+.bk-blog-style h4 {
   font-style: italic;
 }
 
-.bk-blog-content {
+.bk-blog-style {
   h2,
   h3,
   h4,
@@ -220,37 +224,34 @@ pre {
   h3>a,
   h4,
   h4>a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     @include media-query($small){
       font-size: 1rem;
     };
   }
 }
 
-.bk-blog-content h5,
-.bk-blog-content h5>a,
-.bk-blog-content h6,
-.bk-blog-content h6>a,
+.bk-blog-style h5,
+.bk-blog-style h5>a,
+.bk-blog-style h6,
+.bk-blog-style h6>a,
 span.info {
   font-weight: 600;
-  font-size: 0.6em;
+  font-size: 0.6rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   line-height: 2em;
 }
 
-.bk-blog-content h6,
-.bk-blog-content h6>a,
+.bk-blog-style h6,
+.bk-blog-style h6>a,
 span.info {
-  line-height: 1.8em;
+  line-height: 1.9em;
   float: left;
   display: block;
   margin: 0px;
-  padding-top: 2px;
+  padding-top: 5px;
   margin-right: 4px;
-  @include media-query($small){
-    padding-top: 5px;
-  };
 }
 
 span.info {
@@ -259,7 +260,7 @@ span.info {
   vertical-align: middle;
 }
 
-.bk-blog-content h6::after,
+.bk-blog-style h6::after,
 span.info:after {
   content:"\27F6";
   font-size: 1.2em;
@@ -279,13 +280,14 @@ span.info:after {
     font-size: 1.1em;
     margin-bottom: 7px;
     .reversefootnote {
-      font-size: 0.7em;
+      font-size: 0.7rem;
       vertical-align: text-top;
+      border: none;
     }
   }
   ol {
-    font-size: 0.7em;
-    font-family: $sans-serif;
+    font-size: 0.7rem;
+    font-family: $reading;
     font-weight: 300;
   }
   &:before {
@@ -294,14 +296,15 @@ span.info:after {
     top: 0;
     left: 0;
     width: 20%;
-    height: 1px;
+    height: 6px;
+    opacity: 0.3;
     background-color: $dark-color;
   }
 }
 
 p.quote {
   font-family: $serif;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   line-height: 1.2em;
   width: 80%;
   margin: 50px 10%;
@@ -310,12 +313,12 @@ p.quote {
   @include media-query($medium){
     width: 140%;
     margin: 50px -20%;
-    font-size: 1.8em;
+    font-size: 1.8rem;
   };
   @include media-query($large){
     width: 150%;
     margin: 50px -25%;
-    font-size: 2.8em;
+    font-size: 2.8rem;
   };
   &:before {
     content: open-quote;
@@ -334,27 +337,27 @@ p.quote {
 }
 
 blockquote { //overwriting ukit
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-.bk-blog-content blockquote p {
+.bk-blog-style blockquote p {
   opacity: 0.7;
   padding-left: 20px;
   margin: 40px 0 40px 15px;
-  border-left: 3px solid $dark-color;
+  border-left: 6px solid rgba(162, 162, 162, 0.4);
   @include media-query($medium){
     margin: 40px 0 40px 30px;
   };
 }
 
 // Liste
-.bk-blog-content ul,
-.bk-blog-content ol {
-  font-family: $sans-serif;
+.bk-blog-style ul,
+.bk-blog-style ol {
+  font-family: $reading;
   font-weight: 300;
 }
 
-.bk-blog-content ul {
+.bk-blog-style ul {
   list-style: none;
   padding: 0 0 0 15px;
   li {
@@ -365,20 +368,21 @@ blockquote { //overwriting ukit
   }
 }
 
-.bk-blog-content hr {
+.bk-blog-style hr {
   border-top: 1px solid $dark-color;
+  opacity: 0.3;
 }
 
 p.info,
 p.update,
 p.test {
   padding-left: 7px;
-  border-left: 1px solid $dark-color;
+  border-left: 6px solid rgba(162, 162, 162, 0.3);
   position: relative;
-  margin-left: 17px;
+  margin-left: 18px;
   @include media-query($small){
     margin-left: 0;
-    padding-left: 20px;
+    padding-left: 15px;
   };
   &:before {
     text-transform: uppercase;
@@ -386,7 +390,8 @@ p.test {
     color: $dark-color;
     line-height: 1em;
     position: absolute;
-    right: calc(100% + 20px);
+    right: calc(100% + 24px);
+    opacity: .6;
     top: 0;
     transform: rotate(270deg);
     transform-origin: right top;

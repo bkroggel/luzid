@@ -22,8 +22,11 @@
 .bk-article-title {
   @include display_flex;
   @include direction_column;
-  margin-top: 100px;
-  padding: 0 10px;
+  width: 75%;
+  margin: 100px auto 0;
+  @include media-query($small){
+    width: 100%;
+  };
 }
 
 .bk-article-title__row {
@@ -62,9 +65,12 @@
 }
 
 .bk-title-frame {
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: center;
   max-width: 580px;
+  @include media-query($small){
+    margin: 20px auto 45px;
+  };
 }
 
 .article-author-img img {
@@ -74,12 +80,11 @@
 }
 
 .bk-article-title .bk-blog-posts__date {
-  margin-bottom: 15px;
   text-align: center;
 }
 
 .bk-article-title .bk-blog-posts--tags {
-  margin: 25px 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .bk-article-title .article-author-id {
@@ -120,10 +125,10 @@
 }
 
 .bk-blog-content {
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
   max-width: 650px;
   margin: 150px auto 50px;
-  padding: 0 10px;
+  padding: 0 15px;
   @include media-query($medium) {
     width: 100%;
     padding: 0;

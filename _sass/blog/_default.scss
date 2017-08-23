@@ -77,6 +77,7 @@
   &__navigation {
     width: 100%;
     position: absolute;
+    z-index: 1;
     &.stuck {
       position: fixed;
       top: 55px;
@@ -131,6 +132,15 @@
 
 .bk-blog-posts__date {
   margin: 0 0 6px 0;
+  line-height: 1em;
+  .true-date {
+    display: inline-block;
+    width: 100%;
+    @include media-query($small){
+      display: inline;
+      width: auto;
+    };
+  }
 }
 
 .bk-blog-thumbnail {
@@ -149,10 +159,10 @@
 .bk-blog-thumbnail_2 {
   img {
     width: 40%;
-    height: 181px;
+    height: 193px;
     object-fit: cover;
     float: left;
-    margin: 9px 20px 20px 0;
+    margin: 9px 20px 15px 0;
   }
 }
 
@@ -220,11 +230,12 @@
   overflow: hidden;
   transition: all .3s;
   p.about {
-    max-width: 250px;
+    max-width: 400px;
     width: 90%;
     padding: 30px 0 0 30px;
     @include media-query($medium) {
-      padding: 0;
+      padding: 15px 0 0 0;
+      max-width: 250px;
     }
   }
   ul.bk-blog-info {

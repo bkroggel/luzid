@@ -112,6 +112,16 @@
   };
 }
 
+// big letter just in article view
+.bk-blog-content>p:first-of-type:first-letter {
+  font-size: 6.2rem;
+  font-family: $serif;
+  margin-right: 10px;
+  float: left;
+  line-height: 0.9em;
+  margin-bottom: -20px;
+}
+
 .bk-blog-style p {
   .highlighted {
     background-color: $highlighted-color;

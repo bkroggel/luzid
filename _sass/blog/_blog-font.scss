@@ -192,7 +192,7 @@ pre {
 
 .bk-blog-style h2,
 .bk-blog-style h2>a {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   @include media-query($small){
     font-size: 1.375rem;
   };
@@ -272,16 +272,16 @@ span.info:after {
 .footnotes {
   position:relative;
   margin-top: 30px;
-  padding-top: 15px;
+  padding-top: 20px;
   @include media-query($medium){
     margin-top: 40px;
   };
   p {
     font-size: 1.1em;
-    margin-bottom: 7px;
+    margin-bottom: 0;
     .reversefootnote {
       font-size: 0.7rem;
-      vertical-align: text-top;
+      vertical-align: middle;
       border: none;
     }
   }
@@ -374,15 +374,21 @@ blockquote { //overwriting ukit
 }
 
 p.info,
-p.update,
-p.test {
-  padding-left: 7px;
-  border-left: 6px solid rgba(162, 162, 162, 0.3);
+p.update {
+  background-color: $light-accent;
   position: relative;
-  margin-left: 18px;
+  padding: 10px 15px 10px 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  em,
+  a {
+    font-size: 0.9rem;
+  }
   @include media-query($small){
-    margin-left: 0;
-    padding-left: 15px;
+    margin: 0;
   };
   &:before {
     text-transform: uppercase;
@@ -390,13 +396,19 @@ p.test {
     color: $dark-color;
     line-height: 1em;
     position: absolute;
-    right: calc(100% + 24px);
-    opacity: .6;
+    right: 15px;
     top: 0;
-    transform: rotate(270deg);
-    transform-origin: right top;
     white-space: nowrap;
-    margin-top: 8px;
+    margin-top: -21px;
+    background: $light-accent;
+    padding: 10px;
+    @include media-query($small){
+      right: calc(100% + 21px);
+      margin-top: 15px;
+      transform: rotate(270deg);
+      transform-origin: right top;
+      padding: 10px 15px 0 15px;
+    };
   }
 }
 
@@ -405,23 +417,11 @@ p.info {
     content: "information";
   }
   + p.info {
-    margin-top: -20px;
-    padding-top: 1em;
+    margin-top: 0;
+    padding-top: 0;
     &:before {
       content: "";
-    }
-  }
-}
-
-p.test {
-  &:before {
-    content: "test";
-  }
-  + p.test {
-    margin-top: -20px;
-    padding-top: 1em;
-    &:before {
-      content: "";
+      display: none;
     }
   }
 }
@@ -431,10 +431,11 @@ p.update {
     content: "update";
   }
   + p.update {
-    margin-top: -20px;
-    padding-top: 1em;
+    margin-top: 0;
+    padding-top: 0;
     &:before {
       content: "";
+      display: none;
     }
   }
 }

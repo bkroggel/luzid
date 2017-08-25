@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
   // sticky navbar on mobile
-  if($(window).width() < 991) {
+  if($(window).width() < 767) {
     var sticky = new Waypoint.Sticky({
-      element: $('.bk-blog-nav')[0]
+      element: $('.js-stuck-nav')[0]
     })
 
 

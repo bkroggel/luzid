@@ -55,4 +55,25 @@ $(document).ready(function() {
 
   }
 
+  // add caption to Images
+  function add_caption (){
+    var caption_wrapper = '<div class="image_frame" />';
+    var no_classes = ['no_title'];
+    var split_divider = '\\';
+    var converter = new showdown.Converter();
+    $('.bk-blog-style img').each(function() {
+      if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class'), no_classes)) == -1) {
+        $(this).wrap(caption_wrapper);
+        var info = $(this).attr('alt').split(split_divider);
+        var image_title = converter.makeHtml(info[0]);
+        var image_source = converter.makeHtml(info[1]);
+        if (info[1]) {
+          $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_source+'</div></div>');
+        } else {
+          $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div></div>');
+        }
+      }
+    });
+  };
+  add_caption();
 });

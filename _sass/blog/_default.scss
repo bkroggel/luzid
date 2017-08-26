@@ -268,9 +268,9 @@
   .bk_img_big_screen {
     display: none;
     img {
-      width: 90px;
+      width: 75px;
       height: auto;
-      border-radius: 50%;
+      border-radius: 3px;
     }
     @include media-query($medium) {
       display: block;

@@ -289,10 +289,12 @@ span.info:after {
   p {
     font-size: 1.1em;
     margin-bottom: 0;
+    line-height: 1.4em;
     .reversefootnote {
       font-size: 0.7rem;
       vertical-align: middle;
       border: none;
+      line-height: 1em;
     }
     em {
       font-size: 1em;
@@ -302,6 +304,10 @@ span.info:after {
     font-size: 0.7rem;
     font-family: $reading;
     font-weight: 300;
+  }
+  li {
+    line-height: 1em;
+    padding-bottom: 5px;
   }
   &:before {
     content: "";
@@ -450,5 +456,58 @@ p.update {
       content: "";
       display: none;
     }
+  }
+}
+
+// Images
+.bk-blog-style p>img {
+  padding: 0;
+  width: 100%;
+  position: relative;
+  + img {
+    margin-top: 20px;
+  }
+}
+
+.image_frame {
+  position: relative;
+  @include media-query($small){
+    width: 110%;
+    margin-left: -10%;
+    max-width: unset;
+  }
+}
+
+.image_caption {
+  position: absolute;
+  border-top: 1px solid $dark-color;
+  width: 20%;
+  top: 0;
+  left: 100%;
+  padding: 10px 0;
+  padding-right: 2%;
+  margin-left: 20px;
+  p,
+  em,
+  a {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 0.8rem;
+    border-bottom: none;
+    line-height: 1.3em;
+    font-weight: 700;
+    color: $blog-font-color;
+    margin: 0;
+  }
+}
+
+.image_source {
+  margin-top: 10px;
+  p,
+  em,
+  a {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: $dark-color;
   }
 }

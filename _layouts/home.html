@@ -3,9 +3,38 @@ layout: default
 ---
 <script type="text/javascript">
    jQuery(document).ready(function() {
+
      $("time.timeago").timeago();
+
+     if($(window).width() < 767) {
+       var sticky = new Waypoint.Sticky({
+         element: $('.js-stuck-nav')[0]
+       })
+     }
+
+     var navHeight = $('.bk-blog-nav').outerHeight(true) - 15; // hight of navbar - the negative offset (also check css)
+     var bk_wrapper = '<div class="bk-blog__navigation-wrapper" />'
+     var secondHeight = $('.bk-blog__navigation').height();
+
+     $('.bk-blog__navigation').wrap(bk_wrapper);
+     $('.bk-blog__navigation-wrapper').height(secondHeight);
+
+     $('.bk-blog__navigation-wrapper').waypoint({
+       handler: function(direction) {
+         if (direction === 'down') {
+           $('.bk-blog__navigation').addClass('stuck');
+         } else {
+           $('.bk-blog__navigation').removeClass('stuck');
+         }
+       },
+       offset: navHeight
+     });
+
+
    });
+
 </script>
+
 {% include navigation/_blog_horizontal-nav.html %}
 {% include blog/_main.html %}
 {% include blog/_pagination.html %}

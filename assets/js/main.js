@@ -2,28 +2,10 @@ $(document).ready(function() {
 
   // sticky navbar on mobile
   if($(window).width() < 767) {
-    var sticky = new Waypoint.Sticky({
-      element: $('.js-stuck-nav')[0]
-    })
 
 
-    var navHeight = $('.bk-blog-nav').outerHeight(true) - 15; // hight of navbar - the negative offset (also check css)
-    var bk_wrapper = '<div class="bk-blog__navigation-wrapper" />'
-    var secondHeight = $('.bk-blog__navigation').height();
 
-    $('.bk-blog__navigation').wrap(bk_wrapper);
-    $('.bk-blog__navigation-wrapper').height(secondHeight);
-
-    $('.bk-blog__navigation-wrapper').waypoint({
-      handler: function(direction) {
-        if (direction === 'down') {
-          $('.bk-blog__navigation').addClass('stuck');
-        } else {
-          $('.bk-blog__navigation').removeClass('stuck');
-        }
-      },
-      offset: navHeight
-    });
+    
 
     // blog-dropdown
     $('#blog-nav-dropdown').click(function() {

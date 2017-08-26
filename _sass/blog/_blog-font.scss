@@ -488,11 +488,11 @@ p.update {
     font-family: $serif;
     font-style: italic;
     font-size: 0.8rem;
-    border-bottom: none;
     line-height: 1.3em;
     font-weight: 700;
     color: $blog-font-color;
     margin: 0;
+    border-color: $blog-font-color;
   }
   @include media-query($medium){
     position: absolute;
@@ -515,5 +515,6 @@ p.update {
     font-size: 0.7rem;
     font-weight: 400;
     color: $dark-color;
+    border-color: $dark-color;
   }
 }

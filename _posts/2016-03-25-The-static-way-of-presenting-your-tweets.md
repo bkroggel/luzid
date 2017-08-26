@@ -14,8 +14,7 @@ While working on my little personal website I came up with the idea, that a shor
 
 <!-- more -->
 
-![the offical twitter widget](/assets/img/page/blog/2016/March/twitter-official.png){:style="margin-top:0; margin-bottom:0" #thefourth}
-{:.left50}
+![Offical Twitter Widget \ Individually accessible via [https://twitter.com/settings/widgets](https://twitter.com/settings/widgets)](/assets/img/page/blog/2016/March/twitter-official.png)
 
 Speaking of a nice design: Using the official [Embedded Timeline](https://dev.twitter.com/web/embedded-timelines) Feature of Twitter wasn't really an option for me. Of course, there are definitely some situations, where a simple and fast working solution might come in handy, but creating a website based on a simplistic approach definitely needs a much more tailored and well fitting option.
 
@@ -33,9 +32,8 @@ So let me introduce you to the glorious javascript only approach:
 
 Alright. Now you've got the chance to take a look at your new way of embedding twitter timelines, but let me tell you a few things about how this JavaScript component works (and can be used) and why it is a real game changer for any user of static site generators.
 
- [![twitter1](/assets/img/page/blog/2016/March/twitter1.png)](http://www.bastiankroggel.com/#twitter)
-{:.img100}
-
+ ![Twitter-Post-Fetcher \ [Link](http://www.bastiankroggel.com/#twitter) to implementation in production environment](/assets/img/page/blog/2016/March/twitter1.png)
+ {:.img100}
 
 Above you can see a screenshot of my very own [Twitter-Post-Fetcher](http://www.jasonmayes.com/projects/twitterApi) implementation, which powers the twitter section of my homepage. You'll probably notice that the feed looks quite different in comparison to the official twitter widget and even the [example](http://codepen.io/jasonmayes/full/Ioype/) of Jason Mayes uses a completely different approach with it's basic top to bottom presentation.
 

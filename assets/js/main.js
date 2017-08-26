@@ -40,11 +40,12 @@ $(document).ready(function() {
   // add caption to Images
   function add_caption (){
     var caption_wrapper = '<div class="image_frame" />';
-    var no_classes = ['no_title'];
+    var no_classes = ['no_caption']; // more than one "no_classes" currently not supported (26. August 2017)
     var split_divider = '\\';
     var converter = new showdown.Converter();
     $('.bk-blog-style img').each(function() {
-      // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class'), no_classes)) == -1) {
+      // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class').split(' ')[0], no_classes)) == -1) {
+      // just works if one of the items in the "no_classes" array is placed on section[0] in the html class
       if ($(this).attr('alt') && !($(this).parent().hasClass(no_classes))) {
         $(this).wrap(caption_wrapper);
         var info = $(this).attr('alt').split(split_divider);

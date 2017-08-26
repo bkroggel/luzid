@@ -10,7 +10,7 @@ thumbnail:
   stlye: classic
 ---
 ![Website on MacBook Screen](/assets/img/page/blog/2015/December/main-website-mockup.jpg)
-{:.img100 .no_title}
+{:.img100 .no_caption}
 
 Was lange Zeit auf meinem Rechner vor sich hin schlummerte, ist endlich bereit den Schritt an die frische Luft zu tun und den kleinen Zeh vorsichtig in das nasse Kühl der Öffentlichkeit zu strecken.
 <!-- more -->

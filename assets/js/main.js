@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
 
-    
+
 
     // blog-dropdown
     $('#blog-nav-dropdown').click(function() {
@@ -44,7 +44,8 @@ $(document).ready(function() {
     var split_divider = '\\';
     var converter = new showdown.Converter();
     $('.bk-blog-style img').each(function() {
-      if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class'), no_classes)) == -1) {
+      // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class'), no_classes)) == -1) {
+      if ($(this).attr('alt') && !($(this).parent().hasClass(no_classes))) {
         $(this).wrap(caption_wrapper);
         var info = $(this).attr('alt').split(split_divider);
         var image_title = converter.makeHtml(info[0]);

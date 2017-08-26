@@ -9,10 +9,10 @@ thumbnail:
   img: /assets/img/page/blog/2015/December/ppe-conference.jpg
   style: big
 ---
-[![PPE-Conference Website](/assets/img/page/blog/2015/December/ppe-conference.jpg)](http://www.ppe-conference.com)
+![Hompage der PPE-Conference 2015 an der Zeppelin Universität \ der Sourcecode der Website ist bei [Github](https://github.com/bkroggel/WebPage) einsehbar](/assets/img/page/blog/2015/December/ppe-conference.jpg)
 {:.cover}
 
-[Website](http://www.ppe-conference.com) der ersten PPE-Conference des Sociology, Politics and Economics Lehrstuhl der [Zeppelin Universität Friedrichshafen](http://www.zu.de).  
+[Website](https://github.com/bkroggel/WebPage) der ersten PPE-Conference des Sociology, Politics and Economics Lehrstuhl der [Zeppelin Universität Friedrichshafen](http://www.zu.de).  
 Sowohl Design-Prozess (der Website) als auch Entwicklung entstanden im Team-Work aus "einer Hand" und sind somit (hoffentlich) in ein konsistenten Bild übergegangen. Maßgebliche Vorgaben bzw. Anforderungen begrenzten sich lediglich auf Inhalt, Farbgebung und entsprechendes, bereits entwickelte Logo Grafik.
 <!-- more -->
 

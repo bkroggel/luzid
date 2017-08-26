@@ -471,7 +471,7 @@ p.update {
 
 .image_frame {
   position: relative;
-  @include media-query($small){
+  @include media-query($medium){
     width: 110%;
     margin-left: -10%;
     max-width: unset;
@@ -479,14 +479,9 @@ p.update {
 }
 
 .image_caption {
-  position: absolute;
-  border-top: 1px solid $dark-color;
-  width: 20%;
-  top: 0;
-  left: 100%;
-  padding: 10px 0;
-  padding-right: 2%;
-  margin-left: 20px;
+  width: calc(100% - (30% + 15px));
+  padding: 15px 30% 15px 15px;
+  background: rgba(255, 255, 255, 1);
   p,
   em,
   a {
@@ -499,10 +494,21 @@ p.update {
     color: $blog-font-color;
     margin: 0;
   }
+  @include media-query($medium){
+    position: absolute;
+    border-top: 1px solid $dark-color;
+    width: 20%;
+    top: 0;
+    left: 100%;
+    padding: 10px 0;
+    padding-right: 2%;
+    margin-left: 20px;
+    background: none;
+  };
 }
 
 .image_source {
-  margin-top: 10px;
+  margin-top: 5px;
   p,
   em,
   a {

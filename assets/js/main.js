@@ -60,4 +60,15 @@ $(document).ready(function() {
     });
   };
   add_caption();
+
+  // remodeling h6
+  function h6_title(){
+    var h6 = '.bk-blog-style>h6';
+    $(h6).each(function(){
+      var h6_content = $(this).text();
+      $(this).next().prepend('<h6 class="inline-title">'+h6_content+'</h6>');
+      $(this).remove();
+    });
+  };
+  h6_title();
 });

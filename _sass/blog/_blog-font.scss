@@ -245,7 +245,7 @@ pre {
 .bk-blog-style h5>a,
 .bk-blog-style h6,
 .bk-blog-style h6>a,
-span.info {
+span.title {
   font-weight: 600;
   font-size: 0.6rem;
   letter-spacing: 0.05em;
@@ -255,28 +255,41 @@ span.info {
 
 .bk-blog-style h6,
 .bk-blog-style h6>a,
-span.info {
-  line-height: 1.9em;
+span.title {
+  line-height: 1.9rem;
   float: left;
   display: block;
   margin: 0px;
-  padding-top: 5px;
+  padding: 0;
   margin-right: 4px;
 }
 
-span.info {
-  float: none;
+span.title,
+.bk-blog-style h6.inline-title,
+.bk-blog-style h6.inline-title>a, {
+  float: unset;
   display: inline;
-  vertical-align: middle;
+  vertical-align: bottom;
+  line-height: unset;
+  position: relative;
+  top: -2px;
+  @include media-query($small){
+    top: -1px;
+  };
 }
 
 .bk-blog-style h6::after,
-span.info:after {
+span.title:after {
   content:"\27F6";
   font-size: 1.2em;
   font-weight: 300;
   margin-left: 3px;
   color: #696969;
+  position: relative;
+  top: -2px;
+  @include media-query($small){
+    top: -1px;
+  };
 }
 
 .footnotes {

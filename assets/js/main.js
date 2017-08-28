@@ -71,4 +71,10 @@ $(document).ready(function() {
     });
   };
   h6_title();
+
+  function intro_section(){
+    var el_class = 'p.intro';
+    $(el_class).wrapAll('<div class="intro-frame" />')
+  };
+  intro_section();
 });

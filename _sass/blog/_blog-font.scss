@@ -322,10 +322,9 @@ blockquote { //overwriting ukit
   color: rgba(0 ,0 ,0 , .6);
   line-height: 1.5em;
   font-size: 0.9em;
-  padding-left: 20px;
   margin: 40px 0 40px 15px;
   @include media-query($medium){
-    margin: 40px 0 40px 30px;
+    margin: 40px 0 40px 40px;
     width: 80%;
   };
   &:before {

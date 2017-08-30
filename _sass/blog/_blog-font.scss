@@ -280,48 +280,6 @@ span.title:after {
   };
 }
 
-.footnotes {
-  position:relative;
-  margin-top: 30px;
-  padding-top: 20px;
-  @include media-query($medium){
-    margin-top: 40px;
-  };
-  p {
-    font-size: 1.1em;
-    margin-bottom: 0;
-    line-height: 1.4em;
-    .reversefootnote {
-      font-size: 0.7rem;
-      vertical-align: middle;
-      border: none;
-      line-height: 1em;
-    }
-    em {
-      font-size: 1em;
-    }
-  }
-  ol {
-    font-size: 0.7rem;
-    font-family: $reading;
-    font-weight: 300;
-  }
-  li {
-    line-height: 1em;
-    padding-bottom: 5px;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 6px;
-    opacity: 0.3;
-    background-color: $dark-color;
-  }
-}
-
 p.quote {
   font-family: $serif;
   font-size: 1.2rem;
@@ -361,16 +319,45 @@ blockquote { //overwriting ukit
 }
 
 .bk-blog-style blockquote p {
-  opacity: 0.7;
+  color: rgba(0 ,0 ,0 , .6);
+  line-height: 1.5em;
+  font-size: 0.9em;
   padding-left: 20px;
   margin: 40px 0 40px 15px;
-  border-left: 6px solid rgba(162, 162, 162, 0.4);
   @include media-query($medium){
     margin: 40px 0 40px 30px;
+    width: 80%;
   };
+  &:before {
+    content: "Quote";
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 0.6em;
+    margin-right: 15px;
+    color: $dark-color;
+  }
 }
 
 // Liste
+.bk-blog-style ol {
+  padding-left: 15px;
+  counter-reset: item;
+  list-style-type: none;
+  li {
+    display: block;
+    line-height: 1.7em;
+  }
+  li:before {
+    //content: counter(item, decimal-leading-zero) " ";
+    content: "0" counter(item);
+    counter-increment: item;
+    display: inline-block;
+    font-size: 0.6em;
+    margin-right: 15px;
+    color: $dark-color;
+  }
+}
+
 .bk-blog-style ul,
 .bk-blog-style ol {
   font-family: $reading;
@@ -381,10 +368,63 @@ blockquote { //overwriting ukit
   list-style: none;
   padding: 0 0 0 15px;
   li {
+    line-height: 1.7em;
     &:before {
-      content: '|';
-      margin-right: 5px;
+      content: "-";
+      display: inline-block;
+      font-size: 1.2em;
+      vertical-align: middle;
+      margin-right: 15px;
+      color: $dark-color;
     }
+  }
+}
+
+.bk-blog-style .footnotes {
+  position:relative;
+  margin-top: 30px;
+  padding-top: 20px;
+  @include media-query($medium){
+    margin-top: 40px;
+  };
+  p {
+    margin-bottom: 0;
+    line-height: 1.5em;
+    display: inline;
+    font-size: 1em;
+    .reversefootnote {
+      font-size: 0.7rem;
+      vertical-align: middle;
+      border: none;
+      line-height: 1em;
+      color: $dark-color;
+    }
+    em {
+      font-size: 1em;
+    }
+  }
+  ol {
+    font-family: $reading;
+    font-weight: 300;
+  }
+  li {
+    line-height: 1em;
+    padding-bottom: 5px;
+    font-size: 0.7rem;
+    &:before {
+      margin-right: 5px;
+      font-size: 0.8em;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 6px;
+    opacity: 0.3;
+    background-color: $dark-color;
   }
 }
 
@@ -504,21 +544,22 @@ p.update {
     width: 110%;
     margin-left: -10%;
     max-width: unset;
+    box-shadow: 0 0 150px -20px rgba(0,0,0,.3);
   }
 }
 
 .image_caption {
-  width: calc(100% - (30% + 15px));
-  padding: 15px 30% 15px 15px;
+  width: calc(100% - 60px);
+  padding: 30px;
   background: rgba(255, 255, 255, 1);
   p,
   em,
   a {
     font-family: $serif;
-    font-style: italic;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    letter-spacing: -0.012;
     line-height: 1.3em;
-    font-weight: 700;
+    font-weight: 400;
     color: $blog-font-color;
     margin: 0;
     border-color: $blog-font-color;
@@ -533,17 +574,35 @@ p.update {
     padding-right: 2%;
     margin-left: 20px;
     background: none;
+    p,
+    em,
+    a {
+      // font-style: italic;
+      // font-size: 0.8rem;
+      // font-weight: 700;
+      // letter-spacing: 0;
+    }
   };
 }
 
 .image_source {
   margin-top: 5px;
+  width: 70%;
   p,
   em,
   a {
+    font-family: $sans-serif;
     font-size: 0.7rem;
     font-weight: 400;
     color: $dark-color;
     border-color: $dark-color;
   }
+  @include media-query($medium){
+    width: 100%;
+    p,
+    em,
+    a {
+      font-family: $serif;
+    }
+  };
 }

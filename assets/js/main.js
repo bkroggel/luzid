@@ -77,4 +77,19 @@ $(document).ready(function() {
     $(el_class).wrapAll('<div class="intro-frame" />')
   };
   intro_section();
+
+  // screen-nav
+  function screen_nav() {
+    var screen_main = $('#screen-nav');
+    var nav_button = $('#nav_button');
+    var hor_nav = $('.bk-blog-nav');
+    nav_button.click(
+      function() {
+        screen_main.toggleClass('active');
+        hor_nav.toggleClass('active');
+        $('body').toggleClass('active')
+      }
+    );
+  }
+  screen_nav();
 });

@@ -1,0 +1,100 @@
+body.active {
+  overflow: hidden;
+}
+
+#screen-nav {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: #131212;
+  -moz-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -webkit-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  &.active {
+    transform: translate(0px, 0px);
+    transition-delay: 0s;
+  }
+}
+
+.bk-blog-nav.active {
+  li:not(.bk-burger-frame){
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+    transition: none;
+    transition-delay: 0s;
+  }
+  svg {
+    fill: white;
+    transition: all 0.4s ease-in-out;
+  }
+  .bk-burger-line {
+    background-color: white;
+    transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out 0s;
+    transform-origin: center center 0px;
+    &:first-of-type {
+      transform: rotate(45deg);
+      margin: 0;
+    }
+    &:last-of-type {
+      transform: rotate(-45deg);
+      margin: 0;
+    }
+  }
+}
+
+.bk-article-nav.active svg {
+  @include media-query($medium){
+    opacity: 1;
+    fill: white;
+    transition: opacity 0.4s ease-in-out 0s;
+  }
+}
+
+#screen-nav .scren-nav__frame {
+  position: absolute;
+  z-index: 1002;
+  left: 0;
+  right: 0;
+  padding-top: 30vh;
+  //opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -moz-transform: translate(0, 20px);
+  -o-transform: translate(0, 20px);
+  -ms-transform: translate(0, 20px);
+  -webkit-transform: translate(0, 20px);
+  transform: translate(0, 20px);
+  height: 100%;
+}
+
+#screen-nav ul {
+  padding: 0;
+  margin: 0 60px;
+}
+
+#screen-nav li {
+  list-style: none;
+  line-height: 1.6em;
+  font-size: 2.6rem;
+}
+
+#screen-nav a {
+  @include link-mix(white);
+  font-size: 1em;
+}

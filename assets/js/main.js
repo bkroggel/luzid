@@ -11,7 +11,8 @@ $(document).ready(function() {
     $('#blog-nav-dropdown').click(function() {
       var navbar_height = $('.bk-blog-nav').outerHeight(true);
       var trigger_height = $('#blog-nav-dropdown').height();
-      var margin_in_viewport = $('.bk-blog-nav--frame').offset().top - $(document).scrollTop();
+      //var margin_in_viewport = $('.bk-blog-nav--frame').offset().top - $(document).scrollTop();
+      var margin_in_viewport = $('.bk-blog-nav--frame').outerHeight(true) - $(document).scrollTop();
 
       if ($('.bk-blog-sidebar').hasClass('active')) {
         $('.bk-blog-sidebar, #blog-nav-dropdown').removeClass('active');
@@ -19,9 +20,11 @@ $(document).ready(function() {
         $('.bk-blog-sidebar').css('height', 0);
       } else {
 
-        if ($(document).scrollTop() < $('.bk-blog-nav--frame').offset().top) {
+        //if ($(document).scrollTop() < $('.bk-blog-nav--frame').offset().top) {
+        if ($(document).scrollTop() < $('.bk-blog-nav--frame').outerHeight(true)) {
           var screen_beauty = window.innerHeight / 20;
-          var sidebar_height = window.innerHeight - margin_in_viewport - navbar_height - trigger_height - screen_beauty;
+          //var sidebar_height = window.innerHeight - margin_in_viewport - navbar_height - trigger_height - screen_beauty;
+          var sidebar_height = window.innerHeight - margin_in_viewport - trigger_height - screen_beauty;
         } else {
           var screen_beauty = window.innerHeight / 30;
           var sidebar_height = window.innerHeight - navbar_height - trigger_height - screen_beauty;

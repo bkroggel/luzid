@@ -92,4 +92,17 @@ $(document).ready(function() {
     );
   }
   screen_nav();
+
+  // text-indent for blog articles
+  function img_indent() {
+    var text_img = $('p:has(img)');
+    text_img.each(function(){
+      $(this).addClass('img');
+      $('.bk-blog-style p.img img').css('margin', '0');
+    })
+  }
+  //img_indent();
+
+
+
 });

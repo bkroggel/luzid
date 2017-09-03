@@ -57,6 +57,14 @@ justify-content: $justify;
   flex-direction: column;
 }
 
+@mixin direction_row {
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 // mixin for media-querys
 @mixin media-query($device) {
   @media screen and (min-width: $device) {
@@ -78,6 +86,7 @@ justify-content: $justify;
     }
   }
 }
+
 
 // fix for js-links not showing up while hovering over them
 .js-hover:hover {

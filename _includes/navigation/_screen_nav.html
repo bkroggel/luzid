@@ -1,7 +1,24 @@
 <section id="screen-nav">
-  <div class="scren-nav__frame">
+  <div class="screen-nav__frame">
     <ul>
       {% for horizontal-nav in site.data.nav.horizontal-navs %}<li><a href="{{horizontal-nav.link}}">{{horizontal-nav.name}}</a></li>{% endfor %}
     </ul>
+
+    <div class="screen-nav__bottom">
+      <ul class="screen-nav__second">
+        {% for 3_nav in site.data.nav.footer.3_navs %}<li><a href="{{3_nav.link}}">{{3_nav.name}}</a></li>{% endfor %}
+      </ul>
+      <div class="screen-nav__copyright">
+        <p>All rights reserved © 2015 - 2017 Bastian Kroggel</p>
+      </div>
+    </div>
+
+    <div class="screen-nav__quote">
+      <p>Never give up a dream because of the time it will take to accomplish it. The time will pass anyway.</p>
+      <div class="screen-nav__quote__author"><p>- Earl Nightingale</p></div>
+    </div>
+  </div>
+  <div class="screen-nav__sign">
+    {% include svg/_sign.html %}
   </div>
 </section>

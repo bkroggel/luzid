@@ -34,13 +34,12 @@
 }
 
 .bk-blog-nav--frame {
-  margin: 100px 0 0;
-  float: left;
+  padding: 100px 0 0;
   width: 100%;
   z-index: 100;
   position: relative;
   @include media-query($xtra-small){
-    margin: 100px 0 0;
+    padding: 100px 0 0;
   };
 }
 

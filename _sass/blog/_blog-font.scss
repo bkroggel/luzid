@@ -97,6 +97,29 @@
   }
 }
 
+// margins
+address,
+dl,
+fieldset,
+figure,
+ol,
+p,
+pre,
+ul {
+  margin: 0 0 1em 0;
+}
+
+*+address,
+*+dl,
+*+fieldset,
+*+figure,
+*+ol,
+*+p,
+*+pre,
+*+ul {
+  margin-top: 1em;
+}
+
 .bk-blog-style p,
 .bk-blog-style ul,
 .bk-blog-style ol,
@@ -104,8 +127,8 @@
 .bk-blog-style p>code,
 .bk-blog-style p em {
   color: $blog-font-color_small;
-  line-height: 1.9em;
-  font-size: 1.02rem;
+  line-height: 1.8em;
+  font-size: .952rem;
   letter-spacing: 0.015em;
   @include media-query($small){
     color: $blog-font-color;
@@ -122,7 +145,11 @@
   sup a {
     border: none;
     font-size: 0.7rem;
+    white-space: nowrap;
   }
+  // + p {
+  //   text-indent: 1em;
+  // }
 }
 
 h1 + div>pre,
@@ -142,7 +169,7 @@ pre {
   // border-top: 1px solid $dark-color;
   // border-bottom: 1px solid $dark-color;
   // border-left: 1px solid $dark-color;
-  padding: 20px;
+  padding: 10px 20px;
   font-size: 0.8rem;
   line-height: 1.5em;
   border-radius: 0;
@@ -156,7 +183,7 @@ pre {
 
 .bk-blog-style h1,
 .bk-blog-style h1>a {
-  font-size: 1.275rem;
+  font-size: 1.175rem;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.035em;
@@ -164,10 +191,10 @@ pre {
   position: relative;
   width: 90%;
   @include media-query($small){
-    font-size: 1.375rem;
+    font-size: 1.275rem;
   };
   @include media-query($medium){
-    font-size: 1.375rem;
+    font-size: 1.275rem;
   };
 }
 
@@ -190,9 +217,9 @@ pre {
 
 .bk-blog-style h2,
 .bk-blog-style h2>a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   @include media-query($small){
-    font-size: 1.375rem;
+    font-size: 1.275rem;
   };
 }
 
@@ -222,9 +249,9 @@ pre {
   h3>a,
   h4,
   h4>a {
-    font-size: 1rem;
+    font-size: 0.95rem;
     @include media-query($small){
-      font-size: 1rem;
+      font-size: 0.95rem;
     };
   }
 }
@@ -429,11 +456,11 @@ blockquote { //overwriting ukit
 
 // big letter just in article view
 .bk-blog-content>p:first-of-type:first-letter {
-  font-size: 6.2rem;
+  font-size: 5.7rem;
   font-family: $serif;
   margin-right: 10px;
   float: left;
-  line-height: 0.9em;
+  line-height: 0.85em;
   margin-bottom: -20px;
 }
 
@@ -474,6 +501,9 @@ p.update {
   a {
     font-size: 0.9rem;
   }
+  // + p {
+  //   text-indent: 0;
+  // }
   @include media-query($small){
     margin: 0;
   };
@@ -528,9 +558,14 @@ p.update {
 }
 
 // Images
-.bk-blog-style p>img {
+// .bk-blog-style p.img {
+//   text-indent: 0;
+// }
+
+.bk-blog-style p img {
   padding: 0;
   width: 100%;
+  // margin-left: -1em;
   position: relative;
   + img {
     margin-top: 20px;

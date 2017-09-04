@@ -216,12 +216,45 @@ a.blog-posts--title {
 
 .bk-footer-1__sec1__top ul li,
 .bk-footer-1__sec3__top ul li {
-  line-height: 1.7em
+  line-height: 1.3em;
+  padding: 2px 0;
 }
 
 .bk-footer-1__sec1__top ul li a,
 .bk-footer-1__sec3__top ul li a {
-  font-size: 0.9em;
+  position: relative;
+  display: inline-block;
+  font-family: $reading;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform-origin: right center;
+    -ms-transform-origin: right center;
+    transform-origin: right center;
+    height: 1px;
+    background: white;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover:before {
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
 }
 
 .bk-footer-1__sec2 h3 {

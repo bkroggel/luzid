@@ -20,7 +20,6 @@
 
 <section class="bk-article-title">
 
-
   <div class="bk-article-title__row">
     <div class="bk-side-space article-column">
     </div>
@@ -30,6 +29,19 @@
     <div class="bk-side-space article-column">
     </div>
   </div>
+  {% if page.sub_title %}
+  <div class="bk-article-title__row">
+    <div class="bk-side-space article-column">
+    </div>
+    <div class="bk-article-main article-column bk-sub_title__border">
+      <div class="bk-sub_title bk-title-frame bk-sub_title-frame">
+        <h3>{{ page.sub_title }}</h3>
+      </div>
+    </div>
+    <div class="bk-side-space article-column">
+    </div>
+  </div>
+  {% endif %}
 
   <div class="bk-article-title__row">
     <div class="bk-side-space article-column">

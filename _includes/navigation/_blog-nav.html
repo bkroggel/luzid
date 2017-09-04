@@ -3,7 +3,7 @@
     {% for blog-nav in site.data.nav.blog-navs %}<li><a href="{{blog-nav.link}}">{{blog-nav.name}}</a></li>{% endfor %}
   </ul>
   <ul class="bk-blog-info bk-blog-info--mini js-hover">
-    <li><a id="back-button" onclick="window.history.back()">&#8592; back to hompage</a></li>
+    <li><a id="back-button" onclick="{{site.url}}">&#8592; back to hompage</a></li>
     <!-- modify so that it will redirect to the previous blog site if bastiankroggel.com/blog otherwise to bastiankroggel.com -->
     <li class="copyright"><p>&#169; 2015 - 2017 | Bastian Kroggel</p></li>
   </ul>

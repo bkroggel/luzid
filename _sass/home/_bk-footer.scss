@@ -68,13 +68,13 @@ footer {
   @include align-items(center);
 }
 
-.bk-footer-logo svg {
-  fill: white;
-  &:first-of-type {
+.bk-footer-logo {
+  svg {
     width: 25px;
     height: 25px;
+    fill: white;
   }
-  &:last-of-type {
+  &>svg:last-of-type {
     width: 130px;
     height: 10px;
     margin-left: 10px;

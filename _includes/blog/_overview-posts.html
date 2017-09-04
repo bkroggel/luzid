@@ -21,6 +21,9 @@
   <div class="bk-overview-posts__frame">
     {% include blog/overview-posts/_date.html %}
     <a class="blog-posts--title" href="{{ post.url }}">
+      {% if post.sub_title %}<div class="bk-sub_title">
+        <h3>{{ post.sub_title }}</h3>
+      </div>{% endif %}
       <h1 class="posts-title">{{ post.title }}</h1>
     </a>
     <div class="bk-blog-posts--tags">

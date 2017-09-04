@@ -1,5 +1,6 @@
 ---
 title: "The static way of presenting your tweets"
+sub_title: "Twitter-Post-Fetcher"
 author: Bastian Kroggel
 date: 2016-03-25 15:16:00 +0200
 tags: [about, english]
@@ -28,7 +29,7 @@ As you might have guessed (for example by reading the title of this post) I do n
 
 So let me introduce you to the glorious javascript only approach:
 
-# [Twitter-Post-Fetcher by Jason Mayes](http://www.jasonmayes.com/projects/twitterApi)
+## [Twitter-Post-Fetcher by Jason Mayes](http://www.jasonmayes.com/projects/twitterApi)
 
 Alright. Now you've got the chance to take a look at your new way of embedding twitter timelines, but let me tell you a few things about how this JavaScript component works (and can be used) and why it is a real game changer for any user of static site generators.
 
@@ -44,7 +45,7 @@ To be honest, while this nice looking javascript hack has a lot of advantages th
 
 First of all. **It is javascript**. Wow, what a surprise. While most of you won't think of it as a disadvantage it disqualifys Twitter-Post-Fetcher as an option for users who don't have any basic knowledge of the most common web developing languages. HTML, CSS, and Javascript shouldn't be strange acronyms for you. Bear in mind that there isn't any way to modify (or even set up) your personalized version of the component without writing some (yeah…very basic) lines of javascript and html code.  
 
-## The simple example
+### The simple example
 
 ```javascript
 var config1 = {

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // sticky navbar on mobile
-  if($(window).width() < 767) {
+  if($(window).width() < 991) {
 
 
 
@@ -96,15 +96,19 @@ $(document).ready(function() {
   }
   screen_nav();
 
-  // text-indent for blog articles
-  function img_indent() {
-    var text_img = $('p:has(img)');
-    text_img.each(function(){
-      $(this).addClass('img');
-      $('.bk-blog-style p.img img').css('margin', '0');
-    })
+  //back button
+  function back_button(id){
+    var marker = $(id);
+    var url = "localhost:4000";
+    var redirect = "http://localhost:4000/";
+    if (document.referrer.indexOf(url) >= 0) {
+      marker.attr('onclick', 'window.history.back()');
+    } else {
+      marker.attr('href', redirect);
+    }
   }
-  //img_indent();
+  back_button('#back-button, #announcement_link');
+
 
 
 

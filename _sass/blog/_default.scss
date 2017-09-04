@@ -4,6 +4,7 @@
   position: relative;
   width: 25px;
   height: 25px;
+  cursor: pointer;
   @include media-query($xtra-small) {
     width: 35px;
     height: 35px;
@@ -136,9 +137,10 @@
     margin-top: 0;
   }
   h1.posts-title {
-    max-width: 70%;
+    max-width: 100%;
     padding: 0;
     margin: 0 0 13px 0;
+    @include media-query($small);
   }
 }
 
@@ -150,7 +152,7 @@
 }
 
 .bk-blog-posts__date {
-  margin: 0 0 6px 0;
+  margin: 0 0 10px 0;
   line-height: 1em;
   .true-date {
     display: inline-block;
@@ -160,6 +162,10 @@
       width: auto;
     };
   }
+}
+
+.bk-article-title .bk-blog-posts__date {
+  margin: 0 0 26px 0;
 }
 
 .bk-blog-thumbnail {

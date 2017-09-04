@@ -93,6 +93,9 @@
   grid-column: 1 / 2;
   grid-row: 3 / 4;
   background: #fdf5f0;
+  img {
+    object-position: top left;
+  }
 }
 
 .bk-message {
@@ -167,6 +170,13 @@
   position: absolute;
   right: 15px;
   bottom: 15px;
+  &>a {
+    position: unset;
+    opacity: 1;
+    &:hover{
+      opacity: 1;
+    }
+  }
   svg {
     fill: black;
     width: 25px;

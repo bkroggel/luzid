@@ -1,20 +1,14 @@
 ---
 title: "Just a usual test for a new blog style"
+sub_title: '"The Circle" im Review Check.'
 author: Bastian Kroggel
 date: 2017-08-19 20:54:54 +0200
 tags: [about, english]
 ---
-Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae sem eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. Aliquam ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci.
+Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae [sem](http://bastiankroggel.com) eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. *Aliquam* ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci.
 {:.intro}
 
-Aber weil ich jetzt auch nicht so bin, möchte ich doch noch ein klein wenig zusätzlichen Text zum Besten geben, der dann ebenfalls an Ort und Stelle angezeigt wird. Wichtig ist mir an der Aktion auch zu zeigen, dass der margin-bottom, der hier Angezeigt wird bei der doppelten Kombination von zwei Intro-Sections auf 1em (oder rem das muss sich zeigen) verkleinert wird und nur der Letzte der Intro-Blöcke tatsächlich mit einem großen Margin nach unten glänzen darf.
-{:.intro}
-
-Aber weil ich jetzt auch nicht so bin, möchte ich doch noch ein klein wenig zusätzlichen Text zum Besten geben, der dann ebenfalls an Ort und Stelle angezeigt wird. Wichtig ist mir an der Aktion auch zu zeigen, dass der margin-bottom, der hier Angezeigt wird bei der doppelten Kombination von zwei Intro-Sections auf 1em (oder rem das muss sich zeigen) verkleinert wird und nur der Letzte der Intro-Blöcke tatsächlich mit einem großen Margin nach unten glänzen darf.
-{:.intro}
-
-
-Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae sem eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. Aliquam ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci. Vivamus quam nibh, tristique id tortor ac, volutpat vehicula ex. <span>Nulla ante eros, elementum at mattis eget, lacinia id erat.</span>{:.highlighted} Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae sem eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. Aliquam ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci. Vivamus quam nibh, tristique id tortor ac, volutpat vehicula ex. Nulla ante eros, elementum at mattis eget, lacinia id erat.[^go]
+Nam [sem](http://bastiankroggel.com) auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae sem eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. Aliquam ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci. Vivamus quam nibh, tristique id tortor ac, volutpat vehicula ex. <span>Nulla ante eros, elementum at mattis eget, lacinia id erat.</span>{:.highlighted} Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae sem eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. Aliquam ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci. Vivamus quam nibh, tristique id tortor ac, volutpat vehicula ex. Nulla ante eros, elementum at mattis eget, lacinia id erat.[^go]
 
 <!-- more -->
 

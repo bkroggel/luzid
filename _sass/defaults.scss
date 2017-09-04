@@ -7,13 +7,14 @@ $blog-font-color: #4e4e4e;
 $blog-font-color_small: rgb(0,0,0);
 $highlighted-color: #ffa4f8;
 $light-accent: aliceblue;
+$underline-color: $highlighted-color;
 
 $sans-serif: "Open Sans", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 $serif: "Charter", "Times New Roman", Times, serif;
 $reading: "Roboto", "Helvetica Neue", Arial, sans-serif;
 
 ::selection {
-  background: $highlighted-color;
+  background: $darkest-color;
   color: #fff;
   text-shadow: none;
 }
@@ -84,6 +85,17 @@ justify-content: $justify;
       text-decoration: none;
       color: $mixin-color;
     }
+  }
+}
+
+@mixin pure-link($mixin-color) {
+  color: $mixin-color;
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    text-decoration: none;
+    color: $mixin-color;
   }
 }
 

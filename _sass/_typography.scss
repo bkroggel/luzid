@@ -83,7 +83,10 @@ a.blog-posts--title {
 }
 
 .overview-posts h1.posts-title {
-  font-size: 2.25em;
+  font-size: 1.85em;
+  @include media-query($xtra-small){
+    font-size: 2.25em;
+  };
 }
 
 // Tags Formatting
@@ -117,6 +120,8 @@ a.blog-posts--title {
       display: none;
   }
 }
+
+
 
 // old footer
 // ------------
@@ -228,15 +233,29 @@ a.blog-posts--title {
   letter-spacing: 2px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.bk-footer-1__sec2 h3 {
+  font-weight: 300;
+  color: white;
+}
+
+.bk-footer-1__social p a {
+  @include link-mix(white);
+}
+
+
+// links with hover animation
+.bk-links a {
   &:before {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    -webkit-transform-origin: right center;
-    -ms-transform-origin: right center;
-    transform-origin: right center;
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
     height: 1px;
     background: white;
     -webkit-transform: scale(0, 1);
@@ -248,20 +267,25 @@ a.blog-posts--title {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:hover:before {
-    -webkit-transform-origin: left center;
-    -ms-transform-origin: left center;
-    transform-origin: left center;
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
 }
 
-.bk-footer-1__sec2 h3 {
-  font-weight: 300;
-  color: white;
+a.link {
+  position: relative;
+  display: inline-block;
+  font-family: $reading;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.6rem;
 }
 
-.bk-footer-1__social p a {
-  @include link-mix(white);
+a.announcement_link {
+  @include pure-link($blog-font-color);
+  &:before {
+    background: $blog-font-color;
+  }
 }

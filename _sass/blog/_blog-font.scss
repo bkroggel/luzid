@@ -32,6 +32,16 @@
   letter-spacing: 1px;
 }
 
+.bk-sub_title h3 {
+  background: $dark-color;
+  padding: 4px 10px;
+  color: white;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  width: 70%;
+  line-height: 1.4rem;
+}
+
 .vertical-blog-link a {
   @include link-mix($darkest-color);
 }
@@ -52,10 +62,10 @@
   }
   a {
     @include link-mix($blog-font-color_small);
-    border-bottom: 1px solid $blog-font-color_small;
+    border-bottom: 1px solid $underline-color;
     @include media-query($small){
       @include link-mix($blog-font-color);
-      border-bottom: 1px solid $blog-font-color;
+      border-bottom: 1px solid $underline-color;
     };
   }
   h1,
@@ -328,14 +338,14 @@ p.quote {
   &:before {
     content: open-quote;
     position: absolute;
-    left: -0.4em;
+    left: -0.5em;
     top: 0em;
     font-size: 3em;
   }
   &:after {
     content: close-quote;
     position: absolute;
-    right: -0.4em;
+    right: -0.5em;
     bottom: -0.45em;
     font-size: 3em;
   }
@@ -464,7 +474,8 @@ blockquote { //overwriting ukit
   margin-bottom: -20px;
 }
 
-p.intro {
+p.intro,
+p.intro a {
   width: 100%;
   line-height: 1.6em;
   font-size: 0.9rem;
@@ -491,7 +502,7 @@ p.info,
 p.update {
   background-color: $light-accent;
   position: relative;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 15px;
   margin-left: -15px;
   margin-right: -15px;
   margin-top: 40px;
@@ -506,6 +517,9 @@ p.update {
   // }
   @include media-query($small){
     margin: 0;
+    padding: 5%;
+    margin-left: -5%;
+    margin-right: -5%;
   };
   &:before {
     text-transform: uppercase;
@@ -573,9 +587,11 @@ p.update {
 }
 
 .image_frame {
+  margin: 2em 0;
   position: relative;
   @include media-query($medium){
     width: 110%;
+    margin: 3em 0;
     margin-left: -10%;
     max-width: unset;
     box-shadow: 0 0 150px -20px rgba(0,0,0,.3);

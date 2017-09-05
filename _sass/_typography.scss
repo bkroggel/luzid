@@ -306,14 +306,63 @@ a.announcement_link {
 
 .archive__element h3 {
   font-family: $reading;
-  color: white;
+  color: $dark-color;
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   padding: 4px 10px;
   margin: 0;
-  background: $dark-color;
+  background: $main-color;
   display: inline-block;
-  transform: translateY(-50%);
+}
+
+.archive__item time,
+.item__info_2 span,
+.item__info_2:before {
+  font-family: $reading;
+  color: $blog-font-color;
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1rem;
+  margin-right: 10px;
+}
+.archive__item a {
+  font-family: $reading;
+  color: $blog-font-color;
+  font-weight: 300;
+  font-size: .9rem;
+  letter-spacing: 0.05em;
+  line-height: 1.05rem;
+}
+
+.archive__item .info_1_subtitle a {
+  color: $dark-color;
+  letter-spacing: -0.02em;
+  margin-right: 6px;
+}
+
+.archive__item time {
+  white-space: nowrap;
+}
+
+.item__info_2 {
+  line-height: 1em;
+  margin-left: 10px;
+  &:before {
+    content:'Tags: ';
+  }
+  span:after {
+    content:', ';
+  }
+  span:last-of-type:after {
+    content:'';
+  }
+  span,
+  &:before {
+    margin-right: 0;
+    color: $dark-color;
+  }
 }

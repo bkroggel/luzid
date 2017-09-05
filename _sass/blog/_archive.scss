@@ -1,70 +1,71 @@
-.bk-blog__archive {
-  padding-left: 100px;
+.bk-blog__section-title {
+  transform: translateX(-15px);
 }
 
-.bk-blog__section-title,
+.bk-blog__archive {
+  padding: 40px 30px 50px;
+  @include media-query($xtra-small){
+    padding: 80px 60px 50px;
+  };
+  @include media-query($medium){
+    padding: 100px 0px 50px;
+    padding-left: 10%;
+  };
+}
+
+#archive {
+  border-left: 1px solid $dark-color;
+  margin-top: 30px;
+  padding-bottom: 40px;
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background: $dark-color;
+    transform: translateX(-50%) rotate(20deg);
+  }
+  &:after {
+    bottom: 12px;
+  }
+}
+
+
 .archive__element {
   position: relative;
+  transform: translateX(-15px);
   &:before,
   &:after {
     content: '';
     position: absolute;
     background: $dark-color;
-  }
-  &:before {
-    right: 100%;
+    left: 0;
+    width: 70px;
     height: 1px;
-    width: 20px;
-    top: 0;
   }
-  &:after {
-    top: 0;
-    height: calc(50% + 100px);
-    left: -20px;
-    width: 1px;
-  }
-}
-
-.bk-blog__section-title {
-  &:before,
-  &:after {
-    top: 50%;
-  }
-}
-
-.archive__element {
-  margin-top: 100px;
-  margin-left: 40px;
   &:before {
-    width: 60px;
+    top: 0;
   }
   &:after {
-    height: calc(100% + 1px);
-    left: -60px;
+    bottom: 0;
   }
 }
 
 .archive__box {
-  margin-left: 40px;
-  border-left: 1px solid $dark-color;
-  display: flex;
-  max-width: 550px;
-  flex-direction: column;
-  padding: 10px;
-  position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    background: $dark-color;
-    top: 0;
-    height: calc(100% + 101px);
-    left: -61px;
-    width: 1px;
-  }
+  margin: 20px;
 }
-.archive__element__frame:last-of-type {
-  .archive__box:before,
-  .archive__element:after {
-    content: none;
-  }
+
+.archive__item {
+  @include display_flex;
+  margin: 15px 0;
+}
+
+.archive__item .item__info_1 div {
+  @include media-query($small){
+    display: inline-block;
+  };
 }

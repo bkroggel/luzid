@@ -289,3 +289,31 @@ a.announcement_link {
     background: $blog-font-color;
   }
 }
+
+// Archive ------
+.bk-blog__section-title h1 {
+  font-family: $reading;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 5px 15px;
+  margin: 0;
+  background: $dark-color;
+  display: inline;
+}
+
+.archive__element h3 {
+  font-family: $reading;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 4px 10px;
+  margin: 0;
+  background: $dark-color;
+  display: inline-block;
+  transform: translateY(-50%);
+}

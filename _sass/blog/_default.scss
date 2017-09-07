@@ -151,6 +151,9 @@
   @include media-query($medium){
     margin-right: 60px;
   }
+  .blog-posts--overview-content .intro-frame {
+    margin-bottom: 0;
+  }
 }
 
 .bk-blog-posts__date {

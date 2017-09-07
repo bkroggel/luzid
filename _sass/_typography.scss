@@ -92,7 +92,8 @@ a.blog-posts--title {
 // Tags Formatting
 
 .bk-blog-posts--tags p a,
-.bk-footer-1__social p a {
+.bk-footer-1__social p a,
+.archive_tag p {
   @include link-mix($dark-color);
   font-family: $sans-serif;
   font-weight: 600;
@@ -110,7 +111,6 @@ a.blog-posts--title {
 
 .blog-posts--content a {
   @include link-mix($darkest-color);
-  border-bottom: 1px solid $dark-color;
 }
 
 .blog-posts--content {

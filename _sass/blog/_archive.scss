@@ -1,5 +1,7 @@
 .bk-blog__section-title {
   transform: translateX(-15px);
+  @include display_flex;
+  @include align-items(center);
 }
 
 .archive__svg {
@@ -82,4 +84,28 @@
   @include media-query($small){
     display: inline-block;
   };
+}
+
+.archive_tag {
+  display: table-cell;
+  p {
+    display: table;
+    position: relative;
+    border: 1px solid $dark-color;
+    border-radius: 20px;
+    padding: 3px 15px;
+    vertical-align: middle;
+    margin: 0 0 0 40px;
+    background-color: $main-color;
+    &:before {
+      content: '+';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-60%, -52%);
+      color: $dark-color;
+      opacity: 0.3;
+      font-size: 4rem;
+    }
+  }
 }

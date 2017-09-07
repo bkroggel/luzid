@@ -9,7 +9,7 @@
       {% endif %}
     {% endfor %}
     {% if tag %}
-      {% capture tags_content_temp %}{{tags_content}}<a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% endcapture %}
+      {% capture tags_content_temp %}{{tags_content}}<a href="/blog/tags/{{ tag.slug }}/">{{ tag.name }}</a>{% endcapture %}
       {% assign tags_content = tags_content_temp %}
     {% endif %}
   {% endfor %}
@@ -60,7 +60,7 @@
     <div class="bk-article-main article-column">
       <div class="bk-blog-posts--tags">
         <p>
-          {{ tags_content | replace: '/blog/tag/work/', '/work/' }}
+          {{ tags_content }}
         </p>
       </div>
       <div class="article-author-img">

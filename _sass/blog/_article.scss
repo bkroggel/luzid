@@ -52,6 +52,7 @@
 
 .bk-article-main {
   width: 100%;
+  z-index: 1;
   @include display_flex;
   @include direction_column;
   @include justify-content(center);

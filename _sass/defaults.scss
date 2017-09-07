@@ -5,7 +5,7 @@ $slightly-darker: #dadada;
 $darkest-color: rgb(0,0,0);
 $blog-font-color: #4e4e4e;
 $blog-font-color_small: rgb(0,0,0);
-$highlighted-color: #ffa4f8;
+$highlighted-color: #cdddf6;
 $light-accent: aliceblue;
 $underline-color: $highlighted-color;
 
@@ -17,6 +17,14 @@ $reading: "Roboto", "Helvetica Neue", Arial, sans-serif;
   background: $darkest-color;
   color: #fff;
   text-shadow: none;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // device width (use bootstrap)

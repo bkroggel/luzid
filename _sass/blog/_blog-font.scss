@@ -58,14 +58,22 @@
   p,
   a {
     font-family: $reading;
-    font-weight: 300;
+    font-weight: 400;
   }
   a {
     @include link-mix($blog-font-color_small);
-    border-bottom: 1px solid $underline-color;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background: rgba(119, 119, 119, 0.33);
+      bottom: 5%;
+      left: 0;
+    }
     @include media-query($small){
       @include link-mix($blog-font-color);
-      border-bottom: 1px solid $underline-color;
     };
   }
   h1,
@@ -137,7 +145,7 @@ ul {
 .bk-blog-style p>code,
 .bk-blog-style p em {
   color: $blog-font-color_small;
-  line-height: 1.8em;
+  line-height: 1.7em;
   font-size: .952rem;
   letter-spacing: 0.015em;
   @include media-query($small){
@@ -148,6 +156,7 @@ ul {
 .bk-blog-style p {
   .highlighted {
     background-color: $highlighted-color;
+    padding: 2px 4px;
   }
   strong {
     font-weight: 600;
@@ -197,7 +206,6 @@ pre {
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.035em;
-  text-transform: uppercase;
   position: relative;
   width: 90%;
   @include media-query($small){
@@ -206,6 +214,17 @@ pre {
   @include media-query($medium){
     font-size: 1.275rem;
   };
+  &:before {
+    position: absolute;
+    opacity: 0.2;
+    left: -3%;
+    content: '#';
+    font-weight: 700;
+    font-size: 3rem;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .bk-blog-style h1 + p,
@@ -397,7 +416,7 @@ blockquote { //overwriting ukit
 .bk-blog-style ul,
 .bk-blog-style ol {
   font-family: $reading;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .bk-blog-style ul {
@@ -431,9 +450,11 @@ blockquote { //overwriting ukit
     .reversefootnote {
       font-size: 0.7rem;
       vertical-align: middle;
-      border: none;
       line-height: 1em;
       color: $dark-color;
+      &:after {
+        content: none;
+      }
     }
     em {
       font-size: 1em;
@@ -466,27 +487,34 @@ blockquote { //overwriting ukit
 
 // big letter just in article view
 .bk-blog-content>p:first-of-type:first-letter {
-  font-size: 5.7rem;
+  font-size: 5.45rem;
   font-family: $serif;
   margin-right: 10px;
   float: left;
-  line-height: 0.85em;
-  margin-bottom: -20px;
+  line-height: 0.82em;
+  margin-bottom: 0px;
 }
 
 p.intro,
 p.intro a {
   width: 100%;
-  line-height: 1.6em;
-  font-size: 0.9rem;
-  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 1.2rem;
+  font-weight: 300;
   color: $blog-font-color;
   font-family: $reading;
   margin: 0;
+  em {
+    font-size: 1em;
+  }
 }
 
 p.intro + p.intro {
   margin-top: 0.6em;
+}
+
+p.intro a:after {
+  bottom: 10%;
 }
 
 .bk-blog-style hr {

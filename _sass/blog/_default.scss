@@ -150,8 +150,17 @@
   a.link {
     color: $blog-font-color;
     font-size: 0.8rem;
+    position: relative;
+    display: inline-block;
+    font-family: $reading;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
     &:before {
       background: $blog-font-color;
+    }
+    &:after {
+      content: none;
     }
   }
 }
@@ -202,7 +211,7 @@
     flex-direction: row;
     &__img {
       width: 40%;
-      margin: 6px 0 8px 0;
+      margin: 6px 0 6px 0;
       height: unset;
     }
     &__content {

@@ -144,6 +144,16 @@
     margin: 0 0 13px 0;
     @include media-query($small);
   }
+  p:last-of-type {
+    margin-bottom: .5em;
+  }
+  a.link {
+    color: $blog-font-color;
+    font-size: 0.8rem;
+    &:before {
+      background: $blog-font-color;
+    }
+  }
 }
 
 .bk-overview-posts__frame {
@@ -192,7 +202,7 @@
     flex-direction: row;
     &__img {
       width: 40%;
-      margin: 9px 0 9px 0;
+      margin: 6px 0 8px 0;
       height: unset;
     }
     &__content {
@@ -216,9 +226,9 @@
     max-height: 300px;
     @include media-query($medium){
       width: 40%;
-      height: 193px;
+      height: 204px;
       max-height: unset;
-      margin: 9px 20px 15px 0;
+      margin: 6px 20px 15px 0;
     };
   }
 }

@@ -6,6 +6,14 @@
     {% include navigation/_blog-nav.html %}
   </div>
   <div class="bk-blog__content bk-blog__archive">
+    <div class="archive__bc">
+      <ul>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/blog/archive">Archive</a></li>
+        <li><a href="/blog/archive/tags">Tags</a></li>
+        <li><a href="/blog/archive/tags/{{ page.tag }}">{{ page.title }}</a></li>
+      </ul>
+    </div>
     <div class="bk-blog__section-title">
       <h1>Archive</h1>
       <div class="archive_tag"><p>{{ page.title }}</p></div>

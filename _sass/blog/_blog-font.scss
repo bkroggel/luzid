@@ -87,7 +87,6 @@
   h6,
   h6>a {
     font-family: $sans-serif;
-    border-bottom: none;
   }
   h4,
   h4>a {
@@ -111,6 +110,9 @@
       vertical-align: middle;
       margin-right: 7px;
       opacity: 0.4;
+    }
+    a:after {
+      content: none;
     }
   }
 }
@@ -165,6 +167,9 @@ ul {
     border: none;
     font-size: 0.7rem;
     white-space: nowrap;
+    &:after {
+      content: none;
+    }
   }
   // + p {
   //   text-indent: 1em;
@@ -674,6 +679,9 @@ p.update {
     font-weight: 400;
     color: $dark-color;
     border-color: $dark-color;
+  }
+  a:after {
+    bottom: 0;
   }
   @include media-query($medium){
     width: 100%;

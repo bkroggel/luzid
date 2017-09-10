@@ -1,0 +1,20 @@
+{% capture tags_link %}<a href="/blog/archive/tags/{{ tag.slug }}/">{{ tag.name }}</a>{% endcapture %}
+
+{% if forloop.first %}
+  <div class="tags__element">
+  <h3 id="{{ tag.name | slice: 0, 1}}">{{ tag.name | slice: 0, 1}}</h3>
+  <div class="bk__tags">
+  {% capture ptag %}{{ tag.name | slice: 0, 1 }}{% endcapture %}
+{% else %}
+  {% capture ntag %}{{ tag.name | slice: 0, 1 }}{% endcapture %}
+  {% if ntag != ptag %}
+      </div>
+    </div>
+    <div class="tags__element">
+    <h3 id="{{ tag.name | slice: 0, 1}}">{{ tag.name | slice: 0, 1}}</h3>
+    <div class="bk__tags">
+  {% endif %}
+  {% capture ptag %}{{ tag.name | slice: 0, 1 }}{% endcapture %}
+{% endif %}
+
+{{ tags_link }}

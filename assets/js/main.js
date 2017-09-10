@@ -109,7 +109,33 @@ $(document).ready(function() {
   }
   back_button('#back-button, #announcement_link');
 
+  //tag_alphabet
+  function tag_alphabet(){
+    var alphabet = $('.tags__alphabet ul li');
+    var marker = $('.tags__element h3')
+    marker.each(function(){
+      var letter = $(this).text();
+      if($(window).width() < 767) {
+        //removed href so scroll_alphabet will work
+        $('.tags__alphabet ul li:contains("'+letter+'")').wrapInner( '<a></a>');
+      }else{
+        $('.tags__alphabet ul li:contains("'+letter+'")').wrapInner( '<a href="#'+letter+'"></a>');
+      }
 
+    })
+  }
+  tag_alphabet();
 
+  if($(window).width() < 767) {
+    function scroll_alphabet(){
+      var alph_bttn = $('.tags__alphabet ul li a');
+      var root = $('html, body');
+      alph_bttn.click(function() {
+        var letter = $(this).text();
+        root.scrollTop($('#'+letter).offset().top - 160);
+      })
+    }
+    scroll_alphabet();
+  }
 
 });

@@ -12,13 +12,13 @@ horizontal-navs:
 
 blog-navs:
   - name: Blog
-    link: /blog
+    link: /
   - name: About me
     link: /about
   - name: Archive
     link: /blog/archive
   - name: Tags
-    link: /blog/tags
+    link: /blog/archive/tags
   - name: Contact
     link: /contact
   - name: Imprint
@@ -33,7 +33,7 @@ footer:
     - name: About
       link: /about
     - name: Blog
-      link: /blog
+      link: /
     - name: Contact
       link: /contact
   2_navs:

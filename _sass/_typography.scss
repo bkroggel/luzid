@@ -102,7 +102,8 @@ a.blog-posts--title {
 
 .bk-blog-posts--tags p a,
 .bk-footer-1__social p a,
-.archive_tag p {
+.archive_tag p,
+.bk__tags a {
   @include link-mix($dark-color);
   font-family: $sans-serif;
   font-weight: 600;
@@ -329,7 +330,9 @@ a.announcement_link {
 .archive__item time,
 .item__info_2 span,
 .item__info_2:before,
-.archive__bc a {
+.archive__bc a,
+.tags__alphabet li,
+.tags__alphabet li a {
   font-family: $reading;
   color: $blog-font-color;
   font-weight: 600;
@@ -340,9 +343,16 @@ a.announcement_link {
   margin-right: 10px;
 }
 
-.archive__bc a {
+.archive__bc a,
+.tags__alphabet li {
   margin-right: 0;
   color: $dark-color;
+}
+
+.tags__alphabet li a {
+  color: $blog-font-color;
+  margin-right: 0;
+  cursor: pointer;
 }
 
 .archive__item a {
@@ -381,4 +391,14 @@ a.announcement_link {
     margin-right: 0;
     color: $dark-color;
   }
+}
+
+#tags h3 {
+  text-transform: uppercase;
+  font-family: $reading;
+  color: $blog-font-color;
+  margin-bottom: 10px;
+  line-height: 1em;
+  display: inline-block;
+  position: relative;
 }

@@ -9,7 +9,7 @@
       {% endif %}
     {% endfor %}
     {% if tag %}
-      {% capture tags_content_temp %}{{tags_content}}<a href="/blog/tags/{{ tag.slug }}/">{{ tag.name }}</a>{% endcapture %}
+      {% capture tags_content_temp %}{{tags_content}}<a href="/blog/archive/tags/{{ tag.slug }}/">{{ tag.name }}</a>{% endcapture %}
       {% assign tags_content = tags_content_temp %}
     {% endif %}
   {% endfor %}

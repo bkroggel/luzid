@@ -4,7 +4,7 @@ horizontal-navs:
   - name: About
     link: /about
   - name: Blog
-    link: /blog
+    link: /
   - name: Work
     link: /work
   - name: Contact

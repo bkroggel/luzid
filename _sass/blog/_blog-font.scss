@@ -147,7 +147,7 @@ ul {
 .bk-blog-style p>code,
 .bk-blog-style p em {
   color: $blog-font-color_small;
-  line-height: 1.7em;
+  line-height: 1.9em;
   font-size: .952rem;
   letter-spacing: 0.015em;
   @include media-query($small){
@@ -207,29 +207,18 @@ pre {
 
 .bk-blog-style h1,
 .bk-blog-style h1>a {
-  font-size: 1.175rem;
+  font-size: 1.575rem;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.035em;
   position: relative;
   width: 90%;
   @include media-query($small){
-    font-size: 1.275rem;
+    font-size: 1.975rem;
   };
   @include media-query($medium){
-    font-size: 1.275rem;
+    font-size: 1.975rem;
   };
-  &:before {
-    position: absolute;
-    opacity: 0.2;
-    left: -3%;
-    content: '#';
-    font-weight: 700;
-    font-size: 3rem;
-    vertical-align: middle;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 }
 
 .bk-blog-style h1 + p,
@@ -345,10 +334,14 @@ p.quote {
   font-family: $serif;
   font-size: 1.2rem;
   line-height: 1.2em;
-  width: 80%;
-  margin: 50px 10%;
+  width: 86%;
+  margin: 50px 7%;
   text-align: center;
   position: relative;
+  padding: 20px 0;
+  border: 1px solid $blog-font-color;
+  border-left: none;
+  border-right: none;
   @include media-query($medium){
     width: 140%;
     margin: 50px -20%;
@@ -405,7 +398,7 @@ blockquote { //overwriting ukit
   list-style-type: none;
   li {
     display: block;
-    line-height: 1.7em;
+    line-height: 1.9em;
   }
   li:before {
     //content: counter(item, decimal-leading-zero) " ";
@@ -492,25 +485,26 @@ blockquote { //overwriting ukit
 
 // big letter just in article view
 .bk-blog-content>p:first-of-type:first-letter {
-  font-size: 5.45rem;
+  font-size: 6.3rem;
   font-family: $serif;
   margin-right: 10px;
   float: left;
-  line-height: 0.82em;
+  line-height: 0.76em;
   margin-bottom: 0px;
 }
 
 p.intro,
 p.intro a {
   width: 100%;
-  line-height: 1.5em;
-  font-size: 1.2rem;
+  line-height: 1.75em;
+  font-size: 1.1rem;
   font-weight: 300;
   color: $blog-font-color;
   font-family: $reading;
   margin: 0;
   em {
     font-size: 1em;
+    line-height: 1em;
   }
 }
 
@@ -640,7 +634,7 @@ p.update {
   a {
     font-family: $serif;
     font-size: 1rem;
-    letter-spacing: -0.012;
+    letter-spacing: -0.012em;
     line-height: 1.3em;
     font-weight: 400;
     color: $blog-font-color;
@@ -660,6 +654,7 @@ p.update {
     p,
     em,
     a {
+      font-size: 0.85rem;
       // font-style: italic;
       // font-size: 0.8rem;
       // font-weight: 700;

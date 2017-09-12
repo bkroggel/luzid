@@ -34,7 +34,7 @@ excerpt_separator: <!-- more -->
 markdown: kramdown
 highlighter: rouge
 
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-feed]
 
 sass:
   style: compressed
@@ -47,6 +47,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: "Bastian Kroggel"
 
 
 # Exclude from processing.

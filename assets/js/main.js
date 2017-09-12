@@ -45,7 +45,7 @@ $(document).ready(function() {
     var caption_wrapper = '<div class="image_frame" />';
     var no_classes = ['no_caption']; // more than one "no_classes" currently not supported (26. August 2017)
     var split_divider = '\\';
-    var converter = new showdown.Converter();
+    var converter = new showdown.Converter({ extensions: ['twitter'] });
     $('.bk-blog-style img').each(function() {
       // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class').split(' ')[0], no_classes)) == -1) {
       // just works if one of the items in the "no_classes" array is placed on section[0] in the html class
@@ -137,5 +137,10 @@ $(document).ready(function() {
     }
     scroll_alphabet();
   }
+
+  // imagezoom
+  var zooming = new Zooming({
+    defaultZoomable: '.bk-blog-content img'
+  })
 
 });

@@ -92,7 +92,8 @@
   min-height: 800px;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  //z-index: -1; // --> otherwise zoom won't work
+  // overflow: hidden; // --> otherwise zoom won't work
   border-bottom: 1px solid $slightly-darker;
   @include display_flex;
   flex-direction: column;
@@ -141,8 +142,15 @@
   h1.posts-title {
     max-width: 100%;
     padding: 0;
-    margin: 0 0 13px 0;
-    @include media-query($small);
+    margin: 0;
+    line-height: 0.9em;
+  }
+  a.blog-posts--title {
+    display: inline-block;
+    margin: 20px 0 20px 0;
+  }
+  .bk-sub_title {
+    margin-bottom: 5px;
   }
   p:last-of-type {
     margin-bottom: .5em;
@@ -166,7 +174,7 @@
 }
 
 .bk-overview-posts__frame {
-  max-width: 700px;
+  max-width: 750px;
   @include media-query($medium){
     margin-right: 60px;
   }
@@ -176,7 +184,7 @@
 }
 
 .bk-blog-posts__date {
-  margin: 0 0 15px 0;
+  margin: 0;
   line-height: 1em;
   .true-date {
     display: inline-block;
@@ -235,11 +243,16 @@
     max-height: 300px;
     @include media-query($medium){
       width: 40%;
-      height: 204px;
+      height: 207px;
       max-height: unset;
-      margin: 6px 20px 15px 0;
+      margin: 8px 20px 8px 0;
     };
   }
+}
+
+.bk-blog-posts--tags {
+  line-height: 1em;
+  margin-bottom: 1em;
 }
 
 .bk-blog-posts--tags p {

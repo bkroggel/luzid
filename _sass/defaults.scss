@@ -3,7 +3,7 @@ $main-color: #EFEFEF;
 $slightly-darker: #dadada;
 $dark-color: #A2A2A2;
 $darkest-color: rgb(0,0,0);
-$blog-font-color: #4e4e4e;
+$blog-font-color: #272727;
 $blog-font-color_small: rgb(0,0,0);
 $highlighted-color: #cdddf6;
 $light-accent: aliceblue;
@@ -14,7 +14,8 @@ $serif: "Charter", "Times New Roman", Times, serif;
 $reading: "Roboto", "Helvetica Neue", Arial, sans-serif;
 
 ::selection {
-  background: $darkest-color;
+  background: rgba(0,0,0,.5);
+  opacity: 0.5;
   color: #fff;
   text-shadow: none;
 }
@@ -25,6 +26,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
+}
+main {
+  overflow: hidden;
 }
 
 // device width (use bootstrap)
@@ -123,5 +127,6 @@ justify-content: $justify;
   "blog/default",
   "blog/pagination",
   "home/announcement",
+  "home/static",
   "minima/syntax-highlighting.scss"
 ;

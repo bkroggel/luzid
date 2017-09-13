@@ -67,3 +67,21 @@
     float: none;
     margin-bottom: 0px;
 }
+
+// new image frame position if width less than 1200 because padding left
+.bk-static-style .image_caption {
+  @media screen and (max-width: 1200px) and (min-width: $medium){
+    right: 5px;
+    left: unset;
+    top: unset;
+    bottom: 5px;
+    text-align: right;
+    border: none;
+  };
+}
+
+// sign at the end of static site
+.bk-static-style svg {
+  width: 200px;
+  transform: translate(-10px, calc(-1em - 20px));
+}

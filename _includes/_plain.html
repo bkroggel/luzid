@@ -6,6 +6,9 @@
 
       <div class="bk-blog-style bk-blog-content bk-static-style" before="{{ page.title }}">
         {{ content }}
+        {% if page.sign %}
+          {% include svg/_sign.html %}
+        {% endif %}
       </div>
 
 

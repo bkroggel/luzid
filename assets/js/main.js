@@ -140,7 +140,9 @@ $(document).ready(function() {
 
   // imagezoom
   var zooming = new Zooming({
-    defaultZoomable: '.bk-blog-content img'
+    defaultZoomable: '.bk-blog-content img',
+    bgColor: 'black',
+    bgOpacity: '0.7'
   })
 
 });

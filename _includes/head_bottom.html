@@ -6,7 +6,7 @@
       var caption_wrapper = '<div class="image_frame" />';
       var no_classes = ['no_caption']; // more than one "no_classes" currently not supported (26. August 2017)
       var split_divider = '\\';
-      var converter = new showdown.Converter({ extensions: ['twitter'] });
+      var converter = new showdown.Converter(); //{ extensions: ['twitter'] }
       $('.bk-blog-style img').each(function() {
         // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class').split(' ')[0], no_classes)) == -1) {
         // just works if one of the items in the "no_classes" array is placed on section[0] in the html class
@@ -62,7 +62,6 @@
       $('.bk-article-title').waypoint(function(direction) {
         if (direction === 'down') {
           stuck_el.addClass('in_view');
-          console.log('toggled');
         } else {
           stuck_el.removeClass('in_view');
          }
@@ -74,38 +73,19 @@
         if (direction === 'down') {
           stuck_el.addClass('stuck');
         } else {
-
           stuck_el.removeClass('stuck');
          }
       }, {
         offset: 'bottom-in-view'
       })
 
-    }
+    } // endif
 
     if($(window).width() > 991) {
       $(window).on('load', function() {
 
-      //   var scroll_offset_top = trigger_one.offset().top + trigger_one.outerWidth(true);
-      //   var scroll_offset_bottom = $('#social_bottom .social_share').offset().top - $(window).innerHeight();
-      //
-      //   $(window).scroll(function(){
-      //     var scroll = $(window).scrollTop();
-      //     var st = $(this).scrollTop();
-      //     var lastScrollTop = 0;
-      //
-      //     if (scroll >= scroll_offset_top && scroll <= scroll_offset_bottom && st > lastScrollTop){
-      //       social_menu.addClass('social_show');
-      //     } else {
-      //       social_menu.removeClass('social_show');
-      //     }
-      //     lastScrollTop = st;
-      //   });
-
       var social_menu = $('.fixed-social .social_share').one();
       var trigger_one = $('.vertical-blog-link');
-      //var social_el = $('.fixed-social .social_share a');
-      //var social_el_show = $('.fixed-social .social_share.social_show a');
 
         trigger_one.waypoint(function(direction) {
           if (direction === 'down') {

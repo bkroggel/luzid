@@ -15,10 +15,10 @@
   &:before {
     content: attr(before);
     position: absolute;
-    transform: translateY(-100%);
+    transform: translateY(-115%);
     transform-origin: right top;
     white-space: nowrap;
-    font-size: 16vw;
+    font-size: 15vw;
     left: 15px;
     line-height: 0.8em;
     @include media-query($small){

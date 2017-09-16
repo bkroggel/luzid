@@ -143,7 +143,10 @@
     max-width: 100%;
     padding: 0;
     margin: 0;
-    line-height: 0.9em;
+    line-height: 1.2em;
+    @include media-query($small){
+      line-height: 1.1em;
+    };
   }
   a.blog-posts--title {
     display: inline-block;
@@ -151,6 +154,9 @@
   }
   .bk-sub_title {
     margin-bottom: 5px;
+    @include media-query($small){
+      margin-bottom: 7px;
+    };
   }
   p:last-of-type {
     margin-bottom: .5em;
@@ -243,7 +249,7 @@
     max-height: 300px;
     @include media-query($medium){
       width: 40%;
-      height: 207px;
+      height: 222px;
       max-height: unset;
       margin: 8px 20px 8px 0;
     };

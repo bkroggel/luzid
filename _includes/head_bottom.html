@@ -1,0 +1,183 @@
+{% if page.layout == 'post' or page.layout == 'static' %}
+  <script type="text/javascript" src="{{ "/assets/js/showdown.min.js" | prepend: site.baseurl}}"></script>
+  <script type="text/javascript">
+    // add caption to Images
+    function add_caption (){
+      var caption_wrapper = '<div class="image_frame" />';
+      var no_classes = ['no_caption']; // more than one "no_classes" currently not supported (26. August 2017)
+      var split_divider = '\\';
+      var converter = new showdown.Converter({ extensions: ['twitter'] });
+      $('.bk-blog-style img').each(function() {
+        // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class').split(' ')[0], no_classes)) == -1) {
+        // just works if one of the items in the "no_classes" array is placed on section[0] in the html class
+        if ($(this).attr('alt') && !($(this).parent().hasClass(no_classes))) {
+          $(this).wrap(caption_wrapper);
+          var info = $(this).attr('alt').split(split_divider);
+          var image_title = converter.makeHtml(info[0]);
+          var image_source = converter.makeHtml(info[1]);
+          if (info[1]) {
+            $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_source+'</div></div>');
+          } else {
+            $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div></div>');
+          }
+        }
+      });
+    };
+    add_caption();
+  </script>
+{% endif %}
+
+<script type="text/javascript" src="{{ "/assets/js/jquery.waypoints.min.js" | prepend: site.baseurl}}"></script>
+
+<script type="text/javascript" src="{{ "/assets/js/sticky.min.js" | prepend: site.baseurl}}"></script>
+
+{% if page.layout == 'post' or page.layout == 'home' %}
+  <script type="text/javascript" src="{{ "/assets/js/jquery.timeago.js" | prepend: site.baseurl}}"></script>
+{% endif %}
+
+{% if page.layout == 'post' or page.layout == 'static' %}
+  <script src="{{ "/assets/js/zooming.min.js" | prepend: site.baseurl}}"></script>
+    <script type="text/javascript">
+    // imagezoom
+    var zooming = new Zooming({
+      defaultZoomable: '.bk-blog-content img',
+      bgColor: 'black',
+      bgOpacity: '0.7'
+    })
+    </script>
+{% endif %}
+
+{% if page.layout == 'post' or page.layout == 'static' %}
+  <script type="text/javascript">
+    if($(window).width() < 991) {
+      var share_frame_height = $('#social_bottom .social_share').outerHeight();
+      $('#social_bottom').css('height', share_frame_height);
+      if ($('#social_bottom').length > 0) {
+        $('.bk-blog-content').css('margin-bottom', 0)
+      }
+
+      var stuck_frame = $('#social_bottom');
+      var stuck_el = $('.social_share');
+
+      $('.bk-article-title').waypoint(function(direction) {
+        if (direction === 'down') {
+          stuck_el.addClass('in_view');
+        } else {
+
+          stuck_el.removeClass('in_view');
+         }
+      }, {
+        offset: 'bottom-in-view'
+      })
+
+      stuck_frame.waypoint(function(direction) {
+        if (direction === 'down') {
+          stuck_el.addClass('stuck');
+        } else {
+
+          stuck_el.removeClass('stuck');
+         }
+      }, {
+        offset: 'bottom-in-view'
+      })
+
+    }
+
+    if($(window).width() > 991) {
+      $(window).on('load', function() {
+
+      //   var scroll_offset_top = trigger_one.offset().top + trigger_one.outerWidth(true);
+      //   var scroll_offset_bottom = $('#social_bottom .social_share').offset().top - $(window).innerHeight();
+      //
+      //   $(window).scroll(function(){
+      //     var scroll = $(window).scrollTop();
+      //     var st = $(this).scrollTop();
+      //     var lastScrollTop = 0;
+      //
+      //     if (scroll >= scroll_offset_top && scroll <= scroll_offset_bottom && st > lastScrollTop){
+      //       social_menu.addClass('social_show');
+      //     } else {
+      //       social_menu.removeClass('social_show');
+      //     }
+      //     lastScrollTop = st;
+      //   });
+
+      var social_menu = $('.fixed-social .social_share').one();
+      var trigger_one = $('.vertical-blog-link');
+      //var social_el = $('.fixed-social .social_share a');
+      //var social_el_show = $('.fixed-social .social_share.social_show a');
+
+        trigger_one.waypoint(function(direction) {
+          if (direction === 'down') {
+            social_menu.addClass('social_show')
+          } else {
+            social_menu.removeClass('social_show')
+           }
+         }, {
+           offset: - $('.vertical-blog-link').outerWidth()
+        })
+
+        $('#social_bottom').waypoint(function(direction) {
+          if (direction === 'down') {
+            social_menu.removeClass('social_show')
+          } else {
+            social_menu.addClass('social_show')
+           }
+         }, {
+           offset: $(window).innerHeight()
+        })
+
+      }); //end window scroll
+    }
+  </script>
+{% endif %}
+
+{% if page.layout == 'tags' %}
+  <script type="text/javascript">
+    //tag_alphabet
+    function tag_alphabet(){
+      var alphabet = $('.tags__alphabet ul li');
+      var marker = $('.tags__element h3')
+      marker.each(function(){
+        var letter = $(this).text();
+        if($(window).width() < 767) {
+          //removed href so scroll_alphabet will work
+          $('.tags__alphabet ul li:contains("'+letter+'")').wrapInner( '<a></a>');
+        }else{
+          $('.tags__alphabet ul li:contains("'+letter+'")').wrapInner( '<a href="#'+letter+'"></a>');
+        }
+
+      })
+    }
+    tag_alphabet();
+
+    if($(window).width() < 767) {
+      function scroll_alphabet(){
+        var alph_bttn = $('.tags__alphabet ul li a');
+        var root = $('html, body');
+        alph_bttn.click(function() {
+          var letter = $(this).text();
+          root.scrollTop($('#'+letter).offset().top - 160);
+        })
+      }
+      scroll_alphabet();
+    }
+  </script>
+{% endif %}
+
+<script type="text/javascript">
+//back button
+  function back_button(id){
+    var marker = $(id);
+    var url = "{{ site.url }}";
+    var redirect = "{{ site.url }}";
+    if (document.referrer.indexOf(url) >= 0) {
+      marker.attr('onclick', 'window.history.back()');
+    } else {
+      marker.attr('href', redirect);
+    }
+  }
+  back_button('#back-button, #announcement_link');
+</script>
+
+<script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl}}"></script>

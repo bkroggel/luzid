@@ -41,7 +41,7 @@
 .bk-article-title__row {
   @include display_flex;
   &:last-of-type {
-    margin-bottom: -84px;
+    margin-bottom: -103px;
   }
 }
 
@@ -194,4 +194,97 @@
   @include media-query($medium){
     display: none;
   };
+}
+
+
+//social share
+.bk-blog-style .social_share {
+  @include display_flex;
+  a {
+    @include display_flex;
+    @include align-items(center);
+    @include justify-content(center);
+    width: 42px;
+    height: 40px;
+    background: $dark-color;
+    &:after {
+      content: none;
+    }
+    i {
+      color: white;
+    }
+  }
+}
+
+#social_bottom {
+  margin-top: 50px;
+  @include media-query($medium){
+    margin-top: 0;
+  }
+}
+
+#social_bottom .social_share {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+  @include justify-content(space-between);
+  a {
+    width: calc(100%/6 - 1px);
+  }
+  @include media-query($medium){
+    position: relative;
+    @include justify-content(flex-start);
+    margin-top: 50px;
+    a {
+      margin-right: 5px;
+      width: 40px;
+    }
+  }
+  &.in_view {
+    transform: translateY(0%);
+    transition: all 0.3s ease-in-out;
+  }
+  &.stuck {
+    position: absolute;
+  }
+}
+
+.bk-blog-style .fixed-social .social_share {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  //transform: translate(-100%, -50%);
+  transform: translate(0%, -50%);
+  transition: all 0.4s ease-in-out;
+  margin-top: 0;
+  @include direction_column;
+  a {
+    margin: 0 0 5px 0;
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+    &:nth-of-type(6){ transition-delay: .0s }
+    &:nth-of-type(5){ transition-delay: .03s }
+    &:nth-of-type(4){ transition-delay: .06s }
+    &:nth-of-type(3){ transition-delay: .09s }
+    &:nth-of-type(2){ transition-delay: .12s }
+    &:nth-of-type(1){ transition-delay: .15s }
+  }
+  &.social_show {
+    //transform: translate(0%, -50%);
+    //transition: all 0.4s ease-in-out;
+    a {
+      transform: translateX(0%);
+      transition: all 0.4s ease-in-out;
+      &:nth-of-type(1){ transition-delay: .0s }
+      &:nth-of-type(2){ transition-delay: .03s }
+      &:nth-of-type(3){ transition-delay: .06s }
+      &:nth-of-type(4){ transition-delay: .09s }
+      &:nth-of-type(5){ transition-delay: .12s }
+      &:nth-of-type(6){ transition-delay: .15s }
+    }
+  }
 }

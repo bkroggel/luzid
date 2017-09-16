@@ -40,30 +40,6 @@ $(document).ready(function() {
 
   }
 
-  // add caption to Images
-  function add_caption (){
-    var caption_wrapper = '<div class="image_frame" />';
-    var no_classes = ['no_caption']; // more than one "no_classes" currently not supported (26. August 2017)
-    var split_divider = '\\';
-    var converter = new showdown.Converter({ extensions: ['twitter'] });
-    $('.bk-blog-style img').each(function() {
-      // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class').split(' ')[0], no_classes)) == -1) {
-      // just works if one of the items in the "no_classes" array is placed on section[0] in the html class
-      if ($(this).attr('alt') && !($(this).parent().hasClass(no_classes))) {
-        $(this).wrap(caption_wrapper);
-        var info = $(this).attr('alt').split(split_divider);
-        var image_title = converter.makeHtml(info[0]);
-        var image_source = converter.makeHtml(info[1]);
-        if (info[1]) {
-          $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_source+'</div></div>');
-        } else {
-          $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div></div>');
-        }
-      }
-    });
-  };
-  add_caption();
-
   // remodeling h6
   function h6_title(){
     var h6 = '.bk-blog-style>h6';
@@ -95,54 +71,5 @@ $(document).ready(function() {
     );
   }
   screen_nav();
-
-  //back button
-  function back_button(id){
-    var marker = $(id);
-    var url = "localhost:4000";
-    var redirect = "http://localhost:4000/";
-    if (document.referrer.indexOf(url) >= 0) {
-      marker.attr('onclick', 'window.history.back()');
-    } else {
-      marker.attr('href', redirect);
-    }
-  }
-  back_button('#back-button, #announcement_link');
-
-  //tag_alphabet
-  function tag_alphabet(){
-    var alphabet = $('.tags__alphabet ul li');
-    var marker = $('.tags__element h3')
-    marker.each(function(){
-      var letter = $(this).text();
-      if($(window).width() < 767) {
-        //removed href so scroll_alphabet will work
-        $('.tags__alphabet ul li:contains("'+letter+'")').wrapInner( '<a></a>');
-      }else{
-        $('.tags__alphabet ul li:contains("'+letter+'")').wrapInner( '<a href="#'+letter+'"></a>');
-      }
-
-    })
-  }
-  tag_alphabet();
-
-  if($(window).width() < 767) {
-    function scroll_alphabet(){
-      var alph_bttn = $('.tags__alphabet ul li a');
-      var root = $('html, body');
-      alph_bttn.click(function() {
-        var letter = $(this).text();
-        root.scrollTop($('#'+letter).offset().top - 160);
-      })
-    }
-    scroll_alphabet();
-  }
-
-  // imagezoom
-  var zooming = new Zooming({
-    defaultZoomable: '.bk-blog-content img',
-    bgColor: 'black',
-    bgOpacity: '0.7'
-  })
 
 });

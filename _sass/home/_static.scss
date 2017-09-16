@@ -18,21 +18,25 @@
     transform: translateY(-100%);
     transform-origin: right top;
     white-space: nowrap;
-    font-size: 3rem;
+    font-size: 16vw;
     left: 15px;
+    line-height: 0.8em;
+    @include media-query($small){
+      font-size: 12vw;
+    };
     @include media-query($medium){
       transform: rotate(270deg) translateY(1rem);
       top: 0;
       left: unset;
       right: 100%;
       font-size: 7rem;
+      line-height: 1em;
     };
   }
 }
 
 .bk-static-style:before {
   font-family: $reading;
-  line-height: 1em;
   color: $slightly-darker;
   text-transform: lowercase;
   margin-bottom: 0;

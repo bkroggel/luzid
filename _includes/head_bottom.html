@@ -57,17 +57,17 @@
       }
 
       var stuck_frame = $('#social_bottom');
-      var stuck_el = $('.social_share');
+      var stuck_el = $('#social_bottom .social_share');
 
       $('.bk-article-title').waypoint(function(direction) {
         if (direction === 'down') {
           stuck_el.addClass('in_view');
+          console.log('toggled');
         } else {
-
           stuck_el.removeClass('in_view');
          }
       }, {
-        offset: 'bottom-in-view'
+        offset: $(window).innerHeight() - $('.bk-article-title').outerHeight() - $('#social_bottom .social_share').outerHeight()
       })
 
       stuck_frame.waypoint(function(direction) {

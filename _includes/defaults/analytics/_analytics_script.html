@@ -1,0 +1,61 @@
+
+
+<script>
+
+var gaProperty = 'UA-XXXXXXX-X';
+var disableStr = 'ga-disable-' + gaProperty;
+if (document.cookie.indexOf(disableStr + '=true') > -1) {
+  window[disableStr] = true;
+}
+function gaOptout() {
+document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+window[disableStr] = true;
+}
+
+
+if (document.cookie.indexOf('gaIgnore=true') > -1) {
+  window[gaIgnore] = true;
+}
+function gaIgnore(){
+  document.cookie = 'gaIgnore=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  window[gaIgnore] = true;
+}
+
+$(window).on('load', function() {
+  setTimeout(
+    function(){
+      if (!window[disableStr] && !window[gaIgnore]) {
+        $('#ggl-analytics').addClass('ggl-active');
+        setTimeout(
+          function(){
+            $('.ggl-active').css('transition', 'none')
+        }, 500);
+
+        if($(window).width() > 1199) {
+          $('footer').waypoint(function(direction){
+            if (direction === 'down') {
+              $('#ggl-analytics').addClass('stuck');
+            } else {
+              $('#ggl-analytics').removeClass('stuck');
+            }
+           }, {
+             offset: $(window).innerHeight() - ($(window).innerHeight() - $('#ggl-analytics').outerWidth())/2
+          })
+        }
+
+        $("#ggl-close").click(function(){
+          gaIgnore();
+            if ($('#ggl-analytics').hasClass('stuck')) {
+              $('#ggl-analytics').removeClass('ggl-active').css({
+                'transition': 'all 0.4s ease-in-out',
+                'transform': 'rotate(-90deg) translate(0%, 100%)'
+              })
+            } else {
+              $('#ggl-analytics').removeClass('ggl-active').css('transition', 'all 0.4s ease-in-out')
+            }
+        })
+      }
+  }, 1000);
+})
+
+</script>

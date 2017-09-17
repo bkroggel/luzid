@@ -1,0 +1,114 @@
+#ggl-analytics {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 90%;
+  max-width: 600px;
+  transform-origin: left top;
+  transform: translate(-50%, 100%);
+  z-index: 99;
+  transition: all 0.4s ease-in-out;
+  @include media-query($large){
+    top: 50%;
+    left: 100%;
+    bottom: unset;
+    transform: rotate(-90deg) translate(-50%, 0%);
+    width: unset;
+    max-width: unset;
+  };
+  &.ggl-active {
+    transform:translate(-50%, 0%);
+    @include media-query($large){
+      transform: rotate(-90deg) translate(-50%, -100%);
+    };
+  }
+  &.stuck {
+    position: absolute;
+    bottom: 100%;
+    top: unset;
+    transform-origin: left bottom;
+    transform: rotate(-90deg) translate(0%, 100%);
+    &.ggl-active {
+      transform: rotate(-90deg) translate(0%, 0%);
+      transition: none;
+    }
+  }
+}
+
+
+
+.ggl-analytics__inner {
+}
+
+.ggl-analytics__main {
+  //height: 60px;
+  background-color: rgb(130,130,130);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 25px 15px 25px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  @include media-query($large){
+    width: 70vh;
+  };
+}
+
+.ggl-content {
+  position: relative;
+  p {
+    font-size: 10px;
+    line-height: 1.25em;
+    margin-bottom: 0;
+    color: white;
+  }
+}
+
+.ggl-bttn {
+  position: relative;
+  display: flex;
+  line-height: 1em;
+  text-align: center;
+  margin-left: 15px;
+  @include link-mix(white);
+  a {
+    font-size: 9px;
+    line-height: 1.25em;
+    margin-bottom: 0;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 5px;
+    width: 80px;
+    span {
+      margin-left: 2px;
+    }
+  }
+}
+
+.ggl-close{
+  position: absolute;
+  width: 18px;
+  height: 16px;
+  margin-left: 15px;
+  flex: none;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+  &:before,
+  &:after {
+    content: '';
+    background: white;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    top: 50%;
+    left: 0;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

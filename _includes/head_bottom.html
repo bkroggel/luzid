@@ -1,16 +1,67 @@
+<script type="text/javascript" src="{{ "/assets/js/jquery.waypoints.min.js" | prepend: site.baseurl}}"></script>
+
 {% if page.layout == 'post' or page.layout == 'static' %}
   <script type="text/javascript" src="{{ "/assets/js/showdown.min.js" | prepend: site.baseurl}}"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
   <script type="text/javascript">
     // add caption to Images
+
+    // check whether there are more than 2 pics (so three an up) in a row
+    $('.bk-blog-style p').each(function(){
+      if ($(this).find('img').length > 2) {
+        $(this).addClass('bk-gallery');
+      }
+    })
+
+    $('.bk-gallery').each(function(){
+      var container = '<div class="bk-gallery__container" />';
+      var elem_wrap = '<div class="bk-gallery__elem" />'
+      $(this).wrapInner(container);
+      $('.bk-gallery__container').children().wrap(elem_wrap);
+      $('.bk-gallery__container').on('init', function(){
+
+        $('.slick-list').css({
+          'height': '0px',
+          'max-height': $(window).innerHeight(),
+          'overflow': 'hidden'
+        })
+        $('.slick-arrow').css('display', 'none')
+
+        $(window).on('load', function() {
+          var gallery_height = $('.slick-current').outerHeight();
+          $('.slick-list, .bk-gallery__elem').css({
+            'height': gallery_height,
+            'transition': 'all 0.4s ease-in-out'
+          })
+          $('.slick-arrow').css('display', 'block')
+          $('.bk-gallery__elem').each(function(){
+            var bg_image = $(this).find('img').attr('src');
+            var effect_div = '<div class="bk-gallery__effect" />';
+            $(this).prepend(effect_div).find('.bk-gallery__effect').css({
+              'background': 'url('+bg_image+') no-repeat center',
+              'background-size': 'cover'
+            })
+          })
+        })
+
+      }).slick({
+
+      });
+    })
+
+
+
     function add_caption (){
       var caption_wrapper = '<div class="image_frame" />';
       var no_classes = ['no_caption']; // more than one "no_classes" currently not supported (26. August 2017)
       var split_divider = '\\';
       var converter = new showdown.Converter(); //{ extensions: ['twitter'] }
+
+      // end check
       $('.bk-blog-style img').each(function() {
         // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class').split(' ')[0], no_classes)) == -1) {
         // just works if one of the items in the "no_classes" array is placed on section[0] in the html class
-        if ($(this).attr('alt') && !($(this).parent().hasClass(no_classes))) {
+        if ($(this).attr('alt') && !($(this).parent().hasClass(no_classes)) && !($(this).parents('p').hasClass('bk-gallery'))) {
           $(this).wrap(caption_wrapper);
           var info = $(this).attr('alt').split(split_divider);
           var image_title = converter.makeHtml(info[0]);
@@ -27,8 +78,6 @@
   </script>
 {% endif %}
 
-<script type="text/javascript" src="{{ "/assets/js/jquery.waypoints.min.js" | prepend: site.baseurl}}"></script>
-
 <script type="text/javascript" src="{{ "/assets/js/sticky.min.js" | prepend: site.baseurl}}"></script>
 
 {% if page.layout == 'post' or page.layout == 'home' %}
@@ -40,7 +89,7 @@
     <script type="text/javascript">
     // imagezoom
     var zooming = new Zooming({
-      defaultZoomable: '.bk-blog-content img',
+      defaultZoomable: '.bk-blog-content p:not(.bk-gallery) img', // every image which is NOT in gallery
       bgColor: 'black',
       bgOpacity: '0.7'
     })

@@ -1,0 +1,40 @@
+.bk-gallery {
+   width: calc(100% + 30px);
+   margin-left: -15px;
+   @include media-query($medium){
+     width: 110%;
+     margin-left: -10%;
+   };
+}
+
+.bk-gallery__elem {
+  position: relative;
+  overflow: hidden;
+  background: $darkest-color;
+}
+
+.bk-gallery .bk-gallery__elem img {
+  max-height: 100%;
+  max-width: 100%;
+  width: unset;
+  margin: 0 auto;
+}
+
+.bk-gallery__effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}

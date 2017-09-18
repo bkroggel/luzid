@@ -1,5 +1,3 @@
-
-
 <script>
 
 var gaProperty = 'UA-XXXXXXX-X';
@@ -43,19 +41,29 @@ $(window).on('load', function() {
           })
         }
 
-        $("#ggl-close").click(function(){
+        function close_ga_notify(){
+          if ($('#ggl-analytics').hasClass('stuck')) {
+            $('#ggl-analytics').removeClass('ggl-active').css({
+              'transition': 'all 0.4s ease-in-out',
+              'transform': 'rotate(-90deg) translate(0%, 100%)'
+            })
+          } else {
+            $('#ggl-analytics').removeClass('ggl-active').css('transition', 'all 0.4s ease-in-out')
+          }
+        }
+
+        $("#ggl-close, #ggl-ignore-bttn").click(function(){
           gaIgnore();
-            if ($('#ggl-analytics').hasClass('stuck')) {
-              $('#ggl-analytics').removeClass('ggl-active').css({
-                'transition': 'all 0.4s ease-in-out',
-                'transform': 'rotate(-90deg) translate(0%, 100%)'
-              })
-            } else {
-              $('#ggl-analytics').removeClass('ggl-active').css('transition', 'all 0.4s ease-in-out')
-            }
+          close_ga_notify();
         })
-      }
-  }, 1000);
-})
+
+        $('#ggl-optOut').click(function(){
+          gaOptout();
+          close_ga_notify();
+        })
+
+      } // end if not disabled and not ignored
+  }, 1000); // end Timeout & function
+}) // end window onload
 
 </script>

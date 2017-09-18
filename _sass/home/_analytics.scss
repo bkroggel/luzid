@@ -57,12 +57,18 @@
 
 .ggl-content {
   position: relative;
-  p {
+  p,
+  a {
     font-size: 10px;
     line-height: 1.25em;
     margin-bottom: 0;
     color: white;
   }
+  a {
+    font-style: italic;
+    font-weight: 700;
+  }
+  @include link-mix(white);
 }
 
 .ggl-bttn {

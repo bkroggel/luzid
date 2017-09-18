@@ -25,7 +25,7 @@
           'max-height': $(window).innerHeight(),
           'overflow': 'hidden'
         })
-        $('.slick-arrow').css('display', 'none')
+        $('.slick-arrow, .slick-dots').css('display', 'none')
 
         $(window).on('load', function() {
           var gallery_height = $('.slick-current').outerHeight();
@@ -33,7 +33,11 @@
             'height': gallery_height,
             'transition': 'all 0.4s ease-in-out'
           })
-          $('.slick-arrow').css('display', 'block')
+
+          setTimeout(function(){
+            $('.slick-arrow, .slick-dots').css('display', 'block')
+          }, 400)
+
           $('.bk-gallery__elem').each(function(){
             var bg_image = $(this).find('img').attr('src');
             var effect_div = '<div class="bk-gallery__effect" />';
@@ -45,7 +49,20 @@
         })
 
       }).slick({
-
+        slidesToShow: 1,
+        slidesToScrol: 1,
+        dots: true,
+        cssEase:"cubic-bezier(1,0,0,1)",
+        nextArrow: '<div type="button" class="bk-gallery__next bk-gallery__controlls"></div>',
+        prevArrow: '<div type="button" class="bk-gallery__prev bk-gallery__controlls"></div>',
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              //arrows: false
+            }
+          }
+        ]
       });
     })
 

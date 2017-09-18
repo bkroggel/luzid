@@ -44,7 +44,7 @@
       bgColor: 'black',
       bgOpacity: '0.7'
     })
-    </script>
+  </script>
 {% endif %}
 
 {% if page.layout == 'post' or page.layout == 'static' %}
@@ -104,7 +104,7 @@
             social_menu.addClass('social_show')
            }
          }, {
-           offset: $(window).innerHeight()
+           offset: $(window).innerHeight() - $('#social_bottom').innerHeight()
         })
 
       }); //end window scroll

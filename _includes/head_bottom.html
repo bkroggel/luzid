@@ -7,31 +7,84 @@
     // add caption to Images
 
     // check whether there are more than 2 pics (so three an up) in a row
+    // var startTime = window.performance.now();
     $('.bk-blog-style p').each(function(){
       if ($(this).find('img').length > 2) {
         $(this).addClass('bk-gallery');
       }
     })
+    // console.log(window.performance.now() - startTime);
 
-    $('.bk-gallery').each(function(){
-      var container = '<div class="bk-gallery__container" />';
+    // extract title and put in array
+
+    // function gallery_title_array(){
+    //   var split_divider = '\\';
+    //   var converter = new showdown.Converter();
+    //   var gta = new Array();
+    //   $('.bk-gallery img').each(function(){
+    //     if ($(this).attr('alt')) {
+    //       var info = $(this).attr('alt').split(split_divider);
+    //       var image_title = converter.makeHtml(info[0]);
+    //       var image_source = converter.makeHtml(info[1]);
+    //       if (info[1]) {
+    //         var img_info = '<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_source+'</div></div>'
+    //       } else {
+    //         var img_info = '<div class="image_caption"><div class="image_title">'+image_title+'</div></div>';
+    //       }
+    //     } else {
+    //       var img_info = '';
+    //     }
+    //     gta.push(img_info);
+    //   })
+    //   return gta
+    // }
+    //gallery_title_array();
+
+
+    $('.bk-gallery').each(function(index){
+
+      var container = '<div class="bk-gallery__container bk-gallery-no_'+index+'" />';
       var elem_wrap = '<div class="bk-gallery__elem" />';
       var spinner = '<div class="spinningCircle"></div>';
       $(this).wrapInner(container);
-      $('.bk-gallery__container').children().wrap(elem_wrap);
-      $('.bk-gallery__container').on('init', function(){
+      $('.bk-gallery-no_'+index).children().wrap(elem_wrap);
 
-        $('.slick-list').css({
+      // detect image titles
+      var split_divider = '\\';
+      var converter = new showdown.Converter();
+      var gta = new Array();
+      var gallery_index = index
+      $(this).find('img').each(function(){
+        if ($(this).attr('alt')) {
+          var info = $(this).attr('alt').split(split_divider);
+          var image_title = converter.makeHtml(info[0]);
+          var image_source = converter.makeHtml(info[1]);
+          if (info[1]) {
+            var img_info = '<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_source+'</div></div>'
+          } else {
+            var img_info = '<div class="image_caption"><div class="image_title">'+image_title+'</div></div>';
+          }
+        } else {
+          var img_info = '';
+        }
+        $(this).parent().append(img_info);
+      })
+      // end image titles
+
+      $('.bk-gallery-no_'+index).on('init', function(){
+
+        $(this).find('.slick-list').css({
           'height': '0px',
           'max-height': $(window).innerHeight(),
           'overflow': 'hidden'
         })
         $('.slick-track').css('opacity', '0')
-        $('.bk-gallery__container').prepend(spinner)
+        $('.bk-gallery-no_'+index).prepend(spinner)
 
+        //$('.bk-gallery-no_'+index).find('img').on('load', function() {
         $(window).on('load', function() {
-          var gallery_height = $('.slick-current').outerHeight();
-          $('.slick-list, .bk-gallery__elem').css({
+          var gallery_height = $('.bk-gallery-no_'+index+' .slick-current').outerHeight();
+          $('.bk-gallery-no_'+index+' .slick-list, .bk-gallery-no_'+index+' .bk-gallery__elem').css({
             'height': gallery_height,
             'transition': 'all 0.4s ease-in-out'
           })
@@ -53,7 +106,7 @@
             }, 400)
           }, 1000)
 
-          $('.bk-gallery__elem').each(function(){
+          $('.bk-gallery-no_'+index+' .bk-gallery__elem').each(function(){
             var bg_image = $(this).find('img').attr('src');
             var effect_div = '<div class="bk-gallery__effect" />';
             $(this).prepend(effect_div).find('.bk-gallery__effect').css({
@@ -61,6 +114,7 @@
               'background-size': 'cover'
             })
           })
+
         })
 
       }).slick({
@@ -73,6 +127,15 @@
         draggable: false
       });
     })
+
+    // function gallery_image_title(){
+    //   $('.bk-gallery').each(function(){
+    //     var gta = gallery_title_array();
+    //     console.log(gta[0])
+    //     var currentSlide = $('.bk-gallery__container').slick('slickCurrentSlide');
+    //   })
+    // }
+    // gallery_image_title();
 
 
 

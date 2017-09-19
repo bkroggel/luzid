@@ -15,7 +15,8 @@
 
     $('.bk-gallery').each(function(){
       var container = '<div class="bk-gallery__container" />';
-      var elem_wrap = '<div class="bk-gallery__elem" />'
+      var elem_wrap = '<div class="bk-gallery__elem" />';
+      var spinner = '<div class="spinningCircle"></div>';
       $(this).wrapInner(container);
       $('.bk-gallery__container').children().wrap(elem_wrap);
       $('.bk-gallery__container').on('init', function(){
@@ -25,7 +26,8 @@
           'max-height': $(window).innerHeight(),
           'overflow': 'hidden'
         })
-        $('.slick-arrow, .slick-dots').css('display', 'none')
+        $('.slick-track').css('opacity', '0')
+        $('.bk-gallery__container').prepend(spinner)
 
         $(window).on('load', function() {
           var gallery_height = $('.slick-current').outerHeight();
@@ -35,8 +37,21 @@
           })
 
           setTimeout(function(){
-            $('.slick-arrow, .slick-dots').css('display', 'block')
-          }, 400)
+            $('.spinningCircle').css({
+              'opacity': '0',
+              'transition': 'all 0.4s ease-in-out'
+            })
+            setTimeout(function(){
+              $('.spinningCircle').css('display', 'none')
+            }, 400)
+            setTimeout(function(){
+              $('.slick-track').css({
+                'opacity': '1',
+                'transition': 'all 0.4s ease-in-out'
+              })
+              $('.bk-gallery__container, .slick-arrow, .slick-dots').addClass('active')
+            }, 400)
+          }, 1000)
 
           $('.bk-gallery__elem').each(function(){
             var bg_image = $(this).find('img').attr('src');
@@ -52,17 +67,10 @@
         slidesToShow: 1,
         slidesToScrol: 1,
         dots: true,
-        cssEase:"cubic-bezier(1,0,0,1)",
-        nextArrow: '<div type="button" class="bk-gallery__next bk-gallery__controlls"></div>',
+        cssEase:"ease-in-out",
         prevArrow: '<div type="button" class="bk-gallery__prev bk-gallery__controlls"></div>',
-        responsive: [
-          {
-            breakpoint: 767,
-            settings: {
-              //arrows: false
-            }
-          }
-        ]
+        nextArrow: '<div type="button" class="bk-gallery__next bk-gallery__controlls"></div>',
+        draggable: false
       });
     })
 

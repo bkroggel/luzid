@@ -7,13 +7,14 @@
     // add caption to Images
 
     // check whether there are more than 2 pics (so three an up) in a row
-    // var startTime = window.performance.now();
     $('.bk-blog-style p').each(function(){
       if ($(this).find('img').length > 2) {
         $(this).addClass('bk-gallery');
       }
     })
-    // console.log(window.performance.now() - startTime);
+
+    //var startTime = window.performance.now();
+    //console.log(window.performance.now() - startTime);
 
     // extract title and put in array
 
@@ -69,7 +70,7 @@
         }
         gta.push(img_info);
       })
-      // console.log(gta)
+      // end detect image titles
 
       $('.bk-gallery-no_'+index).on('beforeChange', function(event, slick, currentSlide, nextSlide){
         $('.bk-gallery-no_'+index).parent().find('.image_caption').remove();
@@ -126,6 +127,7 @@
               })
               $('.bk-gallery, .slick-arrow, .slick-dots').addClass('active')
               $('.bk-gallery-no_'+index).parent().append(gta[0]);
+              Waypoint.refreshAll() //Waypoint refresh after all elements are loaded
             }, 400)
           }, 1000)
 

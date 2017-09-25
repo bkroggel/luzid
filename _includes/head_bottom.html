@@ -1,8 +1,10 @@
 <script type="text/javascript" src="{{ "/assets/js/jquery.waypoints.min.js" | prepend: site.baseurl}}"></script>
+<script type="text/javascript" src="{{ "/assets/js/sticky.min.js" | prepend: site.baseurl}}"></script>
 
 {% if page.layout == 'post' or page.layout == 'static' %}
   <script type="text/javascript" src="{{ "/assets/js/showdown.min.js" | prepend: site.baseurl}}"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+  <script src="{{ "/assets/js/zooming.min.js" | prepend: site.baseurl}}"></script>
   <script type="text/javascript">
     // add caption to Images
 
@@ -43,7 +45,7 @@
 
 
     $('.bk-gallery').each(function(index){
-
+      var wh = $(window).innerHeight();
       var container = '<div class="bk-gallery__container bk-gallery-no_'+index+'" />';
       var elem_wrap = '<div class="bk-gallery__elem" />';
       var spinner = '<div class="spinningCircle"></div>';
@@ -78,10 +80,9 @@
       })
 
       $('.bk-gallery-no_'+index).on('init', function(){
-
         $(this).find('.slick-list').css({
           'height': '0px',
-          'max-height': $(window).innerHeight()/4*3,
+          'max-height': wh/4*3,
           'overflow': 'hidden'
         })
         $('.slick-track').css('opacity', '0')
@@ -96,8 +97,8 @@
           })
           var gallery_height = Math.max.apply(Math,height_arr);
           //var gallery_height = $('.bk-gallery-no_'+index+' .slick-current').find('img').outerHeight();
-          var max_height = $(window).innerHeight()/5*3;
-          var min_height = $(window).innerHeight()/5*2;
+          var max_height = wh/5*3;
+          var min_height = wh/5*2;
           if (gallery_height < max_height && gallery_height > min_height){
             var initial_height = gallery_height
           } else if (gallery_height < min_height) {
@@ -179,29 +180,15 @@
       });
     };
     add_caption();
-  </script>
-{% endif %}
 
-<script type="text/javascript" src="{{ "/assets/js/sticky.min.js" | prepend: site.baseurl}}"></script>
-
-{% if page.layout == 'post' or page.layout == 'home' %}
-  <script type="text/javascript" src="{{ "/assets/js/jquery.timeago.js" | prepend: site.baseurl}}"></script>
-{% endif %}
-
-{% if page.layout == 'post' or page.layout == 'static' %}
-  <script src="{{ "/assets/js/zooming.min.js" | prepend: site.baseurl}}"></script>
-    <script type="text/javascript">
-    // imagezoom
+    // make images zoomable
     var zooming = new Zooming({
       defaultZoomable: '.bk-blog-content p:not(.bk-gallery) img', // every image which is NOT in gallery
       bgColor: 'black',
       bgOpacity: '0.7'
     })
-  </script>
-{% endif %}
 
-{% if page.layout == 'post' or page.layout == 'static' %}
-  <script type="text/javascript">
+    // social share buttons
     if($(window).width() < 991) {
       var share_frame_height = $('#social_bottom .social_share').outerHeight();
       $('#social_bottom').css('height', share_frame_height);
@@ -263,6 +250,10 @@
       }); //end window scroll
     }
   </script>
+{% endif %}
+
+{% if page.layout == 'post' or page.layout == 'home' %}
+  <script type="text/javascript" src="{{ "/assets/js/jquery.timeago.js" | prepend: site.baseurl}}"></script>
 {% endif %}
 
 {% if page.layout == 'tags' %}

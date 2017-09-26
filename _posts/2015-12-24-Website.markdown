@@ -3,11 +3,12 @@ title: Website
 author: Bastian Kroggel
 date: 2015-12-24 18:32:00 +0200
 tags: [work, about]
+permalink: /2015/12/24/Website.html
 showcase: My personal website which contains my blog, a showcase about my work and some information about the person behind the project. This post collects most of the resources that are implemented in this site and gets updated regularly.
 project_date: 2015
 thumbnail:
   img: /assets/img/page/blog/2015/December/main-website.jpg
-  stlye: classic
+  style: classic
 ---
 ![Website on MacBook Screen](/assets/img/page/blog/2015/December/main-website-mockup.jpg)
 {:.img100 .no_caption}

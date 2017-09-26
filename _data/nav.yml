@@ -46,8 +46,8 @@ footer:
     - name: LinkedIn
       link: /
   3_navs:
-    - name: Contact
-      link: 'mailto: contact@bastiankroggel.com'
+    - name: Humans.txt
+      link: /humans.txt
     - name: Privacy Policy
       link: /pp
     - name: Imprint

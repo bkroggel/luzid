@@ -16,6 +16,11 @@ showcase:
 thumbnail:
   img:
   style:
+sitemap:
+  lastmod:
+  priority:
+  changefreq:
+  exclude:
 ---
 ```
 
@@ -30,6 +35,10 @@ thumbnail:
 | showcase | specific description for social share integration (fallback to excerpt) |  | no |
 | thumbnail.img | set display image for blogposts overview |  | no |
 | thumbnail.style | set how to display image (default set to: `classic` | `classic` or `big` | no |
+| sitemap.lastmod | last modified date for sitemap (fallback set)|  | no |
+| sitemap.priority | priority for sitemap (fallback set) |  | no |
+| sitemap.changefreq | changefrequence for sitemap |  | no |
+| sitemap.exclude | exclude from sitemap if `'yes'`|  | no |
 
 ### Font-Styles
 
@@ -61,6 +70,7 @@ thumbnail:
 | Image-Gallery | ![](https://user-images.githubusercontent.com/11707221/30817331-e5073cf6-a218-11e7-8443-13f563507ad7.jpg) | *everything gets wrapped in a `<div class="gallery"></div>` |   *multiple Images beneath each other* |
 
 ## Resources
+- [Building a Better Sitemap.xml with Jekyll](http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/) - Jekyll sitemap implementation without plugins
 - [Font Awesome](http://fontawesome.io/) - The iconic font and CSS toolkit
 - [Jekyll](http://jekyllrb.com/) - Transform your plain text into static websites and blogs.
 - [jQuery](https://jquery.com/) - jQuery is a fast, small, and feature-rich JavaScript library.

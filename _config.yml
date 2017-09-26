@@ -21,7 +21,7 @@ excerpt_separator: <!-- more -->
 markdown: kramdown
 highlighter: rouge
 
-plugins: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
+plugins: [jekyll-paginate, jekyll-feed]
 
 sass:
   style: compressed

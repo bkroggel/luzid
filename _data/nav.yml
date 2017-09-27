@@ -38,13 +38,13 @@ footer:
       link: 'mailto: contact@bastiankroggel.com'
   2_navs:
     - name: Twitter
-      link: /
-    - name: CodePen
-      link: /
+      link: https://twitter.com/derkroggel
+    # - name: CodePen
+    #   link: /
     - name: GitHub
-      link: /
+      link: https://github.com/bkroggel
     - name: LinkedIn
-      link: /
+      link: https://linkedin.com/in/bastian-kroggel-125712121
   3_navs:
     - name: Humans.txt
       link: /humans.txt

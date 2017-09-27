@@ -1,6 +1,6 @@
 {% capture social-title %}{% if page.title %}{{ page.title | strip_html | strip_newlines | strip }}{% else %}{{ site.title | strip_html | strip_newlines | strip }}{% endif %}{% endcapture %}
 
-{% capture social-img %}{% if page.thumbnail.img %}{{ page.thumbnail.img | prepend: site.baseurl }}{% else %}/assets/img/dev/main_social_img.jpg{% endif %}{% endcapture %}
+{% capture social-img %}{% if page.thumbnail.img %}{{ page.thumbnail.img | prepend: site.url }}{% else %}{{site.url}}/assets/img/dev/main_social_img.jpg{% endif %}{% endcapture %}
 
 {% capture social-desc %}{% if page.title == "index" %}Bastian Kroggel | {{ site.description | strip_html | strip_newlines | strip }}{% elsif page.showcase %}{{ page.showcase | strip_html | strip_newlines | stip | truncate: 190 }}{% elsif page.content %}{{ page.content | strip_html | strip_newlines | stip | truncate: 190 }}{% else %}Bastian Kroggel | {{ site.description | strip_html | strip_newlines | stip }}{% endif %}{% endcapture %}
 

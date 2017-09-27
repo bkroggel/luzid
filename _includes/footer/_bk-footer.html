@@ -27,9 +27,10 @@
       <h3>Thanks for being awesome !</h3>
       <div class="bk-footer-1__social">
         <p>
-          <a href="#">Twitter</a>
+          {% for 2_nav in site.data.nav.footer.2_navs %}<a href="{{2_nav.link}}">{{2_nav.name}}</a>{% endfor %}
+          <!-- <a href="#">Twitter</a>
           <a href="#">Github</a>
-          <a href="#">LinkedIn</a>
+          <a href="#">LinkedIn</a> -->
         </p>
       </div>
       <p class="desc">{{site.description}}</p>

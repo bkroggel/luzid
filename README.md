@@ -72,6 +72,7 @@ sitemap:
 ## Resources
 - [Building a Better Sitemap.xml with Jekyll](http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/) - Jekyll sitemap implementation without plugins
 - [Font Awesome](http://fontawesome.io/) - The iconic font and CSS toolkit
+- [imagesLoaded.js](https://github.com/desandro/imagesloaded) - JavaScript is all like "You images done yet or what?", Detect when images have been loaded.
 - [Jekyll](http://jekyllrb.com/) - Transform your plain text into static websites and blogs.
 - [jQuery](https://jquery.com/) - jQuery is a fast, small, and feature-rich JavaScript library.
 - [Showdown](https://github.com/showdownjs/showdown) - Showdown is a Javascript Markdown to HTML converter, based on the original works by John Gruber.
@@ -80,5 +81,3 @@ sitemap:
 - [UIkit](https://getuikit.com/) - A lightweight and modular front-end framework for developing fast and powerful web interfaces.
 - [Waypoints](http://imakewebthings.com/waypoints/) - Waypoints is the easiest way to trigger a function when you scroll to an element.
 - [Zooming](http://desmonding.me/zooming/) - Image zoom that makes sense.
-
-

@@ -586,7 +586,7 @@ p.update {
     padding: 10px;
     @include media-query($small){
       right: calc(100% + 21px);
-      margin-top: 15px;
+      margin-top: 5%;
       transform: rotate(270deg);
       transform-origin: right top;
       padding: 10px 15px 0 15px;

@@ -11,7 +11,7 @@ sitemap:
 /* SITE */
   Last Updated: {{ site.time }}
   Language: Deutsch / English
-  Powered by: Jekyll, Netlifly
+  Powered by: Jekyll, Netlify
 
 /* CREDITS TO */
   - Building a Better Sitemap.xml with Jekyll
@@ -20,6 +20,9 @@ sitemap:
   - Font Awesome
     http://fontawesome.io/
     The iconic font and CSS toolkit
+  - imagesLoaded.js
+    https://imagesloaded.desandro.com/
+    JavaScript is all like "You images done yet or what?", Detect when images have been loaded.
   - Jekyll
     http://jekyllrb.com/
     Transform your plain text into static websites and blogs.

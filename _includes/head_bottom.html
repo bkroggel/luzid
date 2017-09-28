@@ -5,6 +5,7 @@
   <script type="text/javascript" src="{{ "/assets/js/showdown.min.js" | prepend: site.baseurl}}"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
   <script src="{{ "/assets/js/zooming.min.js" | prepend: site.baseurl}}"></script>
+  <script src="{{ "/assets/js/imagesloaded.pkgd.min.js" | prepend: site.baseurl}}"></script>
   <script type="text/javascript">
     // add caption to Images
 
@@ -82,14 +83,21 @@
       $('.bk-gallery-no_'+index).on('init', function(){
         $(this).find('.slick-list').css({
           'height': '0px',
-          'max-height': wh/4*3,
+          //'max-height': wh/4*3,
           'overflow': 'hidden'
         })
         $('.slick-track').css('opacity', '0')
         $('.bk-gallery-no_'+index).prepend(spinner)
 
+        //images loaded
+        $(this).imagesLoaded( function() {
+          console.log('All images in Gallery '+gallery_index+' have been loaded! - bk')
+        });
+
+
         //$('.bk-gallery-no_'+index).find('img').on('load', function() {
-        $(window).on('load', function() {
+        //$(window).on('load', function() {
+        $(this).imagesLoaded( function() {
           var height_arr = []
           $('.bk-gallery-no_'+index+' .bk-gallery__elem img').each(function(){
             var individual_height = $(this).outerHeight();
@@ -99,12 +107,14 @@
           //var gallery_height = $('.bk-gallery-no_'+index+' .slick-current').find('img').outerHeight();
           var max_height = wh/5*3;
           var min_height = wh/5*2;
-          if (gallery_height < max_height && gallery_height > min_height){
+          if (gallery_height < max_height && gallery_height > min_height && min_height > 200){
             var initial_height = gallery_height
-          } else if (gallery_height < min_height) {
+          } else if (gallery_height < min_height && min_height > 200) {
             var initial_height = min_height
-          } else {
+          } else if (min_height > 200) {
             var initial_height = max_height
+          } else {
+            var initial_height = 250
           }
           $('.bk-gallery-no_'+index+' .slick-list, .bk-gallery-no_'+index+' .bk-gallery__elem').css({
             'height': initial_height,
@@ -114,19 +124,20 @@
 
 
           setTimeout(function(){
-            $('.spinningCircle').css({
+            $('.bk-gallery-no_'+index+' .spinningCircle').css({
               'opacity': '0',
               'transition': 'all 0.4s ease-in-out'
             })
             setTimeout(function(){
-              $('.spinningCircle').css('display', 'none')
+              $('.bk-gallery-no_'+index+' .spinningCircle').css('display', 'none')
             }, 400)
             setTimeout(function(){
-              $('.slick-track').css({
+              $('.bk-gallery-no_'+index+' .slick-track').css({
                 'opacity': '1',
                 'transition': 'all 0.4s ease-in-out'
               })
-              $('.bk-gallery, .slick-arrow, .slick-dots').addClass('active')
+              $('.bk-gallery-no_'+index+' .slick-arrow, .bk-gallery-no_'+index+' .slick-dots').addClass('active')
+              $('.bk-gallery-no_'+index).parents('p').addClass('active')
               $('.bk-gallery-no_'+index).parent().append(gta[0]);
               Waypoint.refreshAll() //Waypoint refresh after all elements are loaded
             }, 400)

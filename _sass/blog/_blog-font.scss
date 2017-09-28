@@ -641,6 +641,10 @@ p.update {
   width: calc(100% + 30px);
   left: -15px;
   position: relative;
+  @include media-query($medium){
+    width: 100%;
+    left: unset;
+  };
 }
 
 .image_frame {

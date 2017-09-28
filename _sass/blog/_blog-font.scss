@@ -637,6 +637,12 @@ p.update {
   }
 }
 
+.bk-blog-style p.bk_img {
+  width: calc(100% + 30px);
+  left: -15px;
+  position: relative;
+}
+
 .image_frame {
   margin: 2em 0;
   position: relative;

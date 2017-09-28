@@ -168,6 +168,7 @@
         // just works if one of the items in the "no_classes" array is placed on section[0] in the html class
         if ($(this).attr('alt') && !($(this).parent().hasClass(no_classes)) && !($(this).parents('p').hasClass('bk-gallery'))) {
           $(this).wrap(caption_wrapper);
+          //$(this).parents('p').addClass('bk_caption_img');
           var info = $(this).attr('alt').split(split_divider);
           var image_title = converter.makeHtml(info[0]);
           var image_source = converter.makeHtml(info[1]);
@@ -176,6 +177,8 @@
           } else {
             $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div></div>');
           }
+        } else if (!($(this).parents('p').hasClass('bk-gallery'))){
+          $(this).parents('p').addClass('bk_img');
         }
       });
     };

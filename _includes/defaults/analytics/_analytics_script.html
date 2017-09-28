@@ -25,7 +25,11 @@ $(window).on('load', function() {
   setTimeout(
     function(){
       if (!window[disableStr] && !window[gaIgnore]) {
-        $('#ggl-analytics').addClass('ggl-active');
+        $('#ggl-analytics').css('display','block');
+        setTimeout( //fix which allows display to change before addClass gets executed
+          function(){
+            $('#ggl-analytics').addClass('ggl-active');
+        }, 100);
         setTimeout(
           function(){
             $('.ggl-active').css('transition', 'none')
@@ -52,6 +56,9 @@ $(window).on('load', function() {
           } else {
             $('#ggl-analytics').removeClass('ggl-active').css('transition', 'all 0.4s ease-in-out')
           }
+          setTimeout(function(){
+            $('#ggl-analytics').css('display','none')
+          }, 500) // 400 for animation + 100 as buffer
         }
 
         $("#ggl-close, #ggl-ignore-bttn").click(function(){

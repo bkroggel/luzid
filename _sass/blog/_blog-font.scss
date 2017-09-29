@@ -228,6 +228,15 @@ pre {
   padding: 2px 3px;
 }
 
+*+h1,
+*+h2,
+*+h3,
+*+h4,
+*+h5,
+*+h6 {
+  margin-top: 25px;
+}
+
 .bk-blog-style h1,
 .bk-blog-style h1>a {
   font-size: 1.575rem;
@@ -619,6 +628,15 @@ p.update {
       content: "";
       display: none;
     }
+  }
+}
+
+.bk-signature {
+  width: 200px;
+  transform: translate(-10px, calc(-1em - 20px));
+  display: none;
+  &.bk-success {
+    display: block;
   }
 }
 

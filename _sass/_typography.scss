@@ -195,7 +195,7 @@ a.blog-posts--title {
 
 // new bk-footer
 .bk-footer-2 p,
-.bk-footer-1__sec2 p.desc,
+.bk-footer-1__sec2 .desc p,
 .bk-footer-1__sec1__top ul li a,
 .bk-footer-1__sec3__top ul li a,
 .bk-footer__acknowledgement p,
@@ -207,7 +207,7 @@ a.blog-posts--title {
   margin: 0;
 }
 
-.bk-footer-1__sec2 p.desc {
+.bk-footer-1__sec2 .desc p {
   font-size: 0.7em;
   text-align: center;
 }

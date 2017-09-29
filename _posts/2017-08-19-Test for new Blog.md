@@ -4,6 +4,7 @@ sub_title: '"The Circle" im Review Check.'
 author: Bastian Kroggel
 date: 2017-08-19 20:54:54 +0200
 tags: [about, english]
+sign: true
 ---
 Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae [sem](http://bastiankroggel.com) eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. *Aliquam* ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci.
 {:.intro}

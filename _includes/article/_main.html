@@ -5,6 +5,9 @@
   <div class="bk-article-main">
     <div class="bk-blog-content bk-blog-style uk-article">
       {{content}}
+      {% if page.sign %}
+        {% include svg/_sign_js.html %}
+      {% endif %}
       <div id="social_bottom">
         {% include article/_social-share.html %}
       </div>

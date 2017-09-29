@@ -9,6 +9,7 @@ project_date: 2015
 thumbnail:
   img: /assets/img/page/blog/2015/December/main-website.jpg
   style: classic
+sign: true
 ---
 ![Website on MacBook Screen](/assets/img/page/blog/2015/December/main-website-mockup.jpg)
 {:.img100 .no_caption}

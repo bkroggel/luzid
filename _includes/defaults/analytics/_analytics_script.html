@@ -26,14 +26,14 @@ $(window).on('load', function() {
     function(){
       if (!window[disableStr] && !window[gaIgnore]) {
         $('#ggl-analytics').css('display','block');
-        setTimeout( //fix which allows display to change before addClass gets executed
+        setTimeout( //fix which allows display to change before addClass gets executed & .stuck to get applied
           function(){
             $('#ggl-analytics').addClass('ggl-active');
-        }, 100);
+        }, 500);
         setTimeout(
           function(){
             $('.ggl-active').css('transition', 'none')
-        }, 500);
+        }, 900);
 
         if($(window).width() > 1199) {
           $('footer').waypoint(function(direction){

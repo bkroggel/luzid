@@ -21,6 +21,7 @@ sitemap:
   priority:
   changefreq:
   exclude:
+sign:
 ---
 ```
 
@@ -39,6 +40,7 @@ sitemap:
 | sitemap.priority | priority for sitemap (fallback set) |  | no |
 | sitemap.changefreq | changefrequence for sitemap |  | no |
 | sitemap.exclude | exclude from sitemap if `'yes'`|  | no |
+| sign  | `true` if signature should be included |  | no |
 
 ### Font-Styles
 

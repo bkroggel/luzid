@@ -3,14 +3,14 @@
   {% include head.html %}
 
   <body>
-
-
-
     <main>
+      {% unless page.url contains '404' %}
+        {% include defaults/_beta.html %}
+      {% endunless %}
+
       {{ content }}
     </main>
     {% include head_bottom.html %}
-
  </body>
 
 </html>

@@ -14,6 +14,9 @@ sitemap:
   Powered by: Jekyll, Netlify
 
 /* CREDITS TO */
+  - Better pagination for Jekyll
+    https://www.timble.net/blog/2015/05/better-pagination-for-jekyll/
+    A Jekyll include file of a Mobile-First pagination, configurable with page front-matter.
   - Building a Better Sitemap.xml with Jekyll
     http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/
     Jekyll sitemap implementation without plugins

@@ -72,6 +72,7 @@ sign:
 | Image-Gallery | ![](https://user-images.githubusercontent.com/11707221/30817331-e5073cf6-a218-11e7-8443-13f563507ad7.jpg) | *everything gets wrapped in a `<div class="gallery"></div>` |   *multiple Images beneath each other* |
 
 ## Resources
+- [Better pagination for Jekyll](https://www.timble.net/blog/2015/05/better-pagination-for-jekyll/) - A Jekyll include file of a Mobile-First pagination, configurable with page front-matter.
 - [Building a Better Sitemap.xml with Jekyll](http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/) - Jekyll sitemap implementation without plugins
 - [Font Awesome](http://fontawesome.io/) - The iconic font and CSS toolkit
 - [imagesLoaded.js](https://github.com/desandro/imagesloaded) - JavaScript is all like "You images done yet or what?", Detect when images have been loaded.

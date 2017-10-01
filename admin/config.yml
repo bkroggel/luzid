@@ -7,7 +7,7 @@ media_folder: "assets/img/page/blog/2017" # Media files will be stored in the re
 
 collections:
   - name: "blog"
-    label: "blog"
+    label: "Blog"
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -43,16 +43,16 @@ collections:
         required: "false"
       - label: "Showcase"
         name: "showcase"
-        widget: "markdown"
+        widget: "text"
         required: "false"
-      - label: "Signed Posed"
+      - label: "Signed Post"
         name: "sign"
         widget: "boolean"
         default: "false"
         required: "false"
       - label: "Thumbnail"
         name: "thumbnail"
-        widget: "list"
+        widget: "object"
         required: "false"
         fields:
           - label: "Image"
@@ -68,7 +68,7 @@ collections:
               - classic
       - label: "Sitemap"
         name: "sitemap"
-        widget: "list"
+        widget: "object"
         required: "false"
         fields:
           - label: "Last Modified"

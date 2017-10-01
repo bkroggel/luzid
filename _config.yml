@@ -11,7 +11,7 @@ twitter: derkroggel
 github:  bkroggel
 
 # Pagination Settings
-paginate: 4
+paginate: 3
 paginate_path: "/:num/"
 
 excerpt_separator: <!-- more -->

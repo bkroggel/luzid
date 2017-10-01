@@ -10,7 +10,7 @@ $pages-breakpoint8:         768px !default;
 $pages-breakpoint9:         768px !default;
 
 // Cosmetics variables
-$pages-cosmetics:           true !default;
+$pages-cosmetics:           false !default;
 $pages-sr-only:             true !default;
 
 // Styling
@@ -182,13 +182,15 @@ $pages-item-active-color:   white !default;
 .bk-pagination {
   border-top: 1px solid $slightly-darker;
   width: 900px;
-  max-width: 90%;
+  max-width: 95%;
   padding: 0;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 100px;
+  @include media-query($small){
+    max-width: 90%;
+  };
   @include media-query($medium){
-
     margin-bottom: 150px;
   };
 }
@@ -203,15 +205,18 @@ $pages-item-active-color:   white !default;
 .bk-pagination ul>li>a,
 .bk-pagination ul>li>span {
   float: left;
-  padding: 11px 15px;
+  padding: 11px 7px;
   line-height: 19px;
   text-decoration: none;
   color: $dark-color;
   border-top: 1px solid $slightly-darker;
+  @include media-query($xtra-small){
+    padding: 11px 15px;
+  };
 }
 
-.bk-pagination ul>li>a:hover,
-.bk-pagination ul>li>span:hover {
+.bk-pagination ul>li:not(.pages-indicator)>a:hover,
+.bk-pagination ul>li:not(.pages-indicator)>span:hover {
   color: $darkest-color;
   border-color: $darkest-color;
 }

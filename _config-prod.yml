@@ -1,0 +1,6 @@
+# www.bastiankroggel.com
+# production environment
+
+url: "https://beta.bastiankroggel.com"
+google-analytics:
+  tracking-code: 

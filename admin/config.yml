@@ -1,0 +1,101 @@
+backend:
+  name: github
+  repo: bkroggel/luzid # Path to your Github repository
+  branch: master # Branch to update
+
+media_folder: "assets/img/page/blog/2017" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "blog"
+    label: "blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Sub-Title"
+        name: "sub_title"
+        widget: "string"
+        required: "false"
+      - label: "Layout"
+        name: "layout"
+        widget: "string"
+        default: "blog"
+        required: "false"
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "Bastian Kroggel"
+        required: "false"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        required: "false"
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: "false"
+      - label: "URL"
+        name: "permalink"
+        widget: "string"
+        required: "false"
+      - label: "Showcase"
+        name: "showcase"
+        widget: "markdown"
+        required: "false"
+      - label: "Signed Posed"
+        name: "sign"
+        widget: "boolean"
+        default: "false"
+        required: "false"
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "list"
+        required: "false"
+        fields:
+          - label: "Image"
+            name: "img"
+            widget: "image"
+            required: "false"
+          - label: "Thumbnail Style"
+            name: "style"
+            widget: "select"
+            required: "false"
+            options:
+              - big
+              - classic
+      - label: "Sitemap"
+        name: "sitemap"
+        widget: "list"
+        required: "false"
+        fields:
+          - label: "Last Modified"
+            name: "lastmod"
+            widget: "datetime"
+            required: "false"
+          - label: "Priority"
+            name: "priority"
+            widget: "number"
+            required: "false"
+          - label: "Frequence of Change"
+            name: "changefreq"
+            widget: "select"
+            required: "false"
+            options:
+              - always
+              - hourly
+              - daily
+              - weekly
+              - monthly
+              - yearly
+              - never
+          - label: "Exclude from Sitemap"
+            name: "exclude"
+            widget: "boolean"
+            required: "false"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: "false"

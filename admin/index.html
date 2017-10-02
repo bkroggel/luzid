@@ -45,16 +45,18 @@
               ),
               h('div', {className: "bk-side-space article-column"}),
             ),
-
-            h('div', {className: "bk-article-title__row"},
-              h('div', {className: "bk-side-space article-column"}),
-              h('div', {className: "bk-article-main article-column bk-sub_title__border"},
-                h('div', {className: "bk-sub_title bk-title-frame bk-sub_title-frame"},
-                  h('h3', {}, entry.getIn(['data', 'sub_title'])),
+            var sub_title = entry.getIn(['data', 'sub_title']);
+            {sub_title.length > 0 &&
+              h('div', {className: "bk-article-title__row"},
+                h('div', {className: "bk-side-space article-column"}),
+                h('div', {className: "bk-article-main article-column bk-sub_title__border"},
+                  h('div', {className: "bk-sub_title bk-title-frame bk-sub_title-frame"},
+                    h('h3', {}, entry.getIn(['data', 'sub_title'])),
+                  ),
                 ),
+                h('div', {className: "bk-side-space article-column"}),
               ),
-              h('div', {className: "bk-side-space article-column"}),
-            ),
+            }
 
             h('div', {className: "bk-article-title__row"},
               h('div', {className: "bk-side-space article-column"}),

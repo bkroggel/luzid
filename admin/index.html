@@ -68,9 +68,9 @@
             h('div', {className: "bk-article-main article-column"},
               h('div', {className: "bk-blog-posts--tags"},
                 h('p', {},
-                  // this.props.widgetsFor('tags').map(function(tags) {
-                  //   return h('a', {}, tags.getIn(['data', 'tags'])),
-                  // }),
+                  this.props.widgetsFor('tags').map(function(tags) {
+                    return h('a', {}, tags.getIn(['data', 'tags'])),
+                  })
                 ),
               ),
               h('div', {className: "article-author-img"}),
@@ -78,9 +78,7 @@
                 h('h2', {}, "Author"),
                 h('h3', {}, entry.getIn(['data', 'author'])),
                 h('a', {},
-                  h('h4', {},
-                    h('span', {className: "fa fa-twitter"}),
-                  "TwitterUsername"),
+                  h('h4', {}, "TwitterUsername"),
                 ),
               ),
             ),

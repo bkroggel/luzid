@@ -1,7 +1,8 @@
 ---
 ---
 @import "defaults";
-.body {
+
+body {
   margin: 0;
 }
 
@@ -16,9 +17,9 @@
   line-height: 1em;
 }
 
-.bk-article-title__row:last-of-type {
-  margin-bottom: -90px;
-}
+// .bk-article-title__row:last-of-type {
+//   margin-bottom: -90px;
+// }
 
 .bk-blog-style a {
   text-decoration: none;

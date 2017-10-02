@@ -39,56 +39,56 @@
             h('div', {className:  'bk-side-space article-column'}),
             h('div', {className: "bk-article-main article-column"},
               h('div', {className: "bk-blog-posts__date"},
-                h('h3', {}, "Posted")
-                h('time', {className: "timeago"})
-                h('h3', {className: "true-date"}, entry.getIn(['data', 'date']))
-              )
-            )
-            h('div', {className: "bk-side-space article-column"})
+                h('h3', {}, "Posted"),
+                h('time', {className: "timeago"}),
+                h('h3', {className: "true-date"}, entry.getIn(['data', 'date'])),
+              ),
+            ),
+            h('div', {className: "bk-side-space article-column"}),
           ),
 
           h('div', {className: "bk-article-title__row"},
-            h('div', {className: "bk-side-space article-column"})
+            h('div', {className: "bk-side-space article-column"}),
             h('div', {className: "bk-article-main article-column bk-sub_title__border"},
               h('div', {className: "bk-sub_title bk-title-frame bk-sub_title-frame"},
                 h('h3', {}, entry.getIn(['data', 'sub_title']))
-              )
-            )
-            h('div', {className: "bk-side-space article-column"})
+              ),
+            ),
+            h('div', {className: "bk-side-space article-column"}),
           ),
 
           h('div', {className: "bk-article-title__row"},
-            h('div', {className: "bk-side-space article-column"})
+            h('div', {className: "bk-side-space article-column"}),
             h('div', {className: "bk-article-main article-column bk-title-frame"},
-              h('h1', {}, entry.getIn(['data', 'title']))
-            )
-            h('div', {className: "bk-side-space article-column"})
+              h('h1', {}, entry.getIn(['data', 'title'])),
+            ),
+            h('div', {className: "bk-side-space article-column"}),
           ),
 
           h('div', {className: "bk-article-title__row author_element"},
-            h('div', {className: "bk-side-space article-column"})
+            h('div', {className: "bk-side-space article-column"}),
             h('div', {className: "bk-article-main article-column"},
               h('div', {className: "bk-blog-posts--tags"},
                 h('p', {},
                   this.props.widgetsFor('tags').map(function(tags) {
-                    return h('a', {}, tags.getIn(['data', 'tags']))
-                  })
-                )
-              )
-              h('div', {className: "article-author-img"})
+                    return h('a', {}, tags.getIn(['data', 'tags'])),
+                  }),
+                ),
+              ),
+              h('div', {className: "article-author-img"}),
               h('div', {className: "article-author-id"},
-                h('h2', {}, "Author")
-                h('h3', {}, entry.getIn(['data', 'author']))
+                h('h2', {}, "Author"),
+                h('h3', {}, entry.getIn(['data', 'author'])),
                 h('a', {},
-                  h('h4', {}, "TwitterUsername")
-                )
-              )
-            )
-            h('div', {className: "bk-side-space article-column"})
+                  h('h4', {}, "TwitterUsername"),
+                ),
+              ),
+            ),
+            h('div', {className: "bk-side-space article-column"}),
           ),
 
 
-        )
+        ),
       }
     });
 

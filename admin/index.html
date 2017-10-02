@@ -69,7 +69,7 @@
               h('div', {className: "bk-blog-posts--tags"},
                 h('p', {},
                   this.props.widgetsFor('tags').map(function(tags) {
-                    return h('a', {}, tags.getIn(['data', 'tags'])),
+                    return h('a', {}, tags.getIn(['data', 'tags']));
                   })
                 ),
               ),

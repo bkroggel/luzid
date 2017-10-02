@@ -2,6 +2,13 @@
 ---
 @import "defaults";
 
-.article-author-id h4 {
-  line-height: 1em;
+
+
+.article-author-id {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  h4 {
+    line-height: 1em;
+  }
 }

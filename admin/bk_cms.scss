@@ -1,6 +1,9 @@
 ---
 ---
 @import "defaults";
+.body {
+  margin: 0;
+}
 
 .article-author-img {
   width: 90px;
@@ -9,6 +12,14 @@
   background: $dark-color;
 }
 
-.article-author-id h4 {
+.bk-article-title .article-author-id h4 {
   line-height: 1em;
+}
+
+.bk-article-title__row:last-of-type {
+  margin-bottom: -90px;
+}
+
+.bk-blog-style a {
+  text-decoration: none;
 }

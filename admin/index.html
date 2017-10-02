@@ -12,22 +12,22 @@
   <script src="https://unpkg.com/netlify-cms@~0.4/dist/cms.js"></script>
   <script type="text/javascript">
 
-  var PostPreview = createClass({
-      render: function() {
-        var entry = this.props.entry;
-        return
-        h('div', {},
-          h('div', {className: "cover"},
-            h('h1', {}, entry.getIn(['data', 'title'])),
-            bg ? h('img', {src: bg.toString()}) : null
-          ),
-          h('p', {},
-            h('small', {}, "Written " + entry.getIn(['data', 'date']))
-          ),
-          h('div', {"className": "text"}, this.props.widgetFor('body'))
-        );
-      }
-    });
+  // var PostPreview = createClass({
+  //     render: function() {
+  //       var entry = this.props.entry;
+  //       return
+  //       h('div', {},
+  //         h('div', {className: "cover"},
+  //           h('h1', {}, entry.getIn(['data', 'title'])),
+  //           bg ? h('img', {src: bg.toString()}) : null
+  //         ),
+  //         h('p', {},
+  //           h('small', {}, "Written " + entry.getIn(['data', 'date']))
+  //         ),
+  //         h('div', {"className": "text"}, this.props.widgetFor('body'))
+  //       );
+  //     }
+  //   });
 
     var BKPostPreview = createClass({
       render: function() {
@@ -95,7 +95,7 @@
 
 
 
-
+    CMS.registerPreviewTemplate("posts", BKPostPreview);
     CMS.registerPreviewStyle("bk_cms.css");
   </script>
 </body>

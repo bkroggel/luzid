@@ -17,10 +17,15 @@ body {
   line-height: 1em;
 }
 
-// .bk-article-title__row:last-of-type {
-//   margin-bottom: -90px;
-// }
-
 .bk-blog-style a {
   text-decoration: none;
+}
+
+.bk-blog-content article>p:first-of-type:first-letter {
+  font-size: 6.55rem;
+  font-family: $serif;
+  margin-right: 10px;
+  float: left;
+  line-height: 0.8em;
+  margin-bottom: 0px;
 }

@@ -32,11 +32,12 @@
     var BKPostPreview = createClass({
       render: function() {
         var entry = this.props.entry;
-        var classNames = require('classnames');
+        import classnames from 'classnames';
+
         return
         h('section', {className: "bk-article-title"},
           h('div', {className: "bk-article-title__row"},
-            h('div', {className:  classNames('bk-side-space', 'article-column')})
+            h('div', {className:  'bk-side-space article-column'}),
             h('div', {className: "bk-article-main article-column"},
               h('div', {className: "bk-blog-posts__date"},
                 h('h3', {}, "Posted")

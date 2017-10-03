@@ -32,7 +32,7 @@
     var BKPostPreview = createClass({
       render: function() {
         var entry = this.props.entry;
-        const sub_title = this.props(['data', 'sub_title']);
+        var sub_title = entry.getIn(['data', 'sub_title']);
         return h('div', {},
           h('section', {className: "bk-article-title"},
             h('div', {className: "bk-article-title__row"},
@@ -46,7 +46,7 @@
               ),
               h('div', {className: "bk-side-space article-column"}),
             ),
-            {sub_title.length > 0 &&
+            sub_title ?
               h('div', {className: "bk-article-title__row"},
                 h('div', {className: "bk-side-space article-column"}),
                 h('div', {className: "bk-article-main article-column bk-sub_title__border"},
@@ -56,7 +56,7 @@
                 ),
                 h('div', {className: "bk-side-space article-column"}),
               ),
-            }
+            : null
 
             h('div', {className: "bk-article-title__row"},
               h('div', {className: "bk-side-space article-column"}),

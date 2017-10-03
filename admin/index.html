@@ -52,7 +52,7 @@
               h('div', {className: "bk-article-main article-column bk-sub_title__border"},
                 h('div', {className: "bk-sub_title bk-title-frame bk-sub_title-frame"},
                   h('h3', {}, entry.getIn(['data', 'sub_title'])),
-                  h('h4', {}, "subtitle present"),
+                  {sub_title && h('h4', {}, "subtitle present"), }
                 ),
               ),
               h('div', {className: "bk-side-space article-column"}),

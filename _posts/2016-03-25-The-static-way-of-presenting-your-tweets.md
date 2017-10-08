@@ -149,7 +149,7 @@ After picking the Tweets with the introduced Twitter-Post-Fetcher and providing 
 ## Let's wrap this up:  
 Check out the [Twitter-Post-Fetcher Website](http://jasonmayes.com/projects/twitterApi/), take a look at the [GitHub Repo](https://github.com/jasonmayes/Twitter-Post-Fetcher) and of course don't forget to thank [Jason Mayes](https://twitter.com/jason_mayes) for his awesome work. If you are interested in a javascript approach that won't need you to tinker around with a server side setup or you are looking for a opportunity to show your tweets on a static websites (Github Pages Users, wherer are you?) just go ahead and set up your own feed right on your website.
 
-## Update - 05/29/2016
+## Update – 05/29/2016
 Haven't had the time to update this post recently, but I am pretty sure I should at least add a few words about the author of Twitter-Post-Fetcher. To be honest, the best plugin is just useless if there is not a guy behind that project who really puts a lot of time and effort into his products and is interested in not just creating but maintaining them. Lucky us, Jason Mayes is totally one of them. After a few weeks ago twitter changed some widget details which caused Twitter-Post-Fetcher not beeing able to get the tweets anymore, it took just a few hours until a new release of this plugin solved all of it's problems. I was definitely pretty impressed by the fast reaction of the dev and the attention he pays to his plugin - so I would call that a additional reason to check it out.
 {:.update}
 

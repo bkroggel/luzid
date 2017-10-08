@@ -128,7 +128,7 @@
         font-size: 0.4em;
         vertical-align: middle;
         margin-right: 10px;
-        opacity: 0.4;
+        opacity: 0.3;
         position: absolute;
         right: 100%;
       };
@@ -250,7 +250,7 @@ pre {
     font-size: 1.975rem;
   };
   @include media-query($medium){
-    font-size: 2.575rem;
+    font-size: 2.775rem;
   };
 }
 
@@ -275,7 +275,7 @@ pre {
 .bk-blog-style h2>a {
   font-size: 1.55rem;
   @include media-query($small){
-    font-size: 1.975rem;
+    font-size: 2.075rem;
   };
 }
 
@@ -290,7 +290,7 @@ pre {
   h5 {
     width: 90%;
     @include media-query($medium){
-      width: 80%;
+      width: 90%;
     };
   }
   h2,

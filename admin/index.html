@@ -5,29 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~0.4/dist/cms.css" />
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~0.5.1/dist/cms.css" />
 
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@~0.4/dist/cms.js"></script>
-  <script type="text/javascript">
-
-  // var PostPreview = createClass({
-  //     render: function() {
-  //       var entry = this.props.entry;
-  //       return
-  //       h('div', {},
-  //         h('div', {className: "cover"},
-  //           h('h1', {}, entry.getIn(['data', 'title'])),
-  //           bg ? h('img', {src: bg.toString()}) : null
-  //         ),
-  //         h('p', {},
-  //           h('small', {}, "Written " + entry.getIn(['data', 'date']))
-  //         ),
-  //         h('div', {"className": "text"}, this.props.widgetFor('body'))
-  //       );
-  //     }
-  //   });
+  <script src="https://unpkg.com/netlify-cms@~0.5.1/dist/cms.js"></script>
+  <script type="text/javascript" >
 
     var BKPostPreview = createClass({
       render: function() {
@@ -101,10 +84,22 @@
     });
 
 
+    var BKAboutPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        return h('section', {className: "bk-blog bk-article"},
+          h('div', {className: "bk-article-main"},
+            h('div', {className: "bk-blog-style bk-blog-content bk-static-style"}, this.props.widgetFor('body')),
+          ),
+        )
+      }
+    });
+
 
 
 
     CMS.registerPreviewTemplate("blog", BKPostPreview);
+    CMS.registerPreviewTemplate("about", BKAboutPreview);
     CMS.registerPreviewStyle("bk_cms.css");
   </script>
 </body>

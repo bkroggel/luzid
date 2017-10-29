@@ -1,10 +1,18 @@
 <nav class="bk-hor-nav">
   <ul>
     {% for horizontal-nav in site.data.nav.horizontal-navs %}<li><a href="{{horizontal-nav.link}}">{{horizontal-nav.name}}</a></li>{% endfor %}
-    <li class="bk-burger-frame">
+    <!-- <li class="bk-burger-frame">
       <div class="bk-burger" id="nav_button">
         <div class="bk-burger-line"></div>
         <div class="bk-burger-line"></div>
+      </div>
+    </li> -->
+    <li class="bk-burger-frame">
+      <div id="nav_button">
+        <div class="bk-menu__line"></div>
+        <div class="bk-menu__line"></div>
+        <div class="bk-menu__line"></div>
+        <div class="bk-menu__line"></div>
       </div>
     </li>
   </ul>

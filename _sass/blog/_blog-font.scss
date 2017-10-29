@@ -54,13 +54,16 @@
 }
 
 .bk-sub_title h3 {
-  background: $dark-color;
-  padding: 4px 10px;
+  background: $accent-color;
+  padding: 7px 10px;
   color: white;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   width: 70%;
   line-height: 1.4rem;
+  position: relative;
+  left: -30px;
+  padding-left: 30px;
 }
 
 .vertical-blog-link a {
@@ -461,7 +464,7 @@ blockquote { //overwriting ukit
   li {
     line-height: 1.7em;
     &:before {
-      content: "–";
+      content: '\2013';
       display: inline-block;
       font-size: 1.2em;
       vertical-align: middle;

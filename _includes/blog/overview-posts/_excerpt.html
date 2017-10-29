@@ -1,35 +1,3 @@
 <div class="blog-posts--content blog-posts--overview-content bk-blog-style">
-  {% if post.thumbnail.img and post.thumbnail.style == "big" %}
-    <div class="bk-blog-thumbnail">
-      <div class="bk-blog-thumbnail__img" style="background: url({{ post.thumbnail.img }}) no-repeat center; background-size: cover">
-      </div>
-      <div class="bk-blog-thumbnail__content">
-        <p>{{ post.content | markdownify | strip_html | truncate: 700 }}</p>
-        <div class="bk-links">
-          <a class="link" href="{{ post.url }}">Read More</a>
-        </div>
-      </div>
-    </div>
-  {% elsif post.thumbnail.img and post.thumbnail.style == "classic" %}
-    <div class="bk-blog-thumbnail_2">
-      <img src="{{post.thumbnail.img}}" alt="">
-      <p>{{ post.content | markdownify | strip_html | truncate: 700 }}</p>
-      <div class="bk-links">
-        <a class="link" href="{{ post.url }}">Read More</a>
-      </div>
-    </div>
-  {% elsif post.thumbnail.img %}
-    <div class="bk-blog-thumbnail_2">
-      <img src="{{post.thumbnail.img}}" alt="">
-      <p>{{ post.content | markdownify | strip_html | truncate: 700 }}</p>
-      <div class="bk-links">
-        <a class="link" href="{{ post.url }}">Read More</a>
-      </div>
-    </div>
-  {% else %}
-    {{post.excerpt}}
-    <div class="bk-links">
-      <a class="link" href="{{ post.url }}">Read More</a>
-    </div>
-  {% endif %}
+  <p>{{ post.content | strip_html | markdownify | truncate: 500 }}</p>
 </div>

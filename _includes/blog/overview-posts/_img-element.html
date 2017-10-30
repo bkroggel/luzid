@@ -1,3 +1,7 @@
 <div class="overview-img">
-  <img src="{{ post.thumbnail.img }}">
+  {% if post.thumbnail.img %}
+  <div class="thumbnail_img" style="background: url({{ post.thumbnail.img }}) no-repeat center"></div>
+  {% else %}
+  <div class="thumb_placeholder thumbnail_img"></div>
+  {% endif %}
 </div>

@@ -1,3 +1,7 @@
 <div class="blog-posts--content blog-posts--overview-content bk-blog-style">
-  <p>{{ post.content | strip_html | markdownify | truncate: 500 }}</p>
+  {% if post.thumbnail.overview %}
+    <p>{{ post.thumbnail.overview | markdownify }}</p>
+  {% else %}
+    <p>{{ post.content | strip_html | markdownify | truncate: 500 }}</p>
+  {% endif %}
 </div>

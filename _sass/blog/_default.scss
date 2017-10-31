@@ -232,6 +232,28 @@
   }
 }
 
+.bk-overview-posts__social {
+  @include media-query($medium){
+    @include display_flex;
+    @include direction_column;
+    opacity: 0.7;
+  };
+  .social__filler {
+    @include media-query($medium){
+      height: calc(100% - 40px * 6);
+      background: white;
+      margin: 0.5px 1px;
+      margin-top: 0;
+    }
+  }
+  .social_share {
+    @include media-query($medium){
+      @include display_flex;
+      @include direction_column;
+    };
+  }
+}
+
 .bk-blog-posts__date {
   margin: 0;
   line-height: 1em;

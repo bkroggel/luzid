@@ -1,0 +1,50 @@
+{% assign social_url =  post.url | prepend: site.url %}
+{% if post.sub_title %}
+  {% assign social_title = post.sub_title | append: ' - ' | append: post.title | url_encode | url_escape %}
+{% else %}
+  {% assign social_title = post.title | url_encode | url_escape %}
+{% endif %}
+
+{% if post.sub_title %}
+  {% assign social_title_plain = post.sub_title | append: ' - ' | append: post.title | escape %}
+{% else %}
+  {% assign social_title_plain = post.title | escape %}
+{% endif %}
+<div class="social_share">
+
+  <a  href="https://twitter.com/intent/tweet?text={{ social_title }}&url={{ social_url }}&via={{ site.twitter }}"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+      title="Share on Twitter" >
+      <i class="fa fa-twitter share-button"></i>
+  </a>
+
+  <a  href="https://www.facebook.com/sharer/sharer.php?u={{ social_url }}"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+      title="Share on Facebook" >
+      <i class="fa fa-facebook share-button"></i>
+  </a>
+
+  <a  href="https://plus.google.com/share?url={{ social_url }}"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+      title="Share on Google+" >
+      <i class="fa fa-google-plus share-button"></i>
+  </a>
+
+  <a  href="https://www.linkedin.com/shareArticle?mini=true&url={{ social_url }}&title={{ social_title }}&summary={{ post.excerpt | prepend: 'via www.bastiankroggel.com: ' | strip_html }}&source=Bastian Kroggel via www.bastiankroggel.com"
+       onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+       title="Share on LinkedIn" >
+       <i class="fa fa-linkedin share-button"></i>
+   </a>
+
+   <a  href="mailto:?subject=[Recommended] {{ social_title_plain }}&amp;body=Check out: {{ social_title_plain }}%0D%0Avia {{ social_url }}%0D%0Aby Bastian Kroggel (@{{site.twitter}})%0D%0A-----"
+      title="Share via Email" >
+      <i class="fa fa-envelope share-button"></i>
+  </a>
+
+  <a  href="https://getpocket.com/save?url={{ social_url }}&title={{ social_title }}"
+       onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+       title="Add to Pocket" >
+       <i class="fa fa-get-pocket share-button"></i>
+   </a>
+
+</div>

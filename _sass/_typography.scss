@@ -333,6 +333,21 @@ a.announcement_link {
   margin-top: 15px;
 }
 
+.bk-overview-posts__social .social_share a {
+  width: 40px;
+  height: 40px;
+  @include display_flex;
+  @include align-items(center);
+  @include justify-content(center);
+  margin: 0.5px 1px;
+  background: white;
+  text-align: center;
+  @include link-mix($dark-color);
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
 // Archive ------
 .bk-blog__section-title h1 {
   font-family: $reading;

@@ -339,13 +339,19 @@ a.announcement_link {
   @include display_flex;
   @include align-items(center);
   @include justify-content(center);
-  margin: 0.5px 1px;
+  margin: 2px 1px;
   background: white;
   text-align: center;
   @include link-mix($dark-color);
   &:last-of-type{
-    margin-bottom: 0;
+    margin-right: 0;
   }
+  @include media-query($medium){
+    margin: 1px 2px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  };
 }
 
 // Archive ------
@@ -449,4 +455,20 @@ a.announcement_link {
   line-height: 1em;
   display: inline-block;
   position: relative;
+}
+
+// news
+#news {
+  h1, h2, p {
+    font-family: $sans-serif;
+    margin: 0;
+  }
+  h1 {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
 }

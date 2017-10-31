@@ -106,7 +106,6 @@
   position: relative;
   //z-index: -1; // --> otherwise zoom won't work
   // overflow: hidden; // --> otherwise zoom won't work
-  border-bottom: 1px solid $slightly-darker;
   @include display_flex;
   flex-direction: column;
   &__navigation {
@@ -151,16 +150,24 @@
 .overview-posts {
   margin: 50px 0;
   display: flex;
-  width: 90%;
+  flex-direction: column;
+  @include media-query($medium){
+    flex-direction: row;
+    width: 90%;
+  };
   &:first-of-type {
     margin-top: 0;
   }
-  &:nth-of-type(odd) .bk-overview-posts__frame {
-    background-color: white;
-  }
+  // &:nth-of-type(odd) .bk-overview-posts__frame {
+  //   background-color: white;
+  // }
   .overview-img {
-    width: calc(40%);
+    height: 200px;
     background: rgba(255,255,255,.5);
+    @include media-query($medium){
+      width: calc(40%);
+      height: unset;
+    };
     img {
       object-fit: cover;
       width: 100%;
@@ -222,9 +229,9 @@
 
 .bk-overview-posts__frame {
   max-width: 750px;
+  padding: 30px;
   @include media-query($medium){
     width: 60%;
-    padding: 30px;
     padding-right: 60px;
   }
   .blog-posts--overview-content .intro-frame {
@@ -233,22 +240,26 @@
 }
 
 .bk-overview-posts__social {
+  @include display_flex;
+  opacity: 0.4;
   @include media-query($medium){
-    @include display_flex;
     @include direction_column;
-    opacity: 0.7;
   };
   .social__filler {
+    background: white;
+    margin: 2px 1px;
+    margin-left: 0;
+    width: calc(100% - 40px * 6 - 13 * 1px);
     @include media-query($medium){
-      height: calc(100% - 40px * 6);
-      background: white;
-      margin: 0.5px 1px;
+      height: calc(100% - 40px * 6 - 13 * 1px);
+      width: unset;
+      margin: 1px 2px;
       margin-top: 0;
     }
   }
   .social_share {
+    @include display_flex;
     @include media-query($medium){
-      @include display_flex;
       @include direction_column;
     };
   }
@@ -269,56 +280,6 @@
 
 .bk-article-title .bk-blog-posts__date {
   margin: 0 0 26px 0;
-}
-
-.bk-blog-thumbnail {
-
-  //flex-direction: column;
-  width: 100%;
-
-  &__img {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 16px;
-    height: 350px;
-  }
-  &__content {
-    width: 100%;
-  }
-  @include media-query($medium){
-    display: flex;
-    flex-direction: row;
-    &__img {
-      width: 40%;
-      margin: 6px 0 6px 0;
-      height: unset;
-    }
-    &__content {
-      width: calc(60% - 0px);
-      padding-left: 20px;
-      p {
-        margin: 0;
-      }
-    }
-  };
-}
-
-.bk-blog-thumbnail_2 {
-  img {
-    object-fit: cover;
-    float: left;
-    margin: 0;
-    margin-bottom: 16px;
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    @include media-query($medium){
-      width: 40%;
-      height: 222px;
-      max-height: unset;
-      margin: 8px 20px 8px 0;
-    };
-  }
 }
 
 .bk-blog-posts--tags {
@@ -450,5 +411,6 @@
   "blog-font",
   "archive",
   "tags",
-  "slider"
+  "slider",
+  "news"
 ;

@@ -113,6 +113,16 @@ justify-content: $justify;
   }
 }
 
+.bk-m-c {
+  padding: 15px 30px;
+  @include media-query($xtra-small){
+    padding: 30px 60px 30px;
+  };
+  @include media-query($medium){
+    padding: 30px 120px 30px 60px;
+  };
+}
+
 
 // fix for js-links not showing up while hovering over them
 .js-hover:hover {

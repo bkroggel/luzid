@@ -135,13 +135,16 @@
   };
   @include media-query($medium){
     flex-direction: row;
+    justify-content: center;
     &__navigation {
         display: block;
-        width: calc(100% / 3);
+        //width: calc(100% / 3);
+        width: unset;
     }
     &__content {
       padding: 100px 0px 50px;
-      width: calc(100% / 3 * 2);
+      //width: calc(100% / 3 * 2);
+      max-width: 750px;
       margin: 0;
     }
   };
@@ -153,7 +156,7 @@
   flex-direction: column;
   @include media-query($medium){
     flex-direction: row;
-    width: 90%;
+    //width: 90%;
   };
   &:first-of-type {
     margin-top: 0;
@@ -164,6 +167,10 @@
   .overview-img {
     height: 200px;
     background: rgba(255,255,255,.5);
+    margin-bottom: 20px;
+    @include media-query($xtra-small){
+      margin-bottom: 0px;
+    };
     @include media-query($medium){
       width: calc(40%);
       height: unset;
@@ -185,6 +192,12 @@
     }
     img[src=""] {
       display: none;
+    }
+    &.overview-img-placeholder {
+      display: none;
+      @include media-query($xtra-small){
+        display: block;
+      };
     }
   }
   h1.posts-title {
@@ -229,14 +242,27 @@
 
 .bk-overview-posts__frame {
   max-width: 750px;
-  padding: 30px;
+  padding-bottom: 20px;
+  @include media-query($xtra-small){
+    order: 2;
+    padding: 20px 0;
+  };
   @include media-query($medium){
     width: 60%;
+    padding: 30px;
     padding-right: 60px;
+    order: 3;
   }
   .blog-posts--overview-content .intro-frame {
     margin-bottom: 0;
   }
+}
+
+.overview-posts .read_more-link {
+  display: none;
+  @include media-query($xtra-small){
+    display: block;
+  };
 }
 
 .bk-overview-posts__social {
@@ -244,12 +270,20 @@
   opacity: 0.4;
   @include media-query($medium){
     @include direction_column;
+    order: 3;
   };
   .social__filler {
-    background: white;
+    background: $accent-color;
     margin: 2px 1px;
     margin-left: 0;
-    width: calc(100% - 40px * 6 - 13 * 1px);
+    width: calc(100% - 35px * 6 - 13 * 1px);
+    @include display_flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include media-query($xtra-small){
+      background: white;
+      width: calc(100% - 40px * 6 - 13 * 1px);
+    };
     @include media-query($medium){
       height: calc(100% - 40px * 6 - 13 * 1px);
       width: unset;
@@ -393,7 +427,7 @@
     flex-direction: row;
     height: auto;
     max-width: 300px;
-    margin: 100px 20px auto 60px;
+    margin: 100px 70px auto 0;
   }
 }
 

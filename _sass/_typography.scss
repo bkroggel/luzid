@@ -333,9 +333,17 @@ a.announcement_link {
   margin-top: 15px;
 }
 
+.overview-posts .social__filler a.link {
+  font-size: 0.5rem;
+  color: white;
+  @include media-query($xtra-small){
+    display: none;
+  };
+}
+
 .bk-overview-posts__social .social_share a {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   @include display_flex;
   @include align-items(center);
   @include justify-content(center);
@@ -343,9 +351,15 @@ a.announcement_link {
   background: white;
   text-align: center;
   @include link-mix($dark-color);
+  font-size: 0.8rem;
   &:last-of-type{
     margin-right: 0;
   }
+  @include media-query($xtra-small){
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  };
   @include media-query($medium){
     margin: 1px 2px;
     &:last-of-type{

@@ -65,8 +65,10 @@
 }
 
 .overview-posts .bk-sub_title h3 {
-  left: -30px;
-  padding-left: 30px;
+  @include media-query($medium){
+    left: -30px;
+    padding-left: 30px;
+  };
 }
 
 .vertical-blog-link a {

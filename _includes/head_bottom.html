@@ -303,6 +303,10 @@
   </script>
 {% endif %}
 
+{% if page.layout == 'home' %}
+  <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
+{% endif %}
+
 <script type="text/javascript">
 //back button
   function back_button(id){

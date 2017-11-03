@@ -102,6 +102,7 @@ var news = {
         var tweetObject = tweets[n];
         var username = '@derKroggel'
         html += '<div class="twitter_el">'
+          //+ '<div class="tweet_text">'
           + '<div class="tweet__frame">'
             + '<div class="tweet_header"><a href="' + tweetObject.permalinkURL + '"><h1>'
              + '<span class="fa fa-twitter"></span>'
@@ -122,6 +123,8 @@ var news = {
               +  '<a href="https://twitter.com/intent/favorite?tweet_id=' + tweetObject.tid + '" target="_blank">Favorite</a>'
             + '</div>'
           + '</div>'
+          //+ '</div>'
+          //+ (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
         + '</div>'
       n++;
       }

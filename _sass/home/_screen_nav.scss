@@ -64,10 +64,10 @@ body.active {
       transition: all ease-in-out .4s;
     }
     &:nth-of-type(2) {
-      transform: translate(100%, -30%);
+      transform: translate(100%, -50%);
     }
     &:nth-of-type(3) {
-      transform: translate(100%, 30%);
+      transform: translate(100%, 50%);
     }
   }
 }

@@ -305,6 +305,20 @@
 
 {% if page.layout == 'home' %}
   <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    //storewindow
+    $('#storewindow__img').slick({
+      slidesToShow: 1,
+      slidesToScrol: 1,
+      dots: true,
+      cssEase:"ease-in-out",
+      prevArrow: $('#storewindow #next'),
+      nextArrow: $('#storewindow #prev'),
+      draggable: false
+    });
+
+  </script>
 {% endif %}
 
 <script type="text/javascript">

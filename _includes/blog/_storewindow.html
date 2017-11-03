@@ -1,0 +1,27 @@
+<section id="storewindow">
+  <div class="storewindow__el" id="storewindow__img">
+    {% for post in site.posts | limit: 4 %}
+      <div class="">
+        {% if post.thumbnail.img %}
+          <img src="{{post.thumbnail.img}}" alt="{{post.title}}"></img>
+        {% else %}
+          <img src="assets/img/dev/thumb_placeholder.png" alt="{{post.title}}"></img>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="storewindow__el" id="storewindow__text">
+    <div class="">
+
+    </div>
+    <div class="storewindow__controlls">
+      <div class="controlls__btn" id="next">
+
+      </div>
+      <div class="controlls__btn" id="prev">
+
+      </div>
+      <div class="controlls__placeholder"></div>
+    </div>
+  </div>
+</section>

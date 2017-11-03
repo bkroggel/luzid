@@ -1,3 +1,7 @@
+.bk-blog-nav--static nav {
+  border-bottom: none;
+}
+
 .bk-blog__static {
   margin: 150px auto 100px;
   @include media-query($medium){

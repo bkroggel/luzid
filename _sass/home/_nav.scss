@@ -3,6 +3,13 @@
 .bk-hor-nav {
   position: relative;
   float: right;
+  @include media-query($medium){
+    border-bottom: 2px solid $darkest-color;
+    @include display_flex;
+    @include align-items(center);
+    @include justify-content(flex-end);
+    width: calc(100% - 55px);
+  };
   ul {
     margin: 0;
     padding: 0;

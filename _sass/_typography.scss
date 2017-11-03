@@ -476,13 +476,35 @@ a.announcement_link {
   h1, h2, p {
     font-family: $sans-serif;
     margin: 0;
+    color: black;
   }
   h1 {
     font-size: 0.9rem;
     font-weight: 700;
+    margin-bottom: 5px;
   }
   h2 {
     font-size: 0.7rem;
     font-weight: 400;
+  }
+  .tweet_content p,
+  .tweet_content a,
+  h1 span.time {
+    font-size: 0.6rem;
+    font-weight: 400;
+    @include link-mix(rgba(0,0,0,0.5));
+    @include media-query($small){
+      font-size: 0.7rem;
+    };
+  }
+  h1 span.time {
+    margin-left: 3px;
+    font-size: 0.5rem;
+  }
+  .tweet__interactions a {
+    font-size: 0.7rem;
+    margin-right: 10px;
+    @include link-mix($darkest-color);
+    opacity: 0.5;
   }
 }

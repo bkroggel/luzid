@@ -66,28 +66,67 @@ handleTweets(arrayTweets);inProgress=false;if(queue.length>0){twitterFetcher.fet
 
 var news = {
   "id": '646979504716533760',
-  "domId": 'news_twitter',
-  "maxTweets": 2,
+  "domId": 'news__twitter',
+  "maxTweets": 3,
   "enableLinks": true,
-  "showPermalinks": false,
-  "showUser": false,
+  "showUser": true,
   "showTime": true,
- // "dateFunction": dateFormatter,
+  "dataOnly": true,
+  //"dateFunction": dateFormatter,
   "showRetweet": false,
-  //"customCallback": handleTweets
+  "customCallback": handleTweets
 };
+
 
   // function handleTweets(tweets) {
   //     var x = tweets.length;
   //     var n = 0;
   //     var element = document.getElementById('news_twitter');
-  //     var html = '<div class="row">';
+  //     var html = '<div class="twitter_frame">';
+  //     var tweet = tweets[n]
   //     while(n < x) {
-  //       html += '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 cols twitter-cols">' + tweets[n] + '</div>';
+  //       html += '<div class="twitter_el">' + tweet + '</div>';
   //       n++;
   //     }
   //     html += '</div>';
   //     element.innerHTML = html;
   // }
+
+  function handleTweets(tweets) {
+      var x = tweets.length;
+      var n = 0;
+      var element = document.getElementById('news__twitter');
+      var html = '<div class="twitter_frame">';
+      //for (var i = 0, lgth = tweets.length; i < lgth ; i++) {
+      while (n < x) {
+        var tweetObject = tweets[n];
+        var username = '@derKroggel'
+        html += '<div class="twitter_el">'
+          + '<div class="tweet__frame">'
+            + '<div class="tweet_header"><a href="' + tweetObject.permalinkURL + '"><h1>'
+             + '<span class="fa fa-twitter"></span>'
+             + 'Twitter<span class="time"> on ' + tweetObject.time + '</span></h1>'
+            + '</a></div>'
+            + (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
+            + '<div class="tweet_content"><p>' + tweetObject.tweet + '</p></div>'
+            // + (tweetObject.author_data.screen_name == username ? '' : '<div class="tweet_link">' + tweetObject.author_data.screen_name + '</div>')
+          + '</div>'
+          + '<div class="tweet__interactions">'
+            + '<div class="interactions__el">'
+              +  '<a href="https://twitter.com/intent/tweet?in_reply_to=' + tweetObject.tid + '" target="_blank">Reply</a>'
+            + '</div>'
+            + '<div class="interactions__el">'
+              +  '<a href="https://twitter.com/intent/retweet?tweet_id=' + tweetObject.tid + '" target="_blank">Retweet</a>'
+            + '</div>'
+            + '<div class="interactions__el">'
+              +  '<a href="https://twitter.com/intent/favorite?tweet_id=' + tweetObject.tid + '" target="_blank">Favorite</a>'
+            + '</div>'
+          + '</div>'
+        + '</div>'
+      n++;
+      }
+      html += '</div>';
+      element.innerHTML = html;
+  }
 
   twitterFetcher.fetch(news);

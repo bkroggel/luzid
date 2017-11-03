@@ -1,11 +1,87 @@
 section#news {
 
 }
+
+#news__twitter {
+  width: 60%;
+  @include media-query($small){
+    width: unset;
+  };
+}
 .news_content {
   border: 2px solid $slightly-darker;
   border-left: none;
   border-right: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  height: 100px;
+  padding-top: 15px;
+  padding-right: 3%;
+  @include display_flex;
+  @include justify-content(space-between);
+}
+
+#news .twitter_frame {
+  @include display_flex;
+}
+
+
+#news .twitter_frame,
+#news .twitter_el {
+  height: 100%;
+}
+
+#news__twitter .twitter_el {
+  @include display_flex;
+  @include direction_column;
+  @include justify-content(space-between);
+  margin-right: 30px;
+  border-bottom: 2px solid black;
+  padding-left: 2px;
+  @include media-query($small){
+    max-width: 250px;
+    padding-right: 30px;
+  };
+}
+
+#news h1 span.fa-twitter {
+  margin-right: 5px;
+}
+
+#news__twitter .tweet__interactions {
+  @include display_flex;
+  margin-bottom: -2px;
+  margin-top: 10px;
+}
+
+
+// how many tweets to display_flex
+#news__twitter .twitter_el {
+  &:nth-of-type(n+1){
+    margin-right: 0;
+  }
+  &:nth-of-type(n+2){
+    display: none;
+  }
+  @include media-query($small){
+    &:nth-of-type(n){
+      margin-right: 30px;
+      @include display_flex;
+    }
+    &:nth-of-type(n+2){
+      margin-right: 0;
+    }
+    &:nth-of-type(n+3){
+      display: none;
+    }
+  };
+  @include media-query($large){
+    &:nth-of-type(n){
+      margin-right: 30px;
+      @include display_flex;
+    }
+    &:nth-of-type(n+3){
+      margin-right: 0;
+    }
+    &:nth-of-type(n+4){
+      display: none;
+    }
+  };
 }

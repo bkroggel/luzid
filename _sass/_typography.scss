@@ -78,7 +78,8 @@ p {
 #blog-nav-dropdown p,
 .bk-article-title h3,
 .bk-article-title time,
-.bk-footer-1__sec2 h3 {
+.bk-footer-1__sec2 h3,
+#storewindow__text h3 {
   font-family: $sans-serif;
   font-weight: 400;
   font-size: 0.6em;
@@ -507,4 +508,14 @@ a.announcement_link {
     @include link-mix($darkest-color);
     opacity: 0.5;
   }
+}
+
+#storewindow__text h3,
+#storewindow__text h1,
+#storewindow__text p {
+  color: white;
+}
+
+#storewindow__text a {
+  @include link-mix(white);
 }

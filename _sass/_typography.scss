@@ -32,6 +32,16 @@ p {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 0.75rem;
+    &.active {
+      font-weight: 700;
+    }
+    @include media-query($medium){
+      font-size: 1.35rem;
+      margin: 2px;
+      display: inline-block;
+      font-family: $reading;
+      letter-spacing: 0;
+    };
   }
   &--mini p,
   &--mini a {

@@ -18,29 +18,31 @@
 {% endif %}
 
 <div class="blog-posts overview-posts">
-  {% include blog/overview-posts/_img-element.html %}
-  <div class="bk-overview-posts__frame">
-    {% include blog/overview-posts/_date.html %}
-    <a class="blog-posts--title" href="{{ post.url }}">
-      {% if post.sub_title %}<div class="bk-sub_title">
-        <h3>{{ post.sub_title }}</h3>
-      </div>{% endif %}
-      <h1 class="posts-title">{{ post.title }}</h1>
-    </a>
-    <div class="bk-blog-posts--tags">
-      <p>
-        {{ tags_content }}
-      </p>
+  <div class="overview-posts__inner">
+    {% include blog/overview-posts/_img-element.html %}
+    <div class="bk-overview-posts__frame">
+      {% include blog/overview-posts/_date.html %}
+      <a class="blog-posts--title" href="{{ post.url }}">
+        {% if post.sub_title %}<div class="bk-sub_title">
+          <h3>{{ post.sub_title }}</h3>
+        </div>{% endif %}
+        <h1 class="posts-title">{{ post.title }}</h1>
+      </a>
+      <div class="bk-blog-posts--tags">
+        <p>
+          {{ tags_content }}
+        </p>
+      </div>
+      {% include blog/overview-posts/_excerpt.html %}
+      <div class="read_more-link">
+        <a class="link" href="{{ post.url }}">Read More</a>
+      </div>
     </div>
-    {% include blog/overview-posts/_excerpt.html %}
-    <div class="read_more-link">
-      <a class="link" href="{{ post.url }}">Read More</a>
+    <div class="bk-overview-posts__social">
+      <div class="social__filler">
+        <a class="link" href="{{ post.url }}">Read More</a>
+      </div>
+      {% include blog/overview-posts/_social-share-overview.html %}
     </div>
-  </div>
-  <div class="bk-overview-posts__social">
-    <div class="social__filler">
-      <a class="link" href="{{ post.url }}">Read More</a>
-    </div>
-    {% include blog/overview-posts/_social-share-overview.html %}
   </div>
 </div>

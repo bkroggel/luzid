@@ -65,7 +65,7 @@
 }
 
 .overview-posts .bk-sub_title h3 {
-  @include media-query($medium){
+  @include media-query($large){
     left: -30px;
     padding-left: 30px;
   };

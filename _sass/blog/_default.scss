@@ -136,17 +136,17 @@
   };
   @include media-query($medium){
     flex-direction: row;
-    justify-content: center;
     &__navigation {
         display: block;
         //width: calc(100% / 3);
         width: unset;
+        flex: 0 0 auto;
     }
     &__content {
       padding: 100px 0px 50px;
       //width: calc(100% / 3 * 2);
-      max-width: 750px;
       margin: 0;
+      flex: 1 1 100%;
     }
   };
 };
@@ -157,7 +157,12 @@
   flex-direction: column;
   @include media-query($medium){
     flex-direction: row;
-    //width: 90%;
+    max-width: 90%;
+    margin: 100px auto;
+    @include justify-content(center);
+  };
+  @include media-query($large){
+    max-width: 900px;
   };
   &:first-of-type {
     margin-top: 0;
@@ -172,9 +177,12 @@
     @include media-query($xtra-small){
       margin-bottom: 0px;
     };
-    @include media-query($medium){
-      width: calc(40%);
-      height: unset;
+    @include media-query($large){
+      position: absolute;
+      height: 85%;
+      width: 50%;
+      left: 0;
+      top: 0;
     };
     img {
       object-fit: cover;
@@ -241,6 +249,15 @@
   }
 }
 
+.overview-posts__inner {
+  @include display_flex;
+  @include direction_column;
+  position: relative;
+  @include media-query($large){
+    @include direction_row;
+  };
+}
+
 .bk-overview-posts__frame {
   max-width: 750px;
   padding-bottom: 20px;
@@ -249,10 +266,17 @@
     padding: 20px 0;
   };
   @include media-query($medium){
-    width: 60%;
     padding: 30px;
+  }
+  @include media-query($large){
+    width: unset;
+    max-width: unset;
     padding-right: 60px;
     order: 3;
+    background: $main-color;
+    z-index: 1;
+    margin-left: 30%;
+    margin-top: 10%;
   }
   .blog-posts--overview-content .intro-frame {
     margin-bottom: 0;
@@ -269,9 +293,10 @@
 .bk-overview-posts__social {
   @include display_flex;
   opacity: 0.4;
-  @include media-query($medium){
+  @include media-query($large){
     @include direction_column;
     order: 3;
+    margin-top: 10%;
   };
   .social__filler {
     background: $accent-color;
@@ -285,7 +310,7 @@
       background: white;
       width: calc(100% - 40px * 6 - 13 * 1px);
     };
-    @include media-query($medium){
+    @include media-query($large){
       height: calc(100% - 40px * 6 - 13 * 1px);
       width: unset;
       margin: 1px 2px;
@@ -294,7 +319,7 @@
   }
   .social_share {
     @include display_flex;
-    @include media-query($medium){
+    @include media-query($large){
       @include direction_column;
     };
   }
@@ -379,8 +404,11 @@
     width: 90%;
     padding: 30px 0 0 30px;
     @include media-query($medium) {
-      padding: 30px 30px 0 30px;
-      width: auto;
+      padding: 0;
+      padding-left: 30px;
+      max-width: 235px;
+      margin: 1.2rem 0 10px;
+      position: relative;
     }
   }
   ul.bk-blog-info {
@@ -394,6 +422,17 @@
       @include media-query($medium) {
         padding-bottom: 0;
         background: none;
+        margin: 0;
+        position: relative;
+        &:after {
+          content: '';
+          bottom: 0;
+          left: 30px;
+          position: absolute;
+          background: $darkest-color;
+          width: 70px;
+          height: 1px;
+        }
       }
     }
     &:last-of-type {
@@ -407,17 +446,9 @@
       width: 100%;
       border-radius: 0;
     }
-  }
-  .bk_img_big_screen {
-    display: none;
-    img {
-      width: 75px;
-      height: auto;
-      border-radius: 3px;
-    }
-    // @include media-query($medium) {
-    //   display: block;
-    // }
+    @include media-query($medium){
+      display: none;
+    };
   }
   &.active {
     height: 100%;
@@ -425,19 +456,45 @@
     overflow: scroll;
   }
   @include media-query($medium) {
-    flex-direction: row;
+    @include display_flex;
+    @include direction_column;
     height: auto;
     max-width: 300px;
     margin: 100px 70px auto 0;
+    background: none;
+    .bk-rights {
+      order: 3;
+    }
   }
 }
 
 .bk-blog-info-nav li {
+  position: relative;
   &:nth-of-type(2),
   &:nth-of-type(4),
   &:nth-of-type(5),
   &:last-of-type {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
+  }
+  a.active:before,
+  a:before,
+  a:hover:before {
+    content: '';
+    background: black;
+    height: 1px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 101%;
+    transition: width ease-in-out 0.2s;
+    @include media-query($medium){
+      top: 46%;
+    };
+  }
+  a:before {
+    width: 0;
+    transition: width ease-in-out 0.4s;
   }
 }
 

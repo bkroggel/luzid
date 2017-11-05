@@ -303,8 +303,11 @@
   </script>
 {% endif %}
 
-{% if page.layout == 'home' %}
+{% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}
   <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
+{% endif %}
+
+{% if page.layout == 'home' %}
   <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
   <script type="text/javascript">
     //storewindow

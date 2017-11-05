@@ -1,16 +1,16 @@
 <div class="bk-blog-sidebar">
   <ul class="bk-blog-info bk-blog-info-nav">
-    {% for blog-nav in site.data.nav.blog-navs %}<li><a href="{{blog-nav.link}}">{{blog-nav.name}}</a></li>{% endfor %}
+    {% for blog-nav in site.data.nav.blog-navs %}<li><a href="{{blog-nav.link}}" {% if blog-nav.link == page.url %}class="active"{% endif %}>{{blog-nav.name}}</a></li>{% endfor %}
   </ul>
-  <ul class="bk-blog-info bk-blog-info--mini js-hover">
+  <ul class="bk-blog-info bk-blog-info--mini js-hover bk-rights">
     <li><a id="back-button" onclick="{{site.url}}">&#8592; back to hompage</a></li>
     <!-- modify so that it will redirect to the previous blog site if bastiankroggel.com/blog otherwise to bastiankroggel.com -->
     <li class="copyright"><p>&#169; 2015 - 2017 | Bastian Kroggel</p></li>
   </ul>
 
-  <ul class="bk-blog-info">
+  <!-- <ul class="bk-blog-info">
     <li><a href="https://twitter.com/{{site.twitter}}" class="twitter-follow-button" data-show-count="false">Follow @{{site.twitter}}</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-  </ul>
+  </ul> -->
 
   <ul class="bk-blog-info bk-blog-info--mini">
     <li>
@@ -18,7 +18,6 @@
         {{ site.data.author.[site.admin_user].info }}
       </p>
     </li>
-    <li class="bk_img_big_screen"><img src="{{ site.data.author.[site.admin_user].img }}" alt="{{site.admin_user}}"></li>
     <li class="bk_img_small_screen"><img src="{{ site.data.author.[site.admin_user].big_img }}" alt="{{site.admin_user}}"></li>
   </ul>
 </div>

@@ -16,15 +16,15 @@ blog-navs:
   - name: About me
     link: /about
   - name: Archive
-    link: /blog/archive
+    link: /blog/archive/
   - name: Tags
-    link: /blog/archive/tags
+    link: /blog/archive/tags/
   - name: Contact
     link: 'mailto: contact@bastiankroggel.com'
   - name: Imprint
-    link: /imprint
+    link: /imprint/
   - name: Privcy Policy
-    link: /pp
+    link: /pp/
 
 footer:
   1_navs:

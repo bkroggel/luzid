@@ -3,29 +3,33 @@
     {% include navigation/_blog-nav.html %}
   </div>
   <div class="bk-blog__content bk-blog__archive">
-    <div class="archive__bc">
-      <ul>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/blog/archive">Archive</a></li>
-        <li><a href="/blog/archive/tags">Tags</a></li>
-        <li><a href="/blog/archive/tags/{{ page.tag }}">{{ page.title }}</a></li>
-      </ul>
-    </div>
-    <div class="bk-blog__section-title">
-      <h1>Archive</h1>
-      <div class="archive_tag"><p>{{ page.title }}</p></div>
-    </div>
-
-    <section id="archive">
-      {% for post in site.tags[page.tag] %}
-
-        {% include blog/archive/_inner.html %}
-
-      {% endfor %}
-    <!-- </div> -->
+    <div class="bk-blog__archive__inner">
+      <div class="archive__bc">
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/blog/archive">Archive</a></li>
+          <li><a href="/blog/archive/tags">Tags</a></li>
+          <li><a href="/blog/archive/tags/{{ page.tag }}">{{ page.title }}</a></li>
+        </ul>
       </div>
-    </div>
-    </section>
+      <div class="bk-blog__section-title">
+        <h1>Archive</h1>
+        <div class="archive_tag"><p>{{ page.title }}</p></div>
+      </div>
 
+      <div class="archive__img">
+        <img src="/assets/img/dev/archive.png" alt="">
+      </div>
+      <section id="archive">
+        {% for post in site.tags[page.tag] %}
+
+          {% include blog/archive/_inner.html %}
+
+        {% endfor %}
+      <!-- </div> -->
+        </div>
+      </div>
+      </section>
+    </div>
   </div>
 </section>

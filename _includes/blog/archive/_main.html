@@ -3,28 +3,35 @@
     {% include navigation/_blog-nav.html %}
   </div>
   <div class="bk-blog__content bk-blog__archive">
-    <div class="archive__bc">
-      <ul>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/blog/archive">Archive</a></li>
-      </ul>
-    </div>
-    <div class="bk-blog__section-title">
-      <h1>{{ page.title }}</h1>
-    </div>
-    <div class="">
-      <img src="/assets/img/dev/archive.png" alt="">
-    </div>
+    <div class="bk-blog__archive__inner">
 
-    <section id="archive">
-      {% for post in site.posts %}
-
-        {% include blog/archive/_inner.html %}
-
-      {% endfor %}
+      <div class="archive__bc">
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/blog/archive">Archive</a></li>
+        </ul>
       </div>
+      <div class="bk-blog__section-title">
+        <h1>{{ page.title }}</h1>
+      </div>
+      <div class="archive__img">
+        <img src="/assets/img/dev/archive.png" alt="">
+      </div>
+
+      <section id="archive">
+        {% for post in site.posts %}
+
+          {% include blog/archive/_inner.html %}
+
+        {% endfor %}
+        </div>
+      </div>
+      </section>
+
+
+
+
     </div>
-    </section>
 
   </div>
 </section>

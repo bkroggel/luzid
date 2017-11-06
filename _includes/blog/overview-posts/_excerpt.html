@@ -2,6 +2,6 @@
   {% if post.thumbnail.overview %}
     <p>{{ post.thumbnail.overview | markdownify }}</p>
   {% else %}
-    <p>{{ post.content | strip_html | markdownify | truncate: 500 }}</p>
+    <p>{{ post.content | strip_html | markdownify | truncatewords: 70 }}</p>
   {% endif %}
 </div>

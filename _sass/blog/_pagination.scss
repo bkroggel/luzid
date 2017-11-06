@@ -186,12 +186,12 @@ $pages-item-active-color:   white !default;
   padding: 0;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   @include media-query($small){
     max-width: 90%;
   };
   @include media-query($medium){
-    margin-bottom: 150px;
+    margin-bottom: 10px;
   };
 }
 
@@ -225,17 +225,16 @@ $pages-item-active-color:   white !default;
   cursor: default;
   border-top: 1px solid $darkest-color;
   color: $darkest-color;
-
 }
 
 .pagination-item,
 a.pagination-item,
 .pages-indicator span {
   color: $dark-color;
-  font-family: $sans-serif;
-  font-weight: 300;
+  font-family: $reading;
+  font-weight: 400;
   font-size: 0.8em;
-  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .bk-pagination ul li.next a:after {

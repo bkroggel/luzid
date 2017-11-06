@@ -273,10 +273,10 @@
     max-width: unset;
     padding-right: 60px;
     order: 3;
-    background: $main-color;
+    background: rgb(255,255,255);
     z-index: 1;
-    margin-left: 30%;
-    margin-top: 10%;
+    margin-top: 5%;
+    box-shadow: 6px 6px 0 0 $accent-two;
   }
   .blog-posts--overview-content .intro-frame {
     margin-bottom: 0;
@@ -288,6 +288,11 @@
   @include media-query($xtra-small){
     display: block;
   };
+  @include media-query($large){
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+  };
 }
 
 .bk-overview-posts__social {
@@ -295,11 +300,13 @@
   opacity: 0.4;
   @include media-query($large){
     @include direction_column;
-    order: 3;
-    margin-top: 10%;
+    order: 2;
+    margin-top: 5%;
+    margin-left: 30%;
+    opacity: 0.9;
   };
   .social__filler {
-    background: $accent-color;
+    background: $accent-two;
     margin: 2px 1px;
     margin-left: 0;
     width: calc(100% - 35px * 6 - 13 * 1px);

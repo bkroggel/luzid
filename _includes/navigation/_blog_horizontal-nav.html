@@ -1,5 +1,5 @@
 <div class="bk-blog-nav--frame">
-  <div class="bk-blog-nav js-stuck-nav {% if page.layout == 'static' %}bk-blog-nav--static{% endif %}">
+  <div class="bk-blog-nav js-stuck-nav {% if page.layout == 'static' and page.title != 'About me' %}bk-blog-nav--static{% endif %}">
     {% include svg/_icon.html %}
     {% include navigation/_horizontal-nav.html %}
   </div>

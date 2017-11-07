@@ -97,17 +97,19 @@
   a {
     @include link-mix($blog-font-color_small);
     position: relative;
-    &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 5px;
-      background: rgba(119, 119, 119, 0.33);
-      bottom: 5%;
-      left: 0;
-    }
+    @include underline($blog-font-color_small, $main-color);
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 5px;
+    //   background: rgba(119, 119, 119, 0.33);
+    //   bottom: 5%;
+    //   left: 0;
+    // }
     @include media-query($small){
       @include link-mix($blog-font-color);
+      @include underline($blog-font-color, $main-color);
     };
   }
   h1,
@@ -746,10 +748,9 @@ p.update {
     font-size: 0.7rem;
     font-weight: 300;
     color: $dark-color;
-    border-color: $dark-color;
   }
-  a:after {
-    bottom: 0;
+  a {
+    @include underline($dark-color, $main-color);
   }
   @include media-query($medium){
     width: 100%;
@@ -759,4 +760,84 @@ p.update {
       font-family: $serif;
     }
   };
+}
+
+.bk-blog-content span.sidenote span:first-of-type {
+  color: $accent-two;
+  cursor: pointer;
+  &:after {
+    content:'\f196';
+    font-family: FontAwesome;
+    font-size: 0.7rem;
+    margin-left: 3px;
+    color: $accent-two;
+  }
+  @include media-query($medium){
+    cursor: default;
+    &:after {
+      display: none;
+    }
+  };
+
+}
+
+.bk-blog-content span.sidenote span:nth-of-type(2) {
+  padding: 20px;
+  margin: 5px 0;
+  display: none;
+  background: $main-color;
+  @include media-query($medium){
+    position: absolute;
+    display: inline-block;
+    width: calc(33% - 40px);
+    right: 100%;
+    padding: 10px 0 0 10px;
+    margin-right: 20px;
+    background: none;
+    &:before,
+    &:after {
+      position: absolute;
+      background: $accent-two;
+    }
+    &:after {
+      content: '';
+      top: 0;
+      right: 0;
+      width: calc(100%);
+      height: 1px;
+    }
+    &:before {
+      content: "Note";
+      font-size: 0.7rem;
+      color: $main-color;
+      padding: 1px 6px;
+      top: 0;
+      right: 0;
+      transform: translateY(-100%);
+    }
+  };
+}
+
+.bk-blog-content span.sidenote.active span:nth-of-type(2) {
+  display: block;
+}
+
+.bk-blog-content span.sidenote span:nth-of-type(2),
+.bk-blog-content span.sidenote span:nth-of-type(2) p,
+.bk-blog-content span.sidenote span:nth-of-type(2) em,
+.bk-blog-content span.sidenote span:nth-of-type(2) a {
+  line-height: 1.2rem;
+  font-size: 0.85rem;
+  color: $accent-two;
+  font-weight: 400;
+  text-align: left;
+  @include media-query($medium){
+    text-align: right;
+  };
+}
+.bk-blog-content span.sidenote span:nth-of-type(2) a {
+  @include underline($accent-two, $main-color);
+  &:after {
+    content: none;
+  }
 }

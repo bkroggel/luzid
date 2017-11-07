@@ -11,12 +11,16 @@ thumbnail:
   overview: |
     Jep, Thumbanil. Maecenas aliquet at turpis ac commodo. Pellentesque convallis dignissim cursus. Vivamus in nulla tellus.
 
-    Vestibulum scelerisque urna metus, at luctus nunc fermentum vel. 
+    Vestibulum scelerisque urna metus, at luctus nunc fermentum vel.
 
     Donec hendrerit nisl leo, tempus efficitur nisi consectetur et. Sed orci lorem, mattis vel varius nec, tincidunt id nulla. Suspendisse et dapibus justo.
 ---
 Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae [sem](http://bastiankroggel.com) eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. *Aliquam* ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci.
 {:.intro}
+
+Suspendisse malesuada quam ac pretium posuere. Curabitur in pellentesque enim. Phasellus vitae tristique tellus. Nulla facilisi. Vestibulum eget mi et tellus efficitur aliquet. Mauris sapien mauris, interdum nec porttitor sit amet, volutpat in ante. Nulla ullamcorper tincidunt enim, ut imperdiet enim blandit quis. Mauris iaculis ex dolor, vitae molestie dolor eleifend et. Vestibulum sit amet odio in nibh tincidunt ultricies a nec velit. Vivamus in scelerisque nisi. Mauris vestibulum mollis nulla, eu feugiat lorem commodo at. Pellentesque suscipit pharetra nisi vitae auctor. Donec tincidunt risus vitae porta ullamcorper.
+
+Sed dictum ut lorem et pellentesque. Vestibulum vitae risus facilisis, ultrices orci consectetur, elementum ante. Donec tempor vel tellus a egestas. Fusce nec augue ex. Vivamus tempor, sem in tristique aliquet, arcu arcu tempor risus, id ullamcorper eros lorem non ante. Quisque erat nisl, blandit id vulputate nec, finibus eu eros. Donec placerat nibh vestibulum, vulputate dui at, venenatis magna. <span class="sidenote"><span>A sidenote</span><span>This is a sidenote that follows the principles by [Edpagajward Tufte](https://edwardtufte.github.io/tufte-css/). Nulla diam massa, scelerisque sit amet ultrices ac, maximus quis arcu. Donec non hendrerit libero. Curabitur vehicula nec quam quis aliquam. Nulla in mauris purus.</span></span> donec mauris neque, ultrices eu purus ut, rhoncus vestibulum massa. Aenean sollicitudin enim eu vehicula laoreet. Vestibulum ligula nibh, ultricies cursus lacinia non, interdum ac diam. Aliquam erat volutpat. Nullam faucibus magna justo, non feugiat mauris malesuada vitae. Phasellus id volutpat ipsum. Morbi finibus nisl faucibus, mattis ante sed, vulputate tortor.
 
 Nam [sem](http://bastiankroggel.com) auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae sem eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. Aliquam ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci. Vivamus quam nibh, tristique id tortor ac, volutpat vehicula ex.
 
@@ -113,7 +117,7 @@ Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculu
 7. eine Liste, die
 8. nicht bei 0 beginnt
 
-<mail@bastiankroggel>
+<mail@bastiankroggel.com>
 
 ###### Lorena
 Integer sed tempus diam, et tempus elit. Praesent molestie lectus vel tempus aliquam. Etiam nec bibendum libero, cursus eleifend magna. Proin quis vehicula neque. Etiam molestie urna sem, vel cursus augue aliquam at. Suspendisse ut pretium dolor. In arcu nunc, congue id dolor nec, suscipit pellentesque mi. Donec purus nibh, convallis a turpis in, mattis dictum lorem. Nunc mattis pellentesque turpis sit amet tincidunt. In ac porttitor nibh. Aliquam a vehicula tellus. Aliquam lacus lorem, scelerisque vel dapibus nec, auctor in justo.

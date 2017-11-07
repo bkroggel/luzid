@@ -263,6 +263,12 @@
 
       }); //end window scroll
     }
+
+    if($(window).width() < 991) {
+      $('.bk-blog-content span.sidenote').click(function() {
+        $(this).toggleClass('active')
+      })
+    }
   </script>
 {% endif %}
 
@@ -303,7 +309,7 @@
   </script>
 {% endif %}
 
-{% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}
+{% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' or page.title == 'About me' %}
   <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
 {% endif %}
 

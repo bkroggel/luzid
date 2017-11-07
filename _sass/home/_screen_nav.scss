@@ -35,6 +35,13 @@ body.active {
     transition: none;
     transition-delay: 0s;
   }
+  .bk-hor-nav {
+    border-color: rgba(0,0,0,0);
+    -webkit-transition : border 0.4s ease-in-out;
+    -moz-transition : border 0.4s ease-in-out;
+    -o-transition : border 0.4s ease-in-out;
+    transition : border 0.4s ease-in-out;
+  }
   svg {
     fill: white;
     transition: all 0.4s ease-in-out;
@@ -127,7 +134,7 @@ body.active {
   padding-top: 30vh;
   margin: 0 30px;
   @include media-query($xtra-small){
-    margin: 0 75px;
+    margin: 0 60px;
   };
   &:hover {
     a {
@@ -182,7 +189,7 @@ body.active {
     @include align-items(flex-end);
   };
   @include media-query($medium){
-    margin: 0 120px 0 80px;
+    margin: 0 120px 0 60px;
     width: calc(100% - 180px);
   };
 }

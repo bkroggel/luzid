@@ -5,6 +5,10 @@
   float: right;
   @include media-query($medium){
     border-bottom: 2px solid $darkest-color;
+    -webkit-transition : border 0.4s ease-in-out;
+    -moz-transition : border 0.4s ease-in-out;
+    -o-transition : border 0.4s ease-in-out;
+    transition : border 0.4s ease-in-out;
     @include display_flex;
     @include align-items(center);
     @include justify-content(flex-end);

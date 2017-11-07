@@ -189,6 +189,7 @@
     width: 100%;
     padding: 0;
     margin: 200px auto;
+    position: relative;
   };
 }
 
@@ -210,6 +211,7 @@
     width: 42px;
     height: 40px;
     background: $dark-color;
+    text-shadow: none;
     &:after {
       content: none;
     }

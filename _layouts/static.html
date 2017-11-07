@@ -3,5 +3,8 @@ layout: default
 ---
 {% include navigation/_screen_nav.html %}
 {% include navigation/_blog_horizontal-nav.html %}
+{% if page.title == 'About me' %}
+  {% include blog/_news.html %}
+{% endif %}
 {% include _plain.html %}
 {% include footer/_bk-footer.html %}

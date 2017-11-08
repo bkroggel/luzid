@@ -313,6 +313,52 @@
   <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
 {% endif %}
 
+{% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}
+  <script type="text/javascript">
+    function set_waypoint(){
+      var sticky = new Waypoint.Sticky({
+        element: $('.js-stuck-nav')[0]
+      })
+
+      var navHeight = $('.bk-blog-nav').outerHeight(true) - 15; // hight of navbar - the negative offset (also check css)
+      var bk_wrapper = '<div class="bk-blog__navigation-wrapper" />'
+      var secondHeight = $('.bk-blog__navigation').height();
+
+      $('.bk-blog__navigation').wrap(bk_wrapper);
+      $('.bk-blog__navigation-wrapper').height(secondHeight);
+
+      $('.bk-blog__navigation-wrapper').waypoint({
+        handler: function(direction) {
+          if (direction === 'down') {
+            $('.bk-blog__navigation').addClass('stuck');
+          } else {
+            $('.bk-blog__navigation').removeClass('stuck');
+          }
+        },
+        offset: navHeight
+      });
+    }
+
+    if($(window).width() < 767) {
+      // if window width is less than 767 the set_waypoint function gets triggert and therefore the wrapper gets calculated as well as set
+      set_waypoint();
+    }
+
+    $( window ).resize(function() {
+      if (($(window).width() < 767) && !($('.bk-blog__navigation').parent().hasClass('bk-blog__navigation-wrapper'))) {
+        // if window width is less than 767 and the navigation bar parent element doesn't has the specified class (and therefore wasn't already triggered) the waypoints get set
+        set_waypoint();
+      } else if (($(window).width() > 767) && ($('.bk-blog__navigation').parent().hasClass('bk-blog__navigation-wrapper'))) {
+        // if window with is bigger than 767 and the navigation bar has the specified class (and therefore was already triggered) the waypoints get removed, the wrapper destroyed and the potentially applied stuck classes removed
+        $('.bk-blog__navigation').unwrap();
+        $('.bk-blog-nav').removeClass('stuck');
+        $('.bk-blog__navigation').removeClass('stuck')
+        Waypoint.destroyAll();
+      }
+    })
+  </script>
+{% endif %}
+
 {% if page.layout == 'home' %}
   <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
   <script type="text/javascript">

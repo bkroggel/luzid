@@ -17,9 +17,6 @@
         <div class="archive_tag"><p>{{ page.title }}</p></div>
       </div>
 
-      <div class="archive__img">
-        <img src="/assets/img/dev/archive.png" alt="">
-      </div>
       <section id="archive">
         {% for post in site.tags[page.tag] %}
 
@@ -28,6 +25,9 @@
         {% endfor %}
       <!-- </div> -->
         </div>
+      </div>
+      <div class="archive_link">
+        <a href="/" class="link">Recent Blog Posts</a>
       </div>
       </section>
     </div>

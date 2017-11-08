@@ -14,9 +14,6 @@
       <div class="bk-blog__section-title">
         <h1>{{ page.title }}</h1>
       </div>
-      <div class="archive__img">
-        <img src="/assets/img/dev/archive.png" alt="">
-      </div>
 
       <section id="archive">
         {% for post in site.posts %}
@@ -25,6 +22,9 @@
 
         {% endfor %}
         </div>
+      </div>
+      <div class="archive_link">
+        <a href="/" class="link">Recent Blog Posts</a>
       </div>
       </section>
 

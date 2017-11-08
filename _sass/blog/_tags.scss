@@ -1,12 +1,17 @@
 .bk-blog__tags {
   margin: 0;
+  @media(max-width: 575px){
+    padding: 20px 30px 50px;
+  }
   @include media-query($medium){
     margin: 0 auto;
+    .bk-blog__archive__inner {
+      width: 80%;
+    }
   };
 }
 
 #tags {
-  transform: translateX(-15px);
   display: flex;
   margin: 30px 0 100px;
 }

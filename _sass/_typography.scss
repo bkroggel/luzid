@@ -328,21 +328,65 @@ a.announcement_link {
   display: inline;
 }
 
-.archive__element h3 {
+.archive__element p.year {
   font-family: $reading;
   color: $darkest-color;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 10px 0;
+  padding: 10px 0 0;
   margin: 0;
-  background: $main-color;
   display: inline-block;
 }
 
-.archive__item time,
-.item__info_2 span,
-.item__info_2:before,
+.archive__item {
+  p, a, span, time {
+    font-family: $reading;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    margin: 0;
+    @include media-query($small){
+      font-size: 1rem;
+      line-height: 1.2rem;
+    };
+  }
+}
+
+.archive__item {
+  p.subtitle a,
+  p.content,
+  time,
+  p.author,
+  span {
+    color: $dark-color;
+    font-weight: 400;
+    font-size: 0.7rem;
+    @include media-query($small){
+      font-size: 0.75rem;
+    };
+  }
+  time,
+  p.title {
+    color: $blog-font-color;
+    opacity: 0.7;
+  }
+  .item__about {
+    text-align: right;
+  }
+  p.title,
+  p.subtitle,
+  p.content {
+    text-overflow: ellipsis;
+  	width: 100%;
+  	white-space: nowrap;
+  	overflow: hidden;
+  }
+  p.content {
+    margin-top: 3px;
+  }
+}
+
 .archive__bc a,
 .tags__alphabet li,
 .tags__alphabet li a {
@@ -368,41 +412,17 @@ a.announcement_link {
   cursor: pointer;
 }
 
-.archive__item a {
-  font-family: $reading;
-  color: $blog-font-color;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.05rem;
-}
-
-.archive__item .info_1_subtitle a {
-  letter-spacing: 0;
-  font-size: 0.75rem;
-  font-weight: 400;
-}
-
 .archive__item time {
   white-space: nowrap;
 }
 
-.item__info_2 {
-  line-height: 1em;
-
-  &:before {
-    content:'Tags: ';
-  }
-  span:after {
-    content:', ';
-  }
-  span:last-of-type:after {
-    content:'';
-  }
-  span,
-  &:before {
-    margin-right: 0;
-    color: $darkest-color;
-  }
+.archive_link a {
+  border: 2px solid #ed9393;
+  padding: 5px 10px;
+  margin-top: 15px;
+  background: #ed9393;
+  padding: 10px 25px;
+  @include pure-link($main-color);
 }
 
 #tags h3 {

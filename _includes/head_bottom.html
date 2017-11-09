@@ -339,16 +339,16 @@
       });
     }
 
-    if($(window).width() < 767) {
-      // if window width is less than 767 the set_waypoint function gets triggert and therefore the wrapper gets calculated as well as set
+    if($(window).width() < 991) {
+      // if window width is less than 991 the set_waypoint function gets triggert and therefore the wrapper gets calculated as well as set
       set_waypoint();
     }
 
     $( window ).resize(function() {
-      if (($(window).width() < 767) && !($('.bk-blog__navigation').parent().hasClass('bk-blog__navigation-wrapper'))) {
-        // if window width is less than 767 and the navigation bar parent element doesn't has the specified class (and therefore wasn't already triggered) the waypoints get set
+      if (($(window).width() < 991) && !($('.bk-blog__navigation').parent().hasClass('bk-blog__navigation-wrapper'))) {
+        // if window width is less than 991 and the navigation bar parent element doesn't has the specified class (and therefore wasn't already triggered) the waypoints get set
         set_waypoint();
-      } else if (($(window).width() > 767) && ($('.bk-blog__navigation').parent().hasClass('bk-blog__navigation-wrapper'))) {
+      } else if (($(window).width() > 991) && ($('.bk-blog__navigation').parent().hasClass('bk-blog__navigation-wrapper'))) {
         // if window with is bigger than 767 and the navigation bar has the specified class (and therefore was already triggered) the waypoints get removed, the wrapper destroyed and the potentially applied stuck classes removed
         $('.bk-blog__navigation').unwrap();
         $('.bk-blog-nav').removeClass('stuck');

@@ -328,6 +328,11 @@ a.announcement_link {
   display: inline;
 }
 
+.tag_title h1 {
+  font-weight: 500;
+  margin-left: 10px;
+}
+
 .archive__element p.year {
   font-family: $reading;
   color: $darkest-color;
@@ -384,6 +389,12 @@ a.announcement_link {
   }
   p.content {
     margin-top: 3px;
+  }
+  p.title {
+    @include link-mix($blog-font-color);
+  }
+  p.subtitle {
+    @include link-mix($dark-color);
   }
 }
 

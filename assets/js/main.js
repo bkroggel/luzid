@@ -13,7 +13,6 @@ $(document).ready(function() {
       var storewindow_height = $('#storewindow').height();
       if (storewindow_height) {
         var news_height = news_height + storewindow_height
-        console.log(news_height)
       }
       var margin_in_viewport = $('.bk-blog-nav--frame').outerHeight(true) + news_height - $(document).scrollTop();
 

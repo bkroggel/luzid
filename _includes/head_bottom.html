@@ -315,6 +315,7 @@
 
 {% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}
   <script type="text/javascript">
+
     function set_waypoint(){
       var sticky = new Waypoint.Sticky({
         element: $('.js-stuck-nav')[0]
@@ -322,7 +323,7 @@
 
       var navHeight = $('.bk-blog-nav').outerHeight(true) - 15; // hight of navbar - the negative offset (also check css)
       var bk_wrapper = '<div class="bk-blog__navigation-wrapper" />'
-      var secondHeight = $('.bk-blog__navigation').height();
+      var secondHeight = $('#blog-nav-dropdown').height();
 
       $('.bk-blog__navigation').wrap(bk_wrapper);
       $('.bk-blog__navigation-wrapper').height(secondHeight);
@@ -355,6 +356,11 @@
         $('.bk-blog__navigation').removeClass('stuck')
         Waypoint.destroyAll();
       }
+      // else if ( ($(window).width() < 991) ) {
+      //   $('.bk-blog__navigation').unwrap();
+      //   set_waypoint();
+      //   console.log('did it, sir')
+      // }
     })
   </script>
 {% endif %}

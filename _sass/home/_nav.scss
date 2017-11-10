@@ -4,15 +4,19 @@
   position: relative;
   float: right;
   @include media-query($medium){
-    border-bottom: 2px solid $darkest-color;
-    -webkit-transition : border 0.4s ease-in-out;
-    -moz-transition : border 0.4s ease-in-out;
-    -o-transition : border 0.4s ease-in-out;
-    transition : border 0.4s ease-in-out;
+    // border: 2px solid $darkest-color;
+    // border-right: none;
+    // -webkit-transition : border 0.4s ease-in-out;
+    // -moz-transition : border 0.4s ease-in-out;
+    // -o-transition : border 0.4s ease-in-out;
+    // transition : border 0.4s ease-in-out;
     @include display_flex;
+    //background: $main-color;
+    //padding-right: 120px;
     @include align-items(center);
     @include justify-content(flex-end);
     width: calc(100% - 55px);
+    //width: calc(100% - 175px);
   };
   ul {
     margin: 0;
@@ -22,14 +26,14 @@
     @include align-items(center);
   }
   li {
-    margin: 0 2em;
+    margin: 0 1.5em;
     height: 100%;
     display: none;
     align-items: center;
     //transition: all 0.4s ease-in-out;
     transition-delay: .7s;
     &:first-of-type {
-      margin: 0 2em 0 0;
+      margin: 0 1.5em 0 0;
     }
     &:last-of-type {
       margin: 0 0 0 60px;

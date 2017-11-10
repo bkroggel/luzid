@@ -16,10 +16,11 @@ p {
 .bk-hor-nav {
   @include link-mix($darkest-color);
   a {
-    font-family: $reading;
+    font-family: $sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
   }
 }
 

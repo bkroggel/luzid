@@ -279,6 +279,10 @@
         social_menu.removeClass('social_show');
         $('#social_bottom').removeClass('big_share');
         small_screen_share();
+        setTimeout(function(){
+          Waypoint.refreshAll()
+          console.log('ya feelin‘ refreshed?')
+        }, 1000);
       } else if ($(window).width() > 991 && $('#social_bottom').hasClass('small_share')) {
         $('#social_bottom').css('height', '');
         $('.bk-blog-content').css('margin-bottom', '')
@@ -349,7 +353,7 @@
         element: $('.js-stuck-nav')[0]
       })
 
-      var navHeight = $('.bk-blog-nav').outerHeight(true) - 15; // hight of navbar - the negative offset (also check css)
+      var navHeight = $('.bk-blog-nav').outerHeight(true) - 10; // hight of navbar - the negative offset (also check css)
       var bk_wrapper = '<div class="bk-blog__navigation-wrapper" />'
       var secondHeight = $('#blog-nav-dropdown').height();
 
@@ -381,7 +385,8 @@
         // if window with is bigger than 767 and the navigation bar has the specified class (and therefore was already triggered) the waypoints get removed, the wrapper destroyed and the potentially applied stuck classes removed
         $('.bk-blog__navigation').unwrap();
         $('.bk-blog-nav').removeClass('stuck');
-        $('.bk-blog__navigation').removeClass('stuck')
+        $('.bk-blog__navigation').removeClass('stuck');
+        $('.js-stuck-nav').unwrap();
         Waypoint.destroyAll();
       }
       // else if ( ($(window).width() < 991) ) {

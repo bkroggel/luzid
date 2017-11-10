@@ -92,6 +92,7 @@
   };
   @include media-query($medium){
     padding: 30px 120px 30px 60px;
+    //padding: 30px 0 30px 60px;
     width: auto;
     @include align-items(stretch);
     svg {
@@ -116,7 +117,7 @@
     z-index: 1;
     &.stuck {
       position: fixed;
-      top: 55px;
+      top: 60px;
       @include media-query($xtra-small) {
         top: 65px
       }

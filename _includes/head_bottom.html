@@ -203,9 +203,11 @@
     })
 
     // social share buttons
-    if($(window).width() < 991) {
+
+    function small_screen_share(){
       var share_frame_height = $('#social_bottom .social_share').outerHeight();
       $('#social_bottom').css('height', share_frame_height);
+      $('#social_bottom').addClass('small_share')
       if ($('#social_bottom').length > 0) {
         $('.bk-blog-content').css('margin-bottom', 0)
       }
@@ -232,38 +234,62 @@
       }, {
         offset: 'bottom-in-view'
       })
+    } // end function small_screen_share
 
-    } // endif
-
-    if($(window).width() > 991) {
-      $(window).on('load', function() {
-
+    function big_screen_share(){
+      $('#social_bottom').addClass('big_share')
       var social_menu = $('.fixed-social .social_share').one();
       var trigger_one = $('.vertical-blog-link');
 
-        trigger_one.waypoint(function(direction) {
-          if (direction === 'down') {
-            social_menu.addClass('social_show')
-          } else {
-            social_menu.removeClass('social_show')
-           }
-         }, {
-           offset: - $('.vertical-blog-link').outerWidth()
-        })
+      trigger_one.waypoint(function(direction) {
+        if (direction === 'down') {
+          social_menu.addClass('social_show')
+        } else {
+          social_menu.removeClass('social_show')
+         }
+       }, {
+         offset: - $('.vertical-blog-link').outerWidth()
+      })
 
-        $('#social_bottom').waypoint(function(direction) {
-          if (direction === 'down') {
-            social_menu.removeClass('social_show')
-          } else {
-            social_menu.addClass('social_show')
-           }
-         }, {
-           offset: $(window).innerHeight() - $('#social_bottom').innerHeight()
-        })
+      $('#social_bottom').waypoint(function(direction) {
+        if (direction === 'down') {
+          social_menu.removeClass('social_show')
+        } else {
+          social_menu.addClass('social_show')
+         }
+       }, {
+         offset: $(window).innerHeight() - $('#social_bottom').innerHeight()
+      })
 
-      }); //end window scroll
+    } // end function big_screen_share
+
+
+    if($(window).width() < 991) {
+      small_screen_share();
+    } else {
+      $(window).on('load', function() {
+        big_screen_share();
+      }); //end window on 'load'
     }
 
+    $( window ).resize( function(){
+      if($(window).width() < 991 && $('#social_bottom').hasClass('big_share')) {
+        Waypoint.destroyAll();
+        var social_menu = $('.fixed-social .social_share').one();
+        social_menu.removeClass('social_show');
+        $('#social_bottom').removeClass('big_share');
+        small_screen_share();
+      } else if ($(window).width() > 991 && $('#social_bottom').hasClass('small_share')) {
+        $('#social_bottom').css('height', '');
+        $('.bk-blog-content').css('margin-bottom', '')
+        Waypoint.destroyAll()
+        $('#social_bottom .social_share').removeClass('in_view');
+        $('#social_bottom').removeClass('small_share')
+        big_screen_share();
+      }
+    })
+
+    // Sidenotes
     if($(window).width() < 991) {
       $('.bk-blog-content span.sidenote').click(function() {
         $(this).toggleClass('active')

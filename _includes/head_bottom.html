@@ -290,11 +290,13 @@
     })
 
     // Sidenotes
-    if($(window).width() < 991) {
-      $('.bk-blog-content span.sidenote').click(function() {
+    $('.bk-blog-content span.sidenote').click(function() {
+      if($(window).width() < 991) {
         $(this).toggleClass('active')
-      })
-    }
+      } else if ($(this).hasClass('inline')) {
+        $(this).toggleClass('active')
+      }
+    })
   </script>
 {% endif %}
 

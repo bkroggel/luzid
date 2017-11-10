@@ -700,69 +700,7 @@ p.update {
   }
 }
 
-.image_caption {
-  width: calc(100% - 60px);
-  padding: 30px;
-  background: rgba(255, 255, 255, 1);
-  p,
-  em,
-  a {
-    font-family: $serif;
-    font-size: 1rem;
-    letter-spacing: -0.012em;
-    line-height: 1.3em;
-    font-weight: 400;
-    color: $blog-font-color;
-    margin: 0;
-    border-color: $blog-font-color;
-  }
-  @include media-query($medium){
-    position: absolute;
-    border-top: 1px solid $dark-color;
-    width: 20%;
-    top: 0;
-    left: 100%;
-    padding: 10px 0;
-    padding-right: 2%;
-    margin-left: 20px;
-    background: none;
-    p,
-    em,
-    a {
-      font-size: 0.85rem;
-      // font-style: italic;
-      // font-size: 0.8rem;
-      // font-weight: 700;
-      // letter-spacing: 0;
-    }
-  };
-}
-
-.image_source {
-  margin-top: 5px;
-  width: 70%;
-  p,
-  em,
-  a {
-    font-family: $sans-serif;
-    font-size: 0.7rem;
-    font-weight: 300;
-    color: $dark-color;
-  }
-  a {
-    @include underline($dark-color, $main-color);
-  }
-  @include media-query($medium){
-    width: 100%;
-    p,
-    em,
-    a {
-      font-family: $serif;
-    }
-  };
-}
-
-.bk-blog-content span.sidenote span:first-of-type {
+.bk-blog-content span.sidenote span.sidenote__toggle {
   color: $accent-two;
   cursor: pointer;
   &:after {
@@ -772,20 +710,26 @@ p.update {
     margin-left: 3px;
     color: $accent-two;
   }
+}
+
+.bk-blog-content span.sidenote:not(.inline) span.sidenote__toggle {
   @include media-query($medium){
     cursor: default;
     &:after {
       display: none;
     }
-  };
-
+  }
 }
 
-.bk-blog-content span.sidenote span:nth-of-type(2) {
+.bk-blog-content span.sidenote span.sidenote__note {
   padding: 20px;
   margin: 5px 0;
   display: none;
   background: $main-color;
+}
+
+.bk-blog-content span.sidenote:not(.inline) span.sidenote__note,
+.bk-blog-content .image_caption {
   @include media-query($medium){
     position: absolute;
     display: inline-block;
@@ -818,26 +762,94 @@ p.update {
   };
 }
 
-.bk-blog-content span.sidenote.active span:nth-of-type(2) {
+.bk-blog-content span.sidenote.active span.sidenote__note {
   display: block;
 }
 
-.bk-blog-content span.sidenote span:nth-of-type(2),
-.bk-blog-content span.sidenote span:nth-of-type(2) p,
-.bk-blog-content span.sidenote span:nth-of-type(2) em,
-.bk-blog-content span.sidenote span:nth-of-type(2) a {
+.bk-blog-content span.sidenote span.sidenote__note,
+.bk-blog-content .image_caption {
+  &, p, em, a {
   line-height: 1.2rem;
   font-size: 0.85rem;
   color: $accent-two;
   font-weight: 400;
   text-align: left;
+  margin-bottom: 0;
+  }
+  a {
+    @include pure-link($accent-two);
+    @include underline($accent-two, $main-color);
+    word-wrap: break-word;
+  }
+}
+
+.bk-blog-content span.sidenote:not(.inline) span.sidenote__note,
+.bk-blog-content span.sidenote:not(.inline) span.sidenote__note p,
+.bk-blog-content span.sidenote:not(.inline) span.sidenote__note em,
+.bk-blog-content span.sidenote:not(.inline) span.sidenote__note a {
   @include media-query($medium){
     text-align: right;
   };
 }
-.bk-blog-content span.sidenote span:nth-of-type(2) a {
+
+.bk-blog-content span.sidenote span.sidenote__note a {
   @include underline($accent-two, $main-color);
   &:after {
     content: none;
   }
+}
+
+.bk-blog-content span.sidenote.left,
+.bk-blog-content .image_caption {
+  @include media-query($medium){
+    padding: 10px 10px 0 0;
+    left: 100%;
+    margin-left: 20px;
+    margin-right: unset;
+    &:after {
+      left: 0;
+    }
+    &:before {
+      content: "Note";
+      left: 0;
+      right: unset;
+      transform: translateY(-100%);
+    }
+  };
+}
+
+
+.bk-blog-content .image_caption {
+  margin: 20px auto 0;
+  max-width: 70%;
+  .image_title {
+    margin-bottom: 5px;
+    p, a, em {
+      font-weight: 500;
+      line-height: 1rem;
+      text-align: center;
+    }
+  }
+
+  .image_source {
+    p, a, em {
+      font-size: 0.75rem;
+      line-height: 0.9rem;
+      text-align: center;
+    }
+  }
+  @include media-query($medium){
+    top: 0;
+    width: calc(30% - 40px);
+    margin: unset;
+    margin-left: 20px;
+    &:before {
+      content: "Img";
+    }
+    .image_title, .image_source {
+      p, a, em {
+        text-align: left;
+      }
+    }
+  };
 }

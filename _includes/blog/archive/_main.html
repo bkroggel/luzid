@@ -4,28 +4,62 @@
   </div>
   <div class="bk-blog__content bk-blog__archive">
     <div class="bk-blog__archive__inner">
-
       <div class="archive__bc">
         <ul>
           <li><a href="/blog">Blog</a></li>
           <li><a href="/blog/archive">Archive</a></li>
+        {% if page.layout == 'by_tag' %}
+          <li><a href="/blog/archive/tags">Tags</a></li>
+          <li><a href="/blog/archive/tags/{{ page.tag }}">{{ page.title }}</a></li>
+        {% endif %}
         </ul>
       </div>
       <div class="bk-blog__section-title">
+        {% if page.layout == 'by_tag' %}
+          <h1>Archive:</h1>
+          <div class="tag_title">
+        {% endif %}
         <h1>{{ page.title }}</h1>
+        {% if page.layout == 'by_tag' %}
+          </div>
+        {% endif %}
       </div>
 
       <section id="archive">
-        {% for post in site.posts %}
+        <!-- assign archive_loop 0 to set an initial value, afterwards this variable will reflect the max value for the site.tags[page.tag] forloop and therefore indicate if there are any post present on this site -->
+        {% assign archive_loop = 0 %}
 
-          {% include blog/archive/_inner.html %}
+        {% if page.layout == 'archive' %}
 
-        {% endfor %}
-        </div>
-      </div>
+          {% for post in site.posts %}
+            {% assign archive_loop = forloop.index %}
+            {% include blog/archive/_inner.html %}
+          {% endfor %}
+
+        {% elsif page.layout == 'by_tag' %}
+
+          {% for post in site.tags[page.tag] %}
+            {% assign archive_loop = forloop.index %}
+            {% include blog/archive/_inner.html %}
+          {% endfor %}
+
+        {% endif %}
+
+
+        {% if archive_loop > 0 %}
+            </div>
+          </div>
+
+        {% else %}
+            <div class="">
+              <p>There is currently no blog post.</p>
+            </div>
+        {% endif %}
+
       <div class="archive_link">
         <a href="/" class="link">Recent Blog Posts</a>
       </div>
+
       </section>
 
 

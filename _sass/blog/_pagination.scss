@@ -179,6 +179,11 @@ $pages-item-active-color:   white !default;
   }
 }
 
+section.pagination {
+  background: $main-color;
+  padding-bottom: 50px;
+}
+
 .bk-pagination {
   border-top: 1px solid $slightly-darker;
   width: 900px;

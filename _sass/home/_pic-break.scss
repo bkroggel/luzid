@@ -1,17 +1,13 @@
 section.pic-break {
-  background: url('img/dev/f_bottom.png') no-repeat;
+  background: url('img/dev/markus-spiske-104895.jpg') no-repeat center;
   background-size: cover;
   width: 100%;
   height: 600px;
   display: flex;
   position: relative;
-  background-position: 70% 20%;
+  //background-position: 70% 20%;
   //align-items: flex-end;
   justify-content: center;
-  img {
-    width: 80%;
-    align-self: flex-end;
-  }
 }
 
 .pic-break__credits {

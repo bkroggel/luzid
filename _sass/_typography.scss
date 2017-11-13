@@ -504,7 +504,7 @@ a.link_button.-white {
   @include link-mix(white);
 }
 
-.pic-break__info {
+.luzid_element {
   p {
     @include link_mix(white);
     margin: 0;
@@ -519,7 +519,7 @@ a.link_button.-white {
   }
 }
 
-.pic-break__name {
+.luzid_el__title {
   p:last-of-type {
     font-size: 1.5rem;
     text-transform: uppercase;

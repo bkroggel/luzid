@@ -67,11 +67,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-filter: blur(5px) grayscale(1) brightness(60%);
+  filter: blur(5px) grayscale(1) brightness(60%);
   @include media-query($small){
-    -webkit-filter: none;
-    filter: none;
+    -webkit-filter: grayscale(1) brightness(60%);
+    filter: grayscale(1) brightness(60%);
   }
 }
 

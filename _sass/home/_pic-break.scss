@@ -131,7 +131,7 @@ $skew_diag: 3;
   @include direction_column;
 }
 
-.pic-break__info {
+.luzid_element {
   @include display_flex;
   @include direction_column;
   text-align: center;
@@ -142,7 +142,7 @@ $skew_diag: 3;
   };
 }
 
-.pic-break__name {
+.luzid_el__title {
   margin-bottom: 10px;
   position: relative;
   &:before {

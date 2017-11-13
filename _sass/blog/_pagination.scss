@@ -181,23 +181,36 @@ $pages-item-active-color:   white !default;
 
 section.pagination {
   background: $main-color;
-  padding-bottom: 50px;
+  //padding-bottom: 50px;
 }
 
 .bk-pagination {
+  position: relative;
   border-top: 1px solid $slightly-darker;
-  width: 900px;
-  max-width: 95%;
+  //width: 900px;
+  //max-width: 95%;
   padding: 0;
+  width: 90%;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   @include media-query($small){
-    max-width: 90%;
+    //max-width: 90%;
   };
   @include media-query($medium){
-    margin-bottom: 10px;
+    padding-bottom: 10px;
   };
+  &.frame-line {
+    &:before, &:after {
+      background: $slightly-darker;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
 }
 
 .bk-pagination ul {

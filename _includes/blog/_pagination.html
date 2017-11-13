@@ -48,7 +48,7 @@
 {% endif %}
 
 <section class="pagination">
-  <div class="bk-pagination">
+  <div class="bk-pagination frame-line">
     <p id="pagination-label" class="pagination-label sr-only" aria-hidden="true">{{ paginator_title }}</p>
 
     <ul class="pagination" role="navigation" aria-labelledby="pagination-label">
@@ -56,7 +56,7 @@
         {% if paginator.previous_page %}
         <li class="previous">
             {% if paginator.previous_page == 1 %}
-            <a class="pagination-item" href="{{ page.paginate.root }}" rel="prev">previous<span class="sr-only"> page</span></a>
+            <a class="pagination-item" href="{{ page.paginate.root }}" rel="prev">prv<span class="sr-only"> page</span></a>
             {% else %}
             <a class="pagination-item" href="{{ paginator.previous_page_path }}" rel="prev">previous<span class="sr-only"> page</span></a>
             {% endif %}
@@ -102,7 +102,7 @@
 
         {% if paginator.next_page %}
         <li class="next">
-            <a class="pagination-item" href="{{ paginator.next_page_path }}" rel="next">next<span class="sr-only"> page</span></a>
+            <a class="pagination-item" href="{{ paginator.next_page_path }}" rel="next">nxt<span class="sr-only"> page</span></a>
         </li>
         {% endif %}
     </ul>

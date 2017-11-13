@@ -14,6 +14,10 @@ section.pic-break {
 }
 
 section.pic-break {
+
+}
+
+.frame-line {
   &:before,
   &:after {
     content: '';
@@ -24,10 +28,10 @@ section.pic-break {
     background: $main-color;
   }
   &:before {
-    left: 32px;
+    left: 5%;
   }
   &:after {
-    right: 32px;
+    right: 5%;
   }
 }
 
@@ -78,6 +82,44 @@ $skew_2: 25;
   };
   @include media-query($medium){
     transform: skewY(#{$skew_2}deg) translateY(-100%);
+  };
+}
+
+.pic__style-diagonal {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+$skew_diag: 3;
+
+.pic__style-diagonal-1 {
+  transform-origin: bottom left;
+  z-index: 1;
+  background: $main-color;
+  &:before, &:after {
+    background: $slightly-darker;
+  }
+  transform: skewY(#{$skew_diag * 1.8}deg) translateY(-100%);
+  @include media-query($small){
+    transform: skewY(#{$skew_diag * 1.5}deg) translateY(-100%);
+  };
+  @include media-query($medium){
+    transform: skewY(#{$skew_diag}deg) translateY(-100%);
+  };
+}
+
+.pic__style-diagonal-2 {
+  transform-origin: bottom right;
+  background: $dark-color;
+  top: 100%;
+  transform: skewY(#{$skew_diag * 1.8}deg);
+  @include media-query($small){
+    transform: skewY(#{$skew_diag * 1.5}deg);
+  };
+  @include media-query($medium){
+    transform: skewY(#{$skew_diag}deg);
   };
 }
 

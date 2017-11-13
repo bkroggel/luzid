@@ -157,6 +157,20 @@
   margin: 50px 0;
   display: flex;
   flex-direction: column;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    width: 50%;
+    height: 1px;
+    background: $slightly-darker;
+  }
+  @include media-query($xtra-small){
+    &:before {
+      content: none;
+    }
+  }
   @include media-query($medium){
     flex-direction: row;
     max-width: 90%;
@@ -169,9 +183,11 @@
   &:first-of-type {
     margin-top: 0;
   }
-  // &:nth-of-type(odd) .bk-overview-posts__frame {
-  //   background-color: white;
-  // }
+  &:last-of-type {
+    &:before {
+      content: none;
+    }
+  }
   .overview-img {
     height: 200px;
     background: rgba(255,255,255,.5);

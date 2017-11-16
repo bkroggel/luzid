@@ -39,8 +39,8 @@ $(window).on('load', function() {
             $('.ggl-active').css('transition', 'none')
         }, 900);
 
-        if($(window).width() > 1199) {
-          $('footer').waypoint(function(direction){
+        function analytics_waypoint(){
+          analytics_waypoint_el = $('footer').waypoint(function(direction){
             if (direction === 'down') {
               $('#ggl-analytics').addClass('stuck');
             } else {
@@ -49,6 +49,13 @@ $(window).on('load', function() {
            }, {
              offset: $(window).innerHeight() - ($(window).innerHeight() - $('#ggl-analytics').outerWidth())/2
           })
+        }
+
+        if($(window).width() > 1199) {
+          analytics_waypoint()
+          $('section#ggl-analytics').addClass('analytics-large')
+        } else {
+          $('section#ggl-analytics').addClass('analytics-small')
         }
 
         function close_ga_notify(){
@@ -75,7 +82,18 @@ $(window).on('load', function() {
           close_ga_notify();
         })
 
+        $( window ).resize(function() {
+          if ($(window).width() > 1199 && $('section#ggl-analytics').hasClass('analytics-small')) {
+            analytics_waypoint()
+            $('section#ggl-analytics').removeClass('analytics-small').addClass('analytics-large')
+          } else if ($(window).width() < 1199 && $('section#ggl-analytics').hasClass('analytics-large')) {
+            	analytics_waypoint_el[0].destroy();
+            $('section#ggl-analytics').removeClass('stuck').removeClass('analytics-large').addClass('analytics-small')
+          }
+        })
+
       } // end if not disabled and not ignored
+
   }, 1000); // end Timeout & function
 }) // end window onload
 

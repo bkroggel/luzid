@@ -32,12 +32,14 @@
     &.ggl-active {
       transform: rotate(-90deg) translate(0%, 0%);
       //transition: none;
-      @include media-query($large){
-        transform: rotate(-90deg) translate(0%, 0%) skewX(-3deg);
-        .ggl-analytics__main>div {
-          transform: skewX(3deg);
-        }
-      };
+      &.ggl-landing {
+        @include media-query($large){
+          transform: rotate(-90deg) translate(0%, 0%) skewX(-3deg);
+          .ggl-analytics__main>div {
+            transform: skewX(3deg);
+          }
+        };
+      }
     }
   }
 }

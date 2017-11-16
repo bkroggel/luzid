@@ -100,13 +100,21 @@ var news = {
       //for (var i = 0, lgth = tweets.length; i < lgth ; i++) {
       while (n < x) {
         var tweetObject = tweets[n];
+        var time_length = (tweetObject.time).replace(/\s/g,'').replace(/\n /g,'').length
+        function tpf_time(){
+          if (time_length <= 3) {
+            return 'Posted ' + tweetObject.time + ' ago'
+          } else {
+            return 'Posted on ' + tweetObject.time
+          }
+        }
         var username = '@derKroggel'
         html += '<div class="twitter_el">'
           //+ '<div class="tweet_text">'
           + '<div class="tweet__frame">'
             + '<div class="tweet_header"><a href="' + tweetObject.permalinkURL + '"><h1>'
              + '<span class="fa fa-twitter"></span>'
-             + 'Twitter<span class="time"> on ' + tweetObject.time + '</span></h1>'
+             + 'Twitter<span class="time">' + tpf_time() + '</span></h1>'
             + '</a></div>'
             + (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
             + '<div class="tweet_content"><p>' + tweetObject.tweet + '</p></div>'

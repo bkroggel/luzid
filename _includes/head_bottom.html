@@ -54,20 +54,23 @@
       $('.bk-gallery-no_'+index).children().wrap(elem_wrap);
 
       // detect image titles
-      var split_divider = '\\';
       var converter = new showdown.Converter();
       var gta = new Array();
       var gallery_index = index
       $(this).find('img').each(function(){
-        if ($(this).attr('alt')) {
-          var info = $(this).attr('alt').split(split_divider);
-          var image_title = converter.makeHtml(info[0]);
-          var image_source = converter.makeHtml(info[1]);
-          if (info[1]) {
-            var img_info = '<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_source+'</div></div>'
+        var image_title = converter.makeHtml($(this).attr('data-title'));
+        var image_subtitle = converter.makeHtml($(this).attr('data-subtitle'));
+        var image_alt = converter.makeHtml($(this).attr('alt'));
+        if (image_subtitle) {
+          if (image_title) {
+            var img_info = '<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_subtitle+'</div></div>'
           } else {
-            var img_info = '<div class="image_caption"><div class="image_title">'+image_title+'</div></div>';
+            var img_info = '<div class="image_caption"><div class="image_title">'+ image_alt +'</div><div class="image_source">'+image_subtitle+'</div></div>'
           }
+        } else if (image_title) {
+          var img_info = '<div class="image_caption"><div class="image_title">'+image_title+'</div></div>';
+        } else if (image_alt) {
+          var img_info = '<div class="image_caption"><div class="image_title">'+image_alt+'</div></div>';
         } else {
           var img_info = '';
         }
@@ -170,23 +173,25 @@
     function add_caption (){
       var caption_wrapper = '<div class="image_frame" />';
       var no_classes = ['no_caption']; // more than one "no_classes" currently not supported (26. August 2017)
-      var split_divider = '\\';
       var converter = new showdown.Converter(); //{ extensions: ['twitter'] }
 
       // end check
       $('.bk-blog-style img').each(function() {
-        // if ($(this).attr('alt') && ($.inArray($(this).parent().attr('class').split(' ')[0], no_classes)) == -1) {
-        // just works if one of the items in the "no_classes" array is placed on section[0] in the html class
-        if ($(this).attr('alt') && !($(this).parent().hasClass(no_classes)) && !($(this).parents('p').hasClass('bk-gallery'))) {
+        if (!($(this).parent().hasClass(no_classes)) && !($(this).parents('p').hasClass('bk-gallery'))) {
           $(this).wrap(caption_wrapper);
-          //$(this).parents('p').addClass('bk_caption_img');
-          var info = $(this).attr('alt').split(split_divider);
-          var image_title = converter.makeHtml(info[0]);
-          var image_source = converter.makeHtml(info[1]);
-          if (info[1]) {
-            $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_source+'</div></div>');
-          } else {
+          var image_title = converter.makeHtml($(this).attr('data-title'));
+          var image_subtitle = converter.makeHtml($(this).attr('data-subtitle'));
+          var image_alt = converter.makeHtml($(this).attr('alt'));
+          if (image_subtitle) {
+            if (image_title){
+              $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_subtitle+'</div></div>');
+            } else {
+              $(this).parent().append('<div class="image_caption"><div class="image_title">'+ image_alt +'</div><div class="image_source">'+image_subtitle+'</div></div>');
+            }
+          } else if (image_title){
             $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_title+'</div></div>');
+          } else if (image_alt) {
+            $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_alt+'</div></div>');
           }
         } else if (!($(this).parents('p').hasClass('bk-gallery'))){
           $(this).parents('p').addClass('bk_img');

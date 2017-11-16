@@ -10,7 +10,7 @@ thumbnail:
   img: /assets/img/page/blog/2015/December/ppe-conference.jpg
   style: big
 ---
-![Hompage der PPE-Conference 2015 an der Zeppelin Universität \ der Sourcecode der Website ist bei [Github](https://github.com/bkroggel/WebPage) einsehbar](/assets/img/page/blog/2015/December/ppe-conference.jpg)
+![Hompage der PPE-Conference 2015 an der Zeppelin Universität](/assets/img/page/blog/2015/December/ppe-conference.jpg){: data-title="Hompage der PPE-Conference 2015 an der Zeppelin Universität" data-subtitle="der Sourcecode der Website ist bei [Github](https://github.com/bkroggel/WebPage) einsehbar"}
 {:.cover}
 
 [Website](https://github.com/bkroggel/WebPage) der ersten PPE-Conference des Sociology, Politics and Economics Lehrstuhl der [Zeppelin Universität Friedrichshafen](http://www.zu.de).  

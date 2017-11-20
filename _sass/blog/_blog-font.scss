@@ -502,6 +502,8 @@ blockquote { //overwriting ukit
       vertical-align: middle;
       line-height: 1em;
       color: $dark-color;
+      background: none;
+      text-shadow: none;
       &:after {
         content: none;
       }

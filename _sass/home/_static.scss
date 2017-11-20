@@ -175,6 +175,7 @@ $clock-color: white;
     width: 1px;
     background: white;
     left: 50%;
+    transform: translateX(-100%);
   }
   &:before {
     bottom: calc(100% + 7px);

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~0.5.1/dist/cms.css" />
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~0.7.5/dist/cms.css" />
 
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@~0.5.1/dist/cms.js"></script>
+  <script src="https://unpkg.com/netlify-cms@~0.7.5/dist/cms.js"></script>
   <script type="text/javascript" >
 
     var BKPostPreview = createClass({
@@ -95,7 +95,47 @@
       }
     });
 
-
+    CMS.registerEditorComponent({
+      id: "sidenote",
+      label: "Sidenote",
+      fields: [{name: 'element', label: 'In-Text Element', widget: 'string'},{name: 'sidenote', label: 'Sidenote', widget: 'markdown'}],
+      pattern: / /,
+      fromBlock: function(match) {
+        return {
+          element: match[1],
+          sidenote: match[1]
+        };
+      },
+      toBlock: function(obj) {
+        return (
+          '<span class="sidenote inline"><span class="sidenote__toggle">' + obj.element + '</span><span class="sidenote__note">' + obj.sidenote + '</span></span>'
+        );
+      },
+      toBlock: function(obj) {
+        return (
+          '<span class="sidenote inline">'
+            + '<span class="sidenote__toggle">'
+              + obj.element
+            + '</span>'
+            + '<span class="sidenote__note">'
+              + obj.sidenote
+            + '</span>'
+          + '</span>'
+        );
+      },
+      toPreview: function(obj) {
+        return (
+          '<span class="sidenote inline">'
+            + '<span class="sidenote__toggle">'
+              + obj.element
+            + '</span>'
+            + '<span class="sidenote__note">'
+              + obj.sidenote
+            + '</span>'
+          + '</span>'
+        );
+      },
+    });
 
 
     CMS.registerPreviewTemplate("blog", BKPostPreview);

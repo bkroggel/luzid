@@ -539,10 +539,10 @@ a.link_button.-white {
   text-align: center;
   margin: 0 auto;
   align-self: flex-start;
-  @include media-query($small){
-    text-align: left;
-    margin: 0;
-  };
+  // @include media-query($small){
+  //   text-align: left;
+  //   margin: 0;
+  // };
 }
 
 #bk-timeline p.tl-intro {

@@ -85,6 +85,17 @@
     bottom: 5px;
     text-align: right;
     border: none;
+    &:before,
+    &:after {
+      content: none;
+    }
+    .image_title,
+    .image_source {
+      p, a {
+        text-align: right;
+        text-shadow: none;
+      }
+    }
   };
 }
 
@@ -95,6 +106,11 @@
   margin: 5px;
   padding: 100px 0;
   width: calc(100% - 10px);
+  @include media-query($small){
+    background: url('/assets/img/dev/berlin.png') no-repeat center, #5a5a5a;
+    background-size: auto 70%;
+    background-position: 15% 150px;
+  };
 }
 
 // #bk-timeline .bk-article-main {
@@ -104,7 +120,7 @@
 .bk-timeline-content {
   margin-top: 0;
   margin-bottom: 0;
-  //padding: 0;
+  padding: 0;
   @include display_flex;
   @include direction_column;
   @include align-items(center);
@@ -115,7 +131,13 @@
 
 .bk-static-style .luzid_element {
   @include media-query($small){
-    transform: translateX(calc(75px));
+    transform: none;
+    position: relative;
+    left: 15%
+  };
+  @include media-query($medium){
+    transform: translateX(10px);
+    left: 50%
   };
   .luzid_el__title {
     z-index: 1;
@@ -164,10 +186,6 @@ $clock-color: white;
   border-radius: 50%;
   border: 2px solid $clock-color;
   margin: 40px 0;
-  @include media-query($small){
-    align-self: flex-start;
-    transform: translateX(calc(-50% + 176px));
-  };
   &:before,
   &:after {
     position: absolute;
@@ -184,8 +202,17 @@ $clock-color: white;
     top: calc(100% + 7px);
     content: '';
   }
+  @include media-query($small){
+    align-self: flex-start;
+    position: relative;
+    left: 15%;
+    transform: translateX(calc(-50% + 102px));
+  };
   @include media-query($medium){
-    transform: translateX(calc(-50% + 65px));
+    left: unset;
+    transform: translateX(0px);
+    margin-left: auto;
+    margin-right: auto;
     &:before {
       content: '';
     }

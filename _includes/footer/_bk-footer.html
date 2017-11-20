@@ -3,8 +3,10 @@
   {% include defaults/analytics/_analytics_window.html %}
 
   <div class="bk-footer-1">
+    {% if page.layout != 'home' %}
+      <div class="bk-footer-1__shadow"></div>
+    {% endif %}
     <div class="bk-footer-1__sec1">
-
       <div class="bk-footer-1__sec1__top  bk-links">
         <div class="footer-line"></div>
         <ul>

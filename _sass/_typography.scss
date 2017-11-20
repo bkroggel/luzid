@@ -82,7 +82,10 @@ p {
 .bk-article-title h3,
 .bk-article-title time,
 .bk-footer-1__sec2 h3,
-#storewindow__text h3 {
+#storewindow__text h3,
+#bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
+#bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
+#bk-timeline .luzid_element>.luzid_el__content>p.luzid-info {
   font-family: $sans-serif;
   font-weight: 400;
   font-size: 0.6em;
@@ -520,9 +523,57 @@ a.link_button.-white {
 }
 
 .luzid_el__title {
-  p:last-of-type {
-    font-size: 1.5rem;
+  p:last-of-type,
+  p.luzid-title {
+    font-size: 1.4rem;
     text-transform: uppercase;
     line-height: 1em;
   }
+}
+
+// bk-timeline
+
+#bk-timeline h2,
+#bk-timeline p.tl-intro {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  align-self: flex-start;
+  @include media-query($small){
+    text-align: left;
+    margin: 0;
+  };
+}
+
+#bk-timeline p.tl-intro {
+  max-width: 500px;
+}
+
+#bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
+#bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
+#bk-timeline .luzid_element>.luzid_el__content>p.luzid-info {
+  display: block;
+  line-height: 1.4rem;
+  margin: 0 auto;
+  @include media-query($small){
+    margin: 0;
+  };
+}
+
+#bk-timeline .luzid_element>.luzid_el__title>p.luzid-position {
+  color: white;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+#bk-timeline .luzid_element>.luzid_el__title>p.luzid-title {
+  font-weight: 400;
+  color: white;
+}
+
+#bk-timeline .luzid_element>.luzid_el__content p,
+#bk-timeline p.tl-intro {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  color: white;
 }

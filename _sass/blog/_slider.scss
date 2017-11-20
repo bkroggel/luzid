@@ -33,6 +33,7 @@
 
 .bk-gallery .slick-dots {
   bottom: 0;
+  padding: 0;
   li button:before {
     content: '';
     background: $main-color;

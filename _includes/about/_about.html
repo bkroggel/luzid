@@ -1,0 +1,40 @@
+<section class="bk-blog bk-article" id="bk-timeline">
+  <div class="bk-side-space bk-article__nav"></div>
+  <div class="bk-article-main bk-timeline-main">
+
+    <div class="bk-timeline-content bk-blog-style bk-blog-content bk-static-style">
+      <h2>Timeline</h2>
+      <p class="tl-intro">Quisque eu augue tincidunt, pellentesque mauris eu, sagittis odio. Mauris molestie eget urna volutpat posuere. Integer nec cursus tortor. Nulla in dolor vitae augue vehicula porttitor ac ac risus.</p>
+      <div class="clock-icon">
+        <div class="top"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="hour"></div>
+        <div class="minute"></div>
+      </div>
+      {% for company_hash in page.timeline %}
+        {% for company in company_hash %}
+
+          <div class="luzid_element">
+            <div class="luzid_el__title">
+              <p class="luzid-date">{{ company[1].from_date }} - {{ company[1].to_date }}</p>
+              <p class="luzid-title">{{ company[0] }}</p>
+              <p class="luzid-position">{{ company[1].position }}</p>
+            </div>
+            <div class="luzid_el__content">
+              <p class="luzid-info">{{ company[1].info }}</p>
+              <p>{{ company[1].description }}</p>
+            </div>
+          </div>
+
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+
+  </div>
+  <div class="bk-side-space">
+  </div>
+</section>

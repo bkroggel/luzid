@@ -4,7 +4,32 @@
   </div>
   <div class="bk-article-main">
 
-      <div class="bk-blog-style bk-blog-content bk-static-style" before="{{ page.title }}">
+      {% if page.title == "About me" %}
+        <div class="bk-blog-style bk-static-style bk-blog-content" id="about-toc">
+          <ul>
+            <li id="intro_link">
+              <a href="#bk-about-introduction" uk-scroll="offset: 50">Introduction</a>
+              <div class="link_line"></div>
+            </li>
+            <li> <a href="#bk-timeline" uk-scroll>Timeline | CV</a> </li>
+            <li> <a href="#" uk-scroll>Social Media</a> </li>
+            <li> <a href="#news" uk-scroll>News and Thoughts</a> </li>
+          </ul>
+          <p class="about">
+            Etiam congue ultrices sapien, sit amet condimentum lectus. Nulla vel sagittis dolor. Cras non metus volutpat, vestibulum nunc vel, finibus odio. Duis vestibulum faucibus interdum. Nam egestas aliquet metus. Nunc hendrerit euismod elit eu pellentesque. Integer pulvinar felis vitae libero tempus finibus.
+          </p>
+        </div>
+      {% endif %}
+      <div class="bk-blog-style bk-blog-content bk-static-style" before="{{ page.title }}" id="bk-about-introduction">
+        {% if page.title == "About me" %}
+          <div class="pulsating-circle">
+            <div class="pulsating__point"></div>
+            <div class="pulsating__dot_frame">
+              <div class="pulsating__dot"></div>
+            </div>
+            <div class="pulsating__line"></div>
+          </div>
+        {% endif %}
         {{ content }}
         {% if page.sign %}
           {% include svg/_sign_js.html %}

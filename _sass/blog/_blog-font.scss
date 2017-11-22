@@ -453,8 +453,8 @@ blockquote { //overwriting ukit
     line-height: 1.9em;
   }
   li:before {
-    //content: counter(item, decimal-leading-zero) " ";
-    content: "0" counter(item);
+    content: counter(item, decimal-leading-zero) " ";
+    //content: "0" counter(item);
     counter-increment: item;
     display: inline-block;
     font-size: 0.6em;

@@ -24,7 +24,8 @@ p {
   }
 }
 
-.bk-blog-info {
+.bk-blog-info,
+#about-toc {
   @include link-mix($darkest-color);
   a {
     font-family: $sans-serif;
@@ -576,4 +577,27 @@ a.link_button.-white {
   font-size: 0.9rem;
   line-height: 1.4rem;
   color: white;
+}
+
+// about toc
+#about-toc {
+  p {
+    font-size: 0.75em;
+    max-width: 330px;
+  }
+  &>ul {
+    padding: 0;
+    &>li {
+      &:before {
+        content: none;
+      }
+      &:first-of-type {
+        margin-bottom: 1rem;
+      }
+      a {
+        text-shadow: none;
+        background: none;
+      }
+    }
+  }
 }

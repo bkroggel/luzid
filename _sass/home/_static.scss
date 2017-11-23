@@ -76,16 +76,16 @@
   width: 168px;
 }
 
-.bk-static-style>p:first-of-type:first-letter {
-    font-family: $reading;
-    font-weight: 300;
-    line-height: 1.9em;
-    font-size: .952rem;
-    letter-spacing: 0.015em;
-    margin-right: 0px;
-    float: none;
-    margin-bottom: 0px;
-}
+// .bk-static-style>p:first-of-type:first-letter {
+//     font-family: $reading;
+//     font-weight: 300;
+//     line-height: 1.9em;
+//     font-size: .952rem;
+//     letter-spacing: 0.015em;
+//     margin-right: 0px;
+//     float: none;
+//     margin-bottom: 0px;
+// }
 
 // new image frame position if width less than 1200 because padding left
 .bk-static-style .image_caption {
@@ -161,12 +161,13 @@
     }
   }
   .luzid_el__content {
-    margin-bottom: 70px;
-    max-width: 430px;
+    margin: 0 auto 70px;
+    width: 430px;
+    max-width: 80%;
     position: relative;
     @include media-query($small){
       padding-bottom: 70px;
-      margin-bottom: 0;
+      margin: 0;
     };
     &:before {
       content: '';
@@ -317,17 +318,30 @@ $clock-color: white;
 
 #about-toc {
   margin: 100px auto;
+  text-align: center;
+  @include media-query($medium){
+    text-align: left;
+  };
   p {
     position: relative;
+    margin: 0 auto;
     &:before {
       content: '';
       top: -12px;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       position: absolute;
       background: #000;
       width: 70px;
       height: 1px;
     }
+    @include media-query($medium){
+      margin: 0;
+      &:before {
+        left: 0;
+        transform: none;
+      }
+    };
   }
   #intro_link {
     position: relative;

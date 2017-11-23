@@ -547,15 +547,16 @@ a.link_button.-white {
 }
 
 #bk-timeline p.tl-intro {
-  max-width: 500px;
+  width: 500px;
+  max-width: 85%;
 }
 
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
 #bk-timeline .luzid_element>.luzid_el__content>p.luzid-info {
   display: block;
-  line-height: 1.4rem;
-  margin: 0 auto;
+  line-height: 1.7em;
+  margin: 0 auto 5px;
   @include media-query($small){
     margin: 0;
   };
@@ -574,15 +575,24 @@ a.link_button.-white {
 
 #bk-timeline .luzid_element>.luzid_el__content p,
 #bk-timeline p.tl-intro {
-  font-size: 0.9rem;
-  line-height: 1.4rem;
+  font-size: 0.8rem;
+  line-height: 1.5em;
   color: white;
 }
 
 // about toc
+.bk-name {
+  overflow: hidden;
+  margin-top: 5px;
+  svg {
+    transform: translateY(-20%);
+  }
+}
+
 #about-toc {
   p {
-    font-size: 0.75em;
+    font-size: 0.75rem;
+    line-height: 1.4em;
     max-width: 330px;
   }
   &>ul {
@@ -597,6 +607,10 @@ a.link_button.-white {
       a {
         text-shadow: none;
         background: none;
+        font-size: 1.2rem;
+        @include media-query($medium){
+          font-size: 1.35rem;
+        }
       }
     }
   }

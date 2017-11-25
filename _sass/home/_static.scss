@@ -155,7 +155,7 @@
     &:before {
       height: 110%;
       top: 0;
-      right: -2px;
+      left: calc(100% - 1px);
       width: 3px;
       background: #5a5a5a;
     }
@@ -169,18 +169,19 @@
       padding-bottom: 70px;
       margin: 0;
     };
-    &:before {
-      content: '';
-      background: white;
+    .luzid_line {
       position: absolute;
-      top: 105%;
-      height: calc(70px - 10%);
       width: 1px;
+      background: white;
+      left: 50%;
+      top: calc(100% + 5px);
+      transform: translateX(-50%);
+      height: 0;
       @include media-query($small){
-        height: 100%;
         left: -10px;
-        top: 0;
-      };
+        top: 0px;
+        transform: none;
+      }
     }
     p.luzid-info {
       max-width: 80%;
@@ -198,28 +199,12 @@ $clock-color: white;
   border-radius: 50%;
   border: 2px solid $clock-color;
   margin: 40px 0;
-  &:before,
-  &:after {
-    position: absolute;
-    height: 30px;
-    width: 1px;
-    background: white;
-    left: 50%;
-    transform: translateX(-100%);
-  }
-  &:before {
-    bottom: calc(100% + 7px);
-  }
-  &:after {
-    top: calc(100% + 7px);
-    content: '';
-  }
   @include media-query($small){
     align-self: flex-start;
     position: relative;
     left: 15%;
     transform: translateX(calc(-50% + 102px));
-  };
+  }
   @include media-query($medium){
     left: unset;
     transform: translateX(0px);
@@ -229,6 +214,15 @@ $clock-color: white;
       content: '';
     }
   };
+  .clock_line {
+    position: absolute;
+    height: 0;
+    width: 1px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 7px);
+  }
   .top {
     position: absolute;
     width: 1px;

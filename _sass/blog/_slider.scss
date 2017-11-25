@@ -31,6 +31,13 @@
   }
 }
 
+.slick-arrow,
+.slick-dots li {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .bk-gallery .slick-dots {
   bottom: 0;
   padding: 0;

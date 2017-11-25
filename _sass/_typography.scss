@@ -57,7 +57,10 @@ p {
       position: relative;
       letter-spacing: 0;
       text-transform: none;
-      @include underline($darkest-color, $main-color);
+      @include underline($darkest-color, white);
+      @include media-query($medium){
+        @include underline($darkest-color, $main-color);
+      };
     }
   }
   #back-button {
@@ -86,7 +89,8 @@ p {
 #storewindow__text h3,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
-#bk-timeline .luzid_element>.luzid_el__content>p.luzid-info {
+#bk-timeline .luzid_element>.luzid_el__content>p.luzid-info,
+.bk-sub {
   font-family: $sans-serif;
   font-weight: 400;
   font-size: 0.6em;

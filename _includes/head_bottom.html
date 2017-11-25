@@ -435,15 +435,15 @@
       $('.pulsating-circle').addClass('active');
     }
 
-      $(window).on('load', function() {
-        if ( $(window).width() > 991) {
-          setTimeout(
-            function(){
-              about_intro_line();
-            }
-          , 1000)
-        }
-      })
+    $(window).on('load', function() {
+      if ( $(window).width() > 991) {
+        setTimeout(
+          function(){
+            about_intro_line();
+          }
+        , 1000)
+      }
+    })
 
 
     $( window ).resize(function() {
@@ -464,6 +464,61 @@
       }
     })
 
+    function timeline_line() {
+      if ($(window).width() < 767) {
+        var height = '60px'
+        var wait = 0.6
+        var speed = wait
+      } else {
+        var height = '100%'
+        var wait = 0.8
+        var speed = wait + 0.2
+      }
+      $('#bk-timeline .clock-icon .clock_line').css({
+        'height': '30px',
+        'transition': 'height 0.3s linear'
+      })
+      $('#bk-timeline .luzid_element').each (function (index){
+        $('#bk-timeline').find('.luzid_element').eq( index ).find('.luzid_line').css({
+          'height': height,
+          'transition': 'height ' + (speed) + 's linear ' + (index * wait + 0.3) + 's'
+        })
+      })
+    }
+
+    $('#bk-timeline .luzid_element').first().waypoint(function(direction) {
+      if (direction === 'down') {
+        if ($(window).width() > 767) {
+          $('#bk-timeline').addClass('big')
+        } else {
+          $('#bk-timeline').addClass('small')
+        }
+        timeline_line()
+        this.destroy()
+       }
+    }, {
+      offset: 'bottom-in-view'
+    })
+
+    $(window).resize(function(){
+      if ($(window).width() > 767 && $('#bk-timeline').hasClass('small')) {
+        $('#bk-timeline .luzid_line, #bk-timeline .clock-icon .clock_line').css({
+          'height': 0,
+          'transition': 'none'
+        })
+        $('#bk-timeline').removeClass('small')
+        $('#bk-timeline').addClass('big')
+        timeline_line()
+      } else if ( $(window).width() < 767 && $('#bk-timeline').hasClass('big') ) {
+        $('#bk-timeline .luzid_line, #bk-timeline .clock-icon .clock_line').css({
+          'height': 0,
+          'transition': 'none'
+        })
+        $('#bk-timeline').removeClass('big')
+        $('#bk-timeline').addClass('small')
+        timeline_line()
+      }
+    })
 
   </script>
 {% endif %}

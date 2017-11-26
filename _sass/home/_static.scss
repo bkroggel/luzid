@@ -354,6 +354,30 @@ $clock-color: white;
   }
 }
 
+#bk_about_quote {
+  width: 80%;
+  max-width: 400px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  @include media-query($medium){
+    padding-left: 9rem;
+  };
+}
+
+.bk_about_quote_small {
+  display: block;
+  @include media-query($medium){
+    display: none;
+  };
+}
+
+.bk_about_quote_big {
+  display: none;
+  @include media-query($medium){
+    display: block;
+  };
+}
 
 .pulsating-circle {
   display: none;

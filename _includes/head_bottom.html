@@ -467,21 +467,23 @@
     function timeline_line() {
       if ($(window).width() < 767) {
         var height = '60px'
-        var wait = 0.6
-        var speed = wait
+        var clock_speed = 0.6
+        var wait = 1.2
+        var speed = 1.0
       } else {
         var height = '100%'
+        var clock_speed = 0.3
         var wait = 0.8
         var speed = wait + 0.2
       }
       $('#bk-timeline .clock-icon .clock_line').css({
         'height': '30px',
-        'transition': 'height 0.3s linear'
+        'transition': 'height ' + clock_speed + 's linear'
       })
       $('#bk-timeline .luzid_element').each (function (index){
         $('#bk-timeline').find('.luzid_element').eq( index ).find('.luzid_line').css({
           'height': height,
-          'transition': 'height ' + (speed) + 's linear ' + (index * wait + 0.3) + 's'
+          'transition': 'height ' + (speed) + 's linear ' + (index * wait + clock_speed) + 's'
         })
       })
     }
@@ -571,6 +573,17 @@
       speed: 1200
     });
 
+  </script>
+{% endif %}
+
+{% if page.layout == 'home' or page.title == 'About me'  %}
+  <script type="text/javascript" src="{{ "/assets/js/ScrollTrigger.min.js" | prepend: site.baseurl}}"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(){
+      var trigger = new ScrollTrigger({
+
+      });
+    });
   </script>
 {% endif %}
 

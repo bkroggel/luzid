@@ -2,6 +2,10 @@
 layout: static
 title: About me
 sign: true
+quote:
+  text: >
+    I am easily satisfied with the very best.
+  author: Winston Churchill
 timeline:
   - Company:
       info: Vestibulum mattis lacus

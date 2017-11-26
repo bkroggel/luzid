@@ -23,8 +23,17 @@
             Etiam congue ultrices sapien, sit amet condimentum lectus. Nulla vel sagittis dolor. Cras non metus volutpat, vestibulum nunc vel, finibus odio. Duis vestibulum faucibus interdum. Nam egestas aliquet metus. Nunc hendrerit euismod elit eu pellentesque. Integer pulvinar felis vitae libero tempus finibus.
           </p>
         </div>
+        <div class="bk-blog-style bk-static-style bk-blog-content bk_about_quote_big" id="bk_about_quote" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+          <div class="bk_about_quote_inner">
+            <p class="bk_quote__main">{{page.quote.text}}</p>
+            <div class="bk_quote__author">
+              <p>- {{page.quote.author}}</p>
+            </div>
+          </div>
+        </div>
       {% endif %}
-      <div class="bk-blog-style bk-blog-content bk-static-style" before="{{ page.title }}" id="bk-about-introduction">
+
+      <div class="bk-blog-style bk-blog-content bk-static-style" before="{{ page.title }}" {% if page.title == "About me" %}id="bk-about-introduction"{% endif %}>
         {% if page.title == "About me" %}
           <div class="pulsating-circle">
             <div class="pulsating__point"></div>
@@ -32,6 +41,14 @@
               <div class="pulsating__dot"></div>
             </div>
             <div class="pulsating__line"></div>
+          </div>
+          <div class="bk-blog-style bk-static-style bk-blog-content bk_about_quote_small" id="bk_about_quote" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+            <div class="bk_about_quote_inner">
+              <p class="bk_quote__main">{{ page.quote.text }}</p>
+              <div class="bk_quote__author">
+                <p>- {{ page.quote.author }}</p>
+              </div>
+            </div>
           </div>
         {% endif %}
         {{ content }}

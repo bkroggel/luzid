@@ -32,6 +32,9 @@ sitemap:
   - jQuery
     https://jquery.com/
     jQuery is a fast, small, and feature-rich JavaScript library.
+  - ScrollTrigger
+    https://terwanerik.github.io/ScrollTrigger/
+    Triggers classes on html elements based on the scroll position.
   - Showdown
     https://github.com/showdownjs/showdown
     Showdown is a Javascript Markdown to HTML converter, based on the original works by John Gruber.

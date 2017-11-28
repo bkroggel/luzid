@@ -490,6 +490,15 @@ a.link_button.-white {
       font-size: 0.7rem;
     };
   }
+  .tweet_content p {
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    background: rgba(255, 255, 255, .9);
+  }
+  .tweet_frame_img .tweet_content p {
+    padding: 1px 7px;
+  }
   h1 span.time {
     margin-left: 3px;
     font-size: 0.5rem;

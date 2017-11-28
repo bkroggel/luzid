@@ -70,6 +70,7 @@ var news = {
   "maxTweets": 3,
   "enableLinks": true,
   "showUser": true,
+  "showImages": true,
   "showTime": true,
   "dataOnly": true,
   //"dateFunction": dateFormatter,
@@ -111,16 +112,20 @@ var news = {
         var username = '@derKroggel'
         html += '<div class="twitter_el">'
           //+ '<div class="tweet_text">'
-          + '<div class="tweet__frame">'
+          + '<div class="tweet__frame' + (tweetObject.image ? ' tweet_frame_img' : '' ) + '">'
             + '<div class="tweet_header"><a href="' + tweetObject.permalinkURL + '"><h1>'
              + '<span class="fa fa-twitter"></span>'
              + 'Twitter<span class="time">' + tpf_time() + '</span></h1>'
             + '</a></div>'
-            + (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
+            //+ (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
             + '<div class="tweet_content"><p>' + tweetObject.tweet + '</p></div>'
             // + (tweetObject.author_data.screen_name == username ? '' : '<div class="tweet_link">' + tweetObject.author_data.screen_name + '</div>')
           + '</div>'
-          + '<div class="tweet__interactions">'
+          //+ '</div>'
+          + (tweetObject.image ? '<div class="tweet-img">'
+            + '<a href="' + tweetObject.permalinkURL + '"><img src="'+tweetObject.image+'" /></a>'
+          + '</div>' : '')
+          + '<div class="tweet__interactions' + (tweetObject.image ? ' tweet__interactions_img' : '' ) + '">'
             + '<div class="interactions__el">'
               +  '<a href="https://twitter.com/intent/tweet?in_reply_to=' + tweetObject.tid + '" target="_blank">Reply</a>'
             + '</div>'
@@ -131,8 +136,6 @@ var news = {
               +  '<a href="https://twitter.com/intent/favorite?tweet_id=' + tweetObject.tid + '" target="_blank">Favorite</a>'
             + '</div>'
           + '</div>'
-          //+ '</div>'
-          //+ (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
         + '</div>'
       n++;
       }

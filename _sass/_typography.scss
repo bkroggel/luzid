@@ -529,10 +529,14 @@ a.link_button.-white {
     &, a {
       font-size: 0.8rem;
     }
+    a {
+      @include just_underline(white);
+    }
   }
   a.link {
     margin-top: 10px;
     color: #606f54;
+
   }
 }
 

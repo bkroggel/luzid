@@ -306,6 +306,53 @@
         $(this).toggleClass('active')
       }
     })
+
+
+    // additional information in post in_view
+    function additional_post_information(){
+      var ext_name = 'info'
+      $('.bk-blog-content p[' + ext_name + ']').each(function() {
+
+        var title = $(this).attr( ext_name )
+        var sub = $(this).attr( ext_name + '_sub' )
+        var title_prev = $(this).prev('.info_block').children('p').attr( ext_name )
+        var sub_prev = $(this).prev('.info_block').children('p').attr( ext_name + '_sub' )
+        if ( $(this).prev().hasClass('info_block') ) {
+          if (title != '' && title == title_prev && sub == sub_prev  || title != '' && title == title_prev && sub == ''  || title == '' && title_prev != '' ) {
+            $(this).prev('.info_block').append( $(this) )
+          } else {
+            if (title == '') {
+              create_block( $(this), 'no_title' )
+            } else {
+              create_block( $(this) )
+            }
+          }
+        } else {
+          if (title == '') {
+            create_block( $(this), 'no_title' )
+          } else {
+            create_block( $(this) )
+          }
+        }
+        function create_block( el, titel_var ){
+          var info_bar = '<div class="info_bar">'
+              + (title ? '<div class="info_bar__el info_bar__title"><p>' + title + '</p></div>' : '')
+              + (titel_var == 'no_title' ? '<div class="info_bar__el info_bar__title"><p>Information</p></div>' : '')
+              + (sub ? '<div class="info_bar__el info_bar__sub"><p>' + sub + '</p></div>' : '')
+            + '</div>'
+          if ( el.prev().is( ':header' ) ) {
+            el.prev().remove()
+          }
+          el.wrap( '<div class="info_block">' ).parent().prepend( info_bar )
+        }
+
+      })
+    }
+
+    additional_post_information()
+
+
+
   </script>
 {% endif %}
 

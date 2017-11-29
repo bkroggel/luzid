@@ -233,6 +233,9 @@ pre {
   font-size: 0.8rem;
   line-height: 1.5em;
   border-radius: 0;
+  code {
+    font-family: $mono;
+  }
 }
 
 .bk-blog-style p>code {
@@ -362,6 +365,7 @@ span.title,
   line-height: unset;
   position: relative;
   top: -2px;
+  color: $accent-two;
   @include media-query($small){
     top: -1px;
   };
@@ -373,7 +377,7 @@ span.title:after {
   font-size: 1.2em;
   font-weight: 300;
   margin-left: 3px;
-  color: #696969;
+  color: $accent-two;
   position: relative;
   top: -2px;
   @include media-query($small){
@@ -579,76 +583,49 @@ p.intro a:after {
   margin-bottom: 30px;
 }
 
-p.info,
-p.update {
-  background-color: $light-accent;
-  position: relative;
-  padding: 10px 15px;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  margin-bottom: 0;
-  em,
-  a {
-    font-size: 0.9rem;
-  }
-  // + p {
-  //   text-indent: 0;
-  // }
-  @include media-query($small){
-    margin: 0;
-    padding: 5%;
-    margin-left: -5%;
-    margin-right: -5%;
-  };
-  &:before {
-    text-transform: uppercase;
-    font-weight: 300;
-    color: $dark-color;
-    line-height: 1em;
-    position: absolute;
-    right: 15px;
-    top: 0;
-    white-space: nowrap;
-    margin-top: -21px;
-    background: $light-accent;
-    padding: 10px;
-    @include media-query($small){
-      right: calc(100% + 21px);
-      margin-top: 5%;
-      transform: rotate(270deg);
-      transform-origin: right top;
-      padding: 10px 15px 0 15px;
+.info_block {
+  margin: 50px 0;
+  border-bottom: 1px solid $dark-color;
+  p {
+    margin: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.7em;
+    &:first-of-type {
+      margin-top: 1.5rem
+    }
+    &:last-of-type {
+      margin-bottom: 1.5rem
+    }
+    @include media-query($xtra-small){
+      margin: 1rem 2rem;
+      &:first-of-type {
+        margin-top: 2rem
+      }
+      &:last-of-type {
+        margin-bottom: 2rem
+      }
     };
   }
 }
 
-p.info {
-  &:before {
-    content: "information";
-  }
-  + p.info {
-    margin-top: 0;
-    padding-top: 0;
-    &:before {
-      content: "";
-      display: none;
+.info_bar {
+  @include display_flex;
+  border-bottom: 1px solid $dark-color;
+  .info_bar__title {
+    border-left: 1px solid $dark-color;
+    border-right: 1px solid $dark-color;
+    p {
+      text-transform: uppercase;
     }
   }
-}
-
-p.update {
-  &:before {
-    content: "update";
-  }
-  + p.update {
-    margin-top: 0;
-    padding-top: 0;
-    &:before {
-      content: "";
-      display: none;
-    }
+  p {
+    margin: 15px !important;
+    line-height: 1em;
+    font-family: $mono;
+    font-weight: 300;
+    color: $dark-color;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
   }
 }
 
@@ -660,11 +637,6 @@ p.update {
     display: block;
   }
 }
-
-// Images
-// .bk-blog-style p.img {
-//   text-indent: 0;
-// }
 
 .bk-blog-style p img {
   padding: 0;

@@ -151,11 +151,9 @@ Check out the [Twitter-Post-Fetcher Website](http://jasonmayes.com/projects/twit
 
 ## Update – 05/29/2016
 Haven't had the time to update this post recently, but I am pretty sure I should at least add a few words about the author of Twitter-Post-Fetcher. To be honest, the best plugin is just useless if there is not a guy behind that project who really puts a lot of time and effort into his products and is interested in not just creating but maintaining them. Lucky us, Jason Mayes is totally one of them. After a few weeks ago twitter changed some widget details which caused Twitter-Post-Fetcher not beeing able to get the tweets anymore, it took just a few hours until a new release of this plugin solved all of it's problems. I was definitely pretty impressed by the fast reaction of the dev and the attention he pays to his plugin - so I would call that a additional reason to check it out.
-{:.update}
+{:info="update" info_sub="2016-09-25 12:34:40 +0100"}
 
 Last but not least - I would love to hear from you. If there are any questions or some feedback you would like to share with me, feel free to send me a message via my [contact page](http://www.bastiankroggel.com/contact/).
-
-
 
 [^1]: On 21st of March in 2006 Jack Dorsey published the first tweet on twitter.
 [^2]: That is a bad day for you fundamental beliefs. Server side actions are a *must* for any OAUTH process. I am sorry for that.

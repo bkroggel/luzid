@@ -46,10 +46,6 @@ collections:
         name: "permalink"
         widget: "string"
         required: "false"
-      - label: "Showcase"
-        name: "showcase"
-        widget: "text"
-        required: "false"
       - label: "Thumbnail"
         name: "thumbnail"
         widget: "object"
@@ -59,13 +55,10 @@ collections:
             name: "img"
             widget: "image"
             required: "false"
-          - label: "Thumbnail Style"
-            name: "style"
-            widget: "select"
+          - label: "Overview"
+            name: "overview"
+            widget: "markdown"
             required: "false"
-            options:
-              - big
-              - classic
       - label: "Sitemap"
         name: "sitemap"
         widget: "object"

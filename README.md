@@ -15,7 +15,7 @@ permalink:
 showcase:
 thumbnail:
   img:
-  style:
+  overview:
 sitemap:
   lastmod:
   priority:
@@ -33,9 +33,8 @@ sign:
 | date | date of post | `2017-09-26 19:13:01 +0200` | no |
 | tags | tags of posts `set english to switch site language to en_US` | `[tag1, tag2]`| no |
 | permalink | set specific url for post (default set) | `/another/link/than/default.html` | no |
-| showcase | specific description for social share integration (fallback to excerpt) |  | no |
 | thumbnail.img | set display image for blogposts overview |  | no |
-| thumbnail.style | set how to display image (default set to: `classic` | `classic` or `big` | no |
+| thumbnail.overview | specific description for social share integration (fallback to excerpt) |  | no |
 | sitemap.lastmod | last modified date for sitemap (fallback set)|  | no |
 | sitemap.priority | priority for sitemap (fallback set) |  | no |
 | sitemap.changefreq | changefrequence for sitemap |  | no |

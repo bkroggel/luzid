@@ -137,6 +137,42 @@
       },
     });
 
+    CMS.registerEditorComponent({
+      id: "info",
+      label: "InfoBox",
+      fields: [{name: 'title', label: 'Titel', widget: 'string', required: 'false'},{name: 'sub', label: 'Sub-Title', widget: 'string', required: 'false'},{name: 'content', label: 'Content', widget: 'markdown'}],
+      pattern: / /,
+      fromBlock: function(match) {
+        return {
+          title: match[1],
+          sub: match[1],
+          content: match[1]
+        };
+      },
+      toBlock: function(obj) {
+        return (
+          '<div class="info_block">'
+          + '<div class="info_bar">'
+                + '<div class="info_bar__el info_bar__title"><p>' + (obj.title ? obj.title  : 'Information') + '</p></div>'
+                + (obj.sub ? '<div class="info_bar__el info_bar__sub"><p>' + obj.sub + '</p></div>' : '')
+          + '</div>'
+          + '<p>' + obj.content + '</p>'
+        + '</div>'
+        );
+      },
+      toPreview: function(obj) {
+        return (
+          '<div class="info_block">'
+          + '<div class="info_bar">'
+                + '<div class="info_bar__el info_bar__title"><p>' + (obj.title ? obj.title  : 'Information') + '</p></div>'
+                + (obj.sub ? '<div class="info_bar__el info_bar__sub"><p>' + obj.sub + '</p></div>' : '')
+          + '</div>'
+          + '<p>' + obj.content + '</p>'
+        + '</div>'
+        );
+      },
+    });
+
 
     CMS.registerPreviewTemplate("blog", BKPostPreview);
     CMS.registerPreviewTemplate("about", BKAboutPreview);

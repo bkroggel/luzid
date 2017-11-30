@@ -12,7 +12,6 @@ author:
 date:
 tags:
 permalink:
-showcase:
 thumbnail:
   img:
   overview:

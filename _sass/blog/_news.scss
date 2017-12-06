@@ -2,6 +2,10 @@ section#news {
   margin: 50px 0;
 }
 
+.news_header {
+  margin-right: 20px;
+}
+
 #news__twitter {
   width: 60%;
   @include media-query($small){
@@ -33,7 +37,6 @@ section#news {
   @include direction_column;
   @include justify-content(space-between);
   margin-right: 30px;
-  border-bottom: 2px solid black;
   padding-left: 2px;
   @include media-query($small){
     max-width: 250px;
@@ -53,6 +56,12 @@ section#news {
   @include display_flex;
   //margin-bottom: -2px;
   margin-top: 10px;
+}
+
+#news__twitter .interactions__el {
+  border-bottom: 2px solid $darkest-color;
+  margin-right: 2px;
+  margin-bottom: -2px;
 }
 
 #news__twitter .tweet__interactions_img {

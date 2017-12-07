@@ -5,6 +5,7 @@ section.pic-break {
   padding: 75px 0;
   position: relative;
   overflow: hidden;
+  z-index: 0;
   @include display_flex;
   @include justify-content(center);
   @include align-items(center);
@@ -97,7 +98,7 @@ $skew_diag: 3;
 
 .pic__style-diagonal-1 {
   transform-origin: bottom left;
-  z-index: 1;
+  z-index: 3;
   background: $main-color;
   &:before, &:after {
     background: $slightly-darker;

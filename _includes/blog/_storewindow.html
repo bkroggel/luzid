@@ -8,6 +8,21 @@
           <img src="/assets/img/dev/thumb_placeholder.png" alt="{{post.title}}"></img>
         {% endif %}
       </div>
+      {% assign index_post = forloop.index %}
+      {% if post.featured %}
+        {% assign featured_posts_count = featured_posts_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% assign featured_posts = (site.posts | where:"featured","true") %}
+    {% for post in featured_posts | offset: featured_posts_count %}
+      {% assign index_post = index_post | plus: 1 %}
+      <div class="el_{{ index_post }}" {% if post.sub_title %} data-subtitle='{{post.sub_title}}' {% endif %} data-title="{{post.title}}" data-excerpt="{{ post.content | strip_html | markdownify | truncatewords: 45 }}" data-url="{{post.url}}">
+        {% if post.thumbnail.img %}
+          <img src="{{post.thumbnail.img}}" alt="{{post.title}}"></img>
+        {% else %}
+          <img src="/assets/img/dev/thumb_placeholder.png" alt="{{post.title}}"></img>
+        {% endif %}
+      </div>
     {% endfor %}
   </div>
   <div class="storewindow__el" id="storewindow__text">

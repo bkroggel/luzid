@@ -5,6 +5,7 @@ date: 2015-12-24 18:30:00 +0200
 tags: [about]
 permalink: /2015/12/24/Hallo-Welt-und-ein-README.html
 showcase: Erste Worte und meine Einführung in die weiten Welten des Blogging-Daseins. Wer nach dem Was, Wo und Warum sucht wird Antworten finden. Wer nicht - der trotzdem. Wenig Inhalt, dafür umso mehr Worte.
+featured: false
 ---
 Hallo und Herzlich Willkommen - oder wie es dem tagesaktuellen Geschehen wohl eher angemessen ist *Frohe Weihnachten, Feliz Navidad, Joyeux Noël, Buon Natale und natürlich Merry Christmas*.
 

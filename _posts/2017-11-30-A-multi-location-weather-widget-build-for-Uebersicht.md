@@ -15,6 +15,7 @@ sitemap:
   exclude:
 sign: false
 published: false
+featured: true
 ---
 
 I recently rediscovered a neat little app for MacOS I already played with a few years ago when it was still in it‘s early days. While it matured a lot since then, the numbers of [third party widgets](http://tracesof.net/uebersicht-widgets/) - an obviously crucial thing for such a solution - increased tremendously, which made me feel like I definitely need to give this app another look and chance to stay on my machine.

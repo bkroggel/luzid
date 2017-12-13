@@ -6,6 +6,7 @@ date: 2016-03-25 15:16:00 +0200
 tags: [about, english]
 permalink: /2016/03/25/The-static-way-of-presenting-your-tweets.html
 showcase: While twitter blocked the old ways of presenting your tweets on your website with forcing you to use the new API and OAUTH process, there is actually a pretty nifty javascript hack to publish your short thoughts without any server side actions.
+featured: true
 ---
 
 Let's start this introduction about a sweet little workaround for a javascript based [twitter](https://twitter.com) widget with a big *hug* and a *Happy Birthday!* (…sorry, I am a little late to the 10th anniversary party)[^1] to the whole twitter team that created such a tremendously useful service, where people can connect and share their thougts in a short but very effective way.

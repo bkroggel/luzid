@@ -5,6 +5,9 @@ author: Bastian Kroggel
 date: 2016-03-25 15:16:00 +0200
 tags: [about, english]
 permalink: /2016/03/25/The-static-way-of-presenting-your-tweets.html
+thumbnail:
+  img: /assets/img/page/blog/static_tweets_thumb.jpg
+  overview:
 showcase: While twitter blocked the old ways of presenting your tweets on your website with forcing you to use the new API and OAUTH process, there is actually a pretty nifty javascript hack to publish your short thoughts without any server side actions.
 featured: true
 ---

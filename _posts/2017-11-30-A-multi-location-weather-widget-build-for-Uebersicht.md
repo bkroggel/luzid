@@ -6,7 +6,7 @@ date: 2017-11-30 14:04:00 +0100
 tags: [work, english]
 permalink:
 thumbnail:
-  img: assets/img/page/blog/wttr_thumbnail.png
+  img: /assets/img/page/blog/wttr_thumbnail.png
   overview:  
 sitemap:
   lastmod:

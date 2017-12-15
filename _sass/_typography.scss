@@ -523,14 +523,18 @@ a.link_button.-white {
 
 .luzid_element {
   p {
-    @include link_mix(white);
+    //@include link_mix(white);
     margin: 0;
+    color: white;
     font-family: $reading;
     &, a {
       font-size: 0.8rem;
     }
     a {
-      @include just_underline(white);
+      color: white;
+      text-decoration: underline;
+      text-decoration-skip: ink;
+      text-decoration-color: rgba(255,255,255,0.5);
     }
   }
   a.link {

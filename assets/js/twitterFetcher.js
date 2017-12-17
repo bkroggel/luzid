@@ -114,7 +114,7 @@ var news = {
           //+ '<div class="tweet_text">'
           + '<div class="tweet__frame' + (tweetObject.image ? ' tweet_frame_img' : '' ) + '">'
             + '<div class="tweet_header"><a href="' + tweetObject.permalinkURL + '"><h1>'
-             + '<span class="fa fa-twitter"></span>'
+             + '<span class="fab fa-twitter" data-fa-transform="shrink-2"></span>'
              + 'Twitter<span class="time">' + tpf_time() + '</span></h1>'
             + '</a></div>'
             //+ (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')

@@ -177,7 +177,8 @@ a.blog-posts--title {
 .bk-footer-1__sec3__top ul li a,
 .bk-footer__acknowledgement p,
 .bk-footer__acknowledgement a{
-  color: rgba(255,255,255,0.8);
+  //color: rgba(255,255,255,0.8);
+  color: $bb-soft;
   font-family: $sans-serif;
   font-size: 0.6em;
   font-weight: 300;
@@ -191,7 +192,7 @@ a.blog-posts--title {
 
 .bk-footer__acknowledgement p {
   font-size: 0.4em;
-  border: 1px solid white;
+  border: 1px solid $bb-soft;
   padding: 0px 10px;
   min-height: 25px;
   @include display_flex;
@@ -228,7 +229,7 @@ a.blog-posts--title {
 }
 
 .bk-footer-1__social p a {
-  @include link-mix(white);
+  @include link-mix($bb-soft);
 }
 
 
@@ -672,6 +673,30 @@ a.link_button.-white {
     };
     p {
       border: 1px solid $main-color;
+    }
+  }
+}
+
+.bk-card {
+  h2 {
+    @include display_flex;
+    align-self: flex-end;
+    color: white;
+    position: relative;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    font-family: $reading;
+  }
+  p {
+    color: $dark-color;
+    font-size: 0.8rem;
+    line-height: 1.4em;
+    font-family: $reading;
+    margin: 0;
+    &.action {
+      color: $accent-two;
     }
   }
 }

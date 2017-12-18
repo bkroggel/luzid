@@ -6,7 +6,8 @@ footer {
   display: flex;
   @include justify-content(space-between);
   padding: 0 5%;
-  background: $dark-color;
+  //background: $dark-color;
+  background: $blue-black;
   flex-wrap: wrap;
   @include media-query($small){
     flex-wrap: nowrap;
@@ -22,7 +23,8 @@ footer {
 }
 
 .bk-footer-2 {
-  background-color: rgb(130,130,130);
+  //background-color: rgb(130,130,130);
+  background-color: rgb(30,30,30);
   text-align: center;
   padding: 7px 0;
 }
@@ -83,7 +85,7 @@ footer {
   svg {
     width: 25px;
     height: 25px;
-    fill: white;
+    fill: $bb-soft;
   }
   &>svg:last-of-type {
     width: 130px;
@@ -94,7 +96,7 @@ footer {
 
 .footer-line {
   width: 1px;
-  background-color: white;
+  background-color: $bb-soft;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -140,7 +142,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   a {
-    border: 1px solid white;
+    border: 1px solid $bb-soft;
     border-radius: 20px;
     margin: 3px;
     padding: 3px 15px;
@@ -160,11 +162,11 @@ footer {
 .bk-footer-1__mobile-line {
   display: flex;
   &.bk-footer-1__left-line {
-    border-right: 1px solid white;
+    border-right: 1px solid $bb-soft;
     order: 1;
   }
   &.bk-footer-1__right-line {
-    border-left: 1px solid white;
+    border-left: 1px solid $bb-soft;
     order: 3;
   }
   @include media-query($small){

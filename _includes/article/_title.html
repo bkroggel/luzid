@@ -69,7 +69,20 @@
       <div class="article-author-id">
         <h2>Author</h2>
         <h3>{{page.author}}</h3>
-        <a href="https://www.twitter.com/{{ site.twitter }}"><h4><span class="fab fa-twitter" data-fa-transform="shrink-2" aria-hidden="true"></span>{{ site.twitter }}</h4></a>
+
+        <div class="social_squares small black">
+          <a href="https://twitter.com/{{ site.data.author.[page.author].twitter }}">
+            <div class="social_squares__el">
+              <i class="fab fa-twitter"></i>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/{{ site.data.author.[page.author].linkedin }}">
+            <div class="social_squares__el">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+          </a>
+        </div>
+
       </div>
     </div>
     <div class="bk-side-space article-column">

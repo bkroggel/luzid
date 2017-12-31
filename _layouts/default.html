@@ -7,6 +7,9 @@
       {% unless page.url contains '404' %}
         {% include defaults/_beta.html %}
       {% endunless %}
+      {% unless page.url contains '404' or page.layout == 'post' or page.layout == 'announcement' %}
+        {% include defaults/_social_squares.html %}
+      {% endunless %}
 
       {{ content }}
     </main>

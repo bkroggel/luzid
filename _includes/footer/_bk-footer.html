@@ -27,13 +27,22 @@
 
     <div class="bk-footer-1__sec2">
       <h3>Thanks for being awesome !</h3>
-      <div class="bk-footer-1__social">
-        <p>
-          {% for 2_nav in site.data.nav.footer.2_navs %}<a href="{{2_nav.link}}">{{2_nav.name}}</a>{% endfor %}
-          <!-- <a href="#">Twitter</a>
-          <a href="#">Github</a>
-          <a href="#">LinkedIn</a> -->
-        </p>
+      <div class="bk-footer-1__social social_squares">
+          <a href="https://twitter.com/derkroggel">
+            <div class="social_squares__el">
+              <i class="fab fa-twitter"></i>
+            </div>
+          </a>
+          <a href="https://github.com/bkroggel">
+            <div class="social_squares__el">
+              <i class="fab fa-github"></i>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/bastian-kroggel-125712121">
+            <div class="social_squares__el">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+          </a>
       </div>
       <div class="desc">{{site.description | markdownify}}</div>
     </div>

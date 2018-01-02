@@ -42,6 +42,14 @@
             </div>
             <div class="pulsating__line"></div>
           </div>
+          <div class="bk-blog-style bk-static-style bk-blog-content bk_about_quote_small" id="bk_about_quote" data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
+            <div class="bk_about_quote_inner">
+              <p class="bk_quote__main">{{ page.quote.text }}</p>
+              <div class="bk_quote__author">
+                <p>- {{ page.quote.author }}</p>
+              </div>
+            </div>
+          </div>
         {% endif %}
         {{ content }}
         {% if page.sign %}

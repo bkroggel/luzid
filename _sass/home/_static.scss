@@ -163,8 +163,8 @@
   }
   .luzid_el__content {
     margin: 0 auto 70px;
-    width: 430px;
-    max-width: 80%;
+    max-width: 430px;
+    width: 80%;
     position: relative;
     @include media-query($small){
       padding-bottom: 70px;

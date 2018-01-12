@@ -138,14 +138,23 @@
     }
     a:before {
       @include media-query($small){
-        content: "\f08e";
-        font-family: FontAwesome;
-        font-size: 0.4em;
+        content: "\f0c1";
+        font-family: "Font Awesome 5 Solid";
+        display: none;
+      };
+    }
+    a>svg {
+      display: none;
+      @include media-query($small){
+        font-size: 1rem;
         vertical-align: middle;
         margin-right: 10px;
         opacity: 0.3;
         position: absolute;
         right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
       };
     }
     a:after {

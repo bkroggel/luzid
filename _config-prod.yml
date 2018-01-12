@@ -2,5 +2,6 @@
 # production environment
 
 url: "https://beta.bastiankroggel.com"
+timezone: Europe/Berlin
 google-analytics:
-  tracking-code: 
+  tracking-code:

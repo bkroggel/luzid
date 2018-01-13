@@ -117,7 +117,7 @@ var news = {
              + '<span class="fab fa-twitter" data-fa-transform="shrink-2"></span>'
              + 'Twitter<span class="time">' + tpf_time() + '</span></h1>'
             + '</a></div>'
-            //+ (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
+            // + (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
             + '<div class="tweet_content"><p>' + tweetObject.tweet + '</p></div>'
             // + (tweetObject.author_data.screen_name == username ? '' : '<div class="tweet_link">' + tweetObject.author_data.screen_name + '</div>')
           + '</div>'

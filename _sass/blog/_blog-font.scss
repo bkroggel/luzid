@@ -656,6 +656,9 @@ p.intro a:after {
   + img {
     margin-top: 20px;
   }
+  &.lock {
+    width: auto;
+  }
 }
 
 .bk-blog-style p.bk_img {
@@ -681,6 +684,33 @@ p.intro a:after {
     margin-left: -10%;
     max-width: unset;
     box-shadow: 0 0 150px -20px rgba(0,0,0,.3);
+  }
+}
+
+.block_element {
+  margin: 2em 0;
+  position: relative;
+  text-align: center;
+  @include media-query($medium){
+    width: 110%;
+    margin: 3em 0;
+    margin-left: -10%;
+  }
+  img[class^="lock_"] {
+    @include media-query($medium){
+      float: right;
+    }
+  }
+  .image_frame {
+    width: unset;
+    margin: 0;
+    @include media-query($medium){
+      float: right;
+    }
+  }
+  .clear-float {
+    clear: both;
+    display: block;
   }
 }
 

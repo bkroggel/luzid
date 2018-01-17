@@ -14,7 +14,7 @@ sitemap:
   changefreq:
   exclude:
 sign: false
-published: false
+published: true
 featured: true
 ---
 
@@ -27,3 +27,18 @@ That said it is actually pretty easy to write a widgets for and by yourself - at
 
 ## Wttr Widget for Übersicht
 ![Wttr Widget for Übersicht](/assets/img/page/blog/wttr_thumbnail.png){: data-subtitle="Sourcecode, documentation and the ready to download product can be found on [Github](https://github.com/bkroggel/wttr)"}
+There are actually quite a few Übersicht widgets out there that allow you to display the current weather conditions right on your MacOS desktop - so why write another one instead of just using what is already there?
+Initially I actually wasn’t interested in writing my own widget instead I was tinkering around with some already present code samples of other developers. Since I already knew what Übersicht is capable of I mainly was interested in how I could modify some very informative products to fit a more MacOS native look.  
+But that didn't feel *finished* - just a bunch of numbers and words that were floting around on my screen.
+![Info widget with a native MacOS look](/assets/img/page/blog/info_widgets.jpg){: data-subtitle="based on code snippets and ideas to be found in the [Übersicht widget collection](http://tracesof.net/uebersicht-widgets/). Currently the widget itself can not be found on the internet but if you are interested in it just let me know."}
+Not being a huge fan of the native MacOS notification center (and especially the widget part of it) I realized that I could not just polish the appearance of my newly created sidebar but also add the most relevant information for myself so I finally  could use widgets on MacOS in the way I <span class="sidenote"><span class="sidenote__toggle">expect it to behave</span><span class="sidenote__note">like on Android OS - present on the main screens and therefore allowing important information to stick out of the usual data mess</span></span> instead of having to use and open an app to actually reach the most relevant information.
+So what I wanted was an easily but still fully featured weather forecast element - and everything should fit into my recently created MacOS styled widget design. While there were a few things out there that kind of helped me to think through the process, there was nothing like the perfect solution for my case.  
+*The reason I created it myself.*
+
+### Features
+The idea and the history aside let‘s dive into the actually features and therefore the "What" instead of the "Why".
+![Info widget with a native MacOS look](/assets/img/page/blog/wttr.gif){: .lock data-subtitle="based on code snippets and ideas to be found in the [Übersicht widget collection](http://tracesof.net/uebersicht-widgets/)"}
+
+
+### Credits
+

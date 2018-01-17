@@ -350,7 +350,18 @@
 
     additional_post_information()
 
-
+    function lock_images() {
+      var lock_height = ($(window).innerHeight() * 0.8);
+      $('.bk-blog-content img').each(function() {
+        if ($(this).is('.lock')) {
+          $(this).css('max-height', lock_height)
+          $(this).parent('.image_frame').wrap('<div class="block_element">')
+          $(this).siblings('.image_caption').appendTo($(this).parents('.block_element'))
+          $(this).parents('.block_element').append('<span class="clear-float"></span>')
+        }
+      })
+    }
+    lock_images()
 
   </script>
 {% endif %}

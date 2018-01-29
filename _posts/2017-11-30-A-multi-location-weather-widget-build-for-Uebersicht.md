@@ -113,7 +113,7 @@ all in all the `location:` section will look like the following:
 
 <br>
 
-every other location can be added just like that:
+and every other location can be added just like that:
 
     location: #<-- do not remove this part
       lnd:
@@ -129,15 +129,20 @@ every other location can be added just like that:
 
 ## Credits
 
-Based on the <a href="https://github.com/rabad/uebersicht-multiple-locations-weather">Multiple Locations Weather widget</a> by <a href="https://github.com/rabad">Rubén Abad</a>. While major parts of this widget were rewritten it still makes use of the original data access as well as parse functions.
+Of course credits where credits belong - and this widget is basically just a combination of multiple components that were already there - and a few additions from my side.  
+So of course I would like to say **Thank you**.
+
+The Wttr widget is mostly based on the <a href="https://github.com/rabad/uebersicht-multiple-locations-weather">Multiple Locations Weather widget</a> by <a href="https://github.com/rabad">Rubén Abad</a>. While major parts of this widget were rewritten it still makes use of the original data access as well as parse functions.
 
 Design-wise this widget is highly influenced by a beautiful <a href="https://dribbble.com/shots/1563616-SimpL-Weather-Widget-PSD">SimpL Weather Widget</a> crafted by the wonderfully talented <a href="https://twitter.com/zramos94">Zahir Ramos</a>. Definitely go and check out his work on <a href="https://dribbble.com/zramos">dribble</a>.
 
-The gorgeous [weather icons](https://github.com/erikflowers/weather-icons/) crafted by [Erik Flowers](http://www.helloerik.com/) can not just be used as standalone icons but also as an easy to implement font. So in case you are wondering what else you could use to display the current weather situation I encourage you to check out the [project site](http://erikflowers.github.io/weather-icons/).
+The gorgeous [weather icons](https://github.com/erikflowers/weather-icons/) crafted by [Erik Flowers](http://www.helloerik.com/) cannot just be used as standalone icons but also as an easy to implement font. So in case you are wondering what else you could use to display the current weather situation I encourage you to check out the [project site](http://erikflowers.github.io/weather-icons/).
 
-Of course credits, where credits belong - so thank you very much <a href="https://twitter.com/Felx">Felix</a> for creating and maintaining <a href="http://tracesof.net/uebersicht/">Übersicht</a>.
+And last but not least thank you very much <a href="https://twitter.com/Felx">Felix</a> for creating and maintaining <a href="http://tracesof.net/uebersicht/">Übersicht</a>.
 
 
-hier muss dann noch ein Update eingebaut werden, dass bereits Version 1.0.1 vorliegt, da eine Änderung in MacOS High Sierra dazu geführt hat, dass eine Weiterentwicklung des CSS nötig war.
+Version 1.0.1 of the Wttr Widget for Übersicht just got released.
+While macOS Sierra users should not recognize any changes this update actually fixes an issue you could have encountered if you are living on the cutting edge side of things and already installed macOS High Sierra on your machine.
+Thanks a lot to [@_martinc](https://twitter.com/_martinc) who not just informed me about this bug but also was extremely patient and helpful while trying to find and resolve the issue.
 {:info="Update" info_sub="2017-12-27 13:18:32 +0100"}
 

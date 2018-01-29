@@ -89,7 +89,7 @@ After everything is installed and the widget is connected to the DarkSky server 
 In order to set your own preferred locations you can of course modify the setup.
 
 1. create an id for your location (e.g. `lnd`)
-2. add a name to your location which later will be displayed on your widget (e.g. `London, G`)
+2. add a name to your location which later will be displayed on your widget (e.g. `London, GB`)
 3. add 'Latitude' as well as 'Longitude' information (e.g. `51.5287718` and `-0.2416814`)
 
 you can grab those information from [Google Maps](https://maps.google.com):
@@ -129,7 +129,7 @@ and every other location can be added just like that:
 
 ## Credits
 
-Of course credits where credits belong - and this widget is basically just a combination of multiple components that were already there - and a few additions from my side.  
+Of course credits where credits belong - and this widget is basically a combination of multiple components that were already there - and a few additions from my side.  
 So of course I would like to say **Thank you**.
 
 The Wttr widget is mostly based on the <a href="https://github.com/rabad/uebersicht-multiple-locations-weather">Multiple Locations Weather widget</a> by <a href="https://github.com/rabad">Rubén Abad</a>. While major parts of this widget were rewritten it still makes use of the original data access as well as parse functions.
@@ -144,5 +144,5 @@ And last but not least thank you very much <a href="https://twitter.com/Felx">Fe
 Version 1.0.1 of the Wttr Widget for Übersicht just got released.
 While macOS Sierra users should not recognize any changes this update actually fixes an issue you could have encountered if you are living on the cutting edge side of things and already installed macOS High Sierra on your machine.
 Thanks a lot to [@_martinc](https://twitter.com/_martinc) who not just informed me about this bug but also was extremely patient and helpful while trying to find and resolve the issue.
-{:info="Update" info_sub="2017-12-27 13:18:32 +0100"}
+{:info="Update" info_sub="2017-12-27 15:14:25 +0100"}
 

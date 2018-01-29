@@ -208,7 +208,7 @@ ul {
     background-color: $highlighted-color;
     padding: 2px 4px;
     a {
-      @include underline($darkest-color, $highlighted-color);
+      @include underline($darkest-color, $highlighted-color-solid);
     }
   }
   strong {

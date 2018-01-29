@@ -191,7 +191,8 @@ ul {
 .bk-blog-style ol,
 .bk-blog-style a,
 .bk-blog-style p>code,
-.bk-blog-style p em {
+.bk-blog-style p em,
+.bk-blog-style li em {
   color: $blog-font-color_small;
   line-height: 1.9em;
   font-size: 1rem;
@@ -201,10 +202,14 @@ ul {
   };
 }
 
-.bk-blog-style p {
+.bk-blog-style p,
+.bk-blog-style li {
   .highlighted {
     background-color: $highlighted-color;
     padding: 2px 4px;
+    a {
+      @include underline($darkest-color, $highlighted-color);
+    }
   }
   strong {
     font-weight: 500;
@@ -248,7 +253,8 @@ pre {
   }
 }
 
-.bk-blog-style p>code {
+.bk-blog-style p>code,
+.bk-blog-style li>code {
   color: $blog-font-color;
   background: rgba(162, 162, 162, 0.3);
   padding: 4px 4px 2px;

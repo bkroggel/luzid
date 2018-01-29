@@ -70,18 +70,20 @@ Anyways that could be an starting point for the next Übersicht widget that evol
 ### How To
 *There is a comprehensive How To section and Readme in the [GitHub Repository](https://github.com/bkroggel/wttr) for Wttr Forecast Widget. The following part will be heavily based on that. If you do have any questions please feel free to open a ticket on GitHub or reach out to me on [Twitter](https://twitter.com/derKroggel)*
 
-The overall starting process to get the Wttr widget up and running basically follows a simple step by step approach you can find below - if you already installed Übersicht and downloaded as well as moved the widget and its components to the right folder you can go ahead with bullet point No. 4 otherwise we will start with the installation of the [Übersicht core](http://tracesof.net/uebersicht/).
+The overall starting process to get the Wttr widget up and running basically follows a <span class="sidenote"><span class="sidenote__toggle">simple step by step approach</span><span class="sidenote__note">if you already installed Übersicht and downloaded as well as moved the widget and its components to the right folder you can go ahead with bullet point No. 4</span></span> you can find below.
 
-1. head over to [the Übersicht website](http://tracesof.net/uebersicht/) and download as well as install the latest version 
-2. either [click here](https://github.com/bkroggel/wttr/releases/download/1.0.1/wttr.widget.zip) or head over to the Wttr forecast widget repository on [GitHub](https://github.com/bkroggel/wttr) to download the latest release
-3. after downloading extract the `wttr.widget.zip` and move the *whole* `wttr.widget` folder to the Übersicht widgets folder.  
+1. Head over to [the Übersicht website](http://tracesof.net/uebersicht/) and download as well as install the latest version of the core
+2. Either [click here](https://github.com/bkroggel/wttr/releases/download/1.0.1/wttr.widget.zip) or head over to the Wttr widget repository on [GitHub](https://github.com/bkroggel/wttr) to download the latest release
+3. After downloading extract the `wttr.widget.zip` and moving the *whole* `wttr.widget` folder to the Übersicht widgets folder  
 `Übersicht menu bar symbol > Open Widgets Folder`
 4. Open: https://darksky.net/dev
-5. Log in or Sign up if you haven't created an account yet
-6. open `index.coffee` in your favorite TextEditor
+5. Log in or Sign up if you haven't created an (entirely free) account yet
+6. Open `index.coffee` in your favorite TextEditor
 7. Get your secret key (on the DarkSky website) and add it below to the `apiKey` section
    (the key needs to be put in quotation marks)  
 <span>**NOTE:** A detailed explanation of the various settings can be found [here](https://github.com/bkroggel/wttr#settings)</span>{:.highlighted}
+
+<br>
 
 After everything is installed and the widget is connected to the DarkSky server you already can see the sample weather forecasts for London, Paris and New York.  
 In order to set your own preferred locations you can of course modify the setup.
@@ -99,6 +101,8 @@ https://www.google.com/maps/place/London,+United+Kingdom/@51.5287718,-0.2416814,
 		   you can find the important information here -->   ^^^^^^^^^^ ^^^^^^^^^^
 ```
 
+<br>
+
 all in all the `location:` section will look like the following:
 
     location: #<-- do not remove this part
@@ -106,6 +110,8 @@ all in all the `location:` section will look like the following:
         name: 'London, GB'
         lat: 51.5287718
         lng: -0.2416814
+
+<br>
 
 every other location can be added just like that:
 
@@ -132,5 +138,6 @@ The gorgeous [weather icons](https://github.com/erikflowers/weather-icons/) craf
 Of course credits, where credits belong - so thank you very much <a href="https://twitter.com/Felx">Felix</a> for creating and maintaining <a href="http://tracesof.net/uebersicht/">Übersicht</a>.
 
 
-*hier muss dann noch ein Update eingebaut werden, dass bereits Version 1.0.1 vorliegt, da eine Änderung in MacOS High Sierra dazu geführt hat, dass eine Weiterentwicklung des CSS nötig war.*
+hier muss dann noch ein Update eingebaut werden, dass bereits Version 1.0.1 vorliegt, da eine Änderung in MacOS High Sierra dazu geführt hat, dass eine Weiterentwicklung des CSS nötig war.
+{:info="Update" info_sub="2017-12-27 13:18:32 +0100"}
 

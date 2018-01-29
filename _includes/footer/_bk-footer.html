@@ -7,7 +7,7 @@
       <div class="bk-footer-1__shadow"></div>
     {% endif %}
     <div class="bk-footer-1__sec1">
-      <div class="bk-footer-1__sec1__top">
+      <div class="bk-footer-1__sec1__top no-print">
         <div class="footer-line"></div>
         <ul>
           {% for 1_nav in site.data.nav.footer.1_navs %}<li><a href="{{1_nav.link}}">{{1_nav.name}}</a></li>{% endfor %}
@@ -20,7 +20,7 @@
 
     </div>
 
-    <div class="bk-footer-1__mobile-line bk-footer-1__left-line">
+    <div class="bk-footer-1__mobile-line bk-footer-1__left-line no-print">
       <div class="mobile-line__line">
       </div>
     </div>
@@ -47,14 +47,14 @@
       <div class="desc">{{site.description | markdownify}}</div>
     </div>
 
-    <div class="bk-footer-1__mobile-line bk-footer-1__right-line">
+    <div class="bk-footer-1__mobile-line bk-footer-1__right-line no-print">
       <div class="mobile-line__line">
       </div>
     </div>
 
     <div class="bk-footer-1__sec3">
 
-      <div class="bk-footer-1__sec3__top">
+      <div class="bk-footer-1__sec3__top no-print">
         <div class="footer-line"></div>
         <ul>
           {% for 3_nav in site.data.nav.footer.3_navs %}<li><a href="{{3_nav.link}}">{{3_nav.name}}</a></li>{% endfor %}

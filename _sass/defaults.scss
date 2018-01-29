@@ -152,6 +152,12 @@ justify-content: $justify;
   };
 }
 
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
 
 // fix for js-links not showing up while hovering over them
 .js-hover:hover {

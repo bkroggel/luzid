@@ -12,6 +12,9 @@ footer {
   @include media-query($small){
     flex-wrap: nowrap;
   }
+  @media print {
+    @include justify-content(center);
+  }
 }
 
 .bk-footer-1__shadow {

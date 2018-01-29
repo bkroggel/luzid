@@ -130,6 +130,9 @@
       // transition: background 0.4s ease-in-out 0s;
     }
   }
+  @media print {
+    @include justify-content(center);
+  }
   @include media-query($xtra-small){
     padding: 20px 60px 20px;
     @include align-items(stretch);

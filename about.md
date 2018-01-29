@@ -38,6 +38,9 @@ timeline:
 
 Praesent vehicula laoreet odio ut fringilla. Vestibulum suscipit purus non ornare dignissim. Aenean feugiat rutrum arcu, ac luctus tortor malesuada ac. Mauris eget arcu in eros interdum eleifend. Donec imperdiet quam ante, eu fringilla mi fringilla ut. Donec nec ex eget nisl porta gravida quis in ex. Sed purus quam, imperdiet non lobortis consequat, imperdiet quis quam. Maecenas nec consequat neque, feugiat viverra odio. Fusce ac eleifend ipsum, non tincidunt ipsum. Praesent euismod arcu quis nunc finibus tempus. Curabitur dignissim convallis iaculis. Quisque volutpat hendrerit lacus vel euismod. Mauris iaculis neque quis velit porttitor, ut pharetra justo pellentesque. Aliquam imperdiet lacus nec justo euismod laoreet. Etiam a iaculis enim, id porta ligula.
 
+# It‘s me, Bastian
+Fusce dictum vestibulum nulla non dignissim. Nulla facilisi. Sed tincidunt rhoncus ligula, et vehicula felis tristique pellentesque. Pellentesque at pharetra sapien.
+
 ![Bastian Kroggel](/assets/img/dev/bk_big.jpg){: data-subtitle="courtesy of [@FloGehm](https://twitter.com/FloGehm)"}
 
 Vestibulum hendrerit purus vel accumsan placerat. Quisque interdum est vel fringilla rhoncus. Nullam dolor turpis, consequat ut ultrices quis, vulputate interdum erat. Ut gravida arcu in efficitur tincidunt. Vivamus dignissim aliquam auctor. Maecenas consectetur porta ligula.

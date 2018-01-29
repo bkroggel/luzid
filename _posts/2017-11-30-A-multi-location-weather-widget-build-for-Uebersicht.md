@@ -14,7 +14,7 @@ sitemap:
   changefreq:
   exclude:
 sign: false
-published: false
+published: true
 featured: true
 ---
 
@@ -55,15 +55,82 @@ But what are the possibilities besides the obvious feature of displaying multipl
 DarkSky - the US-based weather forecasting company that provides the weather information behind this widget - actually is one of the main big features of this widget. Not really noticeable in its entire functionality from a user point of view does it provide a global coverage of current weather conditions as well as perfectly fine forecasting estimations. For the developer audience I also should mention that implementing DarkSky and using their API is an absolute breeze and just works like it should.
 In conjunction with this API the widget allows you modify it in the way to fit all - *alright let‘s say most of* - your needs.  
 DarkSky for example provides weather condition summaries in [dozens of different languages](https://darksky.net/dev/docs#api-request-types) which allows this widget to actually customize the output via a user-modifiable setting variable - same goes for the temperature units which of course can be displayed in the metric as well as the imperial system.  
-Besides that *of course* there is also a setting enables the possibility to easily change the accent color - and therefore the highlighted rectangle containing the current date. 
+Besides that *of course* there is also a setting that enables the possibility to easily change the accent color - and therefore the highlighted rectangle containing the current date. 
 
- 
-- loaded weather forecast gets stored on the local machine so even if your internet connection fails the Wttr widget will still display the last available information
-- Feature, dass einen Workaround für den Bug bietet, dass bei öffnen des Rechners zunächst keine Internetverbindung besteht und damit das Widget ohne Informationen dargestellt
+Last but not least a few thoughts about one of the **main USP** of this widget in comparison to most of the other Übersicht addons out there.  
+While using Übersicht in my daily life I noticed one big annoyance that didn't really prevent me from using it but still bugged my a lot when it occurred.  
+I am speaking of the fact that mostly in situations where Übersicht is running before an actual internet connection is established - e.g. when you wake up your machine from a standby mode (Übersicht is instantly up and running while the WIFI network takes a short amount of time to actually set everything up) - the widget fails to reach out to the server and therefore displays a blank and (not just design-wise) broken output.  
+Since - I initially talked about that - Übersicht basically makes use of a WebKit instance I came up with a handy and more or less easy workaround to fix that issue.
+Either hated or loved [Cookies](https://en.wikipedia.org/wiki/HTTP_cookie) are the perfect solution for storing information through your browser locally on your machine and while it definitely is debatable if using a not really battery friendly web instance as the groundworks for Übersicht, it sure makes it easy to transform web developing practices to a local environment. So what actually happens whenever Wttr for Übersicht pulls updated forecasting information successfully from the DarkSky server is, that all those information get stored as cookies and therefore will be accessible for up to 48 hours - *even if there is no actually internet connection present*.  
+Of course it probably does not make too much sense to rely on outdated weather information - however since the widget still will try to reach out to the servers in the usually - and modifiable - update interval, it is clearly much more pleasant to actually get displayed *kind of* usable weather expectations instead of staring at a blank stack of widgets.  
+Anyways that could be an starting point for the next Übersicht widget that evolves and maybe that even nudges the development of the actually Übersicht software to take the another step and improve even further - I myself would love to see Übersicht and its users to extend the functionality and the variety of widgets in a much broader way and to come up with a lot of new use purposes to take the MacOS desktop to the next level.
+
 
 
 ### How To
+*There is a comprehensive How To section and Readme in the [GitHub Repository](https://github.com/bkroggel/wttr) for Wttr Forecast Widget. The following part will be heavily based on that. If you do have any questions please feel free to open a ticket on GitHub or reach out to me on [Twitter](https://twitter.com/derKroggel)*
+
+The overall starting process to get the Wttr widget up and running basically follows a simple step by step approach you can find below - if you already installed Übersicht and downloaded as well as moved the widget and its components to the right folder you can go ahead with bullet point No. 4 otherwise we will start with the installation of the [Übersicht core](http://tracesof.net/uebersicht/).
+
+1. head over to [the Übersicht website](http://tracesof.net/uebersicht/) and download as well as install the latest version 
+2. either [click here](https://github.com/bkroggel/wttr/releases/download/1.0.1/wttr.widget.zip) or head over to the Wttr forecast widget repository on [GitHub](https://github.com/bkroggel/wttr) to download the latest release
+3. after downloading extract the `wttr.widget.zip` and move the *whole* `wttr.widget` folder to the Übersicht widgets folder.  
+`Übersicht menu bar symbol > Open Widgets Folder`
+4. Open: https://darksky.net/dev
+5. Log in or Sign up if you haven't created an account yet
+6. open `index.coffee` in your favorite TextEditor
+7. Get your secret key (on the DarkSky website) and add it below to the `apiKey` section
+   (the key needs to be put in quotation marks)  
+<span>**NOTE:** A detailed explanation of the various settings can be found [here](https://github.com/bkroggel/wttr#settings)</span>{:.highlighted}
+
+After everything is installed and the widget is connected to the DarkSky server you already can see the sample weather forecasts for London, Paris and New York.  
+In order to set your own preferred locations you can of course modify the setup.
+
+1. create an id for your location (e.g. `lnd`)
+2. add a name to your location which later will be displayed on your widget (e.g. `London, G`)
+3. add 'Latitude' as well as 'Longitude' information (e.g. `51.5287718` and `-0.2416814`)
+
+you can grab those information from [Google Maps](https://maps.google.com):
+1. open [maps.google.com](https://maps.google.com)
+2. search for your desired location
+3. get the URL:  
+```
+https://www.google.com/maps/place/London,+United+Kingdom/@51.5287718,-0.2416814,11z/
+		   you can find the important information here -->   ^^^^^^^^^^ ^^^^^^^^^^
+```
+
+all in all the `location:` section will look like the following:
+
+    location: #<-- do not remove this part
+      lnd:
+        name: 'London, GB'
+        lat: 51.5287718
+        lng: -0.2416814
+
+every other location can be added just like that:
+
+    location: #<-- do not remove this part
+      lnd:
+        name: 'London, GB'
+        lat: 51.5287718
+        lng: -0.2416814
+      prs:
+        name: 'Paris, FR'
+        lat: 48.8589507
+        lng: 2.2770202
 
 
-### Credits
+
+## Credits
+
+Based on the <a href="https://github.com/rabad/uebersicht-multiple-locations-weather">Multiple Locations Weather widget</a> by <a href="https://github.com/rabad">Rubén Abad</a>. While major parts of this widget were rewritten it still makes use of the original data access as well as parse functions.
+
+Design-wise this widget is highly influenced by a beautiful <a href="https://dribbble.com/shots/1563616-SimpL-Weather-Widget-PSD">SimpL Weather Widget</a> crafted by the wonderfully talented <a href="https://twitter.com/zramos94">Zahir Ramos</a>. Definitely go and check out his work on <a href="https://dribbble.com/zramos">dribble</a>.
+
+The gorgeous [weather icons](https://github.com/erikflowers/weather-icons/) crafted by [Erik Flowers](http://www.helloerik.com/) can not just be used as standalone icons but also as an easy to implement font. So in case you are wondering what else you could use to display the current weather situation I encourage you to check out the [project site](http://erikflowers.github.io/weather-icons/).
+
+Of course credits, where credits belong - so thank you very much <a href="https://twitter.com/Felx">Felix</a> for creating and maintaining <a href="http://tracesof.net/uebersicht/">Übersicht</a>.
+
+
+*hier muss dann noch ein Update eingebaut werden, dass bereits Version 1.0.1 vorliegt, da eine Änderung in MacOS High Sierra dazu geführt hat, dass eine Weiterentwicklung des CSS nötig war.*
 

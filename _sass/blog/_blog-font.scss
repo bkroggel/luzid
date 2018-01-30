@@ -250,6 +250,7 @@ pre {
   border-radius: 0;
   code {
     font-family: $mono;
+    white-space: pre;
   }
 }
 
@@ -465,11 +466,12 @@ blockquote { //overwriting ukit
 
 // Liste
 .bk-blog-style ol {
-  padding-left: 15px;
+  padding-left: 50px;
   counter-reset: item;
   list-style-type: none;
   li {
     display: block;
+    position: relative;
     line-height: 1.9em;
   }
   li:before {
@@ -477,6 +479,8 @@ blockquote { //overwriting ukit
     //content: "0" counter(item);
     counter-increment: item;
     display: inline-block;
+    position: absolute;
+    right: 100%;
     font-size: 0.6em;
     margin-right: 15px;
     color: $dark-color;

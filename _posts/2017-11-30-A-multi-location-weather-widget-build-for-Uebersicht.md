@@ -55,7 +55,7 @@ But what are the possibilities besides the obvious feature of displaying multipl
 DarkSky - the US-based weather forecasting company that provides the weather information behind this widget - actually is one of the main big features of this widget. Not really noticeable in its entire functionality from a user point of view does it provide a global coverage of current weather conditions as well as perfectly fine forecasting estimations. For the developer audience I also should mention that implementing DarkSky and using their API is an absolute breeze and just works like it should.
 In conjunction with this API the widget allows you modify it in the way to fit all - *alright let‘s say most of* - your needs.  
 DarkSky for example provides weather condition summaries in [dozens of different languages](https://darksky.net/dev/docs#api-request-types) which allows this widget to actually customize the output via a user-modifiable setting variable - same goes for the temperature units which of course can be displayed in the metric as well as the imperial system.  
-Besides that *of course* there is also a setting that enables the possibility to easily change the accent color - and therefore the highlighted rectangle containing the current date. 
+Besides that *of course* there is also a setting that enables the possibility to easily change the accent color - and therefore the highlighted rectangle containing the current date.
 
 Last but not least a few thoughts about one of the **main USP** of this widget in comparison to most of the other Übersicht addons out there.  
 While using Übersicht in my daily life I noticed one big annoyance that didn't really prevent me from using it but still bugged my a lot when it occurred.  
@@ -83,8 +83,6 @@ The overall starting process to get the Wttr widget up and running basically fol
    (the key needs to be put in quotation marks)  
 <span>**NOTE:** A detailed explanation of the various settings can be found [here](https://github.com/bkroggel/wttr#settings)</span>{:.highlighted}
 
-<br>
-
 After everything is installed and the widget is connected to the DarkSky server you already can see the sample weather forecasts for London, Paris and New York.  
 In order to set your own preferred locations you can of course modify the setup.
 
@@ -101,8 +99,6 @@ https://www.google.com/maps/place/London,+United+Kingdom/@51.5287718,-0.2416814,
 		   you can find the important information here -->   ^^^^^^^^^^ ^^^^^^^^^^
 ```
 
-<br>
-
 all in all the `location:` section will look like the following:
 
     location: #<-- do not remove this part
@@ -110,8 +106,6 @@ all in all the `location:` section will look like the following:
         name: 'London, GB'
         lat: 51.5287718
         lng: -0.2416814
-
-<br>
 
 and every other location can be added just like that:
 
@@ -145,4 +139,3 @@ Version 1.0.1 of the Wttr Widget for Übersicht just got released.
 While macOS Sierra users should not recognize any changes this update actually fixes an issue you could have encountered if you are living on the cutting edge side of things and already installed macOS High Sierra on your machine.
 Thanks a lot to [@_martinc](https://twitter.com/_martinc) who not just informed me about this bug but also was extremely patient and helpful while trying to find and resolve the issue.
 {:info="Update" info_sub="2017-12-27 15:14:25 +0100"}
-

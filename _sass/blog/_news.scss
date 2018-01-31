@@ -50,6 +50,10 @@ section#news {
 
 #news__twitter .tweet_content {
   font-size: 0;
+  span.small_height {
+    display: block;
+    height: 3px;
+  }
 }
 
 #news__twitter .tweet__interactions {

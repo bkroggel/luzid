@@ -102,6 +102,7 @@ var news = {
       while (n < x) {
         var tweetObject = tweets[n];
         var time_length = (tweetObject.time).replace(/\s/g,'').replace(/\n /g,'').length
+        var tweet_text = (tweetObject.tweet).replace(/<br>[<br>]+/g, '<span class="small_height"></span>');
         function tpf_time(){
           if (time_length <= 3) {
             return 'Posted ' + tweetObject.time + ' ago'
@@ -118,7 +119,7 @@ var news = {
              + 'Twitter<span class="time">' + tpf_time() + '</span></h1>'
             + '</a></div>'
             // + (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
-            + '<div class="tweet_content"><p>' + tweetObject.tweet + '</p></div>'
+            + '<div class="tweet_content"><p>' + tweet_text + '</p></div>'
             // + (tweetObject.author_data.screen_name == username ? '' : '<div class="tweet_link">' + tweetObject.author_data.screen_name + '</div>')
           + '</div>'
           //+ '</div>'

@@ -1,3 +1,6 @@
+---
+
+---
 <!doctype html>
 <html>
 <head>
@@ -6,10 +9,14 @@
   <title>Content Manager</title>
 
   <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~1.1.0/dist/cms.css" />
-  <!-- [/^<span\s?class="sidenote">([\n\r\t\s]*)<span class="sidenote__toggle">.+?<\/span>/, /<span class="sidenote__note">.+?<\/span><\/span>/] -->
+
 </head>
 <body>
   <script src="https://unpkg.com/netlify-cms@~1.1.0/dist/cms.js"></script>
+  <script defer src="{{ "/assets/js/fontawesome-all.min.js" | prepend: site.baseurl}}"></script>
+  <script>
+    FontAwesomeConfig = { searchPseudoElements: true };
+  </script>
   <script type="text/javascript" >
 
     var BKPostPreview = createClass({
@@ -103,36 +110,30 @@
     CMS.registerEditorComponent({
       id: "sidenote",
       label: "Sidenote",
-      fields: [{name: 'element', label: 'In-Text Element', widget: 'string'},{name: 'sidenote', label: 'Sidenote', widget: 'markdown'}],
-      pattern: /^<span\s?class="sidenote([\s\S]*)<\/span>([\n\r\s]?)<\/span>/,
+      fields: [{
+        name: 'element',
+        label: 'In-Text Element',
+        widget: 'string'
+      }, {
+        name: 'sidenote',
+        label: 'Sidenote',
+        widget: 'markdown'
+      }],
+      pattern: /^<span class="sidenote"><span class="sidenote__toggle">(.*)<\/span><span class="sidenote__note">(.*)<\/span><\/span>/,
       fromBlock: function(match) {
         return {
           element: match[1],
-          sidenote: match[2]
+          sidenote: match[2],
         };
       },
       toBlock: function(obj) {
         return (
-          '<span class="sidenote">'
-            + '<span class="sidenote__toggle">'
-              + obj.element
-            + '</span>'
-            + '<span class="sidenote__note">'
-              + obj.sidenote
-            + '</span>'
-          + '</span>'
+          '<span class="sidenote"><span class="sidenote__toggle">' + obj.element + '</span><span class="sidenote__note">' + obj.sidenote + '</span></span>'
         );
       },
       toPreview: function(obj) {
         return (
-          '<span class="sidenote inline">'
-            + '<span class="sidenote__toggle">'
-              + obj.element
-            + '</span>'
-            + '<span class="sidenote__note">'
-              + obj.sidenote
-            + '</span>'
-          + '</span>'
+          '<span class="sidenote"><span class="sidenote__toggle">' + obj.element + '</span><span class="sidenote__note">' + obj.sidenote + '</span></span>'
         );
       },
     });
@@ -172,26 +173,6 @@
     //     );
     //   },
     // });
-
-    CMS.registerEditorComponent({
-      id: "youtube",
-      label: "Youtube",
-      fields: [{name: 'id', label: 'Youtube Video ID'}],
-      pattern: /^{{<\s?youtube (\S+)\s?>}}/,
-      fromBlock: function(match) {
-        return {
-          id: match[1]
-        };
-      },
-      toBlock: function(obj) {
-        return '{{< youtube ' + obj.id + ' >}}';
-      },
-      toPreview: function(obj) {
-        return (
-          '<img src="http://img.youtube.com/vi/' + obj.id + '/maxresdefault.jpg" alt="Youtube Video"/>'
-        );
-      }
-    });
   </script>
 </body>
 </html>

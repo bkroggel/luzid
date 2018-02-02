@@ -624,7 +624,8 @@ a.link_button.-white {
         content: none;
       }
       &:first-of-type {
-        margin-bottom: 1rem;
+        margin: 2px;
+        display: block;
       }
       a {
         text-shadow: none;
@@ -641,27 +642,20 @@ a.link_button.-white {
 #bk_about_quote {
   p.bk_quote__main,
   .bk_quote__author p{
-    color: $main-color;
-    background: black;
+    color: $darkest-color;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     font-family: $serif;
     display: inline;
-    padding: 4px 12px;
   }
   p.bk_quote__main {
-    font-size: 2rem;
-    line-height: 1.57em;
-    box-shadow: 3px 3px 0 0 $accent-two;
+    font-size: 3rem;
+    line-height: .5em;
     @include media-query($xtra-small){
-      font-size: 2.5rem;
-      line-height: 1.52em;
-      box-shadow: 4px 4px 0 0 $accent-two;
+      font-size: 4.3rem;
     };
     @include media-query($medium){
-      font-size: 3.5rem;
-      line-height: 1.42em;
-      box-shadow: 6px 6px 0 0 $accent-two;
+      font-size: 5.5rem;
     };
   }
   .bk_quote__author {
@@ -672,7 +666,6 @@ a.link_button.-white {
       margin-left: 15px;
     };
     p {
-      border: 1px solid $main-color;
       font-size: 0.8rem;
       @include media-query($small){
         font-size: unset;

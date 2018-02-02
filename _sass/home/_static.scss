@@ -15,39 +15,39 @@
   position: relative;
   padding: 0 15px;
   @include media-query($medium){
-    padding: 0 0 0 9rem;
+    // padding: 0 0 0 9rem;
   };
-  &:before {
-    content: attr(before);
-    position: absolute;
-    transform: translateY(-115%);
-    transform-origin: right top;
-    white-space: nowrap;
-    font-size: 15vw;
-    left: 15px;
-    line-height: 0.8em;
-    @include media-query($small){
-      font-size: 12vw;
-    };
-    @include media-query($medium){
-      transform: rotate(270deg) translateY(1rem);
-      top: 0;
-      left: unset;
-      right: 100%;
-      font-size: 7rem;
-      line-height: 1em;
-    };
-  }
+  // &:before {
+  //   content: attr(before);
+  //   position: absolute;
+  //   transform: translateY(-115%);
+  //   transform-origin: right top;
+  //   white-space: nowrap;
+  //   font-size: 15vw;
+  //   left: 15px;
+  //   line-height: 0.8em;
+  //   @include media-query($small){
+  //     font-size: 12vw;
+  //   };
+  //   @include media-query($medium){
+  //     transform: rotate(270deg) translateY(1rem);
+  //     top: 0;
+  //     left: unset;
+  //     right: 100%;
+  //     font-size: 7rem;
+  //     line-height: 1em;
+  //   };
+  // }
 }
 
 #bk-about-introduction {
   margin-top: 0;
-  &:before {
-    content: none;
-    @include media-query($medium){
-      content: attr(before);
-    };
-  }
+  // &:before {
+  //   content: none;
+  //   @include media-query($medium){
+  //     content: attr(before);
+  //   };
+  // }
 }
 
 .bk-static-style:before {
@@ -340,6 +340,7 @@ $clock-color: white;
   }
   #intro_link {
     position: relative;
+    display: inline-block;
     .link_line {
       display: none;
       @include media-query($medium){
@@ -347,7 +348,7 @@ $clock-color: white;
         background: #5a5a5a;
         position: absolute;
         top: 50%;
-        right: 100%;
+        left: 100%;
         height: 1px;
         width: 0px;
       };
@@ -356,29 +357,35 @@ $clock-color: white;
 }
 
 #bk_about_quote {
-  width: 80%;
-  max-width: 400px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 10px;
   padding: 0;
-  @include media-query($medium){
-    padding-left: 9rem;
-  };
+  .bk_about_quote_inner {
+    max-width: 350px;
+    @include media-query($xtra-small){
+      max-width: 450px;
+    };
+    @include media-query($medium){
+      margin-left: -5%;
+      width: 100%;
+      max-width: unset;
+    };
+  }
 }
 
-.bk_about_quote_small {
-  display: block;
-  @include media-query($medium){
-    display: none;
-  };
-}
-
-.bk_about_quote_big {
-  display: none;
-  @include media-query($medium){
-    display: block;
-  };
-}
+// .bk_about_quote_small {
+//   display: block;
+//   @include media-query($medium){
+//     display: none;
+//   };
+// }
+//
+// .bk_about_quote_big {
+//   display: none;
+//   @include media-query($medium){
+//     display: block;
+//   };
+// }
 
 .pulsating-circle {
   display: none;
@@ -387,8 +394,8 @@ $clock-color: white;
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 0;
-    left: 40px;
+    //top: 0;
+    right: 40px;
     .pulsating__point {
       background: #5a5a5a;
       width: 30%;

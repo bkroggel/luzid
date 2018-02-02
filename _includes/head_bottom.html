@@ -467,10 +467,11 @@
       var pulsating_dot = $('.pulsating-circle')
 
       var intro_link_left = intro_link.offset().left
+      var intro_link_right = ((intro_link.offset().left + intro_link.outerWidth()));
       var pulsating_dot_left = pulsating_dot.offset().left + (pulsating_dot.outerWidth(true) / 2)
 
       $('#intro_link .link_line').css({
-        'width': (intro_link_left - pulsating_dot_left),
+        'width': (pulsating_dot_left - intro_link_right),
         'transition': 'width ease-in-out .6s'
       });
 

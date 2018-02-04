@@ -645,12 +645,12 @@ a.link_button.-white {
     color: $darkest-color;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    font-family: $serif;
+    font-family: $sans-serif;
     display: inline;
   }
   p.bk_quote__main {
     font-size: 3rem;
-    line-height: .5em;
+    line-height: .6em;
     @include media-query($xtra-small){
       font-size: 4.3rem;
     };
@@ -662,7 +662,7 @@ a.link_button.-white {
     margin-left: 5px;
     margin-top: -5px;
     @include media-query($medium){
-      margin-top: -10px;
+      margin-top: -5px;
       margin-left: 15px;
     };
     p {

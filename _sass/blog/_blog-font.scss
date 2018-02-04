@@ -194,7 +194,7 @@ ul {
 .bk-blog-style p em,
 .bk-blog-style li em {
   color: $blog-font-color_small;
-  line-height: 1.9em;
+  line-height: 1.8em;
   font-size: 1rem;
   letter-spacing: 0.015em;
   @include media-query($small){
@@ -366,7 +366,7 @@ span.title {
 .bk-blog-style h6,
 .bk-blog-style h6>a,
 span.title {
-  line-height: 1.9rem;
+  line-height: 1.8rem;
   float: left;
   display: block;
   margin: 0px;
@@ -473,7 +473,7 @@ blockquote { //overwriting ukit
   li {
     display: block;
     position: relative;
-    line-height: 1.9em;
+    line-height: 1.8em;
   }
   li:before {
     content: counter(item, decimal-leading-zero) " ";

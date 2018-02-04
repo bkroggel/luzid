@@ -548,3 +548,55 @@ section#social {
     background-size: cover;
   }
 }
+
+.bk-blog__intro_img {
+
+  @include display_flex;
+  @include direction_column;
+  @include justify-content(space-between);
+  position: relative;
+  @include media-query($medium){
+    margin-top: -20px;
+  };
+  .intro_img {
+    width: 80%;
+    padding: 30px;
+    @include media-query($medium){
+      width: 60%;
+      padding: 50px;
+    };
+  }
+}
+
+.static-intro__bk-name {
+  padding: 30px;
+  padding-bottom: 50px;
+  @include media-query($medium){
+    padding: 50px;
+  };
+  @include display_flex;
+  svg {
+    fill: $main-color;
+  }
+  &>svg {
+    width: 90px;
+    height: 25px;
+    margin-left: 10px;
+  }
+  &>a {
+    width: 25px;
+    height: 25px;
+  }
+  @include media-query($medium){
+    &>svg {
+      width: 150px;
+      height: 45px;
+      margin-left: 10px;
+    }
+    &>a {
+      width: 45px;
+      height: 45px;
+    }
+  };
+
+}

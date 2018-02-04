@@ -67,6 +67,12 @@
   };
 }
 
+.bk-static-about__inner>.bk-article-main {
+  @include media-query($medium){
+    width: 75%;
+  };
+}
+
 .bk-side-space {
   @include justify-content(flex-start);
   width: 0%;
@@ -79,6 +85,19 @@
     width: 50px;
     margin-left: 60px;
   }
+}
+
+.bk-static-about__inner>.bk-side-space {
+  @include media-query($medium){
+    width: 25%;
+  };
+}
+
+.bk-static-about__frame {
+  width: 100%;
+  @include media-query($medium){
+    width: 80%;
+  };
 }
 
 .bk-title-frame {

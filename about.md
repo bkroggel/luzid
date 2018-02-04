@@ -2,6 +2,14 @@
 layout: static
 title: About me
 sign: true
+header:
+  img:
+    url: about_intro.jpg
+    title: Wildspitz, Unterägeri, Switzerland
+    photographer: Martin Sattler on Unsplash
+  title: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at rutrum orci. Integer ultricies purus vel libero cursus laoreet. Quisque interdum rutrum tortor ut bibendum.
+  subtitle: Bastian Kroggel
 quote:
   text: >
     I am easily satisfied with the very best.

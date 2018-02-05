@@ -5,7 +5,7 @@ sitemap:
 
 /* CREATED BY */
   Bastian Kroggel
-  Twitter: @derkroggel
+  Twitter: @derKroggel
   From: Lake of Constance, Baden-Württemberg, Germany
 
 /* SITE */

@@ -113,7 +113,7 @@
 // bk-timeline
 
 #bk-timeline {
-  background: url('/assets/img/dev/textures/binding-dark.png'), $blue-black;
+  background: $blue-black;
   padding: 100px 0;
   width: 100%;
   // @include media-query($small){

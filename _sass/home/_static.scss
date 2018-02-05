@@ -356,7 +356,7 @@ $clock-color: white;
   }
 }
 
-#bk_about_quote {
+.bk_about_quote {
   margin: 0 auto;
   margin-bottom: 10px;
   padding: 0;
@@ -372,20 +372,6 @@ $clock-color: white;
     };
   }
 }
-
-// .bk_about_quote_small {
-//   display: block;
-//   @include media-query($medium){
-//     display: none;
-//   };
-// }
-//
-// .bk_about_quote_big {
-//   display: none;
-//   @include media-query($medium){
-//     display: block;
-//   };
-// }
 
 .pulsating-circle {
   display: none;
@@ -454,8 +440,24 @@ section#social {
   @include display_flex;
   @include direction_column;
   background: $main-color;
-  padding-top: 100px;
+  padding-top: 0px;
   padding-bottom: 100px;
+  .bk_about_quote {
+    margin: 0;
+    padding: 100px 10px 20px;
+    .bk_about_quote_inner {
+      margin: 0;
+    }
+    @include media-query($xtra-small){
+      padding: 100px 50px 50px;
+    };
+    @include media-query($small){
+      padding: 100px 30px 50px;
+    };
+    @include media-query($medium){
+      padding: 100px 50px;
+    };
+  }
 }
 
 .bk-cards__frame {

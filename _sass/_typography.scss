@@ -556,21 +556,29 @@ a.link_button.-white {
 
 // bk-timeline
 
-#bk-timeline h2,
-#bk-timeline p.tl-intro {
-  color: white;
+#bk-timeline .bk_about_quote  {
   text-align: center;
   margin: 0 auto;
   align-self: flex-start;
-  // @include media-query($small){
-  //   text-align: left;
-  //   margin: 0;
-  // };
+  p {
+    color: white;
+  }
 }
 
-#bk-timeline p.tl-intro {
-  width: 500px;
-  max-width: 85%;
+#bk-timeline .bk_about_quote {
+  .bk_about_quote_inner {
+    margin: 0;
+  }
+  .bk_quote__author {
+    margin: 0 auto;
+    margin-top: 5px;
+    line-height: 0.9em;
+    width: 500px;
+    max-width: 85%;
+    p {
+      line-height: 1.5em;
+    }
+  }
 }
 
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
@@ -639,7 +647,7 @@ a.link_button.-white {
   }
 }
 
-#bk_about_quote {
+.bk_about_quote {
   p.bk_quote__main,
   .bk_quote__author p{
     color: $darkest-color;

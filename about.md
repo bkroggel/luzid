@@ -47,7 +47,7 @@ timeline:
 Praesent vehicula laoreet odio ut fringilla. Vestibulum suscipit purus non ornare dignissim. Aenean feugiat rutrum arcu, ac luctus tortor malesuada ac. Mauris eget arcu in eros interdum eleifend. Donec imperdiet quam ante, eu fringilla mi fringilla ut. Donec nec ex eget nisl porta gravida quis in ex. Sed purus quam, imperdiet non lobortis consequat, imperdiet quis quam. Maecenas nec consequat neque, feugiat viverra odio. Fusce ac eleifend ipsum, non tincidunt ipsum. Praesent euismod arcu quis nunc finibus tempus. Curabitur dignissim convallis iaculis. Quisque volutpat hendrerit lacus vel euismod. Mauris iaculis neque quis velit porttitor, ut pharetra justo pellentesque. Aliquam imperdiet lacus nec justo euismod laoreet. Etiam a iaculis enim, id porta ligula.
 
 <span id="about-me"></span>
-<div class="bk-blog-style bk-static-style bk_about_quote" style="margin-top: 100px">
+<div class="bk-blog-style bk-static-style bk_about_quote" style="margin-top: 70px">
   <div class="bk_about_quote_inner">
     <p class="bk_quote__main">It's me,<br>Bastian</p>
     <div class="bk_quote__author">

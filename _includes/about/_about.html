@@ -1,49 +1,54 @@
 <section class="bk-blog bk-article" id="bk-timeline">
-  <div class="bk-side-space bk-article__nav"></div>
-  <div class="bk-article-main bk-timeline-main" data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">
+  <div class="timeline__inner">
+    <div class="bk-side-space bk-article__nav"></div>
+    <div class="bk-article-main bk-timeline-main" data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">
 
-    <div class="bk-timeline-content bk-blog-style bk-blog-content bk-static-style">
-      <div class="bk-blog-style bk-static-style bk_about_quote">
-        <div class="bk_about_quote_inner">
-          <p class="bk_quote__main">My<br>Timeline.</p>
-          <div class="bk_quote__author">
-            <p>the educational & professional career</p>
+      <div class="bk-timeline-content bk-blog-style bk-blog-content bk-static-style">
+        <div class="bk-blog-style bk-static-style bk_about_quote">
+          <div class="bk_about_quote_inner">
+            <p class="bk_quote__main">My<br>Timeline.</p>
+            <div class="bk_quote__author">
+              <p>the educational & professional career</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="clock-icon">
-        <div class="clock_line"></div>
-        <div class="top"></div>
-        <div class="right"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="center"></div>
-        <div class="hour"></div>
-        <div class="minute"></div>
-      </div>
-      {% for company_hash in page.timeline %}
-        {% for company in company_hash %}
+        <div class="clock-icon">
+          <div class="clock_line"></div>
+          <div class="top"></div>
+          <div class="right"></div>
+          <div class="bottom"></div>
+          <div class="left"></div>
+          <div class="center"></div>
+          <div class="hour"></div>
+          <div class="minute"></div>
+        </div>
+        {% for company_hash in page.timeline %}
+          {% for company in company_hash %}
 
-          <div class="luzid_element">
-            <div class="luzid_el__title">
-              <p class="luzid-date">{{ company[1].from_date }} - {{ company[1].to_date }}</p>
-              <p class="luzid-title">{{ company[0] }}</p>
-              <p class="luzid-position">{{ company[1].position }}</p>
+            <div class="luzid_element">
+              <div class="luzid_el__title">
+                <p class="luzid-date">{{ company[1].from_date }} - {{ company[1].to_date }}</p>
+                <p class="luzid-title">{{ company[0] }}</p>
+                <p class="luzid-position">{{ company[1].position }}</p>
+              </div>
+              <div class="luzid_el__content">
+                <div class="luzid_line"></div>
+                <p class="luzid-info">{{ company[1].info }}</p>
+                <p>{{ company[1].description }}</p>
+              </div>
             </div>
-            <div class="luzid_el__content">
-              <div class="luzid_line"></div>
-              <p class="luzid-info">{{ company[1].info }}</p>
-              <p>{{ company[1].description }}</p>
-            </div>
-          </div>
 
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
+      </div>
+
+
     </div>
-
-
+    <div class="bk-side-space">
+    </div>
   </div>
-  <div class="bk-side-space">
+  <div class="timline__expansion_bar" id="timline__expansion_bar">
+    <p><i class="fas fa-chevron-right" data-fa-transform="shrink-3"></i>Show more</p>
   </div>
 </section>

@@ -87,6 +87,7 @@ p {
 .bk-article-title time,
 .bk-footer-1__sec2 h3,
 #storewindow__text h3,
+#bk-timeline .timline__expansion_bar p,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
 #bk-timeline .luzid_element>.luzid_el__content>p.luzid-info,
@@ -569,6 +570,9 @@ a.link_button.-white {
   .bk_about_quote_inner {
     margin: 0;
   }
+  p.bk_quote__main {
+    text-shadow: 1px 1px $blue-black, -1px 1px $blue-black, -1px -1px $blue-black, 1px -1px $blue-black, -1px 0px $blue-black, 0px -1px $blue-black, 1px 0px $blue-black, 0px 1px $blue-black;
+  }
   .bk_quote__author {
     margin: 0 auto;
     margin-top: 5px;
@@ -728,4 +732,8 @@ a.link_button.-white {
     display: block;
     margin: 2px;
   }
+}
+
+#bk-timeline .timline__expansion_bar p {
+  color: black;
 }

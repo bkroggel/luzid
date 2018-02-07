@@ -6,7 +6,7 @@ date: 2017-11-30 14:04:00 +0100
 tags: [work, english]
 permalink:
 thumbnail:
-  img: /assets/img/page/blog/wttr_thumbnail.png
+  img: /assets/img/page/blog/wttr_thumbnail.jpg
   overview:  
 sitemap:
   lastmod:
@@ -26,7 +26,7 @@ Achieved by a WebKit instance that runs basically in full screen mode as a layer
 That said it is actually pretty easy to write a widgets for and by yourself - at least if you do have some basic knowledge of web development - since it doesn’t require much more than the usual tools and the actually pretty comprehensive and well documented Übersicht-Readme which can be found on [Github](https://github.com/felixhageloh/uebersicht).
 
 ## Wttr Widget for Übersicht
-![Wttr Widget for Übersicht](/assets/img/page/blog/wttr_thumbnail.png){: data-subtitle="Sourcecode, documentation and the ready to download product can be found on [Github](https://github.com/bkroggel/wttr)"}
+![Wttr Widget for Übersicht](/assets/img/page/blog/wttr_thumbnail.jpg){: data-subtitle="Sourcecode, documentation and the ready to download product can be found on [Github](https://github.com/bkroggel/wttr)"}
 There are actually quite a few Übersicht widgets out there that allow you to display the current weather conditions right on your MacOS desktop - so why write another one instead of just using what is already there?
 Initially I actually wasn’t interested in writing my own widget instead I was tinkering around with some already present code samples of other developers. Since I already knew what Übersicht is capable of I mainly was interested in how I could modify some very informative products to fit a more MacOS native look.  
 But that didn't feel *finished* - just a bunch of numbers and words that were floting around on my screen.

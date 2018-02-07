@@ -532,14 +532,52 @@
       }
     })
 
+
+    function expansion_button() {
+      if ( $(window).innerWidth() < 1199 && $('#ggl-analytics').hasClass('ggl-active') ) {
+        var analytics_height = $('#ggl-analytics').innerHeight() + 10
+      } else {
+        var analytics_height = 10
+      }
+      $('#expansion_button').css('bottom', analytics_height)
+    }
+
     function timeline_container() {
+
       var deactivated = $(window).height() * 0.85;
       var activated = $('#bk-timeline .timeline__inner').outerHeight(true);
 
       $('#bk-timeline').css('height', deactivated);
 
-      $('#timline__expansion_bar').click(function() {
-        $('#bk-timeline, #bk-timeline .timline__expansion_bar').toggleClass('active')
+      var expansion_top = new Waypoint({
+        element: document.getElementById('bk-timeline'),
+        handler: function(direction) {
+          if (direction === 'down') {
+            $('#expansion_button').addClass('activated')
+            expansion_button()
+          } else {
+            $('#expansion_button').removeClass('activated')
+          }
+        },
+        offset: $(window).innerHeight()
+      })
+
+      var expansion_bottom = new Waypoint({
+        element: document.getElementById('bk-timeline'),
+        handler: function(direction) {
+          if (direction === 'down') {
+            $('#expansion_button').removeClass('activated')
+          } else {
+            $('#expansion_button').addClass('activated')
+            expansion_button()
+          }
+        },
+        offset: -$('#bk-timeline').innerHeight()
+      })
+
+
+      $('#timline__expansion_bar, #expansion_button').click(function() {
+        $('#bk-timeline, #bk-timeline .timline__expansion_bar').toggleClass('active');
         if ($('#bk-timeline').hasClass('active')) {
           $('#bk-timeline').css('height', activated);
           $('html, body').animate({
@@ -548,13 +586,22 @@
           setTimeout(function(){
             $('#bk-timeline .timline__expansion_bar').addClass('remove')
           }, 500)
+          $('#expansion_button').removeClass('activated')
+          expansion_top.disable()
+          expansion_bottom.disable()
         } else {
           $('#bk-timeline').css('height', deactivated);
           $('#bk-timeline .timline__expansion_bar').removeClass('remove')
+          expansion_top.enable()
+          expansion_bottom.enable()
         }
+        setTimeout(function(){
+          Waypoint.refreshAll();
+        }, 1200)
       })
     }
     timeline_container()
+
 
     function timeline_line() {
       if ($(window).width() < 767) {

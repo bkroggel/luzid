@@ -88,6 +88,7 @@ p {
 .bk-footer-1__sec2 h3,
 #storewindow__text h3,
 #bk-timeline .timline__expansion_bar p,
+#expansion_button p,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
 #bk-timeline .luzid_element>.luzid_el__content>p.luzid-info,
@@ -736,4 +737,10 @@ a.link_button.-white {
 
 #bk-timeline .timline__expansion_bar p {
   color: black;
+}
+
+#expansion_button p {
+  padding: 10px 15px;
+  color: white;
+  text-align: center;
 }

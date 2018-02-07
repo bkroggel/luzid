@@ -141,10 +141,9 @@
   position: fixed;
   cursor: pointer;
   z-index: 99;
-  bottom: 10px;
   left: 50%;
   max-width: 75%;
-  transform: translate(-50%, calc(100% + 95px));
+  transform: translate(-50%, 150px);
   transition: transform cubic-bezier(0.68, -0.55, 0.27, 1.55) .5s;
   background: rgba(0,0,0, .6);
   border-radius: 50px;
@@ -153,7 +152,7 @@
   @include align-items(center);
   min-height: 40px;
   &.activated {
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
   }
 }
 

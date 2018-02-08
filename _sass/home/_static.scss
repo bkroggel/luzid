@@ -143,16 +143,18 @@
   z-index: 99;
   left: 50%;
   max-width: 75%;
-  transform: translate(-50%, 150px);
-  transition: transform cubic-bezier(0.68, -0.55, 0.27, 1.55) .5s;
+  //transform: translate(-50%, 150px);
+  transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) .5s;
   background: rgba(0,0,0, .6);
   border-radius: 50px;
   @include display_flex;
   @include justify-content(center);
   @include align-items(center);
   min-height: 40px;
+  opacity: 0;
   &.activated {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) !important; //call !important to overwrite js
+    opacity: 1;
   }
 }
 

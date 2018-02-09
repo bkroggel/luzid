@@ -17,7 +17,7 @@ quote:
 timeline:
   - name: Company
     info: Vestibulum mattis lacus
-    from_date: 03 1450
+    from_date: "03 1450"
     to_date: 06 1900
     position: Internship
     description: |
@@ -26,7 +26,7 @@ timeline:
   - name: SecondCompany
     info: >
         Vestibulum dapibus mauris non urna auctor malesuada. Cras molestie, tellus et rhoncus sagittis.
-    from_date: 03/1450
+    from_date: "03/1450"
     to_date: 06/1900
     position: Internship
     description: |

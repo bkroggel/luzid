@@ -1,5 +1,6 @@
 ---
 title: About me
+layout: static
 header:
   img:
     photographer: Martin Sattler on Unsplash

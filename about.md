@@ -76,6 +76,25 @@ timeline:
     position: Testpositon
     to_date: 07/1900
     website: test
+contact:
+  twitter:
+    desc: >
+      Bastian uses Twitter mostly as a news platform and to keep up with updates of noteworthy individuals. Sometimes he also tweets about things he cares about - always critical, political, dangerously ironic and with a touch of humor. Feel free to ping or add him to the people you follow on Twitter.
+    link:
+      url: https://twitter.com/derkroggel
+      text: '@realGusti on Twitter'
+  linkedin:
+    desc: >
+      On LinkedIn you can find Bastians track record and important positions of his professional life. Most of the interesting information can also be found on his personal website but if your curious you are of course absolutely welcome to check out his LinkedIn profile.
+    link:
+      url: https://linkedin.com/in/bastian-kroggel-125712121
+      text: 'B. Kroggel on LinkeIn'
+  email:
+    desc: >
+      For more important messages, inquerys that shouldn't cross the servers of the major social media platforms or just because you prefer the "old way of messaging" - he personally does as well - just send him an email and he will be in touch with you as fast as possible.
+    link:
+      url: mailto:contact@bastiankroggel.com
+      text: Send an email to Bastian‘s inbox
 ---
 
 Praesent vehicula laoreet odio ut fringilla. Vestibulum suscipit purus non ornare dignissim. Aenean feugiat rutrum arcu, ac luctus tortor malesuada ac. Mauris eget arcu in eros interdum eleifend. Donec imperdiet quam ante, eu fringilla mi fringilla ut. Donec nec ex eget nisl porta gravida quis in ex. Sed purus quam, imperdiet non lobortis consequat, imperdiet quis quam. Maecenas nec consequat neque, feugiat viverra odio. Fusce ac eleifend ipsum, non tincidunt ipsum. Praesent euismod arcu quis nunc finibus tempus. Curabitur dignissim convallis iaculis. Quisque volutpat hendrerit lacus vel euismod. Mauris iaculis neque quis velit porttitor, ut pharetra justo pellentesque. Aliquam imperdiet lacus nec justo euismod laoreet. Etiam a iaculis enim, id porta ligula.

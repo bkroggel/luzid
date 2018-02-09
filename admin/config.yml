@@ -133,7 +133,11 @@ collections:
             widget: "object"
             fields:
               - {label: "Text", name: "text", widget: "text"}
-              - {label: "Qote Author", name: "author", widget: "string"}
+              - {label: "Quote Author", name: "author", widget: "string"}
+          - label: "TOC About"
+            name: "toc_about"
+            widget: "text"
+            required: "false"
           - label: "Body"
             name: "body"
             widget: "markdown"
@@ -153,6 +157,43 @@ collections:
               - {label: "Company Info", name: "info", widget: "text"}
               - {label: "Description", name: "description", widget: "markdown"}
               - {label: "Website", name: "website", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - label: "Twitter"
+                name: "twitter"
+                widget: "object"
+                fields:
+                  - {label: "Description", name: "desc", widget: "text"}
+                  - label: "Link"
+                    name: "link"
+                    widget: "object"
+                    fields:
+                      - {label: "URL", name: "url", widget: "string"}
+                      - {label: "Text", name: "text", widget: "string"}
+              - label: "LinkedIn"
+                name: "linkedin"
+                widget: "object"
+                fields:
+                  - {label: "Description", name: "desc", widget: "text"}
+                  - label: "Link"
+                    name: "link"
+                    widget: "object"
+                    fields:
+                      - {label: "URL", name: "url", widget: "string"}
+                      - {label: "Text", name: "text", widget: "string"}
+              - label: "eMail"
+                name: "email"
+                widget: "object"
+                fields:
+                  - {label: "Description", name: "desc", widget: "text"}
+                  - label: "Link"
+                    name: "link"
+                    widget: "object"
+                    fields:
+                      - {label: "URL", name: "url", widget: "string"}
+                      - {label: "Text", name: "text", widget: "string"}
 
   - name: "tag"
     label: "Tag"

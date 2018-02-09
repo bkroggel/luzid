@@ -153,3 +153,13 @@ collections:
               - {label: "Company Info", name: "info", widget: "text"}
               - {label: "Description", name: "description", widget: "markdown"}
               - {label: "Website", name: "website", widget: "string"}
+
+  - name: "tag"
+    label: "Tag"
+    folder: "blog/archive/tags"
+    create: true
+    slug: "{{slug}}.html"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "by_tag"}
+      - {label: "Tag", name: "tag", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}

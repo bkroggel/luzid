@@ -148,8 +148,8 @@ collections:
             fields:
               - {label: "Company Name", name: "name", widget: "string"}
               - {label: "Position", name: "position", widget: "string"}
-              - {label: "Start Date", name: "from_date", widget: "date", default:"", format:"MM/YYYY"}
-              - {label: "End Date", name: "to_date", widget: "date", default:"", format:"MM/YYYY"}
+              - {label: "Start Date", name: "from_date", widget: "string"}
+              - {label: "End Date", name: "to_date", widget: "string"}
               - {label: "Company Info", name: "info", widget: "text"}
               - {label: "Description", name: "description", widget: "markdown"}
               - {label: "Website", name: "website", widget: "string"}

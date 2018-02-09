@@ -24,11 +24,11 @@ timeline:
       dolor sit amet, consectetur adipiscing elit. Integer ex mi, tristique et
       fringilla vitae, pretium nec neque. Duis semper nec dolor non viverra. Sed
       bibendum rhoncus semper.
-    from_date: 2018-02-20T00:00:00+01:00
+    from_date: 07/1900
     info: Vestibulum mattis lacus
     name: Company
     position: Internship
-    to_date: 2017-09-19T00:00:00+02:00
+    to_date: 07/1900
     website: 'https://beta.bastiankroggel.com'
   - description: >
       Vestibulum mattis lacus est. Donec vestibulum sed eros at auctor. Aenean
@@ -66,13 +66,13 @@ timeline:
       ipsum rutrum. Mauris hendrerit bibendum enim vitae tristique. Proin odio
       tellus, interdum venenatis posuere et, condimentum eget ipsum. Vivamus
       tristique eros sapien, et dapibus mi scelerisque eu.
-    from_date: 2017-10-02T22:00:00.000Z
+    from_date: 07/1900
     info: >-
       Suspendisse scelerisque erat non dapibus varius. In semper eu magna ac
       pharetra. Vivamus scelerisque dictum tellus, a blandit quam aliquet quis.
     name: Testcompany
     position: Testpositon
-    to_date: 2018-06-20T10:07:21.000Z
+    to_date: 07/1900
     website: test
 ---
 

@@ -17,8 +17,8 @@ quote:
 timeline:
   - name: Company
     info: Vestibulum mattis lacus
-    from_date: 03/1450
-    to_date: 06/1900
+    from_date: 03 1450
+    to_date: 06 1900
     position: Internship
     description: |
             Vestibulum mattis lacus est. Donec vestibulum sed eros at auctor. Aenean diam elit, interdum ut justo at, mollis venenatis eros. Aliquam non tortor nisi. Cras sit amet posuere lacus. Praesent sed mauris justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex mi, tristique et fringilla vitae, pretium nec neque. Duis semper nec dolor non viverra. Sed bibendum rhoncus semper.

@@ -158,7 +158,7 @@ collections:
     label: "Tag"
     folder: "blog/archive/tags"
     create: true
-    slug: "{{slug}}.html"
+    slug: "{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "by_tag"}
       - {label: "Tag", name: "tag", widget: "string"}

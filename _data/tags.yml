@@ -1,8 +1,9 @@
-- slug: about
-  name: about
-- slug: work
-  name: work
-- slug: english
-  name: english
-- slug: test
-  name: test
+tags:
+  - slug: about
+    name: about
+  - slug: work
+    name: work
+  - slug: english
+    name: english
+  - slug: test
+    name: test

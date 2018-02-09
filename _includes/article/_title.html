@@ -3,7 +3,7 @@
 {% assign post = page %}
 {% if post.tags.size > 0 %}
   {% for post_tag in post.tags %}
-    {% for data_tag in site.data.tags %}
+    {% for data_tag in site.data.tags.tags %}
       {% if data_tag.slug == post_tag %}
         {% assign tag = data_tag %}
       {% endif %}

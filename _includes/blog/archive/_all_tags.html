@@ -47,7 +47,7 @@
               </ul>
             </div>
             <div class="tags__content">
-              {% assign sorted_tags = site.data.tags | sort:"name" %}
+              {% assign sorted_tags = site.data.tags.tags | sort:"name" %}
               {% for tag in sorted_tags %}
 
                 {% include blog/archive/_all_tags__inner.html %}

@@ -23,23 +23,23 @@
           <div class="hour"></div>
           <div class="minute"></div>
         </div>
-        {% for company_hash in page.timeline %}
-          {% for company in company_hash %}
+        {% for company in page.timeline %}
+
 
             <div class="luzid_element">
               <div class="luzid_el__title">
-                <p class="luzid-date">{{ company[1].from_date }} - {{ company[1].to_date }}</p>
-                <p class="luzid-title">{{ company[0] }}</p>
-                <p class="luzid-position">{{ company[1].position }}</p>
+                <p class="luzid-date">{{ company.from_date }} - {{ company.to_date }}</p>
+                <p class="luzid-title">{{ company.name }}</p>
+                <p class="luzid-position">{{ company.position }}</p>
               </div>
               <div class="luzid_el__content">
                 <div class="luzid_line"></div>
-                <p class="luzid-info">{{ company[1].info }}</p>
-                <p>{{ company[1].description }}</p>
+                <p class="luzid-info">{{ company.info }}</p>
+                <p>{{ company.description }}</p>
               </div>
             </div>
 
-          {% endfor %}
+          
         {% endfor %}
       </div>
 

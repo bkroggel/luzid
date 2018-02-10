@@ -218,6 +218,7 @@ ul {
     border: none;
     font-size: 0.7rem;
     white-space: nowrap;
+    background: none;
     &:after {
       content: none;
     }
@@ -518,10 +519,14 @@ blockquote { //overwriting ukit
     margin-top: 40px;
   };
   p {
-    margin-bottom: 0;
-    line-height: 1.5em;
-    display: inline;
-    font-size: 1em;
+    margin-bottom: unset;
+    line-height: unset;
+    display: unset;
+    font-size: unset;
+    // margin-bottom: 0;
+    // line-height: unset;
+    // display: inline;
+    // font-size: 1em;
     .reversefootnote {
       font-size: 0.7rem;
       vertical-align: middle;
@@ -542,12 +547,12 @@ blockquote { //overwriting ukit
     font-weight: 300;
   }
   li {
-    line-height: 1em;
+    line-height: 1.8em;
     padding-bottom: 5px;
     font-size: 0.7rem;
     &:before {
       margin-right: 5px;
-      font-size: 0.8em;
+      //font-size: 0.8em;
     }
   }
   &:before {

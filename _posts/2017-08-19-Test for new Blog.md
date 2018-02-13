@@ -1,19 +1,26 @@
 ---
+published: true
 title: Just a usual test for a new blog style
 sub_title: '"The Circle" im Review Check.'
+date: '2017-08-19 20:54:54 +0200'
 author: Bastian Kroggel
-date: 2017-08-19 20:54:54 +0200
-tags: [about, english]
-sign: true
-published: false
+tags:
+  - about
+  - english
 thumbnail:
   img: /assets/img/page/blog/2015/December/main-website.jpg
-  overview: |
-    Jep, Thumbanil. Maecenas aliquet at turpis ac commodo. Pellentesque convallis dignissim cursus. Vivamus in nulla tellus.
+  overview: >
+    Jep, Thumbanil. Maecenas aliquet at turpis ac commodo. Pellentesque
+    convallis dignissim cursus. Vivamus in nulla tellus.
+
 
     Vestibulum scelerisque urna metus, at luctus nunc fermentum vel.
 
-    Donec hendrerit nisl leo, tempus efficitur nisi consectetur et. Sed orci lorem, mattis vel varius nec, tincidunt id nulla. Suspendisse et dapibus justo.
+
+    Donec hendrerit nisl leo, tempus efficitur nisi consectetur et. Sed orci
+    lorem, mattis vel varius nec, tincidunt id nulla. Suspendisse et dapibus
+    justo.
+sign: true
 ---
 Nam auctor nisi a congue imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nunc venenatis malesuada leo at ultricies. Praesent vitae [sem](http://bastiankroggel.com) eget diam luctus commodo. Morbi condimentum erat ac augue sodales aliquam. *Aliquam* ultricies, diam vitae porttitor pellentesque, felis nunc convallis arcu, nec venenatis sapien ipsum vitae orci.
 {:.intro}

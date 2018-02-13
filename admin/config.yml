@@ -83,12 +83,12 @@ collections:
             default: "monthly"
             required: false
             options:
-              - always
-              - hourly
-              - daily
-              - weekly
               - monthly
+              - weekly
+              - daily
+              - hourly
               - yearly
+              - always
               - never
           - label: "Exclude from Sitemap"
             name: "exclude"

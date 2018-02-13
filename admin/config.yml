@@ -21,7 +21,7 @@ collections:
         name: "featured"
         widget: "boolean"
         default: "false"
-        required: "false"
+        required: false
       - label: "Title"
         name: "title"
         widget: "string"

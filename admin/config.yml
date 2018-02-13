@@ -16,7 +16,7 @@ collections:
         name: "published"
         widget: "boolean"
         default: "false"
-        required: "false"
+        required: false
       - label: "Featured"
         name: "featured"
         widget: "boolean"
@@ -28,60 +28,60 @@ collections:
       - label: "Sub-Title"
         name: "sub_title"
         widget: "string"
-        required: "false"
+        required: false
       - label: "Date"
         name: "date"
         widget: "datetime"
-        required: "false"
+        required: false
       - label: "Layout"
         name: "layout"
         widget: "string"
         default: "blog"
-        required: "false"
+        required: false
       - label: "Author"
         name: "author"
         widget: "string"
         default: "Bastian Kroggel"
-        required: "false"
+        required: false
       - label: "Tags"
         name: "tags"
         widget: "list"
-        required: "false"
+        required: false
       - label: "URL"
         name: "permalink"
         widget: "string"
-        required: "false"
+        required: false
       - label: "Thumbnail"
         name: "thumbnail"
         widget: "object"
-        required: "false"
+        required: false
         fields:
           - label: "Image"
             name: "img"
             widget: "image"
-            required: "false"
+            required: false
           - label: "Overview"
             name: "overview"
             widget: "markdown"
-            required: "false"
+            required: false
       - label: "Sitemap"
         name: "sitemap"
         widget: "object"
-        required: "false"
+        required: false
         fields:
           - label: "Last Modified"
             name: "lastmod"
             widget: "datetime"
-            required: "false"
+            required: false
           - label: "Priority"
             name: "priority"
             widget: "number"
-            required: "false"
+            required: false
           - label: "Frequence of Change"
             name: "changefreq"
             widget: "select"
             default: "monthly"
-            required: "false"
+            required: false
             options:
               - always
               - hourly
@@ -93,16 +93,16 @@ collections:
           - label: "Exclude from Sitemap"
             name: "exclude"
             widget: "boolean"
-            required: "false"
+            required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
-        required: "false"
+        required: false
       - label: "Signed Post"
         name: "sign"
         widget: "boolean"
         default: "false"
-        required: "false"
+        required: false
 
   - name: "sites"
     label: "Sites"
@@ -137,7 +137,7 @@ collections:
           - label: "TOC About"
             name: "toc_about"
             widget: "text"
-            required: "false"
+            required: false
           - label: "Body"
             name: "body"
             widget: "markdown"
@@ -145,7 +145,7 @@ collections:
           - label: "Signed Page"
             name: "sign"
             widget: "boolean"
-            required: "false"
+            required: false
           - label: "Timeline"
             name: "timeline"
             widget: "list"

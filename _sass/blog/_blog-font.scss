@@ -694,8 +694,8 @@ p.intro a:after {
   margin: 2em 0;
   position: relative;
   // transform: translateX(-15px);
-  width: calc(100% + 30px);
-  margin-left: -15px;
+  width: calc(100% + 20px);
+  margin-left: -10px;
   @include media-query($medium){
     width: 110%;
     // transform: none;

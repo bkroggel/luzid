@@ -10,34 +10,21 @@
 }
 
 .bk-static-style {
-  //padding: 0;
-  //max-width: 650px;
   position: relative;
-  //padding: 0 15px;
+  padding: 0 15px;
+  width: calc(100% - 30px);
+  .image_frame {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
   @include media-query($medium){
-    // padding: 0 0 0 9rem;
+    width: 100%;
+    padding: 0;
+    .image_frame {
+      width: 100%;
+      margin: 0;
+    }
   };
-  // &:before {
-  //   content: attr(before);
-  //   position: absolute;
-  //   transform: translateY(-115%);
-  //   transform-origin: right top;
-  //   white-space: nowrap;
-  //   font-size: 15vw;
-  //   left: 15px;
-  //   line-height: 0.8em;
-  //   @include media-query($small){
-  //     font-size: 12vw;
-  //   };
-  //   @include media-query($medium){
-  //     transform: rotate(270deg) translateY(1rem);
-  //     top: 0;
-  //     left: unset;
-  //     right: 100%;
-  //     font-size: 7rem;
-  //     line-height: 1em;
-  //   };
-  // }
 }
 
 #bk-about-introduction {
@@ -134,6 +121,9 @@
   &:after {
     background: linear-gradient(to top, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0.981) 9.7%, hsla(0, 0%, 0%, 0.932) 18.3%, hsla(0, 0%, 0%, 0.865) 25.5%, hsla(0, 0%, 0%, 0.789) 31.8%, hsla(0, 0%, 0%, 0.707) 37.5%, hsla(0, 0%, 0%, 0.623) 42.8%, hsla(0, 0%, 0%, 0.538) 47.8%, hsla(0, 0%, 0%, 0.452) 52.8%, hsla(0, 0%, 0%, 0.366) 57.9%, hsla(0, 0%, 0%, 0.282) 63.2%, hsla(0, 0%, 0%, 0.202) 68.9%, hsla(0, 0%, 0%, 0.126) 75.3%, hsla(0, 0%, 0%, 0.061) 82.7%, hsla(0, 0%, 0%, 0.015) 91.4%, hsla(0, 0%, 0%, 0) 100%);
     bottom: 0;
+  }
+  .bk_about_quote_inner {
+    margin: 0 auto;
   }
 }
 
@@ -460,6 +450,7 @@ $clock-color: white;
   padding: 0;
   .bk_about_quote_inner {
     max-width: 350px;
+    margin-left: -8px;
     @include media-query($xtra-small){
       max-width: 450px;
     };

@@ -468,9 +468,12 @@ blockquote { //overwriting ukit
 
 // Liste
 .bk-blog-style ol {
-  padding-left: 50px;
+  padding-left: 40px;
   counter-reset: item;
   list-style-type: none;
+  @include media_query($small){
+    padding-left: 50px;
+  };
   li {
     display: block;
     position: relative;

@@ -101,12 +101,9 @@
 }
 
 .bk-title-frame {
-  margin: 0px auto 20px;
+  margin: 0px auto;
   text-align: center;
   max-width: 580px;
-  @include media-query($small){
-    margin: 0px auto 45px;
-  };
 }
 
 .bk-sub_title-frame {
@@ -163,6 +160,10 @@
 
 .bk-article-title .bk-blog-posts--tags {
   margin-bottom: 20px;
+  margin-top: 20px;
+  @include media-query($small){
+    margin-top: 45px;
+  };
 }
 
 .bk-article-title .article-author-id {

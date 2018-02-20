@@ -102,7 +102,7 @@ Praesent vehicula laoreet odio ut fringilla. Vestibulum suscipit purus non ornar
 <span id="about-me"></span>
 <div class="bk-blog-style bk_about_quote" style="margin-top: 70px">
   <div class="bk_about_quote_inner">
-    <p class="bk_quote__main">It's me,<br>Bastian</p>
+    <p class="bk_quote__main">It's me,<br>Bastian.</p>
     <div class="bk_quote__author">
       <p>a few words about myself</p>
     </div>

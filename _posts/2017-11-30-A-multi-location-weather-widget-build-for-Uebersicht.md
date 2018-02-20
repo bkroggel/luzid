@@ -58,11 +58,15 @@ DarkSky for example provides weather condition summaries in [dozens of different
 Besides that *of course* there is also a setting that enables the possibility to easily change the accent color - and therefore the highlighted rectangle containing the current date.
 
 Last but not least a few thoughts about one of the **main USP** of this widget in comparison to most of the other Übersicht addons out there.  
-While using Übersicht in my daily life I noticed one big annoyance that didn't really prevent me from using it but still bugged my a lot when it occurred.  
+While using Übersicht in my daily life I noticed one big annoyance that didn't really prevent me from using it but still bugged my a lot when it occurred.
+ 
 I am speaking of the fact that mostly in situations where Übersicht is running before an actual internet connection is established - e.g. when you wake up your machine from a standby mode (Übersicht is instantly up and running while the WIFI network takes a short amount of time to actually set everything up) - the widget fails to reach out to the server and therefore displays a blank and (not just design-wise) broken output.  
 Since - I initially talked about that - Übersicht basically makes use of a WebKit instance I came up with a handy and more or less easy workaround to fix that issue.
+
 Either hated or loved [Cookies](https://en.wikipedia.org/wiki/HTTP_cookie) are the perfect solution for storing information through your browser locally on your machine and while it definitely is debatable if using a not really battery friendly web instance as the groundworks for Übersicht, it sure makes it easy to transform web developing practices to a local environment. So what actually happens whenever Wttr for Übersicht pulls updated forecasting information successfully from the DarkSky server is, that all those information get stored as cookies and therefore will be accessible for up to 48 hours - *even if there is no actually internet connection present*.  
+
 Of course it probably does not make too much sense to rely on outdated weather information - however since the widget still will try to reach out to the servers in the usually - and modifiable - update interval, it is clearly much more pleasant to actually get displayed *kind of* usable weather expectations instead of staring at a blank stack of widgets.  
+
 Anyways that could be an starting point for the next Übersicht widget that evolves and maybe that even nudges the development of the actually Übersicht software to take the another step and improve even further - I myself would love to see Übersicht and its users to extend the functionality and the variety of widgets in a much broader way and to come up with a lot of new use purposes to take the MacOS desktop to the next level.
 
 
@@ -86,9 +90,12 @@ The overall starting process to get the Wttr widget up and running basically fol
 After everything is installed and the widget is connected to the DarkSky server you already can see the sample weather forecasts for London, Paris and New York.  
 In order to set your own preferred locations you can of course modify the setup.
 
-1. create an id for your location (e.g. `lnd`)
-2. add a name to your location which later will be displayed on your widget (e.g. `London, GB`)
-3. add 'Latitude' as well as 'Longitude' information (e.g. `51.5287718` and `-0.2416814`)
+1. create an id for your location  
+(e.g. `lnd`)
+2. add a name to your location which later will be displayed on your widget  
+(e.g. `London, GB`)
+3. add 'Latitude' as well as 'Longitude' information  
+(e.g. `51.5287718` and `-0.2416814`)
 
 you can grab those information from [Google Maps](https://maps.google.com):
 1. open [maps.google.com](https://maps.google.com)

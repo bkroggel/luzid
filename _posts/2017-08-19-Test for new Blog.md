@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Just a usual test for a new blog style
 sub_title: '"The Circle" im Review Check.'
 date: '2017-08-19 20:54:54 +0200'

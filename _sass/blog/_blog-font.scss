@@ -275,7 +275,9 @@ pre {
 }
 
 .bk-blog-style h1,
-.bk-blog-style h1>a {
+.bk-blog-style h1>a,
+.bk-blog-style h2,
+.bk-blog-style h2>a {
   font-size: 1.875rem;
   font-weight: 400;
   line-height: 1.2;
@@ -295,20 +297,8 @@ pre {
   margin-top: 10px;
 }
 
-
-// .bk-blog-style h1:after {
-//   content: "";
-//   width: 105%;
-//   height: 1px;
-//   position: absolute;
-//   border-bottom: 6px solid $dark-color;
-//   bottom: 0px;
-//   left: 0;
-//   opacity: 0.3;
-// }
-
-.bk-blog-style h2,
-.bk-blog-style h2>a {
+.bk-blog-style h3,
+.bk-blog-style h3>a {
   font-size: 1.55rem;
   @include media-query($small){
     font-size: 2.075rem;
@@ -320,7 +310,6 @@ pre {
 }
 
 .bk-blog-style {
-  h2,
   h3,
   h4,
   h5 {
@@ -329,8 +318,6 @@ pre {
       width: 90%;
     };
   }
-  h2,
-  h2>a,
   h3,
   h3>a,
   h4,
@@ -339,8 +326,6 @@ pre {
     line-height: 1.2em;
     //letter-spacing: 0.05em;
   }
-  h3,
-  h3>a,
   h4,
   h4>a {
     font-size: 1.35rem;

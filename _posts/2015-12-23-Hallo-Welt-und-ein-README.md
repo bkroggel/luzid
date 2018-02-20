@@ -9,7 +9,7 @@ featured: false
 ---
 Hallo und Herzlich Willkommen - oder wie es dem tagesaktuellen Geschehen wohl eher angemessen ist *Frohe Weihnachten, Feliz Navidad, Joyeux Noël, Buon Natale und natürlich Merry Christmas*.
 
-## Wo bin ich denn hier gelandet?
+### Wo bin ich denn hier gelandet?
 Gute Frage, aber ich will mich mal an einer Antwort darauf versuchen.
 Einerseits sicherlich die Möglichkeit den Gedanken und der
 Meinung freien Lauf zu lassen, andererseits aber auch Ort und Sammelpunkt, an dem Erfahrungen und Wissen weitergetragen werden soll und zum Selbstversuch anregen darf.
@@ -17,7 +17,7 @@ Wer ein Tagebuch sucht und dem lebensbegleitenden Wortschwall des kreativen Indi
 <!-- more -->
 Ich behalte mir vor in purer Ehrlichkeit und vollster Meinung das zu präsentieren, was mir am Herzen liegt. Vielleicht kritisch, aber sicherlich nie auf Positionen beharrend, die es freizugeben gilt.
 
-## Okay. Jetzt aber ehrlich, worum gehts?
+### Okay. Jetzt aber ehrlich, worum gehts?
 Wilde Versuche sich im WebDevelopement Geschehen zurecht zu finden, zwischen Entrepreneurship und der neusten Errungenschaft im Technikhimmel. *Ist das Internet nicht schön?* Ganz sicher kein weiterer Technikblog dessen wohlgewählte Worte zum neusten Produkt in der schieren Masse an Kontrahenten untergeht. Was hier zu begutachtet ist, sind zudem meine ersten Schritte im breiten Feld der [Static Site Generators], wobei mit [Jekyll] auch der wohl bekannteste Vertreter dieser Art aktuell[^1] in diesem Blog Verwendung findet.  
 *Damit sind wir dann auch schon beim ersten Thema, dass in den nächsten Updates schrittweise Eingang in die noch weißen Zeilen des Internets findet.*
 Ich werde mir einfach mal erlauben hier zu zeigen, was meine Versuche der letzten Wochen so ans Tageslicht gebracht haben und welche Ideen und kleinen "Schätze" sich darunter befinden.  

@@ -674,8 +674,8 @@ p.intro a:after {
 }
 
 .bk-blog-style p.bk_img {
-  width: calc(100% + 30px);
-  left: -15px;
+  width: calc(100% + 20px);
+  left: -10px;
   position: relative;
   @include media-query($medium){
     width: 100%;

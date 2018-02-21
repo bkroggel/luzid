@@ -190,7 +190,7 @@
           } else if (image_alt) {
             $(this).parent().append('<div class="image_caption"><div class="image_title">'+image_alt+'</div></div>');
           }
-        } else if (!($(this).parents('p').hasClass('bk-gallery'))){
+        } else if ( !($(this).parents('p').hasClass('bk-gallery')) && !($(this).parent().hasClass('two')) ){
           $(this).parents('p').addClass('bk_img');
         }
       });

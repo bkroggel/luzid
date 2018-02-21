@@ -59,7 +59,7 @@ Besides that *of course* there is also a setting that enables the possibility to
 
 Last but not least a few thoughts about one of the **main USP** of this widget in comparison to most of the other Übersicht addons out there.  
 While using Übersicht in my daily life I noticed one big annoyance that didn't really prevent me from using it but still bugged my a lot when it occurred.
- 
+
 I am speaking of the fact that mostly in situations where Übersicht is running before an actual internet connection is established - e.g. when you wake up your machine from a standby mode (Übersicht is instantly up and running while the WIFI network takes a short amount of time to actually set everything up) - the widget fails to reach out to the server and therefore displays a blank and (not just design-wise) broken output.  
 Since - I initially talked about that - Übersicht basically makes use of a WebKit instance I came up with a handy and more or less easy workaround to fix that issue.
 

@@ -168,16 +168,13 @@
       });
     })
 
-
-
     function add_caption (){
       var caption_wrapper = '<div class="image_frame" />';
       var no_classes = ['no_caption']; // more than one "no_classes" currently not supported (26. August 2017)
       var converter = new showdown.Converter(); //{ extensions: ['twitter'] }
 
-      // end check
       $('.bk-blog-style img').each(function() {
-        if (!($(this).parent().hasClass(no_classes)) && !($(this).parents('p').hasClass('bk-gallery'))) {
+        if (!($(this).parent().hasClass(no_classes)) && !($(this).parent().hasClass('two')) && !($(this).parents('p').hasClass('bk-gallery'))) {
           $(this).wrap(caption_wrapper);
           var image_title = converter.makeHtml($(this).attr('data-title'));
           var image_subtitle = converter.makeHtml($(this).attr('data-subtitle'));
@@ -199,6 +196,28 @@
       });
     };
     add_caption();
+
+    function two_images (){
+      var caption_wrapper = '<div class="image_frame" />';
+      var converter = new showdown.Converter(); //{ extensions: ['twitter'] }
+
+      $('.bk-blog-style p.two').each(function() {
+        $(this).wrapInner(caption_wrapper);
+        $(this).find('.image_frame').wrapInner('<div class="inner_frame" />');
+        var image_title = converter.makeHtml($(this).attr('data-title'));
+        var image_subtitle = converter.makeHtml($(this).attr('data-subtitle'));
+        if (image_subtitle) {
+          if (image_title){
+            $(this).children().append('<div class="image_caption"><div class="image_title">'+image_title+'</div><div class="image_source">'+image_subtitle+'</div></div>');
+          } else {
+            $(this).children().append('<div class="image_caption"><div class="image_title">'+ image_alt +'</div><div class="image_source">'+image_subtitle+'</div></div>');
+          }
+        } else if (image_title){
+          $(this).children().append('<div class="image_caption"><div class="image_title">'+image_title+'</div></div>');
+        }
+      })
+    }
+    two_images()
 
     // make images zoomable
     var zooming = new Zooming({

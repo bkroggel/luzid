@@ -461,9 +461,6 @@ blockquote { //overwriting ukit
 }
 
 .bk-blog-style blockquote p {
-  color: rgba(0 ,0 ,0 , .6);
-  line-height: 1.5em;
-  font-size: 0.9em;
   margin: 40px 0 40px 15px;
   @include media-query($medium){
     margin: 40px 0 40px 40px;
@@ -479,14 +476,24 @@ blockquote { //overwriting ukit
     color: $dark-color;
   }
 }
+.bk-blog-style blockquote p,
+.bk-blog-style blockquote p em,
+.bk-blog-style blockquote p a {
+  color: rgba(0 ,0 ,0 , .6);
+  line-height: 1.5em;
+  font-size: 0.9rem;
+}
 
 // Liste
 .bk-blog-style ol {
   padding-left: 40px;
   counter-reset: item;
   list-style-type: none;
+  li ol {
+    padding-left: 15px;
+  }
   @include media_query($small){
-    padding-left: 50px;
+    padding-left: 43px;
   };
   li {
     display: block;
@@ -535,7 +542,7 @@ blockquote { //overwriting ukit
   @include media-query($medium){
     margin-top: 40px;
   };
-  p {
+  p, a {
     margin-bottom: unset;
     line-height: unset;
     display: unset;

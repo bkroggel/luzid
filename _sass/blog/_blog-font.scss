@@ -255,6 +255,35 @@ pre {
   }
 }
 
+.overflow {
+  margin: 30px 0;
+  @include media_query($small){
+    margin: 40px 0;
+  };
+  pre {
+    margin: 1em 0;
+  }
+}
+
+.overflow_element {
+  @include display_flex;
+  @include align-items(center);
+  @include justify-content(flex-end);
+  p {
+    font-size: 0.6em;
+    letter-spacing: 2px;
+    line-height: 1em;
+    color: $dark-color;
+    margin-right: 5px;
+  }
+  svg {
+    width: 17px;
+    #arrow_el {
+      stroke: $dark-color;
+    }
+  }
+}
+
 .bk-blog-style p>code,
 .bk-blog-style li>code {
   color: $blog-font-color;

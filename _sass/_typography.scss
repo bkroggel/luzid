@@ -92,7 +92,8 @@ p {
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
 #bk-timeline .luzid_element>.luzid_el__content>p.luzid-info,
-.bk-sub {
+.bk-sub,
+.overflow_element p {
   font-family: $sans-serif;
   font-weight: 400;
   font-size: 0.6em;

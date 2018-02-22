@@ -382,6 +382,30 @@
     }
     lock_images()
 
+    function more_to_show() {
+      overflow_svg = '<svg viewBox="0 0 84 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">'
+        +  '<defs></defs>'
+        +  '<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">'
+            +  '<g id="arrow_el" transform="translate(0.000000, 2.000000)" stroke-width="4" stroke="#000000">'
+                +  '<polyline id="Path" points="55 0 80 18 55 36"></polyline>'
+                +  '<path d="M0,18 L80,18" id="Path-2"></path>'
+            +  '</g>'
+        +  '</g>'
+      + '</svg>'
+      overflow_element = '<div class="overflow_element"><p>scroll</p>' + overflow_svg + '</div>'
+      $('.bk-blog-content pre').each(function() {
+        if ( $(this).width() < $(this).children('code').innerWidth() && !( $(this).parent('div').hasClass('overflow') ) ) {
+          $(this).parent('div').addClass('overflow').prepend(overflow_element).append(overflow_element)
+        } else if ( $(this).width() > $(this).children('code').innerWidth() && $(this).parent('div').hasClass('overflow') ) {
+          $(this).parent('div').removeClass('overflow').find('.overflow_element').remove();
+        }
+      })
+    }
+    more_to_show()
+    $( window ).resize(function() {
+      more_to_show()
+    })
+
   </script>
 {% endif %}
 

@@ -91,7 +91,9 @@
 .bk-blog-style {
   -webkit-font-smoothing: auto;
   p,
-  a {
+  a,
+  ul,
+  ol {
     font-family: $reading;
     font-weight: 300;
   }
@@ -195,7 +197,9 @@ ul {
 .bk-blog-style li em {
   color: $blog-font-color_small;
   line-height: 1.8em;
-  font-size: 1rem;
+  //line-height: 1.725em;
+  font-size: 1.0rem;
+  //font-size: 1.0625rem;
   letter-spacing: 0.015em;
   @include media-query($small){
     color: $blog-font-color;
@@ -307,14 +311,14 @@ pre {
 .bk-blog-style h1>a,
 .bk-blog-style h2,
 .bk-blog-style h2>a {
-  font-size: 1.875rem;
+  font-size: 2.0625rem;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.035em;
   position: relative;
   width: 90%;
   @include media-query($small){
-    font-size: 1.975rem;
+    //font-size: 1.975rem;
   };
   @include media-query($medium){
     font-size: 2.775rem;
@@ -324,14 +328,6 @@ pre {
 .bk-blog-style h1 + p,
 .bk-blog-style h2 + p {
   margin-top: 10px;
-}
-
-.bk-blog-style h3,
-.bk-blog-style h3>a {
-  font-size: 1.55rem;
-  @include media-query($small){
-    font-size: 2.075rem;
-  };
 }
 
 .bk-blog-style h4 {
@@ -353,13 +349,10 @@ pre {
   h4>a {
     font-weight: 400;
     line-height: 1.2em;
-    //letter-spacing: 0.05em;
-  }
-  h4,
-  h4>a {
-    font-size: 1.35rem;
+    //font-size: 1.55rem;
+    font-size: 1.725rem;
     @include media-query($small){
-      font-size: 1.55rem;
+      font-size: 2.075rem;
     };
   }
 }
@@ -370,12 +363,15 @@ pre {
 .bk-blog-style h6>a,
 span.title {
   font-weight: 600;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   line-height: 2em;
   font-family: $sans-serif;
   margin-bottom: 0;
+  @include media_query($small){
+    font-size: 0.6rem;
+  };
 }
 
 .bk-blog-style h6,
@@ -498,7 +494,7 @@ blockquote { //overwriting ukit
   li {
     display: block;
     position: relative;
-    line-height: 1.8em;
+    line-height: 1.7rem;
   }
   li:before {
     content: counter(item, decimal-leading-zero) " ";
@@ -510,24 +506,29 @@ blockquote { //overwriting ukit
     font-size: 0.6em;
     margin-right: 15px;
     color: $dark-color;
+    line-height: 1.7rem;
+    vertical-align: inherit;
   }
 }
 
 .bk-blog-style ul,
 .bk-blog-style ol {
-  font-family: $reading;
-  font-weight: 300;
+  font-size: 0.9rem;
+  a {
+    font-size: unset;
+  }
 }
 
 .bk-blog-style ul {
   list-style: none;
   padding: 0 0 0 15px;
   li {
-    line-height: 1.7em;
+    line-height: 1.7rem;
     &:before {
       content: '\2013';
-      display: inline-block;
+      display: inline;
       font-size: 1.2em;
+      line-height: 1.7rem;
       vertical-align: middle;
       margin-right: 15px;
       color: $dark-color;
@@ -545,7 +546,7 @@ blockquote { //overwriting ukit
   p, a {
     margin-bottom: unset;
     line-height: unset;
-    display: unset;
+    display: inline-block;
     font-size: unset;
     // margin-bottom: 0;
     // line-height: unset;
@@ -570,14 +571,14 @@ blockquote { //overwriting ukit
     font-family: $reading;
     font-weight: 300;
     padding-left: 25px;
-  }
-  li {
-    line-height: 1.8em;
-    padding-bottom: 5px;
-    font-size: 0.7rem;
-    &:before {
-      margin-right: 5px;
-      //font-size: 0.8em;
+    li {
+      line-height: 1rem;
+      padding-bottom: 5px;
+      font-size: 0.7rem;
+      &:before {
+        margin-right: 5px;
+        line-height: 1rem;
+      }
     }
   }
   &:before {
@@ -594,7 +595,7 @@ blockquote { //overwriting ukit
 
 // big letter just in article view
 .bk-np-style>p:first-of-type:first-letter {
-  font-size: 6.55rem;
+  font-size: 6.15rem;
   font-family: $serif;
   margin-right: 10px;
   float: left;

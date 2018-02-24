@@ -102,7 +102,6 @@
     a,
     ul,
     ol {
-      font-family: $reading;
       font-weight: 300;
     }
   };
@@ -277,7 +276,7 @@ pre {
     margin: 40px 0;
   };
   pre {
-    margin: 1em 0;
+    margin: .5em 0;
   }
 }
 
@@ -297,6 +296,9 @@ pre {
     #arrow_el {
       stroke: $dark-color;
     }
+  }
+  &:first-of-type {
+    @include justify-content(flex-start);
   }
 }
 
@@ -630,6 +632,7 @@ p.intro a {
   color: $blog-font-color;
   font-family: $reading;
   margin: 0;
+  -webkit-font-smoothing: auto;
   @include media_query($small){
     line-height: 1.75em;
     font-size: 1.15rem;

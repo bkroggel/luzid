@@ -136,6 +136,8 @@ a.blog-posts--title {
   font-size: 0.85rem;
   line-height: 1.6em;
   margin: 0.5em 0;
+  font-weight: 300;
+  -webkit-font-smoothing: auto;
 }
 
 // Tags Formatting
@@ -612,6 +614,8 @@ a.link_button.-white {
   font-size: 0.8rem;
   line-height: 1.5em;
   color: white;
+  font-weight: 300;
+  -webkit-font-smoothing: auto;
 }
 
 // about toc
@@ -659,6 +663,8 @@ a.link_button.-white {
     box-decoration-break: clone;
     font-family: $sans-serif;
     display: inline;
+    font-weight: 300;
+    -webkit-font-smoothing: auto;
   }
   p.bk_quote__main {
     font-size: 3rem;

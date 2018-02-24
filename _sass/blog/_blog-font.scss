@@ -224,7 +224,10 @@ ul {
     }
   }
   strong {
-    font-weight: 500;
+    font-weight: 700;
+    @include media_query($xtra-small){
+      font-weight: 500;
+    };
   }
   sup a {
     border: none;
@@ -283,7 +286,7 @@ pre {
 .overflow_element {
   @include display_flex;
   @include align-items(center);
-  @include justify-content(flex-end);
+  @include justify-content(flex-start);
   p {
     font-size: 0.6em;
     letter-spacing: 2px;
@@ -296,9 +299,6 @@ pre {
     #arrow_el {
       stroke: $dark-color;
     }
-  }
-  &:first-of-type {
-    @include justify-content(flex-start);
   }
 }
 

@@ -204,10 +204,10 @@
 }
 
 .bk-blog-content {
-  width: calc(100% - 20px);
+  width: calc(100% - 2 * #{$side-space});
   max-width: 700px;
   margin: 150px auto 50px;
-  padding: 0 10px;
+  padding: 0 $side-space;
   @include media-query($medium) {
     width: 100%;
     padding: 0;

@@ -89,14 +89,23 @@
 // Typography for BLOG
 
 .bk-blog-style {
-  -webkit-font-smoothing: auto;
   p,
   a,
   ul,
   ol {
     font-family: $reading;
-    font-weight: 300;
+    font-weight: 400;
   }
+  @include media_query($xtra-small){
+    -webkit-font-smoothing: auto;
+    p,
+    a,
+    ul,
+    ol {
+      font-family: $reading;
+      font-weight: 300;
+    }
+  };
   a {
     @include link-mix($blog-font-color_small);
     position: relative;
@@ -249,7 +258,7 @@ pre {
   // border-top: 1px solid $dark-color;
   // border-bottom: 1px solid $dark-color;
   // border-left: 1px solid $dark-color;
-  padding: 10px 20px;
+  padding: 10px 0;
   font-size: 0.8rem;
   line-height: 1.5em;
   border-radius: 0;
@@ -257,6 +266,9 @@ pre {
     font-family: $mono;
     white-space: pre;
   }
+  @include media_query($xtra-small){
+    padding: 10px 20px;
+  };
 }
 
 .overflow {
@@ -291,7 +303,7 @@ pre {
 .bk-blog-style p>code,
 .bk-blog-style li>code {
   color: $blog-font-color;
-  background: rgba(162, 162, 162, 0.3);
+  background: rgba(162, 162, 162, 0.2);
   padding: 4px 4px 2px;
   border-radius: 3px;
   font-size: 0.9em;
@@ -482,13 +494,13 @@ blockquote { //overwriting ukit
 
 // Liste
 .bk-blog-style ol {
-  padding-left: 40px;
+  padding-left: 25px;
   counter-reset: item;
   list-style-type: none;
   li ol {
     padding-left: 15px;
   }
-  @include media_query($small){
+  @include media_query($xtra-small){
     padding-left: 43px;
   };
   li {
@@ -521,7 +533,10 @@ blockquote { //overwriting ukit
 
 .bk-blog-style ul {
   list-style: none;
-  padding: 0 0 0 15px;
+  padding: 0;
+  ul {
+    padding: 0 0 0 15px;
+  }
   li {
     line-height: 1.7rem;
     &:before {
@@ -534,6 +549,9 @@ blockquote { //overwriting ukit
       color: $dark-color;
     }
   }
+  @include media-query($xtra-small){
+    padding: 0 0 0 15px;
+  };
 }
 
 .bk-blog-style .footnotes {
@@ -606,12 +624,16 @@ blockquote { //overwriting ukit
 p.intro,
 p.intro a {
   width: 100%;
-  line-height: 1.75em;
-  font-size: 1.15rem;
+  line-height: 1.55em;
+  font-size: 1.1rem;
   font-weight: 300;
   color: $blog-font-color;
   font-family: $reading;
   margin: 0;
+  @include media_query($small){
+    line-height: 1.75em;
+    font-size: 1.15rem;
+  };
   em {
     font-size: 1em;
     line-height: 1em;
@@ -686,15 +708,11 @@ p.intro a:after {
 
 .bk-signature {
   width: 200px;
-  transform: translate(-5px, calc(-1em - 20px));
+  transform: translate(-10px, calc(-1em - 20px));
   display: none;
   &.bk-success {
     display: block;
   }
-}
-
-.bk-static-style .bk-signature {
-  transform: translate(-10px, calc(-1em - 20px));
 }
 
 .bk-blog-style p img {
@@ -711,8 +729,8 @@ p.intro a:after {
 }
 
 .bk-blog-style p.bk_img {
-  width: calc(100% + 20px);
-  left: -10px;
+  width: calc(100% + 2 * #{$side-space});
+  left: -#{$side-space};
   position: relative;
   @include media-query($medium){
     width: 100%;
@@ -748,8 +766,8 @@ p.intro a:after {
   margin: 2em 0;
   position: relative;
   // transform: translateX(-15px);
-  width: calc(100% + 20px);
-  margin-left: -10px;
+  width: calc(100% + 2 * #{$side-space});
+  margin-left: -#{$side-space};
   @include media-query($medium){
     width: 110%;
     // transform: none;

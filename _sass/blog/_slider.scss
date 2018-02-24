@@ -1,8 +1,8 @@
 .bk-gallery {
   position: relative;
-  width: calc(100% + 30px);
+  width: calc(100% + 2 * #{$side-space});
   margin: 2em 0;
-  margin-left: -15px;
+  margin-left: -#{$side-space};
   @include media-query($medium){
     width: 110%;
     margin-top: 3em;

@@ -11,20 +11,20 @@
 
 .bk-static-style {
   position: relative;
-  padding: 0 15px;
-  width: calc(100% - 30px);
-  .image_frame {
-    width: calc(100% + 30px);
-    margin-left: -15px;
-  }
-  @include media-query($medium){
-    width: 100%;
-    padding: 0;
-    .image_frame {
-      width: 100%;
-      margin: 0;
-    }
-  };
+  // padding: 0 15px;
+  // width: calc(100% - 30px);
+  // .image_frame {
+  //   width: calc(100% + 30px);
+  //   margin-left: -15px;
+  // }
+  // @include media-query($medium){
+  //   width: 100%;
+  //   padding: 0;
+  //   .image_frame {
+  //     width: 100%;
+  //     margin: 0;
+  //   }
+  // };
 }
 
 #bk-about-introduction {
@@ -450,7 +450,7 @@ $clock-color: white;
   padding: 0;
   .bk_about_quote_inner {
     max-width: 350px;
-    margin-left: -8px;
+    margin-left: -15px;
     @include media-query($xtra-small){
       max-width: 450px;
     };

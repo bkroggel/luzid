@@ -4,6 +4,7 @@ $accent-color: rgb(155, 167, 138);
 $accent-two:rgb(237, 147, 147);
 $slightly-darker: #dadada;
 $dark-color: #A2A2A2;
+$really-dark: #5a5a5a;
 $blue-black: #263238;
 $bb-soft: #979797;
 $darkest-color: rgb(0,0,0);
@@ -13,6 +14,8 @@ $highlighted-color: rgb(238, 189, 188); //rgba(237, 147, 147, 0.55); //#cdddf6;
 $highlighted-color-solid: rgb(238, 189, 188);
 $light-accent: aliceblue;
 $underline-color: $highlighted-color;
+$yellow-accent: rgb(246, 241, 237);
+$blue-accent: rgb(48, 65, 93);
 
 $side-space: 25px;
 
@@ -86,6 +89,15 @@ justify-content: $justify;
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+@mixin direction_row_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 // mixin for media-querys

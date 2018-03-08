@@ -94,7 +94,9 @@ p {
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
 #bk-timeline .luzid_element>.luzid_el__content>p.luzid-info,
 .bk-sub,
-.overflow_element p {
+.bk-blog-style.bk-sec p.bk-sub,
+.overflow_element p,
+.bk-about__intro p.sub {
   font-family: $sans-serif;
   font-weight: 400;
   font-size: 0.6em;
@@ -748,4 +750,84 @@ a.link_button.-white {
   padding: 10px 15px;
   color: white;
   text-align: center;
+}
+
+.bk-about__intro {
+  h1{
+    font-family: $serif;
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1em;
+    margin-left: -.03em; //fix to align with sub
+  }
+  p.sub {
+    font-size: .8rem;
+  }
+  p.desc {
+    margin: 30px 0 0;
+    max-width: 550px;
+    font-family: $reading;
+    font-weight: 400;
+    color: $blog-font-color;
+  }
+}
+
+.bk-blog-style.bk-sec {
+  p {
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.9rem;
+    line-height: 1.6em;
+    letter-spacing: 0.01em;
+    margin: 0;
+    &+p {
+      margin-top: 0.5em;
+    }
+  }
+  &.bk-sec__two p {
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    @include media_query($small){
+      text-align: justify;
+    };
+  }
+  h2 {
+    color: $really-dark;
+    margin-top: 0;
+    width: 100%;
+    &:after {
+      content: '';
+      position: relative;
+      display: inline-block;
+      height: 2px;
+      width: 100px;
+      background: $really-dark;
+      vertical-align: middle;
+      margin-left: 25px;
+    }
+  }
+  p.main_quote {
+    font-family: $serif;
+    font-size: 3rem;
+    line-height: 1em;
+  }
+  .bk-sec__vert a {
+    text-transform: uppercase;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    background: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 1em;
+  }
+  .sec__info p {
+    font-weight: 700;
+  }
+  .sec__num p{
+    display: inline;
+    text-transform: uppercase;
+  }
 }

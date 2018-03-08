@@ -1,0 +1,108 @@
+<section class="bk-blog bk-article bk-about">
+  <div class="bk-side-space bk-article__nav">
+    {% include _pseudo-nav_title.html %}
+  </div>
+
+  <div class="bk-static-about__frame">
+
+    <div class="bk-about__intro">
+      <p class="sub">About me</p>
+      <h1>Bastian Kroggel.</h1>
+      <p class="desc">Aenean congue at urna a ultricies. Nullam id dignissim eros, in hendrerit ipsum. Praesent sed sem tellus.</p>
+    </div>
+    <div class="bk-blog__intro_img" style="background: url('{{page.header.img.url}}') no-repeat center;
+    background-size: cover;">
+      <div class="intro_img">
+        <p class="intro_sub bk-sub">{{page.header.subtitle}}</p>
+        <p class="headline">{{page.header.title}}</p>
+      </div>
+      <div class="static-intro__bk-name">
+        {% include  svg/_icon.html %}
+        {% include  svg/_name.html %}
+      </div>
+      <div class="photographer_info">
+        <p class="bk-sub">{{page.header.img.title}}</p>
+        <p class="bk-sub">{{page.header.img.photographer}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+    <div id="about-toc" class="bk-blog-style bk-static-style bk-blog-content bk-sec__width">
+      <ul>
+        <li class="bk-sub">About</li>
+        <li id="intro_link">
+          <a href="#bk-about-introduction" uk-scroll>Introduction</a>
+          <div class="link_line"></div>
+        </li>
+        <li> <a href="#about-me" uk-scroll>About me</a> </li>
+        <li> <a href="#bk-timeline" uk-scroll>Timeline + CV</a> </li>
+        <li> <a href="#news" uk-scroll>News and Thoughts</a> </li>
+        <li> <a href="#social" uk-scroll>Social Media + Contact</a> </li>
+      </ul>
+      <p class="about">
+        {{ page.toc_about }}
+      </p>
+    </div>
+</section>
+
+<section class="bk-blog-style bk-sec__yellow bk-sec bk-sec__two" id="bk-about-introduction">
+  <div id="anchor">
+    <div class="anchor__el"></div>
+    <div class="anchor__line"></div>
+  </div>
+  <div class="bk-sec__inner bk-sec__width">
+    <h2>About Site</h2>
+    <div class="bk-sec__text_frame">
+      {{ page.intro | markdownify }}
+      <div class="bk-sec__sign">
+        {% include svg/_sign.html %}
+      </div>
+    </div>
+  </div>
+  <div class="bk-sec__ending">
+    <div class="sec__num sec__info">
+      <div class="bk-sec__vert">
+        <a href="{{ site.url }}"><strong>Link to</strong> bastiankroggel.com</a>
+      </div>
+      <p class="current">01</p>
+      <p>/</p>
+      <p class="all">07</p>
+    </div>
+    <div class="sec__title sec__info">
+      <p class="bk-sub">About Site</p>
+    </div>
+  </div>
+</section>
+
+<section class="bk-blog-style bk-sec bk-sec__center" id="about-me">
+  <div class="bk-sec__logo">
+    <div class="bk-sec__logo_el">
+      {% include svg/_icon.html %}
+    </div>
+  </div>
+  <div class="bk-sec__inner">
+    <div class="bk-sec__img">
+      <img src="/assets/img/dev/bk_high.jpg" alt="Bastian Kroggel">
+    </div>
+    <div class="bk-sec__text bk-sec__width">
+      <h2>About Bastian</h2>
+      <div class="bk-sec__text_frame">
+        {{ page.about | markdownify }}
+      </div>
+    </div>
+  </div>
+  <div class="bk-sec__ending">
+    <div class="sec__num sec__info">
+      <p class="current">02</p>
+      <p>/</p>
+      <p class="all">07</p>
+    </div>
+    <div class="sec__title sec__info">
+      <p class="bk-sub">About Bastian</p>
+    </div>
+  </div>
+</section>

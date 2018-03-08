@@ -1,6 +1,6 @@
 ---
 title: About me
-layout: static
+layout: about
 header:
   img:
     photographer: Martin Sattler on Unsplash
@@ -18,6 +18,16 @@ quote:
 sign: true
 toc_about: |
     Etiam congue ultrices sapien, sit amet condimentum lectus. Nulla vel sagittis dolor. Cras non metus volutpat, vestibulum nunc vel, finibus odio. Duis vestibulum faucibus interdum. Nam egestas aliquet metus. Nunc hendrerit euismod elit eu pellentesque. Integer pulvinar felis vitae libero tempus finibus.
+intro: |
+    On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.  
+    These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business is will frequently occur that pleasures have to be repudiated and annoyances accepted.
+     
+    The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+about: |
+    Fusce dictum vestibulum nulla non dignissim. Nulla facilisi. Sed tincidunt rhoncus ligula, et vehicula felis tristique pellentesque. Pellentesque at pharetra sapien.  
+
+    In imperdiet risus erat, in sodales tortor volutpat vitae. Nulla elementum vel nisi id lobortis. Nam at efficitur elit, eu laoreet ante. Integer efficitur placerat nisi vestibulum tincidunt. Donec eu diam a nibh commodo congue id sit amet ligula. Suspendisse posuere eleifend dolor, in tincidunt risus placerat non.  
+    Vestibulum hendrerit purus vel accumsan placerat. Quisque interdum est vel fringilla rhoncus. Nullam dolor turpis, consequat ut ultrices quis, vulputate interdum erat. Ut gravida arcu in efficitur tincidunt. Vivamus dignissim aliquam auctor. Maecenas consectetur porta ligula.
 timeline:
   - description: >
       Vestibulum mattis lacus est. Donec vestibulum sed eros at auctor. Aenean
@@ -96,22 +106,3 @@ contact:
       url: mailto:contact@bastiankroggel.com
       text: Send an email to Bastian‘s inbox
 ---
-
-Praesent vehicula laoreet odio ut fringilla. Vestibulum suscipit purus non ornare dignissim. Aenean feugiat rutrum arcu, ac luctus tortor malesuada ac. Mauris eget arcu in eros interdum eleifend. Donec imperdiet quam ante, eu fringilla mi fringilla ut. Donec nec ex eget nisl porta gravida quis in ex. Sed purus quam, imperdiet non lobortis consequat, imperdiet quis quam. Maecenas nec consequat neque, feugiat viverra odio. Fusce ac eleifend ipsum, non tincidunt ipsum. Praesent euismod arcu quis nunc finibus tempus. Curabitur dignissim convallis iaculis. Quisque volutpat hendrerit lacus vel euismod. Mauris iaculis neque quis velit porttitor, ut pharetra justo pellentesque. Aliquam imperdiet lacus nec justo euismod laoreet. Etiam a iaculis enim, id porta ligula.
-
-<span id="about-me"></span>
-<div class="bk-blog-style bk_about_quote" style="margin-top: 70px">
-  <div class="bk_about_quote_inner">
-    <p class="bk_quote__main">It's me,<br>Bastian.</p>
-    <div class="bk_quote__author">
-      <p>a few words about myself</p>
-    </div>
-  </div>
-</div>
-
-Fusce dictum vestibulum nulla non dignissim. Nulla facilisi. Sed tincidunt rhoncus ligula, et vehicula felis tristique pellentesque. Pellentesque at pharetra sapien.
-In imperdiet risus erat, in sodales tortor volutpat vitae. Nulla elementum vel nisi id lobortis. Nam at efficitur elit, eu laoreet ante. Integer efficitur placerat nisi vestibulum tincidunt. Donec eu diam a nibh commodo congue id sit amet ligula. Suspendisse posuere eleifend dolor, in tincidunt risus placerat non.
-
-![Bastian Kroggel](/assets/img/dev/bk_big.jpg){: data-subtitle="courtesy of [@FloGehm](https://twitter.com/FloGehm)"}
-
-Vestibulum hendrerit purus vel accumsan placerat. Quisque interdum est vel fringilla rhoncus. Nullam dolor turpis, consequat ut ultrices quis, vulputate interdum erat. Ut gravida arcu in efficitur tincidunt. Vivamus dignissim aliquam auctor. Maecenas consectetur porta ligula.

@@ -100,7 +100,7 @@
 // bk-timeline
 
 #bk-timeline {
-  background: $blue-black;
+  background: $blue-accent;
   width: 100%;
   min-height: unset;
   overflow: hidden;
@@ -112,7 +112,7 @@
     left: 0;
     content: '';
     height: 100px;
-    opacity: 0.5;
+    opacity: 0.2;
   }
   &:before {
     background: linear-gradient(to bottom, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0.981) 9.7%, hsla(0, 0%, 0%, 0.932) 18.3%, hsla(0, 0%, 0%, 0.865) 25.5%, hsla(0, 0%, 0%, 0.789) 31.8%, hsla(0, 0%, 0%, 0.707) 37.5%, hsla(0, 0%, 0%, 0.623) 42.8%, hsla(0, 0%, 0%, 0.538) 47.8%, hsla(0, 0%, 0%, 0.452) 52.8%, hsla(0, 0%, 0%, 0.366) 57.9%, hsla(0, 0%, 0%, 0.282) 63.2%, hsla(0, 0%, 0%, 0.202) 68.9%, hsla(0, 0%, 0%, 0.126) 75.3%, hsla(0, 0%, 0%, 0.061) 82.7%, hsla(0, 0%, 0%, 0.015) 91.4%, hsla(0, 0%, 0%, 0) 100%);
@@ -175,13 +175,13 @@
   };
   &:before {
     content: '';
-    background: linear-gradient(to top, hsl(200, 19%, 18%) 0%, hsla(200, 19%, 18%, 0.981) 9.7%, hsla(200, 19%, 18%, 0.932) 18.3%, hsla(200, 19%, 18%, 0.865) 25.5%, hsla(200, 19%, 18%, 0.789) 31.8%, hsla(200, 19%, 18%, 0.707) 37.5%, hsla(200, 19%, 18%, 0.623) 42.8%, hsla(200, 19%, 18%, 0.538) 47.8%, hsla(200, 19%, 18%, 0.452) 52.8%, hsla(200, 19%, 18%, 0.366) 57.9%, hsla(200, 19%, 18%, 0.282) 63.2%, hsla(200, 19%, 18%, 0.202) 68.9%, hsla(200, 19%, 18%, 0.126) 75.3%, hsla(200, 19%, 18%, 0.061) 82.7%, hsla(200, 19%, 18%, 0.015) 91.4%, hsla(200, 19%, 18%, 0) 100%);
+    background: linear-gradient(to top, hsl(217, 32%, 28%) 0%, hsla(217, 32%, 28%, 0.981) 9.7%, hsla(217, 32%, 28%, 0.932) 18.3%, hsla(217, 32%, 28%, 0.865) 25.5%, hsla(217, 32%, 28%, 0.789) 31.8%, hsla(217, 32%, 28%, 0.707) 37.5%, hsla(217, 32%, 28%, 0.623) 42.8%, hsla(217, 32%, 28%, 0.538) 47.8%, hsla(217, 32%, 28%, 0.452) 52.8%, hsla(217, 32%, 28%, 0.366) 57.9%, hsla(217, 32%, 28%, 0.282) 63.2%, hsla(217, 32%, 28%, 0.202) 68.9%, hsla(217, 32%, 28%, 0.126) 75.3%, hsla(217, 32%, 28%, 0.061) 82.7%, hsla(217, 32%, 28%, 0.015) 91.4%, hsla(217, 32%, 28%, 0) 100%);
     bottom: 100%;
     left: 0;
     height: 300px;
     width: 100%;
     position: absolute;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: opacity ease-in-out .5s;
     display: block;
   }
@@ -242,9 +242,8 @@
       top: -10%;
       left: calc(100% - 1px);
       width: 3px;
-      //background: #5a5a5a;
-      background: $blue-black;
-      background: url('/assets/img/dev/textures/binding-dark.png'), $blue-black;
+      background: $blue-accent;
+      //background: url('/assets/img/dev/textures/binding-dark.png'), $blue-accent;
     }
   }
   .luzid_el__content {
@@ -399,12 +398,12 @@ $clock-color: white;
 
 #about-toc {
   margin: 100px auto;
-  //text-align: center;
   text-align: left;
   @include media-query($medium){
     text-align: left;
+    margin: 140px 0 100px calc(20% + 50px);
   };
-  p {
+  p.about {
     position: relative;
     //margin: 0 auto;
     &:before {
@@ -462,45 +461,22 @@ $clock-color: white;
   }
 }
 
-.pulsating-circle {
+#anchor {
   display: none;
   @include media-query($medium){
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 3px;
     position: absolute;
-    //top: 0;
-    right: 40px;
-    .pulsating__point {
+    right: 35%;
+    top: 0;
+    .anchor__el {
+      opacity: 0;
+      height: 100%;
+      width: 100%;
       background: #5a5a5a;
-      width: 30%;
-      height: 30%;
-      border-radius: 50%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
     }
-    .pulsating__dot {
-      animation: pulsate 2s ease-out;
-      animation-iteration-count: infinite;
-      opacity: 0.0;
-      border: 3px solid #5a5a5a;
-      border-radius: 50%;
-      box-sizing: border-box;
-      height: 100%;
-      width: 100%;
-      position: relative;
-      display: inline-block;
-      text-align: center;
-    }
-    .pulsating__dot_frame {
-      opacity: 0;
-      height: 100%;
-      width: 100%;
-    }
-    .pulsating__line {
+    .anchor__line {
       position: absolute;
       transform: translateX(-50%);
       left: 50%;
@@ -512,16 +488,6 @@ $clock-color: white;
       }
     }
   }
-};
-
-.pulsating-circle + p {
-  margin-top: 0;
-}
-
-@-webkit-keyframes pulsate {
-    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
-    50% {opacity: 1.0;}
-    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
 
 section#social {
@@ -645,10 +611,10 @@ section#social {
   @include display_flex;
   @include direction_column;
   @include justify-content(space-between);
-  position: relative;
-  @include media-query($medium){
-    margin-top: -20px;
+  @include media_query($medium){
+    margin-bottom: -50px;
   };
+  position: relative;
   .intro_img {
     width: 80%;
     padding: 30px;
@@ -690,4 +656,199 @@ section#social {
     }
   };
 
+}
+
+.bk-about {
+  min-height: unset;
+  &__intro {
+    padding: 100px 30px 50px 30px;
+    @include media_query($small){
+      padding: 100px 50px 50px 50px;
+    }
+  }
+  .bk-about-main {
+    width: 100%;
+  }
+}
+
+.bk-sec {
+  @include display_flex;
+  position: relative;
+  min-height: 500px;
+}
+
+.bk-sec__inner {
+  max-width: 500px;
+  padding: 50px 25px 100px;
+  position: relative;
+  @include media_query($small){
+    padding: 50px;
+  };
+  @include media_query($medium){
+    padding: 100px;
+  };
+}
+
+.bk-sec__two {
+  @include align-items(center);
+  @include justify-content(center);
+  position: relative;
+  min-height: 650px;
+  .bk-sec__inner {
+    .bk-sec__text_frame {
+      position: relative;
+    }
+  }
+  @include media_query($small){
+    .bk-sec__inner {
+      max-width: 900px;
+      .bk-sec__text_frame {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -moz-column-gap: 2em;
+        -webkit-column-gap: 2em;
+        column-gap: 2em;
+      }
+    }
+  };
+  @include media_query($medium){
+    .bk-sec__inner {
+      .bk-sec__text_frame {
+        -moz-column-gap: 3em;
+        -webkit-column-gap: 3em;
+        column-gap: 3em;
+      }
+    }
+  };
+}
+
+.bk-sec__width {
+  @media (max-width: $small) {
+    max-width: 550px;
+  };
+}
+
+.bk-sec__center {
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.bk-sec__yellow {
+  background: $yellow-accent;
+}
+.bk-sec__blue {
+  background: $blue-accent;
+  p {
+    color: white;
+  }
+}
+
+.bk-sec__sign {
+  position: relative;
+  height: 70px;
+  width: 187px;
+  margin-top: -30px;
+  margin-left: -5px;
+  @include media_query($small){
+    position: absolute;
+  };
+}
+
+#about-me {
+  @include direction_column;
+  .bk-sec__inner {
+    @include display_flex;
+    @include direction_column;
+    @include align-items(center);
+    max-width: unset;
+    padding: 0px 0 60px;
+    @include media_query($small){
+      @include align-items(flex-end);
+      @include justify-content(center);
+      padding: 0;
+      width: 100%;
+      min-height: 700px;
+    };
+    .bk-sec__text {
+      width: calc(100% - 50px);
+      margin: 50px auto 30px;
+      @include media_query($small){
+        width: calc(60% - 50px);
+        max-width: 500px;
+        margin: 15% calc(40% + 20px) 5% auto;
+        text-align: right;
+      };
+    }
+    .bk-sec__img {
+      width: 100%;
+      height: 250px;
+      opacity: 0.9;
+      @include media_query($xtra-small){
+        height: 350px;
+      };
+      @include media_query($small) {
+        width: 40%;
+        position: absolute;
+        height: 100%;
+        right: 0;
+      };
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 10% 38%;
+      }
+    }
+  }
+}
+
+.bk-sec__ending {
+  width: 100%;
+  @include display_flex;
+  @include justify-content(space-between);
+  position: absolute;
+  bottom: 0;
+  .sec__info {
+    padding: 25px;
+    @include media_query($small){
+      padding: 30px;
+    };
+  }
+}
+
+.bk-sec__vert {
+  transform: rotate(270deg) translateX(20px);
+  transform-origin: 0 0;
+  position: absolute;
+  white-space: nowrap;
+  display: none;
+  line-height: 0;
+  @include media_query($medium){
+    display: block;
+  };
+}
+
+.bk-sec__logo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .bk-sec__logo_el {
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+    svg {
+      fill: white;
+    }
+    @include media_query($small){
+      margin: 30px;
+      svg {
+        fill:black;
+      }
+    };
+    a {
+      background: none;
+    }
+  }
 }

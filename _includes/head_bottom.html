@@ -507,33 +507,33 @@
   <script type="text/javascript">
     function about_intro_line(){
       var intro_link = $('#intro_link')
-      var pulsating_dot = $('.pulsating-circle')
+      var anchor = $('#anchor')
 
       var intro_link_left = intro_link.offset().left
       var intro_link_right = ((intro_link.offset().left + intro_link.outerWidth()));
-      var pulsating_dot_left = pulsating_dot.offset().left + (pulsating_dot.outerWidth(true) / 2)
+      var anchor_left = anchor.offset().left + (anchor.outerWidth(true) / 2)
 
       $('#intro_link .link_line').css({
-        'width': (pulsating_dot_left - intro_link_right),
+        'width': (anchor_left - intro_link_right),
         'transition': 'width ease-in-out .6s'
       });
 
       var intro_link_top = intro_link.offset().top
       var intro_link_height = intro_link.outerHeight(false) / 2
-      var pulsating_dot_top = pulsating_dot.offset().top
-      var pulsating_dot_height = pulsating_dot.outerHeight(true) / 2
-      var line_top = -(pulsating_dot_top - intro_link_top - intro_link_height)
-      var line_height = pulsating_dot_top - intro_link_top - intro_link_height + pulsating_dot_height
-      $('.pulsating__line').css({
+      var anchor_top = anchor.offset().top
+      var anchor_height = anchor.outerHeight(true) / 2
+      var line_top = -(anchor_top - intro_link_top - intro_link_height)
+      var line_height = anchor_top - intro_link_top - intro_link_height + anchor_height
+      $('.anchor__line').css({
         'height': line_height,
         'top': line_top,
         'transition': 'height ease-in-out 1.6s .6s'
       });
-      $('.pulsating__point, .pulsating__dot_frame').css({
+      $('#anchor .anchor__el').css({
         'opacity': 1,
         'transition': 'opacity ease-in-out .2s 2.2s'
       })
-      $('.pulsating-circle').addClass('active');
+      $('#anchor').addClass('active');
     }
 
     // $(window).on('load', function() {
@@ -560,18 +560,18 @@
     $( window ).resize(function() {
       if( $(window).width() > 991 ){
         about_intro_line();
-      } else if ( $(window).width() < 991 && $('.pulsating-circle').hasClass('active') ){
-        $('.pulsating__line').css({
+      } else if ( $(window).width() < 991 && $('#anchor').hasClass('active') ){
+        $('.anchor__line').css({
           'height': '0px',
           'top': 'unset'
         });
         $('#intro_link .link_line').css({
           'width': '0px'
         });
-        $('.pulsating__point, .pulsating__dot_frame').css({
+        $('#anchor .anchor__el').css({
           'opacity': 0
         })
-        $('.pulsating-circle').removeClass('active')
+        $('#anchor').removeClass('active')
       }
     })
 
@@ -710,6 +710,12 @@
     function intro_image() {
       var image_div = $('.bk-blog__intro_img')
       var height = $(window).height() - $('.bk-blog-nav--frame').outerHeight();
+      if ($(window).width() > 991) {
+        var vertical_blog_link = $('.vertical-transform-frame').outerWidth() + $('.vertical-transform-frame').position().top + 40
+        if (vertical_blog_link > height) {
+          var height = vertical_blog_link
+        }
+      }
       image_div.css('min-height', height)
     }
     intro_image();

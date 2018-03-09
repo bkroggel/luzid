@@ -630,8 +630,8 @@ section#social {
   @include display_flex;
   @include direction_column;
   @include justify-content(space-between);
-  max-width: calc(100% - 20px);
-  margin-left: 20px;
+  max-width: calc(100% - 15px);
+  margin-left: 15px;
   margin-bottom: -100px;
   @include media_query($small){
     max-width: calc(100% - 30px);

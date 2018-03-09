@@ -347,7 +347,7 @@
     background: rgb(255,255,255);
     z-index: 1;
     margin-top: 5%;
-    box-shadow: 6px 6px 0 0 $accent-two;
+    box-shadow: 6px 6px 0 0 $overview-accent;
   }
   .blog-posts--overview-content .intro-frame {
     margin-bottom: 0;
@@ -377,7 +377,7 @@
     opacity: 0.9;
   };
   .social__filler {
-    background: $accent-two;
+    background: $overview-accent;
     margin: 2px 1px;
     margin-left: 0;
     width: calc(100% - 35px * 6 - 13 * 1px);

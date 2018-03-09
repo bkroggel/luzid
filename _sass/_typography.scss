@@ -287,13 +287,13 @@ a.announcement_link {
 }
 
 .overview-posts .read_more-link a.link {
-  border: 2px solid $accent-two;
+  border: 2px solid $overview-accent;
   padding: 5px 10px;
   font-size: 0.6rem;
   color: $main-color;
   font-weight: 400;
   margin-top: 15px;
-  background: $accent-two;
+  background: $overview-accent;
   @include media-query($large){
     padding: 10px 25px;
     margin-top: 0;
@@ -317,7 +317,7 @@ a.announcement_link {
   margin: 2px 1px;
   background: white;
   text-align: center;
-  @include link-mix($accent-two);
+  @include link-mix($overview-accent);
   font-size: 0.8rem;
   &:last-of-type{
     margin-right: 0;

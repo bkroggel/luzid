@@ -21,13 +21,12 @@ toc_about: |
 intro: |
     On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.  
     These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business is will frequently occur that pleasures have to be repudiated and annoyances accepted.
-     
+
     The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
 about: |
-    Fusce dictum vestibulum nulla non dignissim. Nulla facilisi. Sed tincidunt rhoncus ligula, et vehicula felis tristique pellentesque. Pellentesque at pharetra sapien.  
+    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
 
-    In imperdiet risus erat, in sodales tortor volutpat vitae. Nulla elementum vel nisi id lobortis. Nam at efficitur elit, eu laoreet ante. Integer efficitur placerat nisi vestibulum tincidunt. Donec eu diam a nibh commodo congue id sit amet ligula. Suspendisse posuere eleifend dolor, in tincidunt risus placerat non.  
-    Vestibulum hendrerit purus vel accumsan placerat. Quisque interdum est vel fringilla rhoncus. Nullam dolor turpis, consequat ut ultrices quis, vulputate interdum erat. Ut gravida arcu in efficitur tincidunt. Vivamus dignissim aliquam auctor. Maecenas consectetur porta ligula.
+    It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
 timeline:
   - description: >
       Vestibulum mattis lacus est. Donec vestibulum sed eros at auctor. Aenean
@@ -95,7 +94,7 @@ contact:
       text: '@realGusti on Twitter'
   linkedin:
     desc: >
-      On LinkedIn you can find Bastians track record and important positions of his professional life. Most of the interesting information can also be found on his personal website but if your curious you are of course absolutely welcome to check out his LinkedIn profile.
+      On LinkedIn you can find Bastians track record and important positions of his professional life. Most of the interesting information can also be found on his personal website but if you are curious you are of course absolutely welcome to check out his LinkedIn profile.
     link:
       url: https://linkedin.com/in/bastian-kroggel-125712121
       text: 'B. Kroggel on LinkeIn'

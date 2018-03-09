@@ -213,16 +213,35 @@
   }
 }
 
-.bk-timeline-content {
+.bk-timeline-main {
+  width: 100%;
+}
+
+.bk-timeline-content.bk-sec {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
   @include display_flex;
   @include direction_column;
   @include align-items(center);
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  @include media-query($xtra-small){
+    width: calc(100% - 60px);
+  };
+  @include media-query($small){
+    width: calc(100% - 100px);
+  };
   @include media-query($medium){
     display: block;
+    width: calc(100% - 200px);
   };
+}
+
+.bk-timeline__intro {
+  max-width: 500px;
+  margin-bottom: 100px;
+  align-self: flex-start;
 }
 
 .bk-static-style .luzid_element {
@@ -397,7 +416,7 @@ $clock-color: white;
 }
 
 #about-toc {
-  margin: 100px auto;
+  margin: 200px auto 100px;
   text-align: left;
   @include media-query($medium){
     text-align: left;
@@ -611,8 +630,17 @@ section#social {
   @include display_flex;
   @include direction_column;
   @include justify-content(space-between);
+  max-width: calc(100% - 20px);
+  margin-left: 20px;
+  margin-bottom: -100px;
+  @include media_query($small){
+    max-width: calc(100% - 30px);
+    margin-left: 30px;
+  };
   @include media_query($medium){
     margin-bottom: -50px;
+    max-width: 100%;
+    margin-left: 0;
   };
   position: relative;
   .intro_img {
@@ -662,7 +690,10 @@ section#social {
   min-height: unset;
   &__intro {
     padding: 100px 30px 50px 30px;
-    @include media_query($small){
+    @include media_query($xtra-small){
+      padding: 100px 60px 50px 60px;
+    }
+    @include media_query($medium){
       padding: 100px 50px 50px 50px;
     }
   }
@@ -811,6 +842,7 @@ section#social {
   bottom: 0;
   .sec__info {
     padding: 25px;
+    position: relative;
     @include media_query($small){
       padding: 30px;
     };
@@ -827,6 +859,11 @@ section#social {
   @include media_query($medium){
     display: block;
   };
+}
+
+.sec__title .bk-sec__vert {
+  left: calc(100% - 30px); //width of .sec__info substracted by padding of 30px
+  transform: rotate(90deg) translate(calc(-100% - 20px), 0%)
 }
 
 .bk-sec__logo {

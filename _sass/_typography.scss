@@ -699,30 +699,6 @@ a.link_button.-white {
   }
 }
 
-.bk-card {
-  h2 {
-    @include display_flex;
-    align-self: flex-end;
-    color: white;
-    position: relative;
-    margin: 0;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: normal;
-    font-family: $reading;
-  }
-  p {
-    color: $dark-color;
-    font-size: 0.8rem;
-    line-height: 1.4em;
-    font-family: $reading;
-    margin: 0;
-    &.action {
-      color: $accent-two;
-    }
-  }
-}
-
 .intro_img .headline {
   font-family: $sans-serif;
   color: white;
@@ -862,5 +838,33 @@ a.link_button.-white {
     p {
       color: white;
     }
+  }
+}
+
+.bk-blog-style .bk-card {
+  h3 {
+    @include display_flex;
+    align-self: flex-end;
+    color: white;
+    position: relative;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    font-family: $reading;
+  }
+  p {
+    color: $dark-color;
+    font-size: 0.8rem;
+    line-height: 1.4em;
+    font-family: $reading;
+    margin: 0;
+    &.action {
+      color: $accent-two;
+    }
+  }
+  a {
+    background: none;
+    text-shadow: none;
   }
 }

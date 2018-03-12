@@ -224,8 +224,13 @@
   @include display_flex;
   @include direction_column;
   @include align-items(center);
+}
+
+.bk-timeline-content.bk-sec,
+#social .bk-sec__intro_frame {
   width: calc(100% - 50px);
   margin: 0 auto;
+  display: block;
   @include media-query($xtra-small){
     width: calc(100% - 60px);
   };
@@ -236,12 +241,6 @@
     display: block;
     width: calc(100% - 200px);
   };
-}
-
-.bk-timeline__intro {
-  max-width: 500px;
-  margin-bottom: 100px;
-  align-self: flex-start;
 }
 
 .bk-static-style .luzid_element {
@@ -542,9 +541,9 @@ section#social {
 }
 
 .bk-card {
-  width: calc(100% - 20px);
+  width: calc(100% - 40px);
   max-width: 500px;
-  margin: 10px;
+  margin: 5px 20px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
   border-radius: 2px;
   box-sizing: border-box;
@@ -888,4 +887,18 @@ section#social {
       background: none;
     }
   }
+}
+
+.bk-sec__intro_frame,
+#social .bk-sec__intro_frame {
+  margin-top: 100px;
+}
+
+.bk-sec__intro {
+  max-width: 500px;
+  margin-bottom: 50px;
+  align-self: flex-start;
+  @include media_query($small){
+    margin-bottom: 100px;
+  };
 }

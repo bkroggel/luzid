@@ -461,22 +461,8 @@ $clock-color: white;
   }
 }
 
-.bk_about_quote {
-  margin: 0 auto;
-  margin-bottom: 10px;
-  padding: 0;
-  .bk_about_quote_inner {
-    max-width: 350px;
-    margin-left: -10px;
-    @include media-query($xtra-small){
-      max-width: 450px;
-    };
-    @include media-query($medium){
-      margin-left: -5%;
-      width: 95%;
-      max-width: unset;
-    };
-  }
+.bk-about-quote {
+  background: $blue-black;
 }
 
 #anchor {

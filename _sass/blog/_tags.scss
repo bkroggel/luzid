@@ -55,11 +55,11 @@
 }
 
 .bk__tags a {
-  border: 1px solid $dark-color;
-  border-radius: 20px;
+  border: 1px solid $overview-accent;
   display: inline-block;
-  margin: 6px 3px;
-  padding: 3px 15px;
+  border-radius: 2px;
+  margin: 3px 6px 3px 0;
+  padding: 4px 15px;
   &:first-of-type {
     margin-left: 0;
   }

@@ -127,6 +127,12 @@ a.blog-posts--title {
   @include link-mix($darkest-color);
 }
 
+.overview-posts h1.posts-title.bold-title {
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: -0.03em;
+}
+
 .overview-posts h1.posts-title {
   font-size: 1.85em;
   @include media-query($xtra-small){
@@ -138,8 +144,8 @@ a.blog-posts--title {
   font-size: 0.85rem;
   line-height: 1.6em;
   margin: 0.5em 0;
-  font-weight: 300;
-  -webkit-font-smoothing: auto;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Tags Formatting
@@ -150,7 +156,7 @@ a.blog-posts--title {
 .bk__tags a,
 .pic-break__credits p,
 .pic-break__credits a{
-  @include link-mix($dark-color);
+  @include link-mix($overview-accent);
   font-family: $sans-serif;
   font-weight: 600;
   font-size: 0.6rem;
@@ -189,7 +195,7 @@ a.blog-posts--title {
   color: $bb-soft;
   font-family: $sans-serif;
   font-size: 0.6em;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -234,6 +240,7 @@ a.blog-posts--title {
 .bk-footer-1__sec2 h3 {
   font-weight: 300;
   color: white;
+  font-weight: 600;
 }
 
 .bk-footer-1__social p a {
@@ -294,6 +301,10 @@ a.announcement_link {
   font-weight: 400;
   margin-top: 15px;
   background: $overview-accent;
+  @include media-query($xtra-small){
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    border-radius: 2px;
+  };
   @include media-query($large){
     padding: 10px 25px;
     margin-top: 0;
@@ -504,6 +515,15 @@ a.link_button.-white {
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     background: rgba(255, 255, 255, .9);
+    .u-hiddenVisually {
+      display: none;
+    }
+    a.link {
+      text-transform: none;
+      letter-spacing: 0;
+      text-decoration: underline;
+      text-decoration-skip: ink;
+    }
   }
   .tweet_frame_img .tweet_content p {
     padding: 1px 7px;
@@ -544,6 +564,7 @@ a.link_button.-white {
       text-decoration: underline;
       text-decoration-skip: ink;
       text-decoration-color: rgba(255,255,255,0.5);
+      font-weight: 300;
     }
   }
   a.link {
@@ -563,31 +584,6 @@ a.link_button.-white {
 }
 
 // bk-timeline
-
-#bk-timeline .bk_about_quote  {
-  text-align: center;
-  margin: 0 auto;
-  align-self: flex-start;
-  p {
-    color: white;
-  }
-}
-
-#bk-timeline .bk_about_quote {
-  p.bk_quote__main {
-    text-shadow: 1px 1px $blue-black, -1px 1px $blue-black, -1px -1px $blue-black, 1px -1px $blue-black, -1px 0px $blue-black, 0px -1px $blue-black, 1px 0px $blue-black, 0px 1px $blue-black;
-  }
-  .bk_quote__author {
-    margin: 0 auto;
-    margin-top: 5px;
-    line-height: 0.9em;
-    width: 500px;
-    max-width: 85%;
-    p {
-      line-height: 1.5em;
-    }
-  }
-}
 
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-date,
 #bk-timeline .luzid_element>.luzid_el__title>p.luzid-position,
@@ -658,43 +654,6 @@ a.link_button.-white {
           font-size: 1.35rem;
         }
       }
-    }
-  }
-}
-
-.bk_about_quote {
-  p.bk_quote__main,
-  .bk_quote__author p{
-    color: $darkest-color;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    font-family: $sans-serif;
-    display: inline;
-    font-weight: 300;
-    -webkit-font-smoothing: auto;
-  }
-  p.bk_quote__main {
-    font-size: 3rem;
-    line-height: .6em;
-    @include media-query($xtra-small){
-      font-size: 4.3rem;
-    };
-    @include media-query($medium){
-      font-size: 5.5rem;
-    };
-  }
-  .bk_quote__author {
-    margin-left: 5px;
-    margin-top: -5px;
-    @include media-query($medium){
-      margin-top: -5px;
-      margin-left: 15px;
-    };
-    p {
-      font-size: 0.8rem;
-      @include media-query($small){
-        font-size: unset;
-      };
     }
   }
 }
@@ -811,6 +770,7 @@ a.link_button.-white {
     font-family: $serif;
     font-size: 3rem;
     line-height: 1em;
+    margin-left: 10%;
   }
   .bk-sec__vert a {
     text-transform: uppercase;
@@ -836,6 +796,9 @@ a.link_button.-white {
       }
     }
     p {
+      color: white;
+    }
+    .sec__info p {
       color: white;
     }
   }

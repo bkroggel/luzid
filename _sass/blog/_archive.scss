@@ -81,7 +81,7 @@
   border-radius: 3px;
   @include display_flex;
   @include align-items(center);
-  box-shadow: 2px 2px $accent-two;
+  //box-shadow: 2px 2px $accent-two;
   @include media-query($medium){
     width: calc(50% - 10px);
     margin-right: 10px;

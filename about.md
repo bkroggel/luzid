@@ -100,7 +100,7 @@ contact:
       text: 'B. Kroggel on LinkeIn'
   email:
     desc: >
-      For more important messages, inquerys that shouldn't cross the servers of the major social media platforms or just because you prefer the "old way of messaging" - he personally does as well - just send him an email and he will be in touch with you as fast as possible.
+      For more important messages, inquiries that shouldn't cross the servers of the major social media platforms or just because you prefer the "old way of messaging" - he personally does as well - just send him an email and he will get in touch with you as fast as possible.
     link:
       url: mailto:contact@bastiankroggel.com
       text: Send an email to Bastian‘s inbox

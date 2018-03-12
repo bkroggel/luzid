@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~1.2.0/dist/cms.css" />
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~1.3.5/dist/cms.css" />
   <style>
   .nc-controlPane-control:last-of-type {
       margin-bottom: 16px !important;
@@ -17,7 +17,7 @@
 
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@~1.2.0/dist/cms.js"></script>
+  <script src="https://unpkg.com/netlify-cms@~1.3.5/dist/cms.js"></script>
   <script defer src="{{ "/assets/js/fontawesome-all.min.js" | prepend: site.baseurl}}"></script>
   <script>
     FontAwesomeConfig = { searchPseudoElements: true };
@@ -139,6 +139,32 @@
       toPreview: function(obj) {
         return (
           '<span class="sidenote"><span class="sidenote__toggle">' + obj.element + '</span><span class="sidenote__note">' + obj.sidenote + '</span></span>'
+        );
+      },
+    });
+
+    CMS.registerEditorComponent({
+      id: "video",
+      label: "Video",
+      fields: [{
+        name: 'video_url',
+        label: 'Video-URL',
+        widget: 'string'
+      }],
+      pattern: /^<video src="(.*)" controls>Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="(.*)">download it<\/a> and watch it with your favorite video player!<\/video>/,
+      fromBlock: function(match) {
+        return {
+          video_url: match[1],
+        };
+      },
+      toBlock: function(obj) {
+        return (
+          '<video src="' + obj.video_url + '" controls>Sorry, your browser doesn\'t support embedded videos, but don\'t worry, you can <a href="' + obj.video_url + '">download it</a> and watch it with your favorite video player!</video>'
+        );
+      },
+      toPreview: function(obj) {
+        return (
+          '<video src="' + obj.video_url + '" controls>Sorry, your browser doesn\'t support embedded videos, but don\'t worry, you can <a href="' + obj.video_url + '">download it</a> and watch it with your favorite video player!</video>'
         );
       },
     });

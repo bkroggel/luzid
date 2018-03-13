@@ -54,6 +54,7 @@ footer {
   @include display_flex;
   @include align-items(center);
   flex-grow: 2;
+  min-height: 150px;
 }
 
 .bk-footer-1__sec3__top {

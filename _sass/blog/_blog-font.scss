@@ -682,6 +682,10 @@ p.intro a:after {
   a {
     font-size: 0.85rem;
   }
+  @include media-query($medium){
+    margin-left: -2rem;
+    width: calc(100% + 4rem);
+  };
 }
 
 .info_bar {

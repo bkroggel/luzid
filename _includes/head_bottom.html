@@ -500,6 +500,63 @@
       //   console.log('did it, sir')
       // }
     })
+
+    function collapse_sidebar(){
+      $('.bk-blog-sidebar, #blog-nav-dropdown').removeClass('active');
+      $(document.body).css('overflow', 'auto');
+      $('.bk-blog-sidebar').css('height', 0);
+    }
+
+    function call_sidebar(){
+      var navbar_height = $('.bk-blog-nav').outerHeight(true);
+      var trigger_height = $('#blog-nav-dropdown').height();
+
+      {% if page.layout == 'home' %}
+        var news_height = $('#news').outerHeight(true);
+      {% else %}
+        var news_height = 0;
+      {% endif %}
+      var storewindow_height = $('#storewindow').height();
+      if (storewindow_height) {
+        var news_height = news_height + storewindow_height
+      }
+      var margin_in_viewport = $('.bk-blog-nav--frame').outerHeight(true) + news_height - $(document).scrollTop();
+
+
+      if ($(document).scrollTop() < $('.bk-blog-nav--frame').outerHeight(true) + news_height) {
+        var screen_beauty = window.innerHeight / 20;
+        //var sidebar_height = window.innerHeight - margin_in_viewport - navbar_height - trigger_height - screen_beauty;
+        var sidebar_height = window.innerHeight - margin_in_viewport - trigger_height - screen_beauty;
+      } else {
+        var screen_beauty = window.innerHeight / 30;
+        var sidebar_height = window.innerHeight - navbar_height - trigger_height - screen_beauty;
+      }
+
+      $('.bk-blog-sidebar').css('height', sidebar_height);
+      $('.bk-blog-sidebar, #blog-nav-dropdown').addClass('active');
+      $(document.body).css('overflow', 'hidden');
+      $('.bk-blog-sidebar').scrollTop(0);
+    }
+
+    // blog-dropdown
+    $('#blog-nav-dropdown').click(function() {
+      if($(window).width() < 991) {
+        if ($('.bk-blog-sidebar').hasClass('active')) {
+          collapse_sidebar();
+        } else {
+          call_sidebar();
+        }
+      }
+    });
+
+    $(window).resize(function(){
+      if (($(window).width() > 991) && ($('.bk-blog-sidebar').hasClass('active'))) {
+        collapse_sidebar();
+        $('.bk-blog-sidebar').css('height', '');
+      } else if ($(window).width() > 991) {
+        $('.bk-blog-sidebar').css('height', '');
+      }
+    })
   </script>
 {% endif %}
 

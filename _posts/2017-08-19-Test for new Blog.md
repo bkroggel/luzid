@@ -154,10 +154,10 @@ Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vita
 
 Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
 Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed[^no] eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
-{: info=""}
+{: info="test"}
 
 Ut id tristique tortor. Sed sit amet tellus magna. Sed sed efficitur ipsum, vitae imperdiet dui. Integer sit amet pharetra nunc. Nullam quis porta ante, at fermentum tortor. Sed ut gravida nisi. [Link](http://bastiankroggel.com) _Curabitur_ __malesuada__ ***pharetra*** odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
-{:.info}
+{: info="test"}
 
 Sed ut gravida nisi. Curabitur malesuada pharetra odio, sed eleifend nulla consequat in. Sed non risus purus. Pellentesque elit ipsum, maximus eu egestas in, volutpat vitae nibh. Curabitur cursus dictum mi, nec dapibus justo porttitor eget. Vestibulum hendrerit ullamcorper orci, vitae rutrum arcu vulputate vitae. Morbi vel vulputate nunc. Integer et dui nec mi mattis scelerisque.
 

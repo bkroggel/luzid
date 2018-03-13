@@ -330,6 +330,7 @@ a.announcement_link {
   text-align: center;
   @include link-mix($overview-accent);
   font-size: 0.8rem;
+  border-radius: 2px;
   &:last-of-type{
     margin-right: 0;
   }
@@ -337,6 +338,7 @@ a.announcement_link {
     width: 40px;
     height: 40px;
     font-size: 1rem;
+    border-radius: 0;
   };
   @include media-query($medium){
     margin: 1px 2px;

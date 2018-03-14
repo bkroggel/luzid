@@ -262,8 +262,8 @@
     height: 200px;
     background: rgba(255,255,255,.5);
     margin-bottom: 20px;
-    width: calc(100% + 30px);
-    margin-left: -15px;
+    width: calc(100% + 15px);
+    //margin-left: -15px;
     @include media-query($xtra-small){
       margin-left: 0;
       width: 100%;

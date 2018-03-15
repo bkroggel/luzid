@@ -51,8 +51,11 @@
           </div>
 
         {% else %}
-            <div class="">
-              <p>There is currently no blog post.</p>
+            <div class="archive__no-blog-post bk-blog-style">
+              <div class="warning_sign">
+                {% include svg/_warning_sign.html %}
+              </div>
+              <p>Unfortunately there is currently no blog post associated with the tag <code>{{page.title}}</code>.</p>
             </div>
         {% endif %}
 

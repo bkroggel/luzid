@@ -3,7 +3,7 @@ title: "The static way of presenting your tweets"
 sub_title: "Twitter-Post-Fetcher"
 author: Bastian Kroggel
 date: 2016-03-25 15:16:00 +0200
-tags: [about, english]
+tags: [about, english, tutorial]
 permalink: /2016/03/25/The-static-way-of-presenting-your-tweets.html
 thumbnail:
   img: /assets/img/page/blog/static_tweets_thumb.jpg
@@ -25,7 +25,7 @@ While working on my little personal website I came up with the idea, that a shor
 Speaking of a nice design: Using the official [Embedded Timeline](https://dev.twitter.com/web/embedded-timelines) Feature of Twitter wasn't really an option for me. Of course, there are definitely some situations, where a simple and fast working solution might come in handy, but creating a website based on a simplistic approach definitely needs a much more tailored and well fitting option.
 
 You think that shouldn't be a problem? (Well…it is).  
-There are a great amout of plugins out there that totally fit my needs, execpt of one little detail. While [Tweetie](http://sonnyt.com/Tweetie/) by [Sonny T.](http://sonnyt.com/) for example is a outstandingly easy to use jQuery plugin that totally looks like a no-questions-asked solution, it depends (and that is totally not the fault of the developer) on the Twitter 1.1 API and therefore needs a server side authentication via an OAUTH process. Of course that is not a bummer if you already run your page on a PHP server (or probably most of the other server side processing solutions) but what if you are one of those guys who try to keep everything as simple as possible. What if you use a totally plain approach and deploy your website with an [static site generator](https://www.staticgen.com/) like [Jekyll](http://jekyllrb.com), [Hugo](http://gohugo.io/) or [Middleman](https://www.staticgen.com/middleman)?[^2]
+There are a great amout of plugins out there that totally fit my needs, execpt of one little detail. While [Tweetie](http://sonnyt.com/Tweetie/) by [Sonny T.](http://sonnyt.com/) for example is a outstandingly easy to use jQuery plugin that totally looks like a no-questions-asked solution, it depends (and that is totally not the fault of the developer) on the Twitter 1.1 API and therefore needs a server side authentication via an OAUTH process. Of course that is not a bummer if you already run your page on a PHP server (or probably most of the other server side processing solutions) but what if you are one of those guys who try to keep everything as simple as possible. What if you use a totally plain approach and deploy your website with a [static site generator](https://www.staticgen.com/) like [Jekyll](http://jekyllrb.com), [Hugo](http://gohugo.io/) or [Middleman](https://www.staticgen.com/middleman)?[^2]
 
 Looks like you've got a little problem my dear web developer.  
 Or to put it in a better way: You've got a little problem if you don't now, where to go.

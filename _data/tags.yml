@@ -7,3 +7,11 @@ tags:
     name: english
   - slug: test
     name: test
+  - slug: tutorial
+    name: tutorial
+  - slug: backup
+    name: backup
+  - slug: email
+    name: email
+  - slug: imap
+    name: imap

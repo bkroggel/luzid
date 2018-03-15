@@ -3,7 +3,7 @@ title: A multi-location weather widget build for Übersicht
 sub_title: Wttr Forecast Widget
 author: Bastian Kroggel
 date: 2017-11-30 14:04:00 +0100
-tags: [work, english]
+tags: [work, english, tutorial]
 permalink:
 thumbnail:
   img: /assets/img/page/blog/wttr_thumbnail.jpg

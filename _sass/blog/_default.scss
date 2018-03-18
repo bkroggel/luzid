@@ -126,6 +126,7 @@
     top: 0;
     z-index: 999;
     background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
     //transition: background 0.4s ease-in-out 0.6s;
     &.active {
       // background: none;
@@ -477,6 +478,7 @@
   @include align-items(center);
   @include justify-content(center);
   width: 150px;
+  position: relative;
   @include media-query($medium){
     display: none;
   };
@@ -492,6 +494,10 @@
   p {
     margin: 0;
   }
+}
+
+.stuck #blog-nav-dropdown {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 #blog-nav-dropdown.active .blog-nav-inner svg {
@@ -560,6 +566,7 @@
     height: 100%;
     transition: all .3s;
     overflow: scroll;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
   }
   @include media-query($medium) {
     @include display_flex;

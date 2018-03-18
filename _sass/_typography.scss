@@ -39,7 +39,7 @@ p {
     }
     @include media-query($medium){
       font-size: 1.35rem;
-      margin: 2px;
+      margin: 2px 0;
       display: inline-block;
       font-family: $reading;
       letter-spacing: 0;
@@ -674,7 +674,7 @@ a.link_button.-white {
         content: none;
       }
       &:first-of-type {
-        margin: 2px;
+        margin: 2px 0;
         display: block;
       }
       a {

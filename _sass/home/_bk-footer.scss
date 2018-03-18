@@ -72,7 +72,7 @@ footer {
   margin:0 0 0 10px;
 }
 .bk-footer-1__sec3__top ul {
-  margin:0 10px 0 0;
+  margin:5px 10px 5px 0;
   text-align: right;
 }
 
@@ -118,7 +118,7 @@ footer {
 
 .bk-footer-1__sec2 {
   width: calc(100% - 66px);
-  max-width: 400px;
+  max-width: 330px;
   @include display_flex;
   @include direction_column;
   @include align-items(center);

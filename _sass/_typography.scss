@@ -212,8 +212,9 @@ a.blog-posts--title {
   @include display_flex;
   @include align-items(center);
   white-space: pre;
+  text-transform: uppercase;
   @include media-query($small){
-    font-size: 0.6em;
+    font-size: 0.5em;
   };
   a {
     font-size: 1em;
@@ -224,7 +225,7 @@ a.blog-posts--title {
 .bk-footer-1__sec1__top ul li,
 .bk-footer-1__sec3__top ul li {
   line-height: 1.3em;
-  padding: 2px 0;
+  padding: 5px 0;
 }
 
 .bk-footer-1__sec1__top ul li a,
@@ -235,6 +236,7 @@ a.blog-posts--title {
   letter-spacing: 2px;
   font-weight: 400;
   text-transform: uppercase;
+  font-size: 0.8em;
 }
 
 .bk-footer-1__sec2 h3 {
@@ -465,6 +467,7 @@ a.link_button {
   background: #ed9393;
   padding: 10px 25px;
   @include pure-link($main-color);
+  border-radius: 2px;
 }
 
 a.link_button.-small {
@@ -597,6 +600,10 @@ a.link_button.-white {
   line-height: 1.7em;
 }
 
+#bk-timeline .bk-tl_element>.bk-tl_el__title>p.bk-tl-date {
+  margin-bottom: 5px;
+}
+
 #bk-timeline .bk-tl_element>.bk-tl_el__title>p.bk-tl-position {
   color: white;
   line-height: 1rem;
@@ -607,6 +614,7 @@ a.link_button.-white {
   color: white;
   font-size: 2.5rem;
   position: relative;
+  margin-bottom: 5px;
   @include media-query($small){
     font-size: 5rem;
   };
@@ -615,28 +623,28 @@ a.link_button.-white {
     position: absolute;
     height: 2px;
     top: 50%;
-    left: -9px;
+    left: -25px;
     width: 0;
     transform: translateY(-100%);
     background: white;
     @include media-query($xtra-small){
-      left: -14px;
+      left: -30px;
     };
     @include media-query($small){
-      left: -40px;
+      left: -50px;
     };
     @include media-query($medium){
-      left: -165px;
+      left: -175px;
     };
   }
   &.active:before {
-    width: 7px;
-    transition: width .4s linear;
+    width: 20px;
+    transition: width .7s linear;
     @include media-query($xtra-small){
-      width: 12px;
+      width: 25px;
     };
     @include media-query($small){
-      width: 38px;
+      width: 40px;
     };
     @include media-query($medium){
       width: 155px;
@@ -777,21 +785,21 @@ a.link_button.-white {
     text-transform: uppercase;
     line-height: 0.9em;
     letter-spacing: -0.06em;
-    &:after {
-      content: '';
-      position: relative;
-      display: inline-block;
-      height: 2px;
-      width: 70px;
-      background: $really-dark;
-      vertical-align: middle;
-      margin-left: 25px;
-      transform: translateY(-200%);
-    }
+    // &:after {
+    //   content: '';
+    //   position: relative;
+    //   display: inline-block;
+    //   height: 2px;
+    //   width: 70px;
+    //   background: $really-dark;
+    //   vertical-align: middle;
+    //   margin-left: 25px;
+    //   transform: translateY(-200%);
+    // }
   }
-  h3:after {
-    content: none;
-  }
+  // h3:after {
+  //   content: none;
+  // }
   p.main_quote {
     font-family: $serif;
     font-size: 3rem;

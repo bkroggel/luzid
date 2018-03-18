@@ -52,7 +52,7 @@ timeline:
     info: >
       Vestibulum dapibus mauris non urna auctor malesuada. Cras molestie, tellus
       et rhoncus sagittis.
-    name: SecondCompany
+    name: Viaflats B.V.
     position: Internship
     to_date: 06/1900
     website: 'https://beta.bastiankroggel.com'
@@ -60,13 +60,13 @@ timeline:
       Nulla viverra, lorem non faucibus vehicula, tellus nisl tempus ante, at
       viverra massa nulla ut libero. Nullam risus enim, pellentesque tincidunt
       tortor in, eleifend vulputate leo. Suspendisse lacus ligula, cursus.
-    from_date: 03/1450
+    from_date: January 2013
     info: |
-      Bachelors Degree</br>
+      Bachelors Degree (B.A.)</br>
       Zeppelin University on the shores of Lake Constance.
-    name: Aenean eget
+    name: Zeppelin Universität
     position: University
-    to_date: 06/1900
+    to_date: September 2017
     website: 'https://beta.bastiankroggel.com'
   - description: >-
       Proin non lectus accumsan, posuere eros pulvinar, ullamcorper mi.
@@ -77,13 +77,13 @@ timeline:
       ipsum rutrum. Mauris hendrerit bibendum enim vitae tristique. Proin odio
       tellus, interdum venenatis posuere et, condimentum eget ipsum. Vivamus
       tristique eros sapien, et dapibus mi scelerisque eu.
-    from_date: 07/1900
+    from_date: January 2013
     info: >-
       Suspendisse scelerisque erat non dapibus varius. In semper eu magna ac
       pharetra. Vivamus scelerisque dictum tellus, a blandit quam aliquet quis.
     name: Testcompany
     position: Testpositon
-    to_date: 07/1900
+    to_date: January 2013
     website: test
 contact:
   twitter:

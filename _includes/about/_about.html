@@ -8,8 +8,7 @@
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
 
-        <div class="clock-icon">
-          <div class="clock_line"></div>
+        <!-- <div class="clock-icon">
           <div class="top"></div>
           <div class="right"></div>
           <div class="bottom"></div>
@@ -17,25 +16,28 @@
           <div class="center"></div>
           <div class="hour"></div>
           <div class="minute"></div>
-        </div>
+        </div> -->
+        <div class="bk-tl__frame">
+          <div class="side_line"></div>
         {% for company in page.timeline %}
 
 
-            <div class="luzid_element">
-              <div class="luzid_el__title">
-                <p class="luzid-date">{{ company.from_date }} - {{ company.to_date }}</p>
-                <p class="luzid-title">{{ company.name }}</p>
-                <p class="luzid-position">{{ company.position }}</p>
+            <div class="bk-tl_element">
+              <div class="bk-tl_el__title">
+                <p class="bk-tl-date bk-tl__space">{{ company.from_date }} - {{ company.to_date }}</p>
+                <h3 class="bk-tl-title">{{ company.name }}</h3>
+                <p class="bk-tl-position bk-tl__space">{{ company.position }}</p>
               </div>
-              <div class="luzid_el__content">
-                <div class="luzid_line"></div>
-                <p class="luzid-info">{{ company.info }}</p>
+              <div class="bk-tl_el__content bk-tl__space">
+                <div class="bk-tl_line"></div>
+                <p class="bk-tl-info">{{ company.info }}</p>
                 <p>{{ company.description }}</p>
               </div>
             </div>
 
 
         {% endfor %}
+        </div>
       </div>
 
 

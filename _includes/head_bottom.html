@@ -692,9 +692,24 @@
           $('#expansion_button').removeClass('activated')
           expansion_top.disable()
           expansion_bottom.disable()
+
+          $('#bk-timeline h3.bk-tl-title').each( function() {
+            var that = this;
+            $(this).waypoint( function( direction ){
+              if ( direction == 'down' ) {
+                $(that).addClass('active')
+              }
+            }, {
+              offset: 'bottom-in-view'
+            })
+          })
+
         } else {
           $('#bk-timeline').css('height', deactivated);
           $('#bk-timeline .timline__expansion_bar').removeClass('remove')
+          $('html, body').animate({
+              scrollTop: $('#bk-timeline').offset().top
+          }, 600);
           expansion_top.enable()
           expansion_bottom.enable()
         }
@@ -705,64 +720,50 @@
     }
     timeline_container()
 
+    // function timeline_active () {
+    //   var height = '100%'
+    //   var num_of_items = $('#bk-timeline h3.bk-tl-title').length
+    //   $('#bk-timeline .side_line').css({
+    //     'height': height,
+    //     'transition': 'height '+ num_of_items * 1 +'s linear'
+    //   })
+    // }
 
-    function timeline_line() {
-      if ($(window).width() < 767) {
-        var height = '60px'
-        var clock_speed = 0.6
-        var wait = 1.2
-        var speed = 1.0
-      } else {
-        var height = '100%'
-        var clock_speed = 0.3
-        var wait = 0.8
-        var speed = wait + 0.2
-      }
-      $('#bk-timeline .clock-icon .clock_line').css({
-        'height': '30px',
-        'transition': 'height ' + clock_speed + 's linear'
-      })
-      $('#bk-timeline .luzid_element').each (function (index){
-        $('#bk-timeline').find('.luzid_element').eq( index ).find('.luzid_line').css({
-          'height': height,
-          'transition': 'height ' + (speed) + 's linear ' + (index * wait + clock_speed) + 's'
-        })
-      })
-    }
 
-    $('#bk-timeline .luzid_element').first().waypoint(function(direction) {
-      if (direction === 'down') {
-        if ($(window).width() > 767) {
-          $('#bk-timeline').addClass('big')
-        } else {
-          $('#bk-timeline').addClass('small')
-        }
-        timeline_line()
-        this.destroy()
-       }
-    }, {
-      offset: 'bottom-in-view'
-    })
 
-    $(window).resize(function(){
-      if ($(window).width() > 767 && $('#bk-timeline').hasClass('small')) {
-        $('#bk-timeline .luzid_line, #bk-timeline .clock-icon .clock_line').css({
-          'height': 0,
-          'transition': 'none'
-        })
-        $('#bk-timeline').removeClass('small')
-        $('#bk-timeline').addClass('big')
-        timeline_line()
-      } else if ( $(window).width() < 767 && $('#bk-timeline').hasClass('big') ) {
-        $('#bk-timeline .luzid_line, #bk-timeline .clock-icon .clock_line').css({
-          'height': 0,
-          'transition': 'none'
-        })
-        $('#bk-timeline').removeClass('big')
-        $('#bk-timeline').addClass('small')
-        timeline_line()
-      }
-    })
+    // $('#bk-timeline .bk-tl_element').first().waypoint(function(direction) {
+    //   if (direction === 'down') {
+    //     if ($(window).width() > 767) {
+    //       $('#bk-timeline').addClass('big')
+    //     } else {
+    //       $('#bk-timeline').addClass('small')
+    //     }
+    //     timeline_active()
+    //     this.destroy()
+    //    }
+    // }, {
+    //   offset: 'bottom-in-view'
+    // })
+
+    // $(window).resize(function(){
+    //   if ($(window).width() > 767 && $('#bk-timeline').hasClass('small')) {
+    //     $('#bk-timeline .luzid_line, #bk-timeline .clock-icon .clock_line').css({
+    //       'height': 0,
+    //       'transition': 'none'
+    //     })
+    //     $('#bk-timeline').removeClass('small')
+    //     $('#bk-timeline').addClass('big')
+    //     timeline_line()
+    //   } else if ( $(window).width() < 767 && $('#bk-timeline').hasClass('big') ) {
+    //     $('#bk-timeline .luzid_line, #bk-timeline .clock-icon .clock_line').css({
+    //       'height': 0,
+    //       'transition': 'none'
+    //     })
+    //     $('#bk-timeline').removeClass('big')
+    //     $('#bk-timeline').addClass('small')
+    //     timeline_line()
+    //   }
+    // })
 
     function intro_image() {
       var image_div = $('.bk-blog__intro_img')

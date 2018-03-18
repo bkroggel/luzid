@@ -147,7 +147,7 @@
 }
 
 #bk-timeline .timeline__inner {
-  margin: 100px 0;
+  margin: 100px 0 150px;
   position: absolute;
   width: 100%;
   top: 0;
@@ -240,37 +240,34 @@
   };
 }
 
-.bk-static-style .luzid_element {
+.bk-static-style .bk-tl_element {
+  margin-left: 15px;
+  @include media-query($xtra-small){
+    margin-left: 20px;
+  };
   @include media-query($small){
-    transform: none;
-    position: relative;
-    left: 15%
+    margin-left: 50px;
   };
   @include media-query($medium){
-    transform: translateX(10px);
-    left: 50%
+    margin-left: 175px;
   };
-  .luzid_el__title {
-    z-index: 1;
-    &:before {
-      height: 120%;
-      top: -10%;
-      left: calc(100% - 1px);
-      width: 3px;
-      background: $blue-accent;
-      //background: url('/assets/img/dev/textures/binding-dark.png'), $blue-accent;
-    }
+  .bk-tl-date {
+    margin-left: 15px;
   }
-  .luzid_el__content {
-    margin: 0 auto 70px;
+  .bk-tl_el__title {
+    z-index: 1;
+  }
+  .bk-tl_el__content {
+    margin: 0 0 70px;
     max-width: 430px;
-    width: 80%;
+    width: calc(100% - 10px);
     position: relative;
     @include media-query($small){
       padding-bottom: 70px;
       margin: 0;
+      width: 80%;
     };
-    .luzid_line {
+    .bk-tl_line {
       position: absolute;
       width: 1px;
       background: white;
@@ -284,132 +281,150 @@
         transform: none;
       }
     }
-    p.luzid-info {
+    p.bk-tl-info {
       max-width: 80%;
     }
   }
 }
 
-$clock-color: white;
-
-.clock-icon {
-  position: relative;
-  height: 35px;
-  width: 35px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 2px solid $clock-color;
-  margin: 40px 0;
+#bk-timeline .bk-tl_element>.bk-tl_el__title>.bk-tl__space,
+#bk-timeline .bk-tl_element>.bk-tl__space {
+  margin-left: 10px;
   @include media-query($small){
-    align-self: flex-start;
-    position: relative;
-    left: 15%;
-    transform: translateX(calc(-50% + 102px));
-  }
-  @include media-query($medium){
-    left: unset;
-    transform: translateX(0px);
-    margin-left: auto;
-    margin-right: auto;
-    &:before {
-      content: '';
-    }
+      margin-left: 30px;
+    };
+}
+
+.bk-tl__frame {
+  padding: 75px 0 5px;
+  margin-left: -25px;
+  width: calc(100% + 50px);
+  position: relative;
+  @include media-query($xtra-small){
+    margin-left: -30px;
+    width: calc(100% + 60px);
   };
-  .clock_line {
+  @include media-query($small){
+    margin-left: -50px;
+    width: calc(100% + 100px);
+  };
+  @include media-query($medium){
+    margin-left: -100px;
+    width: calc(100% + 200px);
+  };
+  .side_line {
     position: absolute;
-    height: 0;
-    width: 1px;
+    height: 100%;
+    width: 6px;
     background: white;
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(100% + 7px);
-  }
-  .top {
-    position: absolute;
-    width: 1px;
-    height: 3px;
-    background: $clock-color;
     left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-  .right {
-    position: absolute;
-    width: 3px;
-    height: 1px;
-    background: $clock-color;
     top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto 0;
-  }
-  .bottom {
-    position: absolute;
-    width: 1px;
-    height: 3px;
-    background: $clock-color;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-  }
-  .left {
-    position: absolute;
-    width: 3px;
-    height: 1px;
-    background: $clock-color;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto 0;
-  }
-  .center {
-    height: 3px;
-    width: 3px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: $clock-color;
-    border-radius: 50%;
-  }
-  .hour {
-    width: 1px;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    transform: rotate(300deg);
-    &:before {
-      position: absolute;
-      content: "";
-      background: $clock-color;
-      height: 8px;
-      width: 1px;
-      top: 7px;
-    }
-  }
-  .minute {
-    width: 1px;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    transform: rotate(60deg);
-    &:before {
-      position: absolute;
-      content: "";
-      background: $clock-color;
-      height: 13px;
-      width: 1px;
-      top: 2px;
-    }
+    @include media-query($small){
+      width: 10px;
+    };
   }
 }
+
+// .clock-icon {
+//   position: relative;
+//   height: 35px;
+//   width: 35px;
+//   box-sizing: border-box;
+//   border-radius: 50%;
+//   border: 2px solid $clock-color;
+//   margin: 40px 0 5px;
+//   transform: translateX(-50%) scale(.6);
+//   @include media-query($small){
+//     transform: translate(-50%) scale(1);
+//   };
+//   @include media-query($medium){
+//   };
+//   .top {
+//     position: absolute;
+//     width: 1px;
+//     height: 3px;
+//     background: $clock-color;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//   }
+//   .right {
+//     position: absolute;
+//     width: 3px;
+//     height: 1px;
+//     background: $clock-color;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     margin: auto 0;
+//   }
+//   .bottom {
+//     position: absolute;
+//     width: 1px;
+//     height: 3px;
+//     background: $clock-color;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     margin: 0 auto;
+//   }
+//   .left {
+//     position: absolute;
+//     width: 3px;
+//     height: 1px;
+//     background: $clock-color;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     margin: auto 0;
+//   }
+//   .center {
+//     height: 3px;
+//     width: 3px;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     margin: auto;
+//     background: $clock-color;
+//     border-radius: 50%;
+//   }
+//   .hour {
+//     width: 1px;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     transform: rotate(300deg);
+//     &:before {
+//       position: absolute;
+//       content: "";
+//       background: $clock-color;
+//       height: 8px;
+//       width: 1px;
+//       top: 7px;
+//     }
+//   }
+//   .minute {
+//     width: 1px;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     transform: rotate(60deg);
+//     &:before {
+//       position: absolute;
+//       content: "";
+//       background: $clock-color;
+//       height: 13px;
+//       width: 1px;
+//       top: 2px;
+//     }
+//   }
+// }
 
 #about-toc {
   margin: 200px auto 100px;
@@ -456,10 +471,6 @@ $clock-color: white;
       };
     }
   }
-}
-
-.bk-about-quote {
-  background: $blue-black;
 }
 
 #anchor {

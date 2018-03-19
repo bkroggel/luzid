@@ -216,7 +216,7 @@ ul {
   }
   strong {
     font-weight: 700;
-    @include media_query($xtra-small){
+    @include media-query($xtra-small){
       font-weight: 500;
     };
   }
@@ -260,14 +260,14 @@ pre {
     white-space: pre;
     -webkit-font-smoothing: auto;
   }
-  @include media_query($xtra-small){
+  @include media-query($xtra-small){
     padding: 10px 20px;
   };
 }
 
 .overflow {
   margin: 30px 0;
-  @include media_query($small){
+  @include media-query($small){
     margin: 40px 0;
   };
   pre {
@@ -384,7 +384,7 @@ span.title {
   line-height: 2em;
   font-family: $sans-serif;
   margin-bottom: 0;
-  @include media_query($small){
+  @include media-query($small){
     font-size: 0.6rem;
   };
 }
@@ -503,7 +503,7 @@ blockquote { //overwriting ukit
   li ol {
     padding-left: 15px;
   }
-  @include media_query($xtra-small){
+  @include media-query($xtra-small){
     padding-left: 43px;
   };
   li {
@@ -634,7 +634,7 @@ p.intro a {
   font-family: $reading;
   margin: 0;
   -webkit-font-smoothing: auto;
-  @include media_query($small){
+  @include media-query($small){
     line-height: 1.75em;
     font-size: 1.15rem;
   };
@@ -767,7 +767,7 @@ p.intro a:after {
     display: block;
     clear: both;
   }
-  @include media_query($medium){
+  @include media-query($medium){
     img {
       max-width: calc(50% - 10px);
       box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
@@ -800,7 +800,7 @@ p:not(.two) .image_frame {
 
 .no_caption {
   margin: 2em 0;
-  @include media_query($medium){
+  @include media-query($medium){
     margin: 3em 0;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
   };

@@ -167,7 +167,7 @@
   border-top: 2px solid rgba(0,0,0,0.05);
   @include display_flex;
   @include align-items(center);
-  @include media_query($small){
+  @include media-query($small){
     @include justify-content(center);
   };
   &:before {
@@ -185,7 +185,7 @@
   p {
     margin: 0;
     padding-left: 50px;
-    @include media_query($small){
+    @include media-query($small){
       padding-left: 0;
     };
     svg {
@@ -601,11 +601,11 @@ section#social {
   max-width: calc(100% - 15px);
   margin-left: 15px;
   margin-bottom: -100px;
-  @include media_query($small){
+  @include media-query($small){
     max-width: calc(100% - 30px);
     margin-left: 30px;
   };
-  @include media_query($medium){
+  @include media-query($medium){
     margin-bottom: -50px;
     max-width: 100%;
     margin-left: 0;
@@ -658,10 +658,10 @@ section#social {
   min-height: unset;
   &__intro {
     padding: 100px 30px 50px 30px;
-    @include media_query($xtra-small){
+    @include media-query($xtra-small){
       padding: 100px 60px 50px 60px;
     }
-    @include media_query($medium){
+    @include media-query($medium){
       padding: 100px 50px 50px 50px;
     }
   }
@@ -680,10 +680,10 @@ section#social {
   max-width: 500px;
   padding: 150px 25px 130px;
   position: relative;
-  @include media_query($small){
+  @include media-query($small){
     padding: 50px;
   };
-  @include media_query($medium){
+  @include media-query($medium){
     padding: 100px;
   };
 }
@@ -698,7 +698,7 @@ section#social {
       position: relative;
     }
   }
-  @include media_query($small){
+  @include media-query($small){
     .bk-sec__inner {
       max-width: 900px;
       .bk-sec__text_frame {
@@ -711,7 +711,7 @@ section#social {
       }
     }
   };
-  @include media_query($medium){
+  @include media-query($medium){
     .bk-sec__inner {
       .bk-sec__text_frame {
         -moz-column-gap: 3em;
@@ -749,7 +749,7 @@ section#social {
   width: 187px;
   margin-top: -30px;
   margin-left: -5px;
-  @include media_query($small){
+  @include media-query($small){
     position: absolute;
   };
 }
@@ -762,7 +762,7 @@ section#social {
     @include align-items(center);
     max-width: unset;
     padding: 0px 0 60px;
-    @include media_query($small){
+    @include media-query($small){
       @include align-items(flex-end);
       @include justify-content(center);
       padding: 0;
@@ -772,7 +772,7 @@ section#social {
     .bk-sec__text {
       width: calc(100% - 50px);
       margin: 90px auto;
-      @include media_query($small){
+      @include media-query($small){
         width: calc(60% - 50px);
         max-width: 550px;
         margin: 15% calc(40% + 20px) 7% auto;
@@ -783,10 +783,10 @@ section#social {
       width: 100%;
       height: 250px;
       opacity: 0.9;
-      @include media_query($xtra-small){
+      @include media-query($xtra-small){
         height: 350px;
       };
-      @include media_query($small) {
+      @include media-query($small) {
         width: 40%;
         position: absolute;
         height: 100%;
@@ -819,7 +819,7 @@ section#social {
   .sec__info {
     padding: 25px;
     position: relative;
-    @include media_query($small){
+    @include media-query($small){
       padding: 30px;
     };
   }
@@ -832,7 +832,7 @@ section#social {
   white-space: nowrap;
   display: none;
   line-height: 0;
-  @include media_query($medium){
+  @include media-query($medium){
     display: block;
   };
 }
@@ -849,7 +849,7 @@ section#social {
     svg {
       fill: white;
     }
-    @include media_query($small){
+    @include media-query($small){
       margin: 30px;
       svg {
         fill:black;
@@ -870,7 +870,7 @@ section#social {
   max-width: 500px;
   margin-bottom: 50px;
   align-self: flex-start;
-  @include media_query($small){
+  @include media-query($small){
     margin-bottom: 100px;
   };
 }

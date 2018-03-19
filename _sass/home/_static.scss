@@ -678,7 +678,7 @@ section#social {
 
 .bk-sec__inner {
   max-width: 500px;
-  padding: 120px 25px 120px;
+  padding: 150px 25px 130px;
   position: relative;
   @include media_query($small){
     padding: 50px;
@@ -771,11 +771,11 @@ section#social {
     };
     .bk-sec__text {
       width: calc(100% - 50px);
-      margin: 80px auto 50px;
+      margin: 90px auto;
       @include media_query($small){
         width: calc(60% - 50px);
-        max-width: 500px;
-        margin: 15% calc(40% + 20px) 5% auto;
+        max-width: 550px;
+        margin: 15% calc(40% + 20px) 7% auto;
         text-align: right;
       };
     }
@@ -798,6 +798,14 @@ section#social {
         object-fit: cover;
         object-position: 10% 38%;
       }
+    }
+    .bk-sec__quote {
+      margin: 25px 0;
+      width: 90%;
+      max-width: 350px;
+      @include media-query($small){
+        margin: 25px 0 25px auto;
+      };
     }
   }
 }

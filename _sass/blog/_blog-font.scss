@@ -332,6 +332,14 @@ pre {
   };
 }
 
+.bk-blog-style h1,
+.bk-blog-style h1>a {
+  font-size: 2rem;
+  @include media-query($small){
+    font-size: 3rem;
+  };
+}
+
 .bk-blog-style h1 + p,
 .bk-blog-style h2 + p {
   margin-top: 10px;
@@ -599,8 +607,8 @@ blockquote { //overwriting ukit
     position: absolute;
     top: 0;
     left: 0;
-    width: 20%;
-    height: 6px;
+    width: 30%;
+    height: 3px;
     opacity: 0.3;
     background-color: $dark-color;
   }

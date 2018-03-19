@@ -51,7 +51,7 @@
       <div class="sec__num sec__info">
         <p class="current">01</p>
         <p>/</p>
-        <p class="all">07</p>
+        <p class="all">06</p>
       </div>
       <div class="sec__title sec__info">
         <p class="bk-sub">Intro</p>
@@ -80,7 +80,7 @@
       </div>
       <p class="current">02</p>
       <p>/</p>
-      <p class="all">07</p>
+      <p class="all">06</p>
     </div>
     <div class="sec__title sec__info">
       <p class="bk-sub">About Site</p>
@@ -101,7 +101,12 @@
     <div class="bk-sec__text bk-sec__width">
       <h2>About Bastian</h2>
       <div class="bk-sec__text_frame">
-        {{ page.about | markdownify }}
+        {{ page.about.before | markdownify }}
+        <div class="bk-sec__quote">
+          <p class="bk-sub">{{ page.quote.author }}</p>
+          <p class="main_quote">{{ page.quote.text }}</p>
+        </div>
+        {{ page.about.after | markdownify }}
       </div>
     </div>
   </div>
@@ -109,7 +114,7 @@
     <div class="sec__num sec__info">
       <p class="current">03</p>
       <p>/</p>
-      <p class="all">07</p>
+      <p class="all">06</p>
     </div>
     <div class="sec__title sec__info">
       <p class="bk-sub">About Bastian</p>

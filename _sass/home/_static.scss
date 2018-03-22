@@ -804,7 +804,10 @@ section#social {
       width: 90%;
       max-width: 350px;
       @include media-query($small){
-        margin: 25px 0 25px auto;
+        margin: 25px -10% 25px auto;
+        background: $really-dark;
+        padding: 10px;
+        position: relative;
       };
     }
   }

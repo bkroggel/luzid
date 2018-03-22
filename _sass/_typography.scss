@@ -759,12 +759,15 @@ a.link_button.-white {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     font-size: 0.9rem;
-    line-height: 1.6em;
+    line-height: 1.8em;
     letter-spacing: 0.01em;
     margin: 0;
     &+p {
       margin-top: 0.5em;
     }
+    @include media-query($small){
+      line-height: 1.6em;
+    };
   }
   &.bk-sec__two p {
     -moz-hyphens: auto;
@@ -806,6 +809,9 @@ a.link_button.-white {
     line-height: 1em;
     margin-right: 2%;
     margin-top: 3px;
+    @include media-query($small){
+      color: white;
+    };
   }
   .bk-sec__vert a {
     text-transform: uppercase;

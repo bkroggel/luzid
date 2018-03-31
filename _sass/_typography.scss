@@ -515,9 +515,9 @@ a.link_button.-white {
       max-width: 200px;
       text-align: center;
       color: $dark-color;
-      font-size: .65rem;
+      font-size: .6rem;
       @include media-query($small){
-        font-size: .8rem;
+        font-size: .75rem;
         max-width: 300px;
       };
     }

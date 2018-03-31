@@ -133,3 +133,25 @@ section#news {
     }
   };
 }
+
+#news__placeholder {
+  min-height: 170px;
+  @include display_flex;
+  @include justify-content(center);
+  @include align-items(center);
+  @include direction_column;
+  margin-top: -15px;
+  @include media-query($small){
+    width: 60vw;
+  };
+  @include media-query($medium){
+    width: 70vw;
+  };
+  .warning_sign {
+    width: 30px;
+    margin-bottom: 10px;
+    svg {
+      fill: $dark-color;
+    }
+  }
+}

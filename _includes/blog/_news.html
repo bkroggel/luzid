@@ -4,6 +4,15 @@
       <h1>Latest News.</h1>
       <h2>What's going on?</h2>
     </div>
-    <div id="news__twitter"></div>
+    <div id="news__twitter">
+      <!-- placeholder if tweets are unable to load -->
+      <div id="news__placeholder">
+        <div class="warning_sign">
+          {% include svg/_warning_sign.html %}
+        </div>
+        <p>Ooops! Looks like it is currently impossible to reach out for my tweets.</p><p><a href="http://twitter.bastiankroggel.com">Click here</a> to check them out by yourself.</p>
+      </div>
+      <!-- end of placeholder -->
+    </div>
   </div>
 </section>

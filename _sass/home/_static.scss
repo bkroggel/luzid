@@ -805,9 +805,12 @@ section#social {
       max-width: 350px;
       @include media-query($small){
         margin: 25px -10% 25px auto;
-        background: $really-dark;
+        border: 3px solid $really-dark;
         padding: 10px;
         position: relative;
+      };
+      @include media-query($medium){
+        background: rgba(255,255,255,.5);
       };
     }
   }

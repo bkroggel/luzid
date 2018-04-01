@@ -827,9 +827,6 @@ a.link_button.-white {
     line-height: 1em;
     margin-right: 2%;
     margin-top: 3px;
-    @include media-query($small){
-      color: white;
-    };
   }
   .bk-sec__vert a {
     text-transform: uppercase;

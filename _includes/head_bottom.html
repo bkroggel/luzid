@@ -802,17 +802,22 @@
 
     // execute after fontawesome is loaded
     $(window).bind("load", function() {
-      var expansion_top = new Waypoint({
-        element: document.getElementById('bubble_trigger'),
-        handler: function(direction) {
-          if (direction === 'down') {
-            social_bubble('email');
-            $('#social .bk-social__frame .bubble__indicator').css('transform', 'translate(-50%, 50%) rotate(45deg) scale(1)')
-            this.destroy()
-          }
-        },
-        offset: $(window).innerHeight() - ($(window).innerHeight()/5)
-      })
+      if ( $(window).width() >= 767 )  {
+        var expansion_top = new Waypoint({
+          element: document.getElementById('bubble_trigger'),
+          handler: function(direction) {
+            if (direction === 'down') {
+              social_bubble('email');
+              $('#social .bk-social__frame .bubble__indicator').css('transform', 'translate(-50%, 50%) rotate(45deg) scale(1)')
+              this.destroy()
+            }
+          },
+          offset: $(window).innerHeight() - ($(window).innerHeight()/5)
+        })
+      } else {
+        social_bubble('email');
+        $('#social .bk-social__frame .bubble__indicator').css('transform', 'translate(-50%, 50%) rotate(45deg) scale(1)')
+      }
     });
 
     $('#social .bk-social__el').each( function() {

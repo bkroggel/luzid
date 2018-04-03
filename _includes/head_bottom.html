@@ -778,6 +778,64 @@
     }
     intro_image();
 
+    function social_bubble( indicator ) {
+      const obj = $('#social .bk-social__el#' + indicator)
+      const pos_left = $('#social .bk-social__el#' + indicator).position().left;
+      const el_width = $('#social .bk-social__el#' + indicator).outerWidth(true);
+      const height = $('.bk-social__bubble .bubble__' +indicator).outerHeight(true);
+      $('#social .bk-social__frame .bubble__indicator').css('left', pos_left + el_width/2);
+      if (!social_bubble.first) {
+        $('.bk-social__bubble .bubble__inner.bubble__' + indicator).addClass('active');
+        $('.bk-social__bubble').css('height', height);
+        social_bubble.first = true;
+      } else {
+        $('.bk-social__bubble .bubble__inner').removeClass('active');
+        $('.bk-social__bubble').css('height', height);
+        setTimeout( function(){
+          $('.bk-social__bubble .bubble__inner.bubble__' + indicator).addClass('active');
+        }, 700)
+      }
+      setTimeout(function(){
+        Waypoint.refreshAll()
+      }, 1000)
+    }
+
+    // execute after fontawesome is loaded
+    $(window).bind("load", function() {
+      var expansion_top = new Waypoint({
+        element: document.getElementById('bubble_trigger'),
+        handler: function(direction) {
+          if (direction === 'down') {
+            social_bubble('email');
+            $('#social .bk-social__frame .bubble__indicator').css('transform', 'translate(-50%, 50%) rotate(45deg) scale(1)')
+            this.destroy()
+          }
+        },
+        offset: $(window).innerHeight() - ($(window).innerHeight()/5)
+      })
+    });
+
+    $('#social .bk-social__el').each( function() {
+      $(this).click( function () {
+        const active_id = $('.bk-social__bubble .bubble__inner.active').attr('data-bubble');
+        const id = $(this).attr('id');
+        if ( !(id == active_id) ) {
+          social_bubble(id);
+        }
+      })
+    });
+
+    var resizeBubble;
+    $(window).on('resize', function(e) {
+      clearTimeout(resizeBubble);
+      resizeBubble = setTimeout(function() {
+        social_bubble('email');
+      }, 250);
+    });
+
+
+
+
   </script>
 {% endif %}
 

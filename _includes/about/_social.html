@@ -7,71 +7,48 @@
     </div>
   </div>
 
-  <div class="bk-cards__frame">
-
-    <div class="bk-card">
-      <div class="bk-card__title">
-        <div class="icon">
-          <span class="fab fa-twitter"></span>
-        </div>
-        <h3>Twitter</h3>
-      </div>
-      <div class="bk-card__content">
-        <div class="bk-card__text">
-          <p>{{ page.contact.twitter.desc }}</p>
-        </div>
-        <div class="bk-card__action">
-          <a href="{{ page.contact.twitter.link.url }}">
-            <p>{{ page.contact.twitter.link.text }}</p>
-          </a>
-        </div>
-      </div>
+  <div class="bk-social__frame">
+    <div class="bk-social__el" id="twitter">
+      <p href="{{ page.contact.twitter.link.url }}">
+        <span class="fab fa-twitter"></span>
+      </p>
     </div>
-
-    <div class="bk-card">
-      <div class="bk-card__title">
-        <div class="icon">
-          <span class="fab fa-linkedin-in"></span>
-        </div>
-        <h3>LinkedIn</h3>
-      </div>
-      <div class="bk-card__content">
-        <div class="bk-card__text">
-          <p>{{ page.contact.linkedin.desc }}</p>
-        </div>
-        <div class="bk-card__action">
-          <a href="{{ page.contact.linkedin.link.url }}">
-            <p>{{ page.contact.linkedin.link.text }}</p>
-          </a>
-        </div>
-      </div>
+    <div class="bk-social__divider"></div>
+    <div class="bk-social__el" id="linkedin">
+      <p href="{{ page.contact.linkedin.link.url }}">
+        <span class="fab fa-linkedin-in"></span>
+      </p>
     </div>
-
-    <div class="bk-card">
-      <div class="bk-card__title">
-        <div class="icon">
-          <span class="far fa-envelope"></span>
-        </div>
-        <h3>eMail</h3>
-      </div>
-      <div class="bk-card__content">
-        <div class="bk-card__text">
-          <p>{{ page.contact.email.desc }}</p>
-        </div>
-        <div class="bk-card__action">
-          <a href="{{ page.contact.email.link.url }}">
-            <p>{{ page.contact.email.link.text }}</p>
-          </a>
-        </div>
-      </div>
+    <div class="bk-social__divider"></div>
+    <div class="bk-social__el" id="email">
+      <p href="{{ page.contact.email.link.url }}">
+        <span class="far fa-envelope"></span>
+      </p>
     </div>
-
+    <div class="bubble__indicator"></div>
   </div>
+
+  <div class="bk-social__bubble" id="bubble_trigger">
+    <div class="bubble__inner bubble__twitter" data-bubble="twitter">
+      <h2>Twitter</h2>
+      <p>{{ page.contact.twitter.desc }}</p>
+      <a href="{{ page.contact.twitter.link.url }}" class="btn" style="background: #1da1f2">{{ page.contact.twitter.link.text }}</a>
+    </div>
+    <div class="bubble__inner bubble__linkedin" data-bubble="linkedin">
+      <h2>LinkedIn</h2>
+      <p>{{ page.contact.linkedin.desc }}</p>
+      <a href="{{ page.contact.linkedin.link.url }}" class="btn" style="background: #0077b5">{{ page.contact.linkedin.link.text }}</a>
+    </div>
+    <div class="bubble__inner bubble__email" data-bubble="email">
+      <h2>Email</h2>
+      <p>{{ page.contact.email.desc }}</p>
+      <a href="{{ page.contact.email.link.url }}" class="btn">{{ page.contact.email.link.text }}</a>
+    </div>
+  </div>
+
   <div class="bk-sec__ending">
     <div class="sec__num sec__info">
-      <p class="current">06</p>
-      <p>/</p>
-      <p class="all">06</p>
+      <p>06 / 06</p>
     </div>
     <div class="sec__title sec__info">
       <p class="bk-sub">Contact</p>

@@ -840,6 +840,10 @@ a.link_button.-white {
   .sec__info p {
     font-weight: 700;
   }
+  &#social .sec__info p {
+    background: $main-color;
+    padding: 5px 10px;
+  }
   .sec__num p{
     display: inline;
     text-transform: uppercase;
@@ -885,5 +889,16 @@ a.link_button.-white {
   a {
     background: none;
     text-shadow: none;
+  }
+}
+
+.bubble__inner {
+  p,
+  h2 {
+    text-align: center;
+  }
+  a.btn {
+    margin: 0;
+    margin-top: 25px;
   }
 }

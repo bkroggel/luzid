@@ -499,7 +499,91 @@ section#social {
   @include direction_column;
   background: $main-color;
   padding-top: 0px;
-  padding-bottom: 100px;
+}
+
+.bk-social__frame {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  position: relative;
+  @include display_flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+  @include direction_row;
+  width: calc(100% - 100px);
+  max-width: $small;
+  @include media-query($small){
+    padding: 0;
+    width: calc(100% - 100px);
+  };
+  @include media-query($medium){
+    width: calc(100% - 200px);
+  };
+  .bubble__indicator {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $dark-color;
+    border-right: none;
+    border-bottom: none;
+    transform: translate(-50%, 50%) rotate(45deg) scale(0);
+    background: $main-color;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+  }
+}
+
+.bk-social__divider {
+  width: 3px;
+  height: 20px;
+  background: $dark-color;
+  opacity: .3;
+  @include media-query($small){
+    height: 50px;
+  };
+}
+
+#social .bk-social__el {
+  position: relative;
+  cursor: pointer;
+  &>p {
+    background: none;
+    font-size: 50px;
+    color: $dark-color;
+    position: relative;
+    @include media-query($small){
+      font-size: 120px;
+    };
+  }
+}
+
+.bk-social__bubble {
+  border: 1px solid $dark-color;
+  border-bottom: none;
+  height: 0px;
+  width: 90%;
+  margin: 0 5%;
+  position: relative;
+  box-sizing: border-box;
+  transition: height 1s linear;
+  overflow: hidden;
+  .bubble__inner {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin: 100px 0 125px;
+    width: 80%;
+    max-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    @include media-query($small){
+      margin: 150px 0;
+    };
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .bk-cards__frame {
@@ -594,7 +678,6 @@ section#social {
 }
 
 .bk-blog__intro_img {
-
   @include display_flex;
   @include direction_column;
   @include justify-content(space-between);
@@ -829,6 +912,10 @@ section#social {
       padding: 30px;
     };
   }
+}
+
+#social .bk-sec__ending .sec__info {
+  padding: 20px 15px;
 }
 
 .bk-sec__vert {

@@ -828,7 +828,6 @@
     var resizeBubble;
     var initial_width = $(window).width();
     $(window).on('resize', function(e) {
-      console.log( initial_width + ' = ' + $(window).width() )
       if ( initial_width !== $(window).width() ) {
         clearTimeout(resizeBubble);
         resizeBubble = setTimeout(function() {

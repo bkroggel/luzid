@@ -846,7 +846,7 @@ section#social {
     max-width: unset;
     padding: 0px 0 60px;
     @include media-query($small){
-      @include align-items(flex-end);
+      @include align-items(flex-start);
       @include justify-content(center);
       padding: 0;
       width: 100%;
@@ -856,15 +856,15 @@ section#social {
       width: calc(100% - 50px);
       margin: 90px auto;
       @include media-query($small){
-        width: calc(60% - 50px);
+        width: calc(60% - 150px);
         max-width: 550px;
-        margin: 15% calc(40% + 20px) 7% auto;
-        text-align: right;
+        margin: 100px 0 200px 100px;
+        //text-align: left;
       };
     }
     .bk-sec__img {
       width: 100%;
-      height: 250px;
+      height: 300px;
       opacity: 0.9;
       @include media-query($xtra-small){
         height: 350px;
@@ -874,6 +874,27 @@ section#social {
         position: absolute;
         height: 100%;
         right: 0;
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          left: 50px;
+        }
+        &:before {
+          border: 1px solid $darkest-color;
+          border-right: none;
+          border-bottom: none;
+          width: calc(100% - 50px);
+          height: calc(100% - 100px);
+          top: 50px;
+          box-sizing: border-box;
+        }
+        &:after {
+          width: calc(100% - 220px);
+          height: 1px;
+          bottom: 50px;
+          background: $darkest-color;
+        }
       };
       img {
         width: 100%;
@@ -887,13 +908,9 @@ section#social {
       width: 90%;
       max-width: 350px;
       @include media-query($small){
-        margin: 25px -10% 25px auto;
-        border: 3px solid $really-dark;
-        padding: 10px;
+        margin: 20px 0 25px;
+        padding: 10px 0 10px 0px;
         position: relative;
-      };
-      @include media-query($medium){
-        background: rgba(255,255,255,.5);
       };
     }
   }
@@ -918,39 +935,18 @@ section#social {
   padding: 20px 15px;
 }
 
-.bk-sec__vert {
-  transform: rotate(270deg) translateX(20px);
-  transform-origin: 0 0;
-  position: absolute;
-  white-space: nowrap;
-  display: none;
-  line-height: 0;
-  @include media-query($medium){
-    display: block;
-  };
-}
-
 .bk-sec__logo {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  .bk-sec__logo_el {
-    height: 50px;
-    width: 50px;
-    margin: 25px;
-    svg {
-      fill: white;
-    }
-    @include media-query($small){
-      margin: 30px;
-      svg {
-        fill:black;
-      }
-    };
-    a {
-      background: none;
-    }
+  height: 30px;
+  width: 30px;
+  margin-top: 40px;
+  svg {
+    fill: black;
+  }
+  @include media-query($small){
+
+  };
+  a {
+    background: none;
   }
 }
 

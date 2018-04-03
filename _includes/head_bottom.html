@@ -826,11 +826,16 @@
     });
 
     var resizeBubble;
+    var initial_width = $(window).width();
     $(window).on('resize', function(e) {
-      clearTimeout(resizeBubble);
-      resizeBubble = setTimeout(function() {
-        social_bubble('email');
-      }, 250);
+      console.log( initial_width + ' = ' + $(window).width() )
+      if ( initial_width !== $(window).width() ) {
+        clearTimeout(resizeBubble);
+        resizeBubble = setTimeout(function() {
+          social_bubble('email');
+        }, 250);
+        initial_width = $(window).width();
+      }
     });
 
 

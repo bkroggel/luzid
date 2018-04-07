@@ -15,3 +15,5 @@ tags:
     name: email
   - slug: imap
     name: imap
+  - slug: macos
+    name: macos

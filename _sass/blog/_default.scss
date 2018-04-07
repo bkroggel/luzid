@@ -368,7 +368,8 @@
     order: 3;
     background: rgb(255,255,255);
     z-index: 1;
-    margin-top: 5%;
+    //margin-top: 5%; bug in firefox not allowed to set percentage values
+    margin-top: 40px;
     //box-shadow: 6px 6px 0 0 $overview-accent;
   }
   .blog-posts--overview-content .intro-frame {
@@ -398,7 +399,8 @@
   @include media-query($large){
     @include direction_column;
     order: 2;
-    margin-top: 5%;
+    // margin-top: 5%; bug in firefox not allowed to set percentage values
+    margin-top: 40px;
     margin-left: 30%;
     opacity: 0.9;
   };

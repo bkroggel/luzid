@@ -3,7 +3,7 @@ title: A multi-location weather widget build for Übersicht
 sub_title: Wttr Forecast Widget
 author: Bastian Kroggel
 date: 2017-11-30 14:04:00 +0100
-tags: [work, english, tutorial]
+tags: [work, english, tutorial, macos]
 permalink:
 thumbnail:
   img: /assets/img/page/blog/wttr_thumbnail.jpg
@@ -18,67 +18,66 @@ published: true
 featured: true
 ---
 
-I recently rediscovered a neat little app for MacOS I already played with a few years ago when it was still in it‘s early days. While it matured a lot since then, the numbers of [third party widgets](http://tracesof.net/uebersicht-widgets/) - an obviously crucial thing for such a solution - increased tremendously, which made me feel like I definitely need to give this app another look and chance to stay on my machine.
+I recently rediscovered a neat little app for macOS I already played with a few years ago when it was still in it‘s early days. While it matured a lot since then, the numbers of [third party widgets/addons](http://tracesof.net/uebersicht-widgets/) – an obviously crucial thing for such a solution, more about that in a second – increased tremendously, which made me feel like I definitely need to give this app another look and chance to stay on my machine.
 
-[Übersicht app](http://tracesof.net/uebersicht/) is a little *[menu bar](https://support.apple.com/kb/PH25077?locale=en_US)* application for MacOS that according to its website *runs system commands and display their output on your desktop in little containers, called widgets.*
+[Übersicht app](http://tracesof.net/uebersicht/) is a little *[menu bar](https://support.apple.com/kb/PH25077?locale=en_US)* application for macOS that according to its website *runs system commands and displays its output on your desktop in little containers, called widgets.*
 
-Achieved by a WebKit instance that runs basically in full screen mode as a layer between your actual desktop and the application/document icons, *Übersicht* allows you to add nearly any kind of content to your MacOS desktop that is driven by HTML5 as well as <span class="sidenote"><span class="sidenote__toggle">Javascript</span><span class="sidenote__note">Übersicht makes use of [CoffeeScript](http://coffeescript.org/) which can be easily mixed and compiled to JS. However if you prefer, you can also use pure JS to write Übersicht widgets.</span></span>.  
-That said it is actually pretty easy to write a widgets for and by yourself - at least if you do have some basic knowledge of web development - since it doesn’t require much more than the usual tools and the actually pretty comprehensive and well documented Übersicht-Readme which can be found on [Github](https://github.com/felixhageloh/uebersicht).
+Achieved by a WebKit instance that runs basically in full screen mode as a layer between the actual desktop and the application/document icons, *Übersicht* allows to add nearly any kind of content to the macOS desktop that is driven by HTML5 as well as <span class="sidenote"><span class="sidenote__toggle">Javascript</span><span class="sidenote__note">Übersicht makes use of [CoffeeScript](http://coffeescript.org/) which can be easily mixed and compiled to JS. However if preferred, it is also possible to use pure JS to write Übersicht widgets.</span></span>.  
+That said it is actually pretty easy to write a widgets for and by yourself – at least if you do have some basic knowledge of web development – since it doesn’t require much more than the usual tools and the actually pretty comprehensive and well documented Übersicht-Readme which can be found on [Github](https://github.com/felixhageloh/uebersicht).
 
 ## Wttr Widget for Übersicht
 ![Wttr Widget for Übersicht](/assets/img/page/blog/wttr_thumbnail.jpg){: data-subtitle="Sourcecode, documentation and the ready to download product can be found on [Github](https://github.com/bkroggel/wttr)"}
-There are actually quite a few Übersicht widgets out there that allow you to display the current weather conditions right on your MacOS desktop - so why write another one instead of just using what is already there?
-Initially I actually wasn’t interested in writing my own widget instead I was tinkering around with some already present code samples of other developers. Since I already knew what Übersicht is capable of I mainly was interested in how I could modify some very informative products to fit a more MacOS native look.  
-But that didn't feel *finished* - just a bunch of numbers and words that were floting around on my screen.
-![Info widget with a native MacOS look](/assets/img/page/blog/info_widgets.jpg){: data-subtitle="based on code snippets and ideas to be found in the [Übersicht widget collection](http://tracesof.net/uebersicht-widgets/). Currently the widget itself can not be found on the internet but if you are interested just let me know."}
-Not being a huge fan of the native MacOS notification center (and especially the widget part of it) I realized that I could not just polish the appearance of my newly created sidebar but also add the most relevant information for myself so I finally  could use widgets on MacOS in the way I <span class="sidenote"><span class="sidenote__toggle">expect it to behave</span><span class="sidenote__note">like on Android OS - present on the main screens and therefore allowing important information to stick out of the usual data mess</span></span> instead of having to use and open an app to actually reach the most relevant information.
-So what I wanted was an easily but still fully featured weather forecast element - and everything should fit into my recently created MacOS styled widget design. While there were a few things out there that kind of helped me to think through the process, there was nothing like the perfect solution for my case.  
+There are actually quite a few Übersicht widgets out there that allow to display the current weather conditions right on the macOS desktop – so why write another one instead of just using what is already there?
+Initially I actually was not interested in writing my own widget instead I was tinkering around with some already present code samples of other developers. Since I already knew what Übersicht is capable of I mainly was interested in how I could modify some function-wise very tempting products to fit a more macOS native look.  
+But that did not feel *finished* at all – just a bunch of numbers and words that were floating around on my screen.
+![Info widget with a native macOS look](/assets/img/page/blog/info_widgets.jpg){: data-subtitle="based on code snippets and ideas to be found in the [Übersicht widget collection](http://tracesof.net/uebersicht-widgets/). Currently the widget itself cannot be found on the internet but if you are interested just let me know."}
+Not being a huge fan of the native macOS notification center – and especially the widget part of it – I realized that I could not just polish the appearance of my newly created sidebar but also add the most relevant information for myself so I finally  could use widgets on macOS in the way I <span class="sidenote"><span class="sidenote__toggle">expect it to behave</span><span class="sidenote__note">like on Android OS – displayed right on the main screens and therefore allowing important information to stick out of the usual data mess</span></span> instead of having to use and open an app to actually reach the most relevant information.
+So what I was looking for was an easily but still fully featured weather forecast element – and everything should fit into my recently created macOS styled widget design. While there were a few things out there that kind of helped me to think through the process, there was nothing like the perfect solution for my case.  
 *The reason I created it myself.*
 
 ### Features
 The idea and the history aside let‘s dive into the actually features and therefore the "What" instead of the "Why".
 So what is the purpose of this piece of code?
-After the initial thought of providing myself with a widget that not just allows to show some weather information in a beautiful and style-wise fitting design but also is capable of displaying multiple locations while still maintaining a slim and not overloaded appearance I came up with a neat little solutions for one of the minor issues I had with Übersicht.  
-But before we discuss that let‘s start with a closer look at the overall features and the implementation of those in Wttr widget for Übersicht.
+After the initial thought of providing myself with a widget that not just allows to show some weather information in a beautiful and style-wise fitting design but also is capable of displaying multiple locations while still maintaining a slim and not overloaded appearance, I came up with a neat little solutions for one of the minor issues I had with Übersicht.  
+But before we discuss that, let‘s start with a closer look at the overall features and the implementation of those in Wttr widget for Übersicht.
 ![Showcase of Wttr Forecast](/assets/img/page/blog/wttr.gif){: .lock data-subtitle="a multi-location weather widget build for Übersicht"}
 
-Above there is a short little image sequence that displays the
-most relevant characteristics of the widget.  
-Wttr Forecast displays not just the **current weather conditions** (*temperature* as well as a *summary of the outside situation*) of your favorite places - *or the one you hate the most...that clearly depends on what you are looking for* - but also shows **minimum** and **maximum temperatures** for the upcoming two days as well as todays forecast and also adds the **chance of rain** for those days.  
-Of course the whole package is rounded of by a <span class="sidenote"><span class="sidenote__toggle">nice little icon art</span><span class="sidenote__note">the icons as well as a lot more weather themed graphics are maintained by [Eric Flowers](https://twitter.com/erik_flowers) & can be found [here](http://erikflowers.github.io/weather-icons/)</span></span>  that gets dynamically changed depending on the weather situation as well as the actual date which is based on the timezone of your machine running MacOS.
+Above there is a short little image sequence that displays the most relevant characteristics of the widget.  
+Wttr Forecast displays not just the **current weather conditions** (*temperature* as well as a *summary of the outside situation*) of your favorite places – *or the one you hate the most...that clearly depends on what you are looking for* – but also shows **minimum** and **maximum temperatures** for the upcoming two days as well as todays forecast and also adds the **chance of rain** for those days.  
+Of course the whole package is rounded of by a <span class="sidenote"><span class="sidenote__toggle">nice little icon art</span><span class="sidenote__note">the icons as well as a lot more weather themed graphics are maintained by [Eric Flowers](https://twitter.com/erik_flowers) & can be found [here](http://erikflowers.github.io/weather-icons/)</span></span> that gets dynamically changed depending on the weather situation as well as the actual time which is based on the location of your machine running macOS.
 
 Wttr Forecast stores all weather information locally on your device and allows you to access forecasts even when you are offline.
 {:.quote}
 
-But what are the possibilities besides the obvious feature of displaying multiple locations - basically just limited by the <span class="sidenote"><span class="sidenote__toggle">number of calls</span><span class="sidenote__note">more about that and an explanation of the configuration can be found in the [How-To section](#how-to) </span></span> allowed by the weather API?
+But what are the possibilities besides the obvious feature of displaying multiple locations – basically just limited by the <span class="sidenote"><span class="sidenote__toggle">number of calls</span><span class="sidenote__note">more about that and an explanation of the configuration can be found in the [How-To section](#how-to) </span></span> allowed by the weather API?
 
-DarkSky - the US-based weather forecasting company that provides the weather information behind this widget - actually is one of the main big features of this widget. Not really noticeable in its entire functionality from a user point of view does it provide a global coverage of current weather conditions as well as perfectly fine forecasting estimations. For the developer audience I also should mention that implementing DarkSky and using their API is an absolute breeze and just works like it should.
-In conjunction with this API the widget allows you modify it in the way to fit all - *alright let‘s say most of* - your needs.  
-DarkSky for example provides weather condition summaries in [dozens of different languages](https://darksky.net/dev/docs#api-request-types) which allows this widget to actually customize the output via a user-modifiable setting variable - same goes for the temperature units which of course can be displayed in the metric as well as the imperial system.  
-Besides that *of course* there is also a setting that enables the possibility to easily change the accent color - and therefore the highlighted rectangle containing the current date.
+DarkSky – the US-based weather forecasting company that provides the weather information accessed by this widget – actually is one of the main big features of this product. Not really noticeable in its entire functionality from a user point of view does it provide a global coverage of current weather conditions as well as perfectly fine forecasting estimations. For the developer audience I also should mention that implementing DarkSky and using their API is an absolute breeze and just works like it should.
+In conjunction with this API the widget allows to modify the output in a way to fit all – *alright let‘s say most of* – your needs.  
+DarkSky for example provides weather condition summaries in [dozens of different languages](https://darksky.net/dev/docs#api-request-types) which e.g. enables the widget to serve the forecasting data – customizable via a user-modifiable setting variable – in your mother tongue. Same goes for the temperature units which of course can be displayed in the metric as well as the imperial system.  
+Besides that *of course* there is also a setting that enables the possibility to easily change the accent color – and therefore the highlighted rectangle containing the current date.
 
-Last but not least a few thoughts about one of the **main USP** of this widget in comparison to most of the other Übersicht addons out there.  
-While using Übersicht in my daily life I noticed one big annoyance that didn't really prevent me from using it but still bugged my a lot when it occurred.
+Last but not least a few thoughts about one of the **main USPs** of this widget in comparison to most of the other Übersicht addons out there.  
+While using Übersicht in my daily life I noticed one big annoyance that did not really prevent me from using it but still bugged my a lot when it occurred.
 
-I am speaking of the fact that mostly in situations where Übersicht is running before an actual internet connection is established - e.g. when you wake up your machine from a standby mode (Übersicht is instantly up and running while the WIFI network takes a short amount of time to actually set everything up) - the widget fails to reach out to the server and therefore displays a blank and (not just design-wise) broken output.  
-Since - I initially talked about that - Übersicht basically makes use of a WebKit instance I came up with a handy and more or less easy workaround to fix that issue.
+I am speaking of the fact that mostly in situations where Übersicht is running before an actual internet connection is established – e.g. when you wake up your machine from a standby mode (Übersicht is instantly up and running while the WIFI network takes a short amount of time to actually set everything up) – the widget fails to reach out to the server and therefore displays a blank and – not just design-wise –å broken output.  
+Since – I initially talked about that – Übersicht basically makes use of a WebKit instance I came up with a handy and more or less easy workaround to fix that issue.
 
-Either hated or loved [Cookies](https://en.wikipedia.org/wiki/HTTP_cookie) are the perfect solution for storing information through your browser locally on your machine and while it definitely is debatable if using a not really battery friendly web instance as the groundworks for Übersicht, it sure makes it easy to transform web developing practices to a local environment. So what actually happens whenever Wttr for Übersicht pulls updated forecasting information successfully from the DarkSky server is, that all those information get stored as cookies and therefore will be accessible for up to 48 hours - *even if there is no actually internet connection present*.  
+Either hated or loved [Cookies](https://en.wikipedia.org/wiki/HTTP_cookie) are the perfect solution for storing information via your browser locally on your machine and while it definitely is debatable if using a not really battery friendly web instance as the groundworks for Übersicht is the right decision, it sure makes it easy to transform web developing practices to a local environment. So whenever Wttr for Übersicht pulls updated forecasting information successfully from the DarkSky server those information get stored as cookies and therefore will be accessible for up to 48 hours – *even if there is no actually internet connection present*.  
 
-Of course it probably does not make too much sense to rely on outdated weather information - however since the widget still will try to reach out to the servers in the usually - and modifiable - update interval, it is clearly much more pleasant to actually get displayed *kind of* usable weather expectations instead of staring at a blank stack of widgets.  
+Of course it probably does not make too much sense to rely on outdated weather information – however since the widget still will try to reach out to the servers in the usually – and modifiable – update interval, it is clearly much more pleasant to actually get displayed *kind of* usable weather expectations instead of staring at a blank stack of widgets.  
 
-Anyways that could be an starting point for the next Übersicht widget that evolves and maybe that even nudges the development of the actually Übersicht software to take the another step and improve even further - I myself would love to see Übersicht and its users to extend the functionality and the variety of widgets in a much broader way and to come up with a lot of new use purposes to take the MacOS desktop to the next level.
+Anyways that could be an starting point for the next Übersicht widget that evolves and maybe it even nudges the development of the actually Übersicht software to take the another step and improve even further – I myself would love to see Übersicht and its users to extend the functionality and the variety of widgets in a much broader way and to come up with a lot of new use purposes to take the macOS desktop to the next level.
 
 
 
 ### How To
-*There is a comprehensive How To section and Readme in the [GitHub Repository](https://github.com/bkroggel/wttr) for Wttr Forecast Widget. The following part will be heavily based on that. If you do have any questions please feel free to open a ticket on GitHub or reach out to me on [Twitter](https://twitter.com/derKroggel)*
+*There is a comprehensive How-To section and Readme in the [GitHub Repository](https://github.com/bkroggel/wttr) for Wttr Forecast Widget. The following part will be heavily based on that. If you do have any questions please feel free to open a ticket on GitHub or reach out to me on [Twitter](https://twitter.com/derKroggel)*
 
 The overall starting process to get the Wttr widget up and running basically follows a <span class="sidenote"><span class="sidenote__toggle">simple step by step approach</span><span class="sidenote__note">if you already installed Übersicht and downloaded as well as moved the widget and its components to the right folder you can go ahead with bullet point No. 4</span></span> you can find below.
 
-1. Head over to [the Übersicht website](http://tracesof.net/uebersicht/) and download as well as install the latest version of the core
+1. Head over to [the Übersicht website](http://tracesof.net/uebersicht/) and download as well as install the latest version of the core application
 2. Either [click here](https://github.com/bkroggel/wttr/releases/download/1.0.1/wttr.widget.zip) or head over to the Wttr widget repository on [GitHub](https://github.com/bkroggel/wttr) to download the latest release
-3. After downloading extract the `wttr.widget.zip` and moving the *whole* `wttr.widget` folder to the Übersicht widgets folder  
+3. After downloading extract the `wttr.widget.zip` and move the *whole* `wttr.widget` folder to the Übersicht widgets folder  
 `Übersicht menu bar symbol > Open Widgets Folder`
 4. Open: https://darksky.net/dev
 5. Log in or Sign up if you haven't created an (entirely free) account yet
@@ -87,7 +86,7 @@ The overall starting process to get the Wttr widget up and running basically fol
    (the key needs to be put in quotation marks)  
 <span>**NOTE:** A detailed explanation of the various settings can be found [here](https://github.com/bkroggel/wttr#settings)</span>{:.highlighted}
 
-After everything is installed and the widget is connected to the DarkSky server you already can see the sample weather forecasts for London, Paris and New York.  
+After everything is installed correctly and the widget is connected to the DarkSky server you already can see the sample weather forecasts for London, Paris and New York.  
 In order to set your own preferred locations you can of course modify the setup.
 
 1. create an id for your location  
@@ -130,7 +129,7 @@ and every other location can be added just like that:
 
 ## Credits
 
-Of course credits where credits belong - and this widget is basically a combination of multiple components that were already there - and a few additions from my side.  
+Of course credits where credits belong – and this widget is basically a combination of multiple components that were already there – and a few additions from my side.  
 So of course I would like to say **Thank you**.
 
 The Wttr widget is mostly based on the <a href="https://github.com/rabad/uebersicht-multiple-locations-weather">Multiple Locations Weather widget</a> by <a href="https://github.com/rabad">Rubén Abad</a>. While major parts of this widget were rewritten it still makes use of the original data access as well as parse functions.

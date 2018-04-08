@@ -778,6 +778,7 @@
     }
     intro_image();
 
+    var bubble_move;
     function social_bubble( indicator ) {
       const obj = $('#social .bk-social__el#' + indicator)
       const pos_left = $('#social .bk-social__el#' + indicator).position().left;
@@ -789,9 +790,11 @@
         $('.bk-social__bubble').css('height', height);
         social_bubble.first = true;
       } else {
+        clearTimeout(bubble_move)
         $('.bk-social__bubble .bubble__inner').removeClass('active');
         $('.bk-social__bubble').css('height', height);
-        setTimeout( function(){
+        bubble_move = setTimeout( function(){
+          console.log("delete")
           $('.bk-social__bubble .bubble__inner.bubble__' + indicator).addClass('active');
         }, 700)
       }

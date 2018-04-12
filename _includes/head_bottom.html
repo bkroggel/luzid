@@ -356,12 +356,15 @@
           var info_bar = '<div class="info_bar">'
               + (title ? '<div class="info_bar__el info_bar__title"><p>' + title + '</p></div>' : '')
               + (titel_var == 'no_title' ? '<div class="info_bar__el info_bar__title"><p>Information</p></div>' : '')
+              // + (sub ? '<div class="info_bar__el info_bar__sub"><p>' + sub + '</p></div>' : '')
+            + '</div>'
+          var info_bar_sub = '<div class="info_bar info_bar_sub">'
               + (sub ? '<div class="info_bar__el info_bar__sub"><p>' + sub + '</p></div>' : '')
             + '</div>'
           if ( el.prev().is( ':header' ) ) {
             el.prev().remove()
           }
-          el.wrap( '<div class="info_block">' ).parent().prepend( info_bar )
+          el.wrap( '<div class="info_block">' ).parent().prepend( info_bar ).append( info_bar_sub )
         }
 
       })

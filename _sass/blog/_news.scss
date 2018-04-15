@@ -96,9 +96,13 @@ section#news {
 
 
 #news .twitter_frame,
-#news .twitter_el,
 #news .slick-list {
   height: 100%;
+}
+
+#news .twitter_el,
+#news .slick-slide {
+  height: unset;
 }
 
 #news__twitter .twitter_el {

@@ -46,6 +46,8 @@ footer:
     - name: LinkedIn
       link: https://linkedin.com/in/bastian-kroggel-125712121
   3_navs:
+    - name: RSS
+      link: /feed.xml
     - name: Humans.txt
       link: /humans.txt
     - name: Privacy Policy

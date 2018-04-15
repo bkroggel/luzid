@@ -1,8 +1,19 @@
 <section id="news" class="bk-m-c">
   <div class="news_content" {% if page.title == "About me" %}data-scroll="toggle(.fromBottomIn, .fromBottomOut) once"{% endif %}>
     <div class="news_header">
-      <h1>Latest News.</h1>
-      <h2>What's going on?</h2>
+      <div class="news__title">
+        <h1>Latest News.</h1>
+        <h2>What's going on?</h2>
+        <h2 id="twitter_indicator"></h2>
+      </div>
+      <div class="news__ctrls">
+        <div class="news__ctrl" id="news__ctrl__left">
+          <p><</p>
+        </div>
+        <div class="news__ctrl" id="news__ctrl__right">
+          <p>></p>
+        </div>
+      </div>
     </div>
     <div id="news__twitter">
       <!-- placeholder if tweets are unable to load -->

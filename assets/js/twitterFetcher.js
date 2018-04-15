@@ -1,5 +1,5 @@
 /*********************************************************************
-*  #### Twitter Post Fetcher v18.0.1 ####
+*  #### Twitter Post Fetcher v18.0.2 ####
 *  Coded by Jason Mayes 2015. A present to all the developers out there.
 *  www.jasonmayes.com
 *  Please keep this disclaimer with my code if you use it. Thanks. :-)
@@ -63,12 +63,13 @@ tids[n]+'" class="twitter_fav_icon"'+
 if(showImages&&images[n]!==undefined&&extractImageUrl(images[n])!==undefined){op+='<div class="media">'+'<img src="'+extractImageUrl(images[n])+'" alt="Image from tweet" />'+'</div>';}
 if(showImages){arrayTweets.push(op);}else if(!showImages&&tweets[n].textContent.length){arrayTweets.push(op);}
 n++;}}
-handleTweets(arrayTweets);inProgress=false;if(queue.length>0){twitterFetcher.fetch(queue[0]);queue.splice(0,1);}}};window.__twttrf=twitterFetcher;window.twitterFetcher=twitterFetcher;return twitterFetcher;}));
+handleTweets(arrayTweets);inProgress=false;if(queue.length>0){twitterFetcher.fetch(queue[0]);queue.splice(0,1);}}};window.__twttrf=twitterFetcher;window.twitterFetcher=twitterFetcher;return twitterFetcher;}));(function(arr){arr.forEach(function(item){if(item.hasOwnProperty('prepend')){return;}
+Object.defineProperty(item,'prepend',{configurable:true,enumerable:true,writable:true,value:function prepend(){var argArr=Array.prototype.slice.call(arguments),docFrag=document.createDocumentFragment();argArr.forEach(function(argItem){var isNode=argItem instanceof Node;docFrag.appendChild(isNode?argItem:document.createTextNode(String(argItem)));});this.insertBefore(docFrag,this.firstChild);}});});})([Element.prototype,Document.prototype,DocumentFragment.prototype]);
 
 var news = {
   "id": '646979504716533760',
   "domId": 'news__twitter',
-  "maxTweets": 3,
+  "maxTweets": 6,
   "enableLinks": true,
   "showUser": true,
   "showImages": true,
@@ -95,54 +96,109 @@ var news = {
   // }
 
   function handleTweets(tweets) {
-      var x = tweets.length;
-      var n = 0;
-      var element = document.getElementById('news__twitter');
-      var html = '<div class="twitter_frame">';
-      //for (var i = 0, lgth = tweets.length; i < lgth ; i++) {
-      while (n < x) {
-        var tweetObject = tweets[n];
-        var time_length = (tweetObject.time).replace(/\s/g,'').replace(/\n /g,'').length
-        var tweet_text = (tweetObject.tweet).replace(/<br>[<br>]+/g, '<span class="small_height"></span>');
-        function tpf_time(){
-          if (time_length <= 3) {
-            return 'Posted ' + tweetObject.time + ' ago'
-          } else {
-            return 'Posted on ' + tweetObject.time
-          }
+    var x = tweets.length;
+    var n = 0;
+    var element = document.getElementById('news__twitter');
+    var html = '<div class="twitter_frame">';
+    //for (var i = 0, lgth = tweets.length; i < lgth ; i++) {
+    while (n < x) {
+      var tweetObject = tweets[n];
+      var time_length = (tweetObject.time).replace(/\s/g,'').replace(/\n /g,'').length
+      var tweet_text = (tweetObject.tweet).replace(/<br>[<br>]+/g, '<span class="small_height"></span>');
+      function tpf_time(){
+        if (time_length <= 3) {
+          return 'Posted ' + tweetObject.time + ' ago'
+        } else {
+          return 'Posted on ' + tweetObject.time
         }
-        var username = '@derKroggel'
-        html += '<div class="twitter_el">'
-          //+ '<div class="tweet_text">'
-          + '<div class="tweet__frame' + (tweetObject.image ? ' tweet_frame_img' : '' ) + '">'
-            + '<div class="tweet_header"><a href="' + tweetObject.permalinkURL + '"><h1>'
-             + '<span class="fab fa-twitter" data-fa-transform="shrink-2"></span>'
-             + 'Twitter<span class="time">' + tpf_time() + '</span></h1>'
-            + '</a></div>'
-            // + (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
-            + '<div class="tweet_content"><p>' + tweet_text + '</p></div>'
-            // + (tweetObject.author_data.screen_name == username ? '' : '<div class="tweet_link">' + tweetObject.author_data.screen_name + '</div>')
+      }
+      var username = '@derKroggel'
+      html += '<div class="twitter_el">'
+        //+ '<div class="tweet_text">'
+        + '<div class="tweet__frame' + (tweetObject.image ? ' tweet_frame_img' : '' ) + '">'
+          + '<div class="tweet_header"><a href="' + tweetObject.permalinkURL + '"><h1>'
+           + '<span class="fab fa-twitter" data-fa-transform="shrink-2"></span>'
+           + 'Twitter<span class="time">' + tpf_time() + '</span></h1>'
+          + '</a></div>'
+          // + (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
+          + '<div class="tweet_content"><p>' + tweet_text + '</p></div>'
+          // + (tweetObject.author_data.screen_name == username ? '' : '<div class="tweet_link">' + tweetObject.author_data.screen_name + '</div>')
+        + '</div>'
+        //+ '</div>'
+        + (tweetObject.image ? '<div class="tweet-img">'
+          + '<a href="' + tweetObject.permalinkURL + '"><img src="'+tweetObject.image+'" /></a>'
+        + '</div>' : '')
+        + '<div class="tweet__interactions' + (tweetObject.image ? ' tweet__interactions_img' : '' ) + '">'
+          + '<div class="interactions__el">'
+            +  '<a href="https://twitter.com/intent/tweet?in_reply_to=' + tweetObject.tid + '" target="_blank">Reply</a>'
           + '</div>'
-          //+ '</div>'
-          + (tweetObject.image ? '<div class="tweet-img">'
-            + '<a href="' + tweetObject.permalinkURL + '"><img src="'+tweetObject.image+'" /></a>'
-          + '</div>' : '')
-          + '<div class="tweet__interactions' + (tweetObject.image ? ' tweet__interactions_img' : '' ) + '">'
-            + '<div class="interactions__el">'
-              +  '<a href="https://twitter.com/intent/tweet?in_reply_to=' + tweetObject.tid + '" target="_blank">Reply</a>'
-            + '</div>'
-            + '<div class="interactions__el">'
-              +  '<a href="https://twitter.com/intent/retweet?tweet_id=' + tweetObject.tid + '" target="_blank">Retweet</a>'
-            + '</div>'
-            + '<div class="interactions__el">'
-              +  '<a href="https://twitter.com/intent/favorite?tweet_id=' + tweetObject.tid + '" target="_blank">Favorite</a>'
-            + '</div>'
+          + '<div class="interactions__el">'
+            +  '<a href="https://twitter.com/intent/retweet?tweet_id=' + tweetObject.tid + '" target="_blank">Retweet</a>'
+          + '</div>'
+          + '<div class="interactions__el">'
+            +  '<a href="https://twitter.com/intent/favorite?tweet_id=' + tweetObject.tid + '" target="_blank">Favorite</a>'
           + '</div>'
         + '</div>'
-      n++;
+      + '</div>'
+    n++;
+    }
+    html += '</div>';
+    element.innerHTML = html;
+
+    $('.twitter_frame').slick({
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: false,
+      infinite: false,
+      cssEase:"ease-in-out",
+      draggable: false,
+      prevArrow: $('#news__ctrl__left'),
+      nextArrow: $('#news__ctrl__right'),
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true
+          }
+        }
+      ]
+    });
+
+
+    function get_pages(){
+      var toScroll = $('.twitter_frame').slick('slickGetOption', 'slidesToScroll');
+      var no_pages = $('.twitter_frame').slick('getSlick').slideCount / toScroll;
+      return [toScroll, no_pages]
+    }
+
+    function print_pages (slide) {
+      if ( slide == undefined ) {
+        var current_slide = $('.twitter_frame').slick('slickCurrentSlide');
+      } else {
+        var current_slide = slide
       }
-      html += '</div>';
-      element.innerHTML = html;
-  }
+      var pages = get_pages();
+      var page = ( (current_slide == 0) ? 1 : (current_slide + pages[0]) / pages[0] )
+      Waypoint.refreshAll();
+      var indicator_text = page + ' of ' + pages[1]
+      $('#twitter_indicator').html(indicator_text)
+    }
+    print_pages()
+
+    $('.twitter_frame').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      print_pages(nextSlide)
+    });
+  };
+
+
 
   twitterFetcher.fetch(news);

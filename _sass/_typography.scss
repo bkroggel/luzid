@@ -505,11 +505,13 @@ a.link_button.-white {
     font-size: 0.9rem;
     font-weight: 700;
     margin-bottom: 5px;
+    white-space: nowrap;
   }
   h2 {
     font-size: 0.7rem;
     font-weight: 400;
     margin-bottom: 10px;
+    white-space: nowrap;
   }
   #news__placeholder {
     p, p a {

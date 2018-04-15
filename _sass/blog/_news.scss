@@ -57,7 +57,7 @@ section#news {
 }
 
 #news__twitter {
-  width: calc(252px * 1);
+  width: calc(222px * 1);
   margin-bottom: -2px;
   @include media-query($small){
     width: calc(252px * 2);
@@ -109,9 +109,11 @@ section#news {
   @include display_flex;
   @include direction_column;
   @include justify-content(space-between);
-  margin-right: 30px;
   padding-left: 2px;
   max-width: 220px;
+  @include media-query($small){
+    margin-right: 30px;
+  };
   @include media-query($medium){
     max-width: 250px;
     padding-right: 30px;

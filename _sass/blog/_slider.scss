@@ -103,6 +103,7 @@
     height: 70px;
     width: 30px;
     background: rgba(0,0,0,0.1);
+    -webkit-appearance: none;
     @include media-query($small){
       left: calc(100% + 2px);
       right: unset;

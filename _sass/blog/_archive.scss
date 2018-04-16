@@ -164,6 +164,7 @@
     list-style: none;
     display: inline;
     line-height: 1rem;
+    font-family: $reading;
     &:last-of-type a {
       color: $blog-font-color;
     }

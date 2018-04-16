@@ -246,22 +246,29 @@ h6 + div>pre {
 pre {
   white-space: pre-wrap;
   margin-top: 20px;
-  background: none;
+  background: white;
+  border-radius: 2px;
+  overflow: auto;
   border: none;
   // border-top: 1px solid $dark-color;
   // border-bottom: 1px solid $dark-color;
   // border-left: 1px solid $dark-color;
-  padding: 10px 0;
+  padding: 10px;
   font-size: 0.8rem;
   line-height: 1.5em;
-  border-radius: 0;
+  tab-size: 4;
+  overflow: auto;
+  width: calc(100% - 20px + 2 * 15px);
+  margin-left: -15px;
   code {
     font-family: $mono;
     white-space: pre;
     -webkit-font-smoothing: auto;
   }
   @include media-query($xtra-small){
-    padding: 10px 20px;
+    padding: 20px;
+    margin-left: 0;
+    width: unset;
   };
 }
 
@@ -271,7 +278,8 @@ pre {
     margin: 40px 0;
   };
   pre {
-    margin: .5em 0;
+    margin-top: .5em;
+    margin-bottom: .5em;
   }
 }
 

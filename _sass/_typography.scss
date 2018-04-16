@@ -537,6 +537,7 @@ a.link_button.-white {
     font-size: 0.6rem;
     font-weight: 400;
     @include link-mix(rgba(0,0,0,0.5));
+    line-height: calc(1em + 6px);
     @include media-query($small){
       font-size: 0.7rem;
     };
@@ -750,6 +751,7 @@ a.link_button.-white {
     font-size: 2.5rem;
     margin: 0;
     line-height: 1em;
+    font-weight: 400;
     margin-left: -.03em; //fix to align with sub
     @include media-query($xtra-small){
       font-size: 3rem;

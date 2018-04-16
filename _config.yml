@@ -25,6 +25,8 @@ plugins: [jekyll-paginate, jekyll-feed]
 sass:
   style: compressed
 
+encoding: utf-8
+
 #default values
 defaults:
   -

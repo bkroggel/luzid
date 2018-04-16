@@ -23,10 +23,13 @@ layout: compress
     <script type="text/javascript" src="{{ "/assets/js/blog.js" | prepend: site.baseurl}}"></script>
     {% endif %}
     {% if page.layout == 'tags' %}
-      {% include js/_tags.html %}
+      <script type="text/javascript" src="{{ "/assets/js/tags.js" | prepend: site.baseurl}}"></script>
     {% endif %}
     {% if page.layout == 'home' %}
-      {% include js/_home.html %}
+      <script type="text/javascript" src="{{ "/assets/js/home.js" | prepend: site.baseurl}}"></script>
+    {% endif %}
+    {% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}
+      {% include js/_nav.html %}
     {% endif %}
     {% if page.title == 'About me' %}
     <script type="text/javascript" src="{{ "/assets/js/about.js" | prepend: site.baseurl}}"></script>

@@ -1,4 +1,3 @@
-<script>
 /* SlickSlider on Home */
 function get_slide_content(current_el){
   var content = $('#storewindow__img .el_' + current_el);
@@ -43,4 +42,3 @@ $('#storewindow__img').on('init', function(){
   cssEase:"cubic-bezier(0.19, 1, 0.22, 1)",
   speed: 1200
 });
-</script>

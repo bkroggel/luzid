@@ -1,4 +1,3 @@
-<script>
 /* Tags */
 function tag_alphabet(){
   var alphabet = $('.tags__alphabet ul li');
@@ -23,4 +22,3 @@ $('.tags__alphabet ul li a').click(function(e) {
     e.preventDefault();
   }
 })
-</script>

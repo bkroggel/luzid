@@ -16,6 +16,13 @@
 
       {{ content }}
     </main>
+
+    <script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl}}"></script>
+
+    {% if page.layout == 'post' or page.layout == 'static' %}
+    <script type="text/javascript" src="{{ "/assets/js/blog.js" | prepend: site.baseurl}}"></script>
+    {% endif %}
+
     {% include head_bottom.html %}
  </body>
 

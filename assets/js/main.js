@@ -1,3 +1,9 @@
+---
+---
+{% include js/jquery.waypoints.min.js %}
+{% include js/sticky.min.js %}
+{% include js/slick.min.js %}
+
 $(document).ready(function() {
 
   // remodeling h6

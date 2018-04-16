@@ -11,7 +11,7 @@ if (document.cookie.indexOf(disableStr + '=true') > -1) {
 }
 function gaOptout() {
 expiration_date = new Date();
-expiration_date.setTime(expiration_date.getTime()+(1000*60*60*24*30))
+expiration_date.setTime(expiration_date.getTime()+(1000*60*60*24*30));
 document.cookie = disableStr + '=true; expires=' + expiration_date + '; path=/';
 window[disableStr] = true;
 }
@@ -30,7 +30,7 @@ $(window).on('load', function() {
     function(){
       if (!window[disableStr] && !window[gaIgnore]) {
         $('#ggl-analytics').css('display','block');
-        setTimeout( //fix which allows display to change before addClass gets executed & .stuck to get applied
+        setTimeout( /* fix which allows display to change before addClass gets executed & .stuck to get applied */
           function(){
             $('#ggl-analytics').addClass('ggl-active');
         }, 500);
@@ -52,10 +52,10 @@ $(window).on('load', function() {
         }
 
         if($(window).width() > 1199) {
-          analytics_waypoint()
-          $('section#ggl-analytics').addClass('analytics-large')
+          analytics_waypoint();
+          $('section#ggl-analytics').addClass('analytics-large');
         } else {
-          $('section#ggl-analytics').addClass('analytics-small')
+          $('section#ggl-analytics').addClass('analytics-small');
         }
 
         function close_ga_notify(){
@@ -69,22 +69,22 @@ $(window).on('load', function() {
           }
           setTimeout(function(){
             $('#ggl-analytics').css('display','none')
-          }, 500) // 400 for animation + 100 as buffer
+          }, 500) /* 400 for animation + 100 as buffer */
         }
 
         $("#ggl-close, #ggl-ignore-bttn").click(function(){
           gaIgnore();
           close_ga_notify();
-        })
+        });
 
         $('#ggl-optOut').click(function(){
           gaOptout();
           close_ga_notify();
-        })
+        });
 
         $( window ).resize(function() {
           if ($(window).width() > 1199 && $('section#ggl-analytics').hasClass('analytics-small')) {
-            analytics_waypoint()
+            analytics_waypoint();
             $('section#ggl-analytics').removeClass('analytics-small').addClass('analytics-large')
           } else if ($(window).width() < 1199 && $('section#ggl-analytics').hasClass('analytics-large')) {
             	analytics_waypoint_el[0].destroy();
@@ -92,9 +92,9 @@ $(window).on('load', function() {
           }
         })
 
-      } // end if not disabled and not ignored
+      } /* end if not disabled and not ignored */
 
-  }, 1000); // end Timeout & function
-}) // end window onload
+  }, 1000); /* end Timeout & function */
+}) /* end window onload */
 
 </script>

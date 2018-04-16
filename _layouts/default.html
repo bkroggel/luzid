@@ -25,6 +25,9 @@ layout: compress
     {% if page.layout == 'tags' %}
       {% include js/_tags.html %}
     {% endif %}
+    {% if page.layout == 'home' %}
+      {% include js/_home.html %}
+    {% endif %}
     {% if page.title == 'About me' %}
     <script type="text/javascript" src="{{ "/assets/js/about.js" | prepend: site.baseurl}}"></script>
     {% endif %}

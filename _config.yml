@@ -41,12 +41,12 @@ defaults:
 compress_html:
   clippings: all
   comments: all
-  endings: all
+  endings: []
   ignore:
-    envs:
+    envs: []
   blanklines: false
   profile: false
-  startings: [html, head, body]
+  startings: []
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

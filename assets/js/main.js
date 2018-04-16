@@ -5,6 +5,10 @@
 {% include js/sticky.min.js %}
 {% include js/slick.min.js %}
 {% include js/ScrollTrigger.min.js %}
+{% include js/fontawesome-all.min.js %}
+
+/* FontAwesome */
+FontAwesomeConfig = { searchPseudoElements: true };
 
 /* ScrollTrigger */
 document.addEventListener('DOMContentLoaded', function(){

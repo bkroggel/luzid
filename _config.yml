@@ -38,6 +38,15 @@ defaults:
       author: "Bastian Kroggel"
       permalink: /blog/:year/:title
 
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  ignore:
+    envs:
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

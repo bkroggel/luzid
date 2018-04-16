@@ -22,12 +22,16 @@ layout: compress
     {% if page.layout == 'post' or page.layout == 'static' %}
     <script type="text/javascript" src="{{ "/assets/js/blog.js" | prepend: site.baseurl}}"></script>
     {% endif %}
+    {% if page.layout == 'tags' %}
+      {% include js/_tags.html %}
+    {% endif %}
     {% if page.title == 'About me' %}
     <script type="text/javascript" src="{{ "/assets/js/about.js" | prepend: site.baseurl}}"></script>
     {% endif %}
     {% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' or page.title == 'About me' %}
       <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
     {% endif %}
+
  </body>
 
 </html>

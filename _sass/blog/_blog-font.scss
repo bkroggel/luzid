@@ -366,6 +366,13 @@ pre {
 }
 
 .bk-blog-style {
+  h1,
+  h2 {
+    @include media-query($medium){
+      margin-left: -5%;
+      width: 105%;
+    };
+  }
   h3,
   h4,
   h5 {

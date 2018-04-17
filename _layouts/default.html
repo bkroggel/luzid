@@ -23,19 +23,19 @@ layout: compress
     <script type="text/javascript" src="{{ "/assets/js/blog.js" | prepend: site.baseurl}}"></script>
     {% endif %}
     {% if page.layout == 'tags' %}
-      <script type="text/javascript" src="{{ "/assets/js/tags.js" | prepend: site.baseurl}}"></script>
+    <script type="text/javascript" src="{{ "/assets/js/tags.js" | prepend: site.baseurl}}"></script>
     {% endif %}
     {% if page.layout == 'home' %}
-      <script type="text/javascript" src="{{ "/assets/js/home.js" | prepend: site.baseurl}}"></script>
+    <script type="text/javascript" src="{{ "/assets/js/home.js" | prepend: site.baseurl}}"></script>
     {% endif %}
     {% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}
-      {% include js/_nav.html %}
+    <script type="text/javascript" src="{{ "/assets/js/nav.js" | prepend: site.baseurl}}"></script>
     {% endif %}
     {% if page.title == 'About me' %}
     <script type="text/javascript" src="{{ "/assets/js/about.js" | prepend: site.baseurl}}"></script>
     {% endif %}
     {% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' or page.title == 'About me' %}
-      <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
+    <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
     {% endif %}
 
  </body>

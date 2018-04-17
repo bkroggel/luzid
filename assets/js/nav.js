@@ -1,4 +1,3 @@
-<script>
 /* Sidebar + Nav */
 function set_waypoint(){
   var sticky = new Waypoint.Sticky({
@@ -57,12 +56,12 @@ function collapse_sidebar(){
 function call_sidebar(){
   var navbar_height = $('.bk-blog-nav').outerHeight(true);
   var trigger_height = $('#blog-nav-dropdown').height();
-
-  {% if page.layout == 'home' %}
+  console.log( $('#news').prev().attr('id') );
+  if ( ($('#news').prev().attr('id')) == 'storewindow' ) {
     var news_height = $('#news').outerHeight(true);
-  {% else %}
+  } else {
     var news_height = 0;
-  {% endif %}
+  }
   var storewindow_height = $('#storewindow').height();
   if (storewindow_height) {
     var news_height = news_height + storewindow_height
@@ -104,4 +103,3 @@ $(window).resize(function(){
     $('.bk-blog-sidebar').css('height', '');
   }
 });
-</script>

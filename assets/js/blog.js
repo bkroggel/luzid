@@ -352,12 +352,12 @@ function additional_post_information(){
     }
     function create_block( el, titel_var ){
       var info_bar = '<div class="info_bar">'
-          + (title ? '<div class="info_bar__el info_bar__title"><p>' + title + '</p></div>' : '')
+          + (title ? '<div class="info_bar__el info_bar__title"><h3>' + title + '</h3></div>' : '')
           + (titel_var == 'no_title' ? '<div class="info_bar__el info_bar__title"><p>Information</p></div>' : '')
           // + (sub ? '<div class="info_bar__el info_bar__sub"><p>' + sub + '</p></div>' : '')
         + '</div>'
       var info_bar_sub = '<div class="info_bar info_bar_sub">'
-          + (sub ? '<div class="info_bar__el info_bar__sub"><p>' + sub + '</p></div>' : '')
+          + (sub ? '<div class="info_bar__el info_bar__sub"><h3>' + sub + '</h3></div>' : '')
         + '</div>'
       if ( el.prev().is( ':header' ) ) {
         el.prev().remove()

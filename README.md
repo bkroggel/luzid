@@ -76,6 +76,7 @@ sign:
 - [imagesLoaded.js](https://github.com/desandro/imagesloaded) - JavaScript is all like "You images done yet or what?", Detect when images have been loaded.
 - [Jekyll](http://jekyllrb.com/) - Transform your plain text into static websites and blogs.
 - [jQuery](https://jquery.com/) - jQuery is a fast, small, and feature-rich JavaScript library.
+- [normalize.css](http://necolas.github.io/normalize.css/) - A modern alternative to CSS resets
 - [ScrollTrigger](https://terwanerik.github.io/ScrollTrigger/) - Triggers classes on html elements based on the scroll position.
 - [Showdown](https://github.com/showdownjs/showdown) - Showdown is a Javascript Markdown to HTML converter, based on the original works by John Gruber.
 - [Slick](http://kenwheeler.github.io/slick/) - the last carousel you'll ever need

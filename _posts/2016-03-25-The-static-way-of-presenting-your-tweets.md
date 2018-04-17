@@ -109,6 +109,7 @@ function handleTweets(tweets) {
 
 twitterFetcher.fetch(config2);
 ```
+{:.block}
 
 While it might look a little bit confusing at first, it really isn't that hard to use. Let's take a look at the relevant items. We already talked about `id` and `domID`. As you can see right here, the html element that houses my Twitter-Post-Fetcher posts has the class `twitter-posts`. The `maxTweets` variable allows me to reduce or increase the amount of tweets that will be shown on the custom widget, while the `true` or `false` value for `enableLinks` will decide whether or not the users will be possbile to retweet, "love" or reply instantly to your presented tweets.  
 It shouldn't be some suprising news, that the `showTime` variable allows to add a line of code to your tweets which presents the date when the posts were created.  
@@ -160,4 +161,4 @@ Haven't had the time to update this post recently, but I am pretty sure I should
 Last but not least - I would love to hear from you. If there are any questions or some feedback you would like to share with me, feel free to get in touch with me on [twitter](http://twitter.bastiankroggel.com).
 
 [^1]: On 21st of March in 2006 Jack Dorsey published the first tweet on twitter.
-[^2]: That is a bad day for you fundamental beliefs. Server side actions are a *must* for any OAUTH process. I am sorry for that.
+[^2]: That is a bad day for your fundamental beliefs. Server side actions are a *must* for any OAUTH process. I am sorry for that.

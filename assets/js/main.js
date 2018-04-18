@@ -1,14 +1,14 @@
 ---
 ---
 {% include js/jquery.waypoints.min.js %}
-{% include js/jquery.timeago.js %}
 {% include js/sticky.min.js %}
+{% include js/jquery.timeago.js %}
 {% include js/slick.min.js %}
 {% include js/ScrollTrigger.min.js %}
-{% include js/fontawesome-all.min.js %}
 
 /* FontAwesome */
 FontAwesomeConfig = { searchPseudoElements: true };
+{% include js/fontawesome-all.min.js %}
 
 /* ScrollTrigger */
 document.addEventListener('DOMContentLoaded', function(){

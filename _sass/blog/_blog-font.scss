@@ -690,53 +690,25 @@ p.intro a:after {
   margin: 50px 0;
   background: white;
   border-radius: 2px;
-  width: calc(100% + 50px);
+  width: 100%;
+  padding: 35px 25px;
   margin-left: -25px;
   p {
-    margin: 1.1rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.7em;
-    &:first-of-type {
-      margin-top: 1.1rem;
+    a {
+      font-size: 1em;
+      @include underline($blog-font-color, white);
     }
-    &:last-of-type {
-      padding-bottom: 1.1rem;
-      margin-bottom: 0;
-    }
-    @include media-query($xtra-small){
-      margin: 1rem 2rem;
-      &:first-of-type {
-        margin-top: 1.1rem;
-      }
-      &:last-of-type {
-        padding-bottom: 1.1rem;
-      }
-    };
-  }
-  a {
-    font-size: 0.85rem;
-    @include underline($blog-font-color, white);
   }
   @include media-query($medium){
-    margin-left: -2rem;
-    width: calc(100% + 4rem);
+    margin-left: -3rem;
+    width: calc(100%);
+    padding: 2.5rem 3rem;
   };
 }
 
 .info_bar {
-  .info_bar__title {
-    padding-top: 2rem;
-    h3 {
-      text-transform: uppercase;
-      padding: 0;
-    }
-  }
-  .info_bar__sub {
-    padding-bottom: 2rem;
-    h3 {
-      margin-top: 0;
-    }
-  }
   h3 {
     line-height: 1em;
     font-family: $mono;
@@ -744,10 +716,19 @@ p.intro a:after {
     color: $accent-two;
     font-size: 0.6rem;
     letter-spacing: 0.14em;
-    margin: 0 1.1rem;
-    @include media-query($xtra-small){
-      margin: 0 2rem;
+    border: 1px solid $accent-two;
+    border-radius: 2px;
+    padding: 4px 15px;
+    display: inline;
+  }
+  .info_bar__title {
+    margin-bottom: 1.5rem;
+    h3 {
+      text-transform: uppercase;
     }
+  }
+  .info_bar__sub {
+    margin-top: 1.5rem;
   }
 }
 
@@ -875,25 +856,25 @@ p:not(.two) .image_frame {
   display: inline-flex;
   @include align-items(center);
   &:after {
-    content: '\f0fe';
+    content: '\f27a';
     display: none;
-    font-family: "Font Awesome 5 Regular";
+    font-family: "Font Awesome 5 Solid";
   }
   svg {
     font-size: 0.7rem;
-    margin-left: 3px;
+    margin-left: 5px;
     color: $accent-two;
   }
 }
 
-.bk-blog-content span.sidenote:not(.inline) span.sidenote__toggle {
-  @include media-query($medium){
-    cursor: default;
-    &:after {
-      display: none;
-    }
-  }
-}
+// .bk-blog-content span.sidenote:not(.inline) span.sidenote__toggle {
+//   @include media-query($medium){
+//     cursor: default;
+//     &:after {
+//       display: none;
+//     }
+//   }
+// }
 
 .bk-blog-content span.sidenote span.sidenote__note {
   padding: 20px;

@@ -30,7 +30,7 @@
       <i class="fab fa-google-plus-g share-button"></i>
   </a>
 
-  <a  href="https://www.linkedin.com/shareArticle?mini=true&url={{ social_url }}&title={{ social_title }}&summary={{ post.excerpt | prepend: 'via www.bastiankroggel.com: ' | strip_html }}&source=Bastian Kroggel via www.bastiankroggel.com"
+  <a  href="https://www.linkedin.com/shareArticle?mini=true&url={{ social_url }}&title={{ social_title }}&summary={{ post.excerpt | prepend: 'via www.bastiankroggel.com: ' | strip_html | truncate: 250 }}&source=Bastian Kroggel via www.bastiankroggel.com"
        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
        title="Share on LinkedIn" >
        <i class="fab fa-linkedin-in share-button"></i>

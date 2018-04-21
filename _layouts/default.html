@@ -4,7 +4,6 @@ layout: compress
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {% include head.html %}
-
   <body>
     <main>
       {% unless page.url contains '404' %}
@@ -16,9 +15,7 @@ layout: compress
 
       {{ content }}
     </main>
-
     <script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl}}"></script>
-
     {% if page.layout == 'post' or page.layout == 'static' %}
     <script type="text/javascript" src="{{ "/assets/js/blog.js" | prepend: site.baseurl}}"></script>
     {% endif %}
@@ -37,7 +34,11 @@ layout: compress
     {% if page.layout == 'home' or page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' or page.title == 'About me' %}
     <script type="text/javascript" src="{{ "/assets/js/twitterFetcher.js" | prepend: site.baseurl}}"></script>
     {% endif %}
-
+    {% if page.layout == 'home' or page.layout == 'post' %}
+    <script type="text/javascript">
+      $("time.timeago").timeago().prepend("\u00A0").append("\u00A0");
+    </script>
+    {% endif %}
  </body>
 
 </html>

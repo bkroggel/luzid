@@ -42,7 +42,7 @@ timeline:
     name: DONGXii
     position: Internship
     to_date: 01/2017
-    website: 'https://www.dongxii.com/'
+    website:
   - description: >
     bullets:
       - customer experience and service improvement

@@ -139,10 +139,6 @@ collections:
             name: "toc_about"
             widget: "text"
             required: false
-          - label: "Body"
-            name: "body"
-            widget: "markdown"
-            required: "false"
           - label: "Signed Page"
             name: "sign"
             widget: "boolean"
@@ -152,12 +148,17 @@ collections:
             widget: "list"
             fields:
               - {label: "Company Name", name: "name", widget: "string"}
-              - {label: "Position", name: "position", widget: "string"}
-              - {label: "Start Date", name: "from_date", widget: "string"}
-              - {label: "End Date", name: "to_date", widget: "string"}
-              - {label: "Company Info", name: "info", widget: "text"}
-              - {label: "Description", name: "description", widget: "markdown"}
-              - {label: "Website", name: "website", widget: "string"}
+              - {label: "Position", name: "position", widget: "string", required: "false"}
+              - {label: "Start Date", name: "from_date", widget: "string", required: "false"}
+              - {label: "End Date", name: "to_date", widget: "string", required: "false"}
+              - {label: "Company Info", name: "info", widget: "text", required: "false"}
+              - {label: "Description", name: "description", widget: "markdown", required: "false"}
+              - label: "Website"
+                name: "website"
+                widget: "object"
+                fields:
+                  - {label: "Link-Text", name: "text", widget: "string", required: "false"}
+                  - {label: "URL", name: "url", widget: "string", required: "false"}
           - label: "Contact"
             name: "contact"
             widget: "object"

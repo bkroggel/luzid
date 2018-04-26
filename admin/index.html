@@ -18,7 +18,9 @@
 </head>
 <body>
   <script src="https://unpkg.com/netlify-cms@~1.7.0/dist/cms.js"></script>
-  <script defer src="{{ "/assets/js/fontawesome-all.min.js" | prepend: site.baseurl}}"></script>
+  <script type="text/javascript">
+    {% include js/fontawesome-all.min.js %}
+  </script>
   <script>
     FontAwesomeConfig = { searchPseudoElements: true };
   </script>

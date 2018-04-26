@@ -13,14 +13,24 @@
 
             <div class="bk-tl_element">
               <div class="bk-tl_el__title">
-                <p class="bk-tl-date bk-tl__space">{{ company.from_date }} - {{ company.to_date }}</p>
+                <p class="bk-tl-date bk-tl__space">{% unless company.to_date %}since {% endunless %}{{ company.from_date }}{% if company.to_date %} — {% endif %}{{ company.to_date }}</p>
                 <h3 class="bk-tl-title">{{ company.name }}</h3>
                 <p class="bk-tl-position bk-tl__space">{{ company.position }}</p>
               </div>
               <div class="bk-tl_el__content bk-tl__space">
                 <div class="bk-tl_line"></div>
                 <p class="bk-tl-info">{{ company.info }}</p>
+                {% if company.website %}
+                  <p class="bk-tl-info"><a href="{{ company.website.url }}">{{ company.website.text }}</a></p>
+                {% endif %}
                 <p>{{ company.description }}</p>
+                {% if company.bullets %}
+                <ul class="bk-tl_bullets">
+                  {% for bullet in company.bullets %}
+                  <li>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
               </div>
             </div>
 

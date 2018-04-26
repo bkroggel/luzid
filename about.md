@@ -30,62 +30,111 @@ about:
       One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
 timeline:
   - description: >
-      Vestibulum mattis lacus est. Donec vestibulum sed eros at auctor. Aenean
-      diam elit, interdum ut justo at, mollis venenatis eros. Aliquam non tortor
-      nisi. Cras sit amet posuere lacus. Praesent sed mauris justo. Lorem ipsum
-      dolor sit amet, consectetur adipiscing elit. Integer ex mi, tristique et
-      fringilla vitae, pretium nec neque. Duis semper nec dolor non viverra. Sed
-      bibendum rhoncus semper.
-    from_date: 07/1900
-    info: Vestibulum mattis lacus
-    name: Company
-    position: Internship
-    to_date: 07/1900
-    website: 'https://beta.bastiankroggel.com'
-  - description: >
-      Vestibulum mattis lacus est. Donec vestibulum sed eros at auctor. Aenean
-      diam elit, interdum ut justo at, mollis venenatis eros. Aliquam non tortor
-      nisi. Cras sit amet posuere lacus. Praesent sed mauris justo. Lorem ipsum
-      dolor sit amet, consectetur adipiscing elit. Integer ex mi, tristique et
-      fringilla vitae, pretium nec neque. Duis semper nec dolor non viverra. Sed
-      bibendum rhoncus semper.
-    from_date: 03/1450
+    bullets:
+      - conception and modeling of the business model
+      - strategic concept and implementation of website re-design
+      - investor relations due diligence of fit, preparation of pitch deck and documentation, participation in negotiations
+      - shaping of B2B acquisition strategy
+    from_date: 11/2016
     info: >
-      Vestibulum dapibus mauris non urna auctor malesuada. Cras molestie, tellus
-      et rhoncus sagittis.
+      Things move China GmbH</br>Berlin, GER</br>
+      Online platform that connects independent European brands and their customers in China
+    name: DONGXii
+    position: Internship
+    to_date: 01/2017
+    website: 'https://www.dongxii.com/'
+  - description: >
+    bullets:
+      - customer experience and service improvement
+      - conceptualization of future modifications and features for business processes/platform in cooperation with the IT department
+      - market research and development of investors pitch deck
+    from_date: 07/2016
+    info: >
+      Online housing rental platform</br>Maastricht, NL
     name: Viaflats B.V.
     position: Internship
-    to_date: 06/1900
-    website: 'https://beta.bastiankroggel.com'
+    to_date: 10/2016
+    website:
   - description: >
-      Nulla viverra, lorem non faucibus vehicula, tellus nisl tempus ante, at
-      viverra massa nulla ut libero. Nullam risus enim, pellentesque tincidunt
-      tortor in, eleifend vulputate leo. Suspendisse lacus ligula, cursus.
-    from_date: January 2013
+      an initiative organized by students to build a bridge between the university program and the technological capabilities which the digital work environment requires
+    bullets:
+    from_date: 2015
     info: |
-      Bachelors Degree (B.A.)</br>
-      Zeppelin University on the shores of Lake Constance.
-    name: Zeppelin Universität
-    position: University
-    to_date: September 2017
+    name: CODECATS INITIATIVE
+    position:
+    to_date:
+    website:
+      text: www.codecats.io
+      url: 'http://codecats.io'
+  - description: >
+      for various public initiatives and private organisations
+    bullets:
+      - PPE-Conference, Transcultural Leadership Summit
+      - ZU-LearningNetwork
+    from_date: 2015
+    info: |
+    name: FREELANCING</br>WEBDEVELOPEMENT
+    position: Selfemployed
+    to_date:
     website: 'https://beta.bastiankroggel.com'
   - description: >-
-      Proin non lectus accumsan, posuere eros pulvinar, ullamcorper mi.
-      Phasellus semper tellus vel hendrerit egestas. Mauris rutrum commodo sem
-      vel tincidunt. Aenean fermentum imperdiet lorem, id viverra nulla lacinia
-      vel. Pellentesque sagittis felis quis felis ullamcorper, eget aliquet
-      lectus scelerisque. Donec rhoncus odio ut augue tincidunt, sed euismod
-      ipsum rutrum. Mauris hendrerit bibendum enim vitae tristique. Proin odio
-      tellus, interdum venenatis posuere et, condimentum eget ipsum. Vivamus
-      tristique eros sapien, et dapibus mi scelerisque eu.
-    from_date: January 2013
+    bullets:
+      - main focus on Web- and Agile Software Development
+      - HTML, CSS, JavaScript and Ruby on Rails
+    from_date: 06/2015
     info: >-
-      Suspendisse scelerisque erat non dapibus varius. In semper eu magna ac
-      pharetra. Vivamus scelerisque dictum tellus, a blandit quam aliquet quis.
-    name: Testcompany
-    position: Testpositon
-    to_date: January 2013
-    website: test
+      in cooperation with CareerFoundry</br>Berlin, GER
+    name: CODECATS SUMMERCAMP 2015
+    position:
+    to_date: 08/2015
+    website:
+  - description: >
+    bullets:
+      - transfer of scientific results into practice
+      - process market research studies
+      - development of ideas and concepts for the brand management
+      - support of the leading management
+    from_date: 06/2014
+    info: >-
+      Zeppelin University Friedrichshafen</br>in cooperation with Allianz Global Investors
+    name: SUMMER SCHOOL</br>BRAND MANAGEMENT
+    position:
+    to_date: 07/2014
+    website:
+  - description: >-
+    bullets:
+      - interdisciplinary program combining business administration and economics as well as cultural, communication and political science
+      - 'Bachelor Thesis at the Chair for Strategic Management and Human Resources Management:</br>ANALYSIS OF THE IMPACT OF STREAMING PROVIDERS ON THE TELEVISION INDUSTRY</br>( original title in german: Analyse der Auswirkungen von Streaming-Anbietern auf die Fernsehindustrie )'
+    from_date: 01/2012
+    info: >-
+      BACHELORS DEGREE (B.A.)</br>ZEPPELIN UNIVERSITY FRIEDRICHSHAFEN</br>ON THE SHORES OF LAKE CONSTANCE.
+    name: ZEPPELIN UNIVERSITÄT
+    position: University
+    to_date: 09/2017
+    website:
+  - description: >
+    bullets:
+      - organization and planning of activities and events
+      - support of the management team
+    from_date: 09/2012
+    info: >-
+      Kindergarten
+    name: KINDERTAGESEINRICHTUNG BROCHENZELL
+    position: Internship
+    to_date: 10/2012
+    website:
+  - description: >
+    bullets:
+      - development and creation of transit times and air waybills
+      - administration, archiving and scheduling of daily business
+      - customer communication and external communication on national and international level
+    from_date: 07/2012
+    info: >-
+      Logistics Operator based in Meckenbeuren, GER
+    name: WIECHERT LOGISTIC GMBH
+    position: Internship
+    to_date: 07/2012
+    website:
 contact:
   twitter:
     desc: >

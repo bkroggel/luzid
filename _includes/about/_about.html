@@ -15,15 +15,21 @@
               <div class="bk-tl_el__title">
                 <p class="bk-tl-date bk-tl__space">{% unless company.to_date %}since {% endunless %}{{ company.from_date }}{% if company.to_date %} — {% endif %}{{ company.to_date }}</p>
                 <h3 class="bk-tl-title">{{ company.name }}</h3>
+                {% if company.position %}
                 <p class="bk-tl-position bk-tl__space">{{ company.position }}</p>
+                {% endif %}
               </div>
               <div class="bk-tl_el__content bk-tl__space">
                 <div class="bk-tl_line"></div>
+                {% if company.info %}
                 <p class="bk-tl-info">{{ company.info }}</p>
+                {% endif %}
                 {% if company.website %}
                   <p class="bk-tl-info"><a href="{{ company.website.url }}">{{ company.website.text }}</a></p>
                 {% endif %}
+                {% if company.description %}
                 <p>{{ company.description }}</p>
+                {% endif %}
                 {% if company.bullets %}
                 <ul class="bk-tl_bullets">
                   {% for bullet in company.bullets %}

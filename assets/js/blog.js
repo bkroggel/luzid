@@ -14,6 +14,11 @@ $('.bk-blog-style p').each(function(){
   }
 })
 
+$('.bk-blog-style h2').each(function(){
+  var value = $(this).text();
+  $(this).attr('data-letter', value.slice(0,1) );
+});
+
 //var startTime = window.performance.now();
 //console.log(window.performance.now() - startTime);
 

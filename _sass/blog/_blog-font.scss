@@ -366,14 +366,14 @@ pre {
 }
 
 .bk-blog-style {
-  h1,
-  h2 {
+  h1:not(.no_initial),
+  h2:not(.no_initial) {
     @include media-query($medium){
       margin-left: -5%;
       width: 105%;
     };
   }
-  h2:before {
+  h2:not(.no_initial):before {
     @include media-query($medium){
       content: attr(data-letter);
       position: absolute;
@@ -381,7 +381,7 @@ pre {
       top: 0;
       right: 100%;
       line-height: 0.8em;
-      opacity: .2;
+      opacity: .1;
       transform: translate(60%, -20%);
       z-index: 1;
     };

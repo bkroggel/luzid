@@ -118,7 +118,7 @@ footer {
 
 .bk-footer-1__sec2 {
   width: calc(100% - 66px);
-  max-width: 330px;
+  //max-width: 330px;
   @include display_flex;
   @include direction_column;
   @include align-items(center);
@@ -127,6 +127,9 @@ footer {
   @include media-query($small){
     width: 50%;
   };
+  .desc {
+    max-width: 330px;
+  }
 }
 
 .bk-footer-1__sec3 {

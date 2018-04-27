@@ -4,6 +4,7 @@ title: Imprint
 ---
 
 # Impressum
+{:.no_initial}
 
 ## Angaben gem&auml;&szlig; &sect; 5 TMG:
 {:.no_initial}

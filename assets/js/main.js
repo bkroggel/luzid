@@ -1,5 +1,6 @@
 ---
 ---
+{% include js/analytics_script.js %}
 {% include js/jquery.waypoints.min.js %}
 {% include js/sticky.min.js %}
 {% include js/jquery.timeago.js %}

@@ -158,11 +158,11 @@ intro_image();
 
 var bubble_move;
 function social_bubble( indicator ) {
-  const obj = $('#social .bk-social__el#' + indicator)
-  const pos_left = $('#social .bk-social__el#' + indicator).position().left;
-  const el_width = $('#social .bk-social__el#' + indicator).outerWidth(true);
+  const obj = $('#contact .bk-social__el#' + indicator)
+  const pos_left = $('#contact .bk-social__el#' + indicator).position().left;
+  const el_width = $('#contact .bk-social__el#' + indicator).outerWidth(true);
   const height = $('.bk-social__bubble .bubble__' +indicator).outerHeight(true);
-  $('#social .bk-social__frame .bubble__indicator').css('left', pos_left + el_width/2);
+  $('#contact .bk-social__frame .bubble__indicator').css('left', pos_left + el_width/2);
   if (!social_bubble.first) {
     $('.bk-social__bubble .bubble__inner.bubble__' + indicator).addClass('active');
     $('.bk-social__bubble').css('height', height);
@@ -188,7 +188,7 @@ $(window).bind("load", function() {
       handler: function(direction) {
         if (direction === 'down') {
           social_bubble('email');
-          $('#social .bk-social__frame .bubble__indicator').css('transform', 'translate(-50%, 50%) rotate(45deg) scale(1)')
+          $('#contact .bk-social__frame .bubble__indicator').css('transform', 'translate(-50%, 50%) rotate(45deg) scale(1)')
           this.destroy()
         }
       },
@@ -196,11 +196,11 @@ $(window).bind("load", function() {
     })
   } else {
     social_bubble('email');
-    $('#social .bk-social__frame .bubble__indicator').css('transform', 'translate(-50%, 50%) rotate(45deg) scale(1)')
+    $('#contact .bk-social__frame .bubble__indicator').css('transform', 'translate(-50%, 50%) rotate(45deg) scale(1)')
   }
 });
 
-$('#social .bk-social__el').each( function() {
+$('#contact .bk-social__el').each( function() {
   $(this).click( function () {
     const active_id = $('.bk-social__bubble .bubble__inner.active').attr('data-bubble');
     const id = $(this).attr('id');

@@ -8,7 +8,7 @@ horizontal-navs:
   # - name: Work
   #   link: /work
   - name: Contact
-    link: /about#social
+    link: /about#contact
 
 blog-navs:
   - name: Blog
@@ -20,7 +20,7 @@ blog-navs:
   - name: Tags
     link: /blog/archive/tags/
   - name: Contact
-    link: /about#social
+    link: /about#contact
   - name: Imprint
     link: /imprint/
   - name: Privcy Policy
@@ -35,7 +35,7 @@ footer:
     - name: Blog
       link: /
     - name: Contact
-      link: /about#social
+      link: /about#contact
   2_navs:
     - name: Twitter
       link: https://twitter.com/derkroggel

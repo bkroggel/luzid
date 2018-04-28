@@ -224,7 +224,7 @@
 }
 
 .bk-timeline-content.bk-sec,
-#social .bk-sec__intro_frame {
+#contact .bk-sec__intro_frame {
   width: calc(100% - 50px);
   margin: 0 auto;
   display: block;
@@ -492,7 +492,7 @@
   }
 }
 
-section#social {
+section#contact {
   width: 100%;
   @include display_flex;
   @include direction_column;
@@ -542,7 +542,7 @@ section#social {
   };
 }
 
-#social .bk-social__el {
+#contact .bk-social__el {
   position: relative;
   cursor: pointer;
   &>p {
@@ -930,7 +930,7 @@ section#social {
   }
 }
 
-#social .bk-sec__ending .sec__info {
+#contact .bk-sec__ending .sec__info {
   padding: 20px 15px;
 }
 
@@ -950,7 +950,7 @@ section#social {
 }
 
 .bk-sec__intro_frame,
-#social .bk-sec__intro_frame {
+#contact .bk-sec__intro_frame {
   margin-top: 100px;
 }
 

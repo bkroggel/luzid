@@ -365,7 +365,7 @@ pre {
   font-style: italic;
 }
 
-.bk-blog-style:not(.bk-sec) {
+.bk-article-main .bk-blog-style {
   h1:not(.no_initial),
   h2:not(.no_initial) {
     @include media-query($medium){
@@ -386,6 +386,9 @@ pre {
       z-index: 1;
     };
   }
+}
+
+.bk-blog-style {
   h3,
   h4,
   h5 {

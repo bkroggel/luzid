@@ -3,9 +3,9 @@
     {% for post in site.posts | limit: 4 %}
       <div class="el_{{ forloop.index }}" {% if post.sub_title %} data-subtitle='{{post.sub_title}}' {% endif %} data-title="{{post.title}}" data-excerpt="{{ post.content | strip_html | markdownify | truncatewords: 45 }}" data-url="{{post.url}}">
         {% if post.thumbnail.img %}
-          <img src="{{post.thumbnail.img}}" alt="{{post.title}}"></img>
+          <img data-lazy="{{post.thumbnail.img}}" alt="{{post.title}}"/>
         {% else %}
-          <img src="/assets/img/dev/thumb_placeholder.png" alt="{{post.title}}"></img>
+          <img data-lazy="/assets/img/dev/thumb_placeholder.png" alt="{{post.title}}"/>
         {% endif %}
       </div>
       {% assign index_post = forloop.index %}
@@ -18,9 +18,9 @@
       {% assign index_post = index_post | plus: 1 %}
       <div class="el_{{ index_post }}" {% if post.sub_title %} data-subtitle='{{post.sub_title}}' {% endif %} data-title="{{post.title}}" data-excerpt="{{ post.content | strip_html | markdownify | truncatewords: 45 }}" data-url="{{post.url}}">
         {% if post.thumbnail.img %}
-          <img src="{{post.thumbnail.img}}" alt="{{post.title}}"></img>
+          <img data-lazy="{{post.thumbnail.img}}" alt="{{post.title}}"/>
         {% else %}
-          <img src="/assets/img/dev/thumb_placeholder.png" alt="{{post.title}}"></img>
+          <img data-lazy="/assets/img/dev/thumb_placeholder.png" alt="{{post.title}}"/>
         {% endif %}
       </div>
     {% endfor %}

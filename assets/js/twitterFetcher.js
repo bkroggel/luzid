@@ -69,6 +69,7 @@ Object.defineProperty(item,'prepend',{configurable:true,enumerable:true,writable
 var news = {
   "id": '646979504716533760',
   "domId": 'news__twitter',
+  "lazyLoad": 'ondemand',
   "maxTweets": 6,
   "enableLinks": true,
   "showUser": true,
@@ -126,7 +127,7 @@ var news = {
         + '</div>'
         //+ '</div>'
         + (tweetObject.image ? '<div class="tweet-img">'
-          + '<a href="' + tweetObject.permalinkURL + '"><img src="'+tweetObject.image+'" /></a>'
+          + '<a href="' + tweetObject.permalinkURL + '"><img data-lazy="'+tweetObject.image+'"/></a>'
         + '</div>' : '')
         + '<div class="tweet__interactions' + (tweetObject.image ? ' tweet__interactions_img' : '' ) + '">'
           + '<div class="interactions__el">'

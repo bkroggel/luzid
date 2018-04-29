@@ -32,6 +32,7 @@ $('#storewindow__img').on('init', function(){
 }).slick({
   slidesToShow: 1,
   slidesToScrol: 1,
+  lazyLoad: 'progressive',
   dots: true,
   cssEase:"ease-in-out",
   prevArrow: $('#storewindow #next'),

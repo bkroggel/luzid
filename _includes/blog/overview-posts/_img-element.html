@@ -1,8 +1,9 @@
 {% if post.thumbnail.img %}
 <div class="overview-img">
-  <div class="thumbnail_img" style="background: url({{ post.thumbnail.img }}) no-repeat center; background-size: cover"></div>
+  <div class="thumb_placeholder thumbnail_img"></div>
+  <div class="lazyload thumbnail_img" data-bg="{{ post.thumbnail.img }}"></div>
 {% else %}
 <div class="overview-img overview-img-placeholder">
-    <div class="thumb_placeholder thumbnail_img"></div>
+  <div class="thumb_placeholder thumbnail_img"></div>
 {% endif %}
 </div>

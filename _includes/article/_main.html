@@ -6,7 +6,9 @@
     <div class="bk-blog-content bk-blog-style uk-article bk-np-style">
       {{content}}
       {% if page.sign %}
-        {% include svg/_sign_js.html %}
+        <div class="bk-signature">
+          {% include svg/_sign.html %}
+        </div>
       {% endif %}
       <div id="social_bottom" class="no-print">
         {% include article/_social-share.html %}

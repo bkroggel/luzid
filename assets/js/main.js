@@ -2,20 +2,14 @@
 ---
 {% include js/jquery.waypoints.min.js %}
 {% include js/analytics_script.js %}
+{% include js/lazysizes.min.js %}
 {% include js/sticky.min.js %}
 {% include js/jquery.timeago.js %}
 {% include js/slick.min.js %}
-{% include js/ScrollTrigger.min.js %}
 
 /* FontAwesome */
 FontAwesomeConfig = { searchPseudoElements: true };
 {% include js/fontawesome-all.min.js %}
-
-/* ScrollTrigger */
-document.addEventListener('DOMContentLoaded', function(){
-  var trigger = new ScrollTrigger({
-  });
-});
 
 /* BackButton */
 function back_button(id){

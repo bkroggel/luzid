@@ -121,6 +121,7 @@ function timeline_container() {
         $(this).waypoint( function( direction ){
           if ( direction == 'down' ) {
             $(that).addClass('active')
+            this.destroy()
           }
         }, {
           offset: 'bottom-in-view'

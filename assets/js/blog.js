@@ -5,6 +5,24 @@
 {% include js/zooming.min.js %}
 {% include js/imagesloaded.pkgd.min.js %}
 
+
+// signature in case of footnotes
+var footnotes = $('.footnotes');
+var signature = $('.bk-signature');
+function sign_website(el){
+  var bkSignature = document.getElementsByClassName('bk-signature');
+  var signature_content = $(bkSignature).html();
+  $(el).before('<div class="bk-signature bk-success">'+signature_content+'</div>');
+  var bkSignature_old = document.querySelector('.bk-signature:not(.bk-success)');
+  $(bkSignature_old).remove();
+}
+if (footnotes.length > 0 && signature.length > 0) {
+  sign_website(footnotes);
+} else {
+  var bkSignature = document.getElementsByClassName('bk-signature');
+  $(bkSignature).addClass('bk-success');
+}
+
 // add caption to Images
 
 // check whether there are more than 2 pics (so three an up) in a row

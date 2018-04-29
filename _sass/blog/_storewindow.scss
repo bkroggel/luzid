@@ -12,12 +12,19 @@
 #storewindow__img {
   width: 100%;
   margin: 0;
+  background: $main-color;
   @include media-query($small){
     width: 40%;
   };
   @include media-query($medium){
     width: 60%;
   };
+  img {
+    display: none;
+  }
+  img[src] {
+    display: block;
+  }
 }
 
 #storewindow {
@@ -25,6 +32,9 @@
   .slick-slide,
   .slick-track {
     height: 100%;
+  }
+  .slick-slide {
+    -webkit-backface-visibility: hidden; //possible flickering fix mentioned here: https://github.com/kenwheeler/slick/issues/1961
   }
   .slick-arrow,
   .slick-dots {

@@ -1,6 +1,4 @@
 section.pic-break {
-  background: url('img/dev/markus-spiske-104895.jpg') no-repeat center;
-  background-size: cover;
   width: 100%;
   padding: 125px 0;
   position: relative;
@@ -13,9 +11,22 @@ section.pic-break {
     padding: 150px 0;
   };
 }
-
-section.pic-break {
-
+.pic-break__bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+  }
+  &.lazyloaded {
+    opacity: 1;
+    transition: opacity .6s;
+  }
 }
 
 .frame-line {
@@ -191,5 +202,13 @@ $skew_diag: 3;
   img {
     border-radius: 50%;
     transform: scale(0.9);
+  }
+  img.lazyload,
+  img.lazyloading {
+    opacity: 0;
+  }
+  img.lazyloaded {
+    opacity: 1;
+    transition: opacity .6s;
   }
 }

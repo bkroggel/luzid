@@ -10,8 +10,7 @@
       <h1>Bastian Kroggel.</h1>
       <p class="desc">Aenean congue at urna a ultricies. Nullam id dignissim eros, in hendrerit ipsum. Praesent sed sem tellus.</p>
     </div>
-    <div class="bk-blog__intro_img" style="background: url('{{page.header.img.url}}') no-repeat center;
-    background-size: cover;">
+    <div class="bk-blog__intro_img">
       <div class="intro_img">
         <p class="intro_sub bk-sub">{{page.header.subtitle}}</p>
         <p class="headline">{{page.header.title}}</p>
@@ -24,6 +23,7 @@
         <p class="bk-sub">{{page.header.img.title}}</p>
         <p class="bk-sub">{{page.header.img.photographer}}</p>
       </div>
+      <div class="bg_image lazyload" data-bg="{{page.header.img.url}}"></div>
     </div>
 
   </div>
@@ -84,7 +84,7 @@
 <section class="bk-blog-style bk-sec bk-sec__center" id="about-me">
   <div class="bk-sec__inner">
     <div class="bk-sec__img">
-      <img src="/assets/img/dev/bk_high.jpg" alt="Bastian Kroggel">
+      <img data-src="/assets/img/dev/bk_high.jpg" alt="Bastian Kroggel" class="lazyload">
     </div>
     <div class="bk-sec__text bk-sec__width">
       <h2>About Bastian</h2>

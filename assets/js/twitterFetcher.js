@@ -69,7 +69,7 @@ Object.defineProperty(item,'prepend',{configurable:true,enumerable:true,writable
 var news = {
   "id": '646979504716533760',
   "domId": 'news__twitter',
-  "lazyLoad": 'ondemand',
+  //"lazyLoad": 'ondemand',
   "maxTweets": 6,
   "enableLinks": true,
   "showUser": true,
@@ -127,7 +127,7 @@ var news = {
         + '</div>'
         //+ '</div>'
         + (tweetObject.image ? '<div class="tweet-img">'
-          + '<a href="' + tweetObject.permalinkURL + '"><img data-lazy="'+tweetObject.image+'"/></a>'
+          + '<a href="' + tweetObject.permalinkURL + '"><img data-src="'+tweetObject.image+'"/></a>'
         + '</div>' : '')
         + '<div class="tweet__interactions' + (tweetObject.image ? ' tweet__interactions_img' : '' ) + '">'
           + '<div class="interactions__el">'
@@ -193,10 +193,22 @@ var news = {
       var indicator_text = page + ' of ' + pages[1]
       $('#twitter_indicator').html(indicator_text)
     }
-    print_pages()
+    print_pages();
 
+    function set_lazyload() {
+      $('.twitter_el.slick-active .tweet-img img:not(.lazyloaded)').addClass('lazyload');
+    }
+    set_lazyload();
+
+    $('.twitter_frame').on('breakpoint', function(event, slick, breakpoint){
+      $('.twitter_el:not(.slick-active) .tweet-img img.lazyload').removeClass('lazyload');
+      $('.twitter_el.slick-active .tweet-img img:not(.lazyloaded)').addClass('lazyload');
+    });
     $('.twitter_frame').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      print_pages(nextSlide)
+      print_pages(nextSlide);
+    });
+    $('.twitter_frame').on('afterChange', function(event, slick, currentSlide){
+      set_lazyload();
     });
   };
 

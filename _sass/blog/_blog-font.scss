@@ -768,6 +768,9 @@ p.intro a:after {
   &.lock {
     width: auto;
   }
+  &[src=""] {
+    visibility: hidden;
+  }
 }
 
 .bk-blog-style p.bk_img {

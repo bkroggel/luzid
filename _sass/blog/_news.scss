@@ -170,7 +170,14 @@ section#news {
     margin-left: -1px;
     margin-top: -1px;
     z-index: -1;
+  }
+  img.lazyload,
+  img.lazyloading {
+    opacity: 0;
+  }
+  img.lazyloaded {
     opacity: .8;
+    transition: opacity .6s;
   }
 }
 

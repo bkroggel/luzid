@@ -4,6 +4,7 @@ section.pic-break {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  background: $accent-color;
   @include display_flex;
   @include justify-content(center);
   @include align-items(center);

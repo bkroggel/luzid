@@ -16,13 +16,19 @@ quote:
   text: |
     I am easily satisfied with the very best.
 sign: true
+first_impression: |
+    Short introduction to the who and why of this website + an in-depth look at the author and its intentions. Enjoy the ride.
 toc_about: |
-    Etiam congue ultrices sapien, sit amet condimentum lectus. Nulla vel sagittis dolor. Cras non metus volutpat, vestibulum nunc vel, finibus odio. Duis vestibulum faucibus interdum. Nam egestas aliquet metus. Nunc hendrerit euismod elit eu pellentesque. Integer pulvinar felis vitae libero tempus finibus.
+    This site presents a—by all means not comprehensive—overview of the author, his ideas and intentions and the underlying reason which led to the development of this webpage.
+    In case of questions or inquiries there is also a dedicated section where all of the major points of connection can be found.
 intro: |
-    On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.  
-    These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business is will frequently occur that pleasures have to be repudiated and annoyances accepted.
+    The idea is simple, the approach as well—yet the implementation holds some challenges.
+    The current iteration of the internet is shaped by the possibilities that social networks provide their user base with. In reverse that however also means that a very little group of companies concentrate—at least a substantial amount of—the entirety of user generated content on their own platforms.
+    I honestly do not mind those practices, they actually work fairly well and allow a lot of people to participate on the web who otherwise would not be able to express their own thoughts.  
+    Nevertheless those platforms most of the time lack search machine compatibility and are rather a data grave than an open and easily accessible data catalog of thoughts, opinions and information.
 
-    The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+    That in mind I created a personal counterpoint to the common social network.
+    Surely I integrated a highly customized Twitter feed in my site—convenience + reach are still variables that should not be underrated—but the main aspect of this site is a simple yet highly effective blog system that provides an entirely customizable and plain text-files based experience that not just allows to back up all information at any time but also to keep all data in my  own possession in the first place—features that are still highly missed on social networks these days.
 about:
     before: |
       Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.
@@ -84,7 +90,7 @@ timeline:
     from_date: 06/2015
     info: >-
       in cooperation with CareerFoundry</br>Berlin, GER
-    name: CODECATS SUMMERCAMP 2015
+    name: CODECATS</br>SUMMERCAMP 2015
     position:
     to_date: 08/2015
     website:
@@ -96,7 +102,7 @@ timeline:
       - support of the leading management
     from_date: 06/2014
     info: >-
-      Zeppelin University Friedrichshafen</br>in cooperation with Allianz Global Investors
+      Zeppelin University Friedrichshafen</br>in cooperation with Allianz Global Investors</br>Frankfurt, GER
     name: SUMMER SCHOOL</br>BRAND MANAGEMENT
     position:
     to_date: 07/2014
@@ -104,7 +110,7 @@ timeline:
   - description: >-
     bullets:
       - interdisciplinary program combining business administration and economics as well as cultural, communication and political science
-      - 'Bachelor Thesis at the Chair for Strategic Management and Human Resources Management:</br>ANALYSIS OF THE IMPACT OF STREAMING PROVIDERS ON THE TELEVISION INDUSTRY</br>( original title in german: Analyse der Auswirkungen von Streaming-Anbietern auf die Fernsehindustrie )'
+      - 'Bachelor Thesis at the Chair for Strategic Management and Human Resources Management:</br><strong>ANALYSIS OF THE IMPACT OF STREAMING PROVIDERS ON THE TELEVISION INDUSTRY</strong></br>( original title in german: Analyse der Auswirkungen von Streaming-Anbietern auf die Fernsehindustrie )'
     from_date: 01/2012
     info: >-
       BACHELORS DEGREE (B.A.)</br>ZEPPELIN UNIVERSITY FRIEDRICHSHAFEN</br>ON THE SHORES OF LAKE CONSTANCE.

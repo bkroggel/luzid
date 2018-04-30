@@ -63,8 +63,10 @@
 }
 
 .slick-slider .slick-track,
-.slick-slider .slick-list {
+.slick-slider .slick-list,
+.slick-slider .slick-slide {
    -webkit-perspective: 1000px; //possible flickering fix mentioned here: https://github.com/kenwheeler/slick/issues/1890
+   -webkit-backface-visibility: hidden; //possible flickering fix mentioned here: https://github.com/kenwheeler/slick/issues/1961
 }
 
 .bk-gallery .bk-gallery__elem img {

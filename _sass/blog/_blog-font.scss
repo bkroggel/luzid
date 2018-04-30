@@ -709,9 +709,13 @@ p.intro a:after {
   width: 100%;
   padding: 35px 25px;
   margin-left: -25px;
+  @include display_flex;
+  @include direction_column;
   p {
     font-size: 0.9rem;
     line-height: 1.7em;
+    margin-top: 5px;
+    margin-bottom: 5px;
     a {
       font-size: 1em;
       @include underline($blog-font-color, white);
@@ -745,6 +749,9 @@ p.intro a:after {
   }
   .info_bar__sub {
     margin-top: 1.5rem;
+  }
+  &.info_bar_sub {
+    order: 1;
   }
 }
 

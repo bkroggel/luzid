@@ -5,6 +5,7 @@
   grid-template-columns: 30px auto 30px;
   grid-template-rows: 50px auto 70px;
   grid-gap: 15px;
+  overflow-y: scroll; 
   @include media-query($small){
     grid-template-columns: 1fr 650px 1fr;
     grid-template-rows: 0.6fr 2fr 0.7fr;

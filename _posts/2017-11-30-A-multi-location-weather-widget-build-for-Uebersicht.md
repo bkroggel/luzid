@@ -25,6 +25,15 @@ I recently rediscovered a neat little app for macOS I already played with a few 
 Achieved by a WebKit instance that runs basically in full screen mode as a layer between the actual desktop and the application/document icons, *Übersicht* allows to add nearly any kind of content to the macOS desktop that is driven by HTML5 as well as <span class="sidenote"><span class="sidenote__toggle">Javascript</span><span class="sidenote__note">Übersicht makes use of [CoffeeScript](http://coffeescript.org/) which can be easily mixed and compiled to JS. However if preferred, it is also possible to use pure JS to write Übersicht widgets.</span></span>.  
 That said it is actually pretty easy to write a widgets for and by yourself—at least if you do have some basic knowledge of web development—since it doesn’t require much more than the usual tools and the actually pretty comprehensive and well documented Übersicht-Readme which can be found on [Github](https://github.com/felixhageloh/uebersicht).
 
+Initially this blogpost was intended to be published right along with the release of Wttr Forecast widget for Uebersicht. Since I was quite busy with the redesign and rebuilding of my new website—which you are looking at right now—I had to postpone the final push to my main domain in order to be able to release this writeup with all of the features my newly developed site provides.  
+So while the actual release of this post might have been at the end of November 2017 the publishing date reflects the actual release on my website instead of its first appearance on my—public yet not easy to catch—beta section.
+Just for the record:  
+{:info="Update" info_sub="2018-04-29 19:14:59 +0200"}
+
+<span class="highlighted">Initial Release:&nbsp;&nbsp;&nbsp; `2017-11-30 14:04:00 +0100`</span>
+{:info="Update" info_sub="2018-04-29 19:14:59 +0200"}
+<br>
+
 ## Wttr Widget for Übersicht
 ![Wttr Widget for Übersicht](/assets/img/page/blog/wttr_thumbnail.jpg){: data-subtitle="Sourcecode, documentation and the ready to download product can be found on [Github](https://github.com/bkroggel/wttr)"}
 There are actually quite a few Übersicht widgets out there that allow to display the current weather conditions right on the macOS desktop—so why write another one instead of just using what is already there?
@@ -35,7 +44,9 @@ Not being a huge fan of the native macOS notification center—and especially th
 So what I was looking for was an easily but still fully featured weather forecast element—and everything should fit into my recently created macOS styled widget design. While there were a few things out there that kind of helped me to think through the process, there was nothing like the perfect solution for my case.  
 *The reason I created it myself.*
 
-### Features
+[Get Wttr Forecast](http://tracesof.net/uebersicht-widgets/#wttr){:.btn}
+
+### Hands on + the Features
 The idea and the history aside let‘s dive into the actually features and therefore the "What" instead of the "Why".
 So what is the purpose of this piece of code?
 After the initial thought of providing myself with a widget that not just allows to show some weather information in a beautiful and style-wise fitting design but also is capable of displaying multiple locations while still maintaining a slim and not overloaded appearance, I came up with a neat little solutions for one of the minor issues I had with Übersicht.  
@@ -70,7 +81,7 @@ Anyways that could be an starting point for the next Übersicht widget that evol
 
 
 
-### How To
+### How To + A short manual
 *There is a comprehensive How-To section and Readme in the [GitHub Repository](https://github.com/bkroggel/wttr) for Wttr Forecast Widget. The following part will be heavily based on that. If you do have any questions please feel free to open a ticket on GitHub or reach out to me on [Twitter](https://twitter.com/derKroggel)*
 
 The overall starting process to get the Wttr widget up and running basically follows a <span class="sidenote"><span class="sidenote__toggle">simple step by step approach</span><span class="sidenote__note">if you already installed Übersicht and downloaded as well as moved the widget and its components to the right folder you can go ahead with bullet point No. 4</span></span> you can find below.

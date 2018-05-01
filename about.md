@@ -8,9 +8,7 @@ header:
     url: /assets/img/dev/about_intro.jpg
   subtitle: Bastian Kroggel
   title: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at rutrum
-    orci. Integer ultricies purus vel libero cursus laoreet. Quisque interdum
-    rutrum tortor ut bibendum.
+    Driven by an urge to keep pace with the evolving technical environment + distinguished by the broad knowledge of theoretical aspects but also technical details and hands-on approaches.
 quote:
   author: Winston Churchill
   text: |
@@ -24,16 +22,31 @@ toc_about: |
 intro: |
     The idea is simple, the approach as well—yet the implementation holds some challenges.
     The current iteration of the internet is shaped by the possibilities that social networks provide their user base with. In reverse that however also means that a very little group of companies concentrate—at least a substantial amount of—the entirety of user generated content on their own platforms.
-    I honestly do not mind those practices, they actually work fairly well and allow a lot of people to participate on the web who otherwise would not be able to express their own thoughts.  
-    Nevertheless those platforms most of the time lack search machine compatibility and are rather a data grave than an open and easily accessible data catalog of thoughts, opinions and information.
 
-    That in mind I created a personal counterpoint to the common social network.
+    I honestly do not mind those practices, they actually work fairly well and allow a lot of people to participate on the web who otherwise would not be able to express their own thoughts.  
+    Nevertheless those platforms most of the time lack search machine compatibility and are rather a data grave than an open and easily accessible catalog of thoughts, opinions and information.
+
+    That in mind I created a personal counterpoint to the common state of art.
     Surely I integrated a highly customized Twitter feed in my site—convenience + reach are still variables that should not be underrated—but the main aspect of this site is a simple yet highly effective blog system that provides an entirely customizable and plain text-files based experience that not just allows to back up all information at any time but also to keep all data in my  own possession in the first place—features that are still highly missed on social networks these days.
-about:
-    before: |
-      Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.
-    after: |
-      One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
+
+    All together this website should provide an insight in my own opinions and ideas, act as a silo + wiki for notes I do like to keep track of and at the same time would like to share with the world and of course it should be the one point of contact some needs to reach out on the web in order to get hold of all publicly available and confirmed information regarding myself.
+
+    Anyways, I honestly hope I am able to provide you with the exact details you are looking for and—of course—I am always happy to hear from you.
+    <!-- Anyways, if the above matches with your intentions of visiting my site I sincerely hope I am able to provide you with all of the details you are looking for. And if not—I am of course always happy to hear from you. -->
+
+    Sincerely,
+
+about: |
+    What drives me is an urge to keep pace with the constantly evolving digital environment, what distinguishes me is the broad knowledge about not just the theoretical and strategic approaches but also the technical details and actual ways of implementation—the development.
+
+    While my educational background at Zeppelin University Friedrichshafen on the shores of Lake Constance equips me with a generalistic yet in certain areas highly focused perspective, my personal skills provide me with the ability to also transfer those information into an actual production ready solution.
+    <br><br>
+    Besides a general enthusiasm for technology the spectrum of interests also covers creative areas like a strong preference for contemporary literature, for simple yet effective design and a long-standing experience as a piano playing musician.
+
+    Probably on the road right now with my motorcycle.  
+    — The way of clearing my mind.
+timeline_intro: |
+    Outline and insight of my current and past professional as well as educational experiences + career. By no means should this be seen as a comprehensive, detailed and complete timeline of myself rather than a short summary of the—in my eyes—most important waypoints of my background
 timeline:
   - description: >
     bullets:

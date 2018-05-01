@@ -89,8 +89,7 @@
     <div class="bk-sec__text bk-sec__width">
       <h2>About Bastian</h2>
       <div class="bk-sec__text_frame">
-        {{ page.about.before | markdownify }}
-        {{ page.about.after | markdownify }}
+        {{ page.about | markdownify }}
         <div class="bk-sec__quote">
           <p class="bk-sub">{{ page.quote.author }}</p>
           <p class="main_quote">{{ page.quote.text }}</p>

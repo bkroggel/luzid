@@ -887,6 +887,11 @@ a.link_button.-white {
     .sec__info p {
       color: white;
     }
+    a {
+      font-size: 0.9rem;
+      @include pure-link(white);
+      @include underline(white, $blue-accent);
+    }
   }
 }
 

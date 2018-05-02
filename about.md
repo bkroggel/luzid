@@ -46,7 +46,9 @@ about: |
     Probably on the road right now with my motorcycle.  
     — The way of clearing my mind.
 timeline_intro: |
-    Outline and insight of my current and past professional as well as educational experiences + career. By no means should this be seen as a comprehensive, detailed and complete timeline of myself rather than a short summary of the—in my eyes—most important waypoints of my background
+    Outline and insight of my current and past professional as well as educational experiences + career. By no means should this be seen as a comprehensive, detailed and complete timeline rather than a short summary of the—in my eyes—most important waypoints of my background.
+
+    If you would like to know how to get added to that list feel free to head over to my [Contact Section](#contact) and get in touch with me.
 timeline:
   - description: >
     bullets:

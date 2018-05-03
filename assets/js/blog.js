@@ -431,3 +431,8 @@ more_to_show()
 $( window ).resize(function() {
   more_to_show()
 })
+
+// call waypoint after lazyloaded images
+document.addEventListener('lazyloaded', function(e){
+  Waypoint.refreshAll();
+});

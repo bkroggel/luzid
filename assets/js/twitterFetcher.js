@@ -212,7 +212,6 @@ var news = {
       set_lazyload();
       if ( $(window).width() < 767 ) {
         Waypoint.refreshAll();
-        console.log('Test')
       }
     });
   };

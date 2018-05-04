@@ -102,7 +102,9 @@ section#news {
 
 #news .twitter_el,
 #news .slick-slide {
-  height: unset;
+  @include media-query($small){
+    height: unset;
+  };
 }
 
 #news__twitter .twitter_el {

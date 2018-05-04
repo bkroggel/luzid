@@ -207,8 +207,13 @@ var news = {
     $('.twitter_frame').on('beforeChange', function(event, slick, currentSlide, nextSlide){
       print_pages(nextSlide);
     });
+
     $('.twitter_frame').on('afterChange', function(event, slick, currentSlide){
       set_lazyload();
+      if ( $(window).width() < 767 ) {
+        Waypoint.refreshAll();
+        console.log('Test')
+      }
     });
   };
 

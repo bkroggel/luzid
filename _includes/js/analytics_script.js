@@ -32,11 +32,12 @@ $(window).on('load', function() {
         setTimeout( /* fix which allows display to change before addClass gets executed & .stuck to get applied */
           function(){
             $('#ggl-analytics').addClass('ggl-active');
+            console.log('triggered')
+            setTimeout( function(){
+              $('.ggl-active').css('transition', 'none')
+              console.log('triggered as well')
+            }, 500);
         }, 500);
-        setTimeout(
-          function(){
-            $('.ggl-active').css('transition', 'none')
-        }, 1500);
 
         function analytics_waypoint(){
           analytics_waypoint_el = $('footer').waypoint(function(direction){

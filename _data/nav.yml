@@ -3,8 +3,8 @@ horizontal-navs:
     link: /
   - name: About
     link: /about
-  - name: Blog
-    link: /
+  - name: Archive
+    link: /blog/archive/
   # - name: Work
   #   link: /work
   - name: Contact
@@ -32,8 +32,8 @@ footer:
       link: /
     - name: About
       link: /about
-    - name: Blog
-      link: /
+    - name: Archive
+      link: /blog/archive/
     - name: Contact
       link: /about#contact
   2_navs:

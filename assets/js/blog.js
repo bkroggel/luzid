@@ -352,7 +352,7 @@ $('.bk-blog-content span.sidenote').click(function() {
 // additional information in post in_view
 function additional_post_information(){
   var ext_name = 'info'
-  $('.bk-blog-content p[' + ext_name + ']').each(function() {
+  $('.bk-blog-content p[' + ext_name + '], .bk-blog-content ul[' + ext_name + '], .bk-blog-content ol[' + ext_name + ']').each(function() {
 
     var title = $(this).attr( ext_name )
     var sub = $(this).attr( ext_name + '_sub' )

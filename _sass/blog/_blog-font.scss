@@ -577,24 +577,26 @@ blockquote { //overwriting ukit
 
 .bk-blog-style ul {
   list-style: none;
-  padding: 0;
+  padding: 0 0 0 21px;
   ul {
     padding: 0 0 0 15px;
   }
   li {
     line-height: 1.7rem;
+    position: relative;
     &:before {
       content: '\2013';
-      display: inline;
       font-size: 1.2em;
       line-height: 1.7rem;
       vertical-align: middle;
-      margin-right: 15px;
+      margin-right: 10px;
       color: $dark-color;
+      position: absolute;
+      right: 100%;
     }
   }
   @include media-query($xtra-small){
-    padding: 0 0 0 15px;
+    padding: 0 0 0 calc(15px + 21px);
   };
 }
 
@@ -645,13 +647,14 @@ blockquote { //overwriting ukit
   }
   &:before {
     content: 'Footnotes';
-    color: #A2A2A2;
+    color: $main-color;
     font-family: "Open Sans","Source Sans Pro","Helvetica Neue",Arial,sans-serif;
     font-weight: 600;
     font-size: 0.6rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    border: 1px solid #A2A2A2;
+    border: 1px solid $dark-color;
+    background: $dark-color;
     border-radius: 2px;
     margin: 0 2px;
     padding: 4px 15px;
@@ -896,6 +899,12 @@ p:not(.two) .image_frame {
     margin-left: 5px;
     color: $accent-two;
   }
+}
+
+.bk-blog-content span.sidenote:not(.inline) span.sidenote__toggle svg {
+  @include media-query($medium){
+    display: none;
+  };
 }
 
 // .bk-blog-content span.sidenote:not(.inline) span.sidenote__toggle {

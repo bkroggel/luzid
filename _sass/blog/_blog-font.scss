@@ -570,7 +570,7 @@ blockquote { //overwriting ukit
 .bk-blog-style ul,
 .bk-blog-style ol {
   font-size: 0.9rem;
-  a {
+  a, em, strong {
     font-size: unset;
   }
 }

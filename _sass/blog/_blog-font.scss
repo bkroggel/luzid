@@ -516,7 +516,7 @@ blockquote { //overwriting ukit
   margin: 40px 0 40px 15px;
   @include media-query($medium){
     margin: 40px 0 40px 40px;
-    width: 80%;
+    //width: 80%;
   };
   &:before {
     content: "Quote";
@@ -524,16 +524,17 @@ blockquote { //overwriting ukit
     display: inline-block;
     font-size: 0.6em;
     line-height: 1em;
-    margin-right: 15px;
-    color: $dark-color;
+    margin-right: 10px;
+    color: $accent-two;
+    font-weight: 700;
   }
 }
 .bk-blog-style blockquote p,
 .bk-blog-style blockquote p em,
 .bk-blog-style blockquote p a {
-  color: rgba(0 ,0 ,0 , .6);
-  line-height: 1.5em;
-  font-size: 0.9rem;
+  color: rgba(0 ,0 ,0 , .5);
+  //line-height: 1.5em;
+  //font-size: 0.9rem;
 }
 
 // Liste
@@ -543,6 +544,7 @@ blockquote { //overwriting ukit
   list-style-type: none;
   li ol {
     padding-left: 15px;
+    margin-top: 10px;
   }
   @include media-query($xtra-small){
     padding-left: 43px;
@@ -551,6 +553,10 @@ blockquote { //overwriting ukit
     display: block;
     position: relative;
     line-height: 1.7rem;
+    margin-top: 10px;
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
   li:before {
     content: counter(item, decimal-leading-zero) " ";

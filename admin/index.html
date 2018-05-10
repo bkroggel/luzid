@@ -67,8 +67,8 @@
               h('div', {className: "bk-article-main article-column"},
                 h('div', {className: "bk-blog-posts--tags"},
                   h('p', {},
-                    this.props.widgetsFor('tags').map(function(tags, index) {
-                      return h('a', {key: index}, tags.getIn(['data']));
+                    this.props.widgetsFor('tags').map(function(tag, index) {
+                      return h('a', {key: index}, tag.getIn(['data']));
                     })
                   ),
                 ),

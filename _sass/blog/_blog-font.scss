@@ -590,6 +590,10 @@ blockquote { //overwriting ukit
   li {
     line-height: 1.7rem;
     position: relative;
+    margin-top: 10px;
+    &:first-of-type {
+      margin-top: 0;
+    }
     &:before {
       content: '\2013';
       font-size: 1.2em;

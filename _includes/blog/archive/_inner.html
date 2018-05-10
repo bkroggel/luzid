@@ -43,7 +43,13 @@
           </div>
           {% if post.tags %}
           <div class="item__info_2">
-            {% for tag in post.tags %}
+            {% capture tags %}
+              {% for tag in post.tags %}
+                {{ tag }}
+              {% endfor %}
+            {% endcapture %}
+            {% assign sortedtags = tags | split:' ' | sort %}
+            {% for tag in sortedtags %}
               <span class="tag">{{tag}}</span>
             {% endfor %}
           </div>

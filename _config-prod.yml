@@ -1,7 +1,7 @@
 # www.bastiankroggel.com
 # production environment
 
-url: "https://beta.bastiankroggel.com"
+url: "https://www.bastiankroggel.com"
 timezone: Europe/Berlin
 google-analytics:
   tracking-code:

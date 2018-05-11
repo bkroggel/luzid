@@ -147,6 +147,9 @@ a.blog-posts--title {
   margin: 0.5em 0;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  em, strong {
+    font-size: 0.85rem;
+  }
 }
 
 // Tags Formatting

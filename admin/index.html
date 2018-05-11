@@ -66,11 +66,12 @@
               h('div', {className: "bk-side-space article-column"}),
               h('div', {className: "bk-article-main article-column"},
                 h('div', {className: "bk-blog-posts--tags"},
-                  h('p', {},
-                    this.props.widgetsFor('tags').map(function(tag, index) {
-                      return h('a', {key: index}, tag.getIn(['data']));
-                    })
-                  ),
+                  // h('p', {},
+                  //   this.props.widgetsFor('tags').map(function(tag, index) {
+                  //     console.log(tag);
+                  //     return h('a', {kex: index}, tag.getIn(['data']));
+                  //   })
+                  // ),
                 ),
                 h('div', {className: "article-author-img"}),
                 h('div', {className: "article-author-id"},

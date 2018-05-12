@@ -15,7 +15,7 @@ quote:
     I am easily satisfied with the very best.
 sign: true
 first_impression: |
-    Short introduction to the who and why of this website + an in-depth look at the author and its intentions. Enjoy the ride.
+    Short introduction to the who and why of this website + an in-depth look at the author and his intentions. Enjoy the ride.
 toc_about: |
     This site presents a—by all means not comprehensive—overview of the author, his ideas and intentions and the underlying reason which led to the development of this webpage.
     In case of questions or inquiries there is also a dedicated section where all of the major points of connection can be found.

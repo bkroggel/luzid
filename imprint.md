@@ -8,16 +8,11 @@ title: Imprint
 
 ## Angaben gem&auml;&szlig; &sect; 5 TMG:
 {:.no_initial}
-Max Mustermann  
-Musterstra&szlig;e 111  
-Geb&auml;ude 44  
-90210 Musterstadt  
+Bastian Kroggel
 
 ## Kontakt:
 {:.no_initial}
-Telefon: +49 (0) 123 44 55 66  
-Telefax: +49 (0) 123 44 55 99  
-E-Mail: mustermann@musterfirma.de   
+E-Mail: contact (at) bastiankroggel (dot) com   
 
 ## Haftung f&uuml;r Inhalte
 Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen.

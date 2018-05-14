@@ -30,11 +30,11 @@ footer:
   1_navs:
     - name: Home
       link: /
-    - name: About
+    - name: About Me
       link: /about
-    - name: Archive
+    - name: Blog Archive
       link: /blog/archive/
-    - name: Contact
+    - name: Contact Me
       link: /about#contact
   2_navs:
     - name: Twitter
@@ -46,7 +46,7 @@ footer:
     - name: LinkedIn
       link: https://linkedin.com/in/bastian-kroggel-125712121
   3_navs:
-    - name: RSS
+    - name: RSS Feed
       link: /feed.xml
     - name: Humans.txt
       link: /humans.txt

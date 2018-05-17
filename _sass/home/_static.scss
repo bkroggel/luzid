@@ -446,6 +446,9 @@
       }
     };
   }
+  ul li {
+    margin-top: 0;
+  }
   #intro_link {
     position: relative;
     display: inline-block;
@@ -681,7 +684,7 @@ section#contact {
   @include direction_column;
   @include justify-content(space-between);
   max-width: calc(100% - 15px);
-  background-color: $blog-font-color; 
+  background-color: $blog-font-color;
   margin-left: 15px;
   margin-bottom: -100px;
   @include media-query($small){

@@ -4,7 +4,7 @@ function set_waypoint(){
     element: $('.js-stuck-nav')[0]
   });
 
-  var navHeight = $('.bk-blog-nav').outerHeight(true) - 10; /* hight of navbar - the negative offset (also check css) */
+  var navHeight = $('.bk-blog-nav').outerHeight(true); /*  - 10 hight of navbar - the negative offset (also check css) */
   var bk_wrapper = '<div class="bk-blog__navigation-wrapper" />';
   var secondHeight = $('#blog-nav-dropdown').height();
 
@@ -69,7 +69,7 @@ function call_sidebar(){
 
 
   if ($(document).scrollTop() < $('.bk-blog-nav--frame').outerHeight(true) + news_height) {
-    var screen_beauty = window.innerHeight / 20;
+    var screen_beauty = window.innerHeight / 30;
     /* var sidebar_height = window.innerHeight - margin_in_viewport - navbar_height - trigger_height - screen_beauty;*/
     var sidebar_height = window.innerHeight - margin_in_viewport - trigger_height - screen_beauty;
   } else {

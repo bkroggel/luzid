@@ -173,9 +173,9 @@
     z-index: 2;
     &.stuck {
       position: fixed;
-      top: 60px;
+      top: 70px;
       @include media-query($xtra-small) {
-        top: 65px
+        top: 75px
       }
     }
     @include media-query($medium) {

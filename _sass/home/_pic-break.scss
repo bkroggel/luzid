@@ -106,21 +106,6 @@ $skew_diag: 3;
   };
 }
 
-.pic__style-diagonal-2 {
-  transform-origin: bottom right;
-  z-index: 1;
-  //background: $dark-color;
-  background: white;
-  top: 100%;
-  transform: skewY(#{$skew_diag * 1.8}deg);
-  @include media-query($small){
-    transform: skewY(#{$skew_diag * 1.5}deg);
-  };
-  @include media-query($medium){
-    transform: skewY(#{$skew_diag}deg);
-  };
-}
-
 .pic-break__author {
   width: calc(90% - 64px);
   max-width: 300px;

@@ -977,8 +977,18 @@ section#contact {
   padding: 20px 15px;
   align-self: flex-end;
   &.sec__num {
+    margin-bottom: 35px;
+    @include media-query($xtra-small){
+      margin-bottom: 55px;
+    };
+    @include media-query($small){
+      margin-bottom: 70px;
+    };
     @include media-query($medium){
-      margin-bottom: 80px;
+      margin-bottom: 50px;
+    };
+    @include media-query($large){
+      margin-bottom: 70px;
     };
   }
 }

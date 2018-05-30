@@ -1,4 +1,4 @@
-<footer {% if page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}class="dark"{% endif %}>
+<footer class="{% if page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}dark{% endif %}{% if page.layout == 'post' %}straight{% endif %}">
   <!-- Google Analytics -->
   {% include defaults/analytics/_analytics_window.html %}
   <div class="footer_skew"></div>

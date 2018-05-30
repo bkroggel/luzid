@@ -1,0 +1,55 @@
+<footer {% if page.layout == 'archive' or page.layout == 'by_tag' or page.layout == 'tags' %}class="dark"{% endif %}>
+  <!-- Google Analytics -->
+  {% include defaults/analytics/_analytics_window.html %}
+  <div class="footer_skew"></div>
+  <div class="footer_high footer_slide">
+    <div class="footer__index">
+      <ul>
+        {% for 1_nav in site.data.nav.footer.1_navs %}<li><a href="{{1_nav.link}}">{{1_nav.name}}</a></li>{% endfor %}
+      </ul>
+      {{site.data.info.footer_text | markdownify}}
+    </div>
+    <div class="footer__additional">
+      <div class="additional_one footer_toc">
+        <ul>
+          <li class="define">About site</li>
+          {% for 3_nav in site.data.nav.footer.3_navs %}<li><a href="{{3_nav.link}}">{{3_nav.name}}</a></li>{% endfor %}
+        </ul>
+      </div>
+      <div class="additional_two footer_toc">
+        <li class="define">social media</li>
+        <li>Follow Bastian</li>
+        <li class="social_icons">
+          <div class="social_item">
+            <a href="http://twitter.bastiankroggel.com"><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="social_item">
+            <a href="https://linkedin.com/in/bastian-kroggel-125712121"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="social_item">
+            <a href="https://github.com/bkroggel"><i class="fab fa-github"></i></a>
+          </div>
+          <!-- <div class="social_item">
+            <a href="https://www.instagram.com/derkroggel/"><i class="fab fa-instagram"></i></a>
+          </div> -->
+          <div class="social_item social_item__bk">
+            {% include svg/_icon.html %}
+          </div>
+        </li>
+      </div>
+    </div>
+  </div>
+  <div class="footer_low footer_slide">
+    <div class="footer_low__logo">
+      <div class="logo__item">
+        {% include svg/_name.html %}
+      </div>
+      <div class="logo__info">
+        <p>personal website — &copy;{{ site.cr_date }}</p>
+      </div>
+    </div>
+    <div class="footer__thought">
+      <p><span>Life is a journey </span><span>— be part of it.</span> </p>
+    </div>
+  </div>
+</footer>

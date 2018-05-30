@@ -45,7 +45,7 @@ $(window).on('load', function() {
               $('#ggl-analytics').removeClass('stuck');
             }
            }, {
-             offset: $(window).innerHeight() - ($(window).innerHeight() - $('#ggl-analytics').outerWidth())/2
+             offset: $(window).innerHeight() - ($(window).innerHeight() - $('#ggl-analytics').outerWidth())/2 - 80 /* 80 = offset due to skewed element*/
           })
         }
 

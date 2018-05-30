@@ -30,24 +30,6 @@ section.pic-break {
   }
 }
 
-.frame-line {
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 1px;
-    top: 0;
-    background: $main-color;
-  }
-  &:before {
-    left: 5%;
-  }
-  &:after {
-    right: 5%;
-  }
-}
-
 .pic-break__credits {
   position: absolute;
   right: 6px;
@@ -128,7 +110,7 @@ $skew_diag: 3;
   transform-origin: bottom right;
   z-index: 1;
   //background: $dark-color;
-  background: $blue-black;
+  background: white;
   top: 100%;
   transform: skewY(#{$skew_diag * 1.8}deg);
   @include media-query($small){
@@ -137,12 +119,6 @@ $skew_diag: 3;
   @include media-query($medium){
     transform: skewY(#{$skew_diag}deg);
   };
-  &.frame-line {
-    &:before,
-    &:after {
-      background: $bb-soft;
-    }
-  }
 }
 
 .pic-break__author {

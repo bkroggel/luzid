@@ -109,6 +109,12 @@
   src:local('Open Sans Bold'),url(//brick.a.ssl.fastly.net/fonts/opensans/700.woff) format('woff');
 }
 
+@font-face{
+  font-family:'Open Sans';
+  font-style:normal;
+  font-weight:900;
+  src:local('Open Sans Extrabold'),url(//brick.freetls.fastly.net/fonts/opensans/900.woff) format('woff')}
+
 @font-face {
   font-family:'Open Sans';
   font-style:italic;

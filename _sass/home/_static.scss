@@ -975,6 +975,12 @@ section#contact {
 
 #contact .bk-sec__ending .sec__info {
   padding: 20px 15px;
+  align-self: flex-end;
+  &.sec__num {
+    @include media-query($medium){
+      margin-bottom: 80px;
+    };
+  }
 }
 
 .bk-sec__logo {

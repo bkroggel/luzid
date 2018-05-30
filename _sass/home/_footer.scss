@@ -50,8 +50,11 @@ footer.dark .footer_skew {
 }
 
 .footer_high {
-  padding-top: 80px;
+  padding-top: 120px;
   margin-top: -80px;
+  @include media-query($small){
+    padding-top: 80px;
+  };
 }
 
 .footer_low {
@@ -121,9 +124,12 @@ footer li {
 .footer__index {
   li a {
     text-transform: uppercase;
-    font-size: 2.7rem;
+    font-size: 1.9rem;
     font-weight: 900;
     line-height: 1.25em;
+    @include media-query($medium){
+      font-size: 2.7rem;
+    };
   }
   p {
     max-width: 300px;

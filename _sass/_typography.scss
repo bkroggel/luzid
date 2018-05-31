@@ -116,7 +116,7 @@ p {
   vertical-align: middle;
 }
 
-.bk-blog-style.bk-sec p.bk-sub {
+.bk-blog-style.bk-sec .bk-sec__quote p.bk-sub {
   color: $darkest-color;
 }
 
@@ -925,5 +925,8 @@ a.link_button.-white {
   a.btn {
     margin: 0;
     margin-top: 25px;
+    box-shadow: none;
+    background: white;
+    color: $darkest-color;
   }
 }

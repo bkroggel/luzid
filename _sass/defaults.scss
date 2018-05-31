@@ -2,6 +2,7 @@
 $main-color: #EFEFEF;
 $accent-color: rgb(155, 167, 138);
 $accent-two:rgb(237, 147, 147);
+$accent-three: #cdddf6;
 $slightly-darker: #dadada;
 $dark-color: #A2A2A2;
 $really-dark: #5a5a5a;
@@ -230,7 +231,7 @@ justify-content: $justify;
   "typography",
   "home/nav",
   "home/screen_nav",
-  "home/bk-footer",
+  //"home/bk-footer",
   "home/footer",
   "blog/default",
   "blog/pagination",

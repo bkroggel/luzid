@@ -589,37 +589,6 @@ a.link_button.-white {
   @include link-mix(white);
 }
 
-.luzid_element {
-  p {
-    //@include link_mix(white);
-    margin: 0;
-    color: white;
-    font-family: $reading;
-    &, a {
-      font-size: 0.8rem;
-    }
-    a {
-      color: white;
-      text-decoration: underline;
-      text-decoration-skip: ink;
-    }
-  }
-  a.link {
-    margin-top: 20px;
-    color: #606f54;
-
-  }
-}
-
-.luzid_el__title {
-  p:last-of-type,
-  p.luzid-title {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    line-height: 1em;
-  }
-}
-
 // bk-timeline
 
 #bk-timeline .bk-tl_element>.bk-tl_el__title>p.bk-tl-date,
@@ -889,31 +858,36 @@ a.link_button.-white {
   }
 }
 
-.bk-blog-style .bk-card {
+.bk-card {
   h3 {
     @include display_flex;
     align-self: flex-end;
-    color: white;
+    color: $darkest-color;
     position: relative;
     margin: 0;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 900;
     line-height: normal;
-    font-family: $reading;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+    text-shadow: 0px 0px 25px white;
   }
-  p {
+  p, a {
     color: $blog-font-color;
     font-size: 0.8rem;
     line-height: 1.6em;
-    font-family: $reading;
+    font-family: $sans-serif;
     margin: 0;
-    &.action {
-      color: $accent-two;
-    }
   }
   a {
+    @include underline($darkest-color, white);
+  }
+  a.card-action {
     background: none;
-    text-shadow: none;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
   }
 }
 

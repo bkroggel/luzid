@@ -597,9 +597,6 @@ section#contact {
 }
 
 .bk-card {
-  width: calc(100% - 50px);
-  max-width: 500px;
-  margin: 10px 25px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
   border-radius: 2px;
   box-sizing: border-box;
@@ -607,21 +604,21 @@ section#contact {
   @include display_flex;
   @include direction_column;
   background: white;
-  @include media-query($small){
-    width: calc(100%/3 - 3 * 10px);
-    max-width: unset;
-    margin: 5px;
-  };
-  @include media-query($medium){
-    width: 300px;
-  };
+  &.bk-card--wide {
+    width: 90%;
+    max-width: 450px;
+    z-index: 5;
+  }
   &>.bk-card__title {
-    height: 126px;
-    flex: 0 0 126px;
+    height: 200px;
+    flex: 0 0 200px;
     position: relative;
-    background: $darkest-color;
+    background: $accent-three;
     @include display_flex;
     padding: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   &>.bk-card__content {
     @include display_flex;
@@ -638,7 +635,6 @@ section#contact {
       border-top: 1px solid rgba(0,0,0,.1)
     }
   }
-
   .icon {
     position: absolute;
     opacity: .7;

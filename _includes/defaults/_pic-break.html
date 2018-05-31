@@ -3,18 +3,19 @@
   <div class="pic__style-el pic__style-el-2"></div>
   <div class="pic__style-diagonal pic__style-diagonal-1"></div>
 
-  <div class="pic-break__author">
-    <div class="pic-break__img">
-      <img class="lazyload" data-src="{{site.data.author.['Bastian Kroggel'].img}}" alt="Bastian Kroggel">
-    </div>
-    <div class="luzid_element">
-      <div class="luzid_el__title">
-        <p>Bastian</p>
-        <p>Kroggel</p>
+  <div class="bk-card bk-card--wide">
+    <div class="bk-card__title lazyload" data-bg="{{site.data.author.['Bastian Kroggel'].big_img}}">
+      <h3>Bastian Kroggel</h3>
+      <div class="icon">
+        {% include svg/_icon.html %}
       </div>
-      <div class="luzid_el__content">
+    </div>
+    <div class="bk-card__content">
+      <div class="bk-card__text">
         <p>{{site.data.author.['Bastian Kroggel'].info}}</p>
-        <a class="link link_button -small -white" href="/about">About me</a>
+      </div>
+      <div class="bk-card__action">
+        <a class="card-action" href="/about">Read more</a>
       </div>
     </div>
   </div>

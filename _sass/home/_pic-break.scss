@@ -1,6 +1,6 @@
 section.pic-break {
   width: 100%;
-  padding: 125px 0;
+  padding: 150px 0;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -9,7 +9,7 @@ section.pic-break {
   @include justify-content(center);
   @include align-items(center);
   @include media-query($small){
-    padding: 150px 0;
+    padding: 120px 0;
   };
 }
 .pic-break__bg {
@@ -112,46 +112,6 @@ $skew_diag: 3;
   @include display_flex;
   @include align-items(center);
   @include direction_column;
-}
-
-.luzid_element {
-  @include display_flex;
-  @include direction_column;
-  text-align: center;
-  @include media-query($small){
-    transform: translateX(calc(50% + 5px));
-    @include direction_row;
-    text-align: unset;
-  };
-}
-
-.luzid_el__title {
-  margin-bottom: 15px;
-  position: relative;
-  // &:before {
-  //   content: '';
-  //   background: white;
-  //   height: 1px;
-  //   width: 100%;
-  //   position: absolute;
-  //   bottom: -5px;
-  //   left: 0;
-  // }
-  @include media-query($small){
-    margin-bottom: unset;
-    text-align: right;
-    position: absolute;
-    transform: translateX(calc(-100% - 10px));
-    &:before {
-      content: '';
-      background: white;
-      height: 160px;
-      width: 1px;
-      position: absolute;
-      top: 110%;
-      left: unset;
-    }
-  };
 }
 
 .pic-break__img {

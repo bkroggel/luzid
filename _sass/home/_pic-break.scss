@@ -113,24 +113,3 @@ $skew_diag: 3;
   @include align-items(center);
   @include direction_column;
 }
-
-.pic-break__img {
-  border-radius: 50%;
-  margin-bottom: 20px;
-  overflow: hidden;
-  height: 120px;
-  width: 120px;
-  background: $main-color;
-  img {
-    border-radius: 50%;
-    transform: scale(0.9);
-  }
-  img.lazyload,
-  img.lazyloading {
-    opacity: 0;
-  }
-  img.lazyloaded {
-    opacity: 1;
-    transition: opacity .6s;
-  }
-}

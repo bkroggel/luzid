@@ -2,11 +2,11 @@
 title: A multi-location weather widget build for Übersicht
 sub_title: Wttr Forecast Widget
 author: Bastian Kroggel
-date: 2017-11-30 14:04:00 +0100
+date: 2018-05-31 17:05:56 +0200
 tags: [work, english, tutorial, macos]
 permalink:
 thumbnail:
-  img: /assets/img/page/blog/wttr_thumbnail.jpg
+  img: /assets/img/page/blog/wttr_thumb.jpg
   overview:  
 sitemap:
   lastmod:

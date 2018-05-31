@@ -15,10 +15,10 @@ quote:
     I am easily satisfied with the very best.
 sign: true
 first_impression: |
-    Short introduction to the who and why of this website + an in-depth look at the author and his intentions. Enjoy the ride.
-toc_about: |
     This site presents a—by all means not comprehensive—overview of the author, his ideas and intentions and the underlying reason which led to the development of this webpage.
     In case of questions or inquiries there is also a dedicated section where all of the major points of connection can be found.
+toc_about: |
+    Short introduction to the who and why of this website + an in-depth look at the author and his intentions. Enjoy the ride.
 intro: |
     The idea is simple, the approach as well—yet the implementation holds some challenges.
     The current iteration of the internet is shaped by the possibilities that social networks provide their user base with. In reverse that however also means that a very little group of companies concentrate—at least a substantial amount of—the entirety of user generated content on their own platforms.

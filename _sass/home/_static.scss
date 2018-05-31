@@ -422,7 +422,7 @@
   text-align: left;
   @include media-query($medium){
     text-align: left;
-    margin: 140px 0 100px calc(20% + 50px);
+    margin: 170px 0 130px calc(20% + 50px);
   };
   p.about {
     position: relative;
@@ -474,7 +474,7 @@
     width: 60px;
     height: 3px;
     position: absolute;
-    right: 35%;
+    right: 20%;
     top: 0;
     .anchor__el {
       opacity: 0;
@@ -523,11 +523,11 @@ section#contact {
   .bubble__indicator {
     width: 30px;
     height: 30px;
-    border: 1px solid $dark-color;
-    border-right: none;
-    border-bottom: none;
+    //border: 1px solid $dark-color;
+    //border-right: none;
+    //border-bottom: none;
     transform: translate(-50%, 50%) rotate(45deg) scale(0);
-    background: $main-color;
+    background: rgba(238, 191, 191, 1);
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -551,7 +551,7 @@ section#contact {
   &>p {
     background: none;
     font-size: 50px;
-    color: $dark-color;
+    color: $darkest-color;
     position: relative;
     @include media-query($small){
       font-size: 120px;
@@ -560,11 +560,12 @@ section#contact {
 }
 
 .bk-social__bubble {
-  border: 1px solid $dark-color;
-  border-bottom: none;
+  //border: 1px solid $dark-color;
+  //border-bottom: none;
   height: 0px;
-  width: 90%;
-  margin: 0 5%;
+  //width: 90%;
+  //margin: 0 5%;
+  background: rgba(238, 191, 191, 1);
   position: relative;
   box-sizing: border-box;
   transition: height 1s linear;
@@ -961,7 +962,7 @@ section#contact {
 .bk-sec__ending {
   width: 100%;
   @include display_flex;
-  @include justify-content(space-between);
+  @include justify-content(flex-end);
   position: absolute;
   bottom: 0;
   .sec__info {
@@ -976,21 +977,6 @@ section#contact {
 #contact .bk-sec__ending .sec__info {
   padding: 20px 15px;
   align-self: flex-end;
-  &.sec__num {
-    margin-bottom: 35px;
-    @include media-query($xtra-small){
-      margin-bottom: 55px;
-    };
-    @include media-query($small){
-      margin-bottom: 70px;
-    };
-    @include media-query($medium){
-      margin-bottom: 50px;
-    };
-    @include media-query($large){
-      margin-bottom: 70px;
-    };
-  }
 }
 
 .bk-sec__logo {

@@ -612,10 +612,12 @@ blockquote { //overwriting ukit
 
 .bk-blog-style .footnotes {
   position:relative;
-  margin-top: 30px;
+  //margin-top: 30px;
   padding-top: 20px;
+  margin-bottom: 100px;
   @include media-query($medium){
-    margin-top: 40px;
+    margin-top: 10px;
+    margin-bottom: 0;
   };
   p, a {
     margin-bottom: unset;
@@ -630,9 +632,11 @@ blockquote { //overwriting ukit
       font-size: 0.7rem;
       vertical-align: middle;
       line-height: 1em;
-      color: $dark-color;
+      color: $darkest-color;
       background: none;
       text-shadow: none;
+      font-family: $sans-serif;
+      font-weight: 600;
       &:after {
         content: none;
       }
@@ -646,30 +650,34 @@ blockquote { //overwriting ukit
     font-weight: 300;
     padding-left: 25px;
     li {
-      line-height: 1rem;
+      line-height: 1.2rem;
       padding-bottom: 5px;
       font-size: 0.7rem;
       margin: 0;
       &:before {
         margin-right: 5px;
-        line-height: 1rem;
+        line-height: unset;
+        color: $darkest-color;
+        font-weight: 700;
+        font-family: 'Open Sans';
+        font-size: 0.6rem;
       }
     }
   }
   &:before {
     content: 'Footnotes';
-    color: $main-color;
+    color: $darkest-color;
     font-family: "Open Sans","Source Sans Pro","Helvetica Neue",Arial,sans-serif;
-    font-weight: 600;
-    font-size: 0.6rem;
-    letter-spacing: 0.05rem;
+    font-weight: 900;
+    font-size: 0.9rem;
+    // letter-spacing: 0.05rem;
     text-transform: uppercase;
-    border: 1px solid $dark-color;
-    background: $dark-color;
-    border-radius: 2px;
-    margin: 0 2px;
-    padding: 4px 15px;
-    margin-bottom: 15px;
+    // border: 1px solid $dark-color;
+    // background: $dark-color;
+    // border-radius: 2px;
+    // margin: 0 2px;
+    // padding: 4px 15px;
+    margin-bottom: 5px;
     display: inline-block;
   }
 }

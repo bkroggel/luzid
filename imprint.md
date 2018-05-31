@@ -4,7 +4,7 @@ title: Imprint
 ---
 
 # Impressum
-{:.no_initial}
+{:.no_initial style="font-family: 'Open Sans','Source Sans Pro','Helvetica Neue',Arial,sans-serif; text-transform: uppercase; font-weight: 900"}
 
 ### Angaben gem&auml;&szlig; &sect; 5 TMG:
 {:.no_initial}

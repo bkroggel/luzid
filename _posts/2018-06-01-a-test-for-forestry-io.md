@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: ''
 author: Bastian Kroggel
 title: A test for Forestry.io
 date: 2018-06-01 00:00:00 +0000
@@ -20,7 +20,7 @@ sitemap:
   exclude: false
 sign: false
 featured: false
-published: false
+published: true
 ---
 Integer molestie pulvinar dignissim. Mauris malesuada congue leo, et pulvinar libero pharetra vitae. Suspendisse semper, lectus sit amet ullamcorper aliquet, nunc sem suscipit est, at varius tortor justo eu diam. Donec convallis posuere quam, a varius est viverra ut. In hac habitasse platea dictumst. Curabitur hendrerit hendrerit ornare. Fusce feugiat rhoncus velit at ultricies. Nunc in eleifend sem. Ut et lorem ut nisi commodo viverra et sed orci. Cras vel ultrices purus. Sed varius sagittis vehicula. Ut malesuada lorem a iaculis euismod. Sed sodales vel nisl nec consequat.
 

@@ -17,3 +17,5 @@ fields:
   template: sitemap
   label: sitemap
   name: sitemap
+pages:
+- privacy_policy.md

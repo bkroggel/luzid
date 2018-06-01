@@ -1,5 +1,5 @@
 ---
-permalink: /pp
+permalink: "/pp"
 layout: static
 title: Privacy Policy
 ---

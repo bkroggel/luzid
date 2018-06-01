@@ -1,0 +1,51 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: ''
+- name: sitemap
+  label: Sitemap
+  type: field_group
+  fields:
+  - name: exclude
+    label: Exclude
+    type: text
+    hidden: false
+    default: ''
+  - name: priority
+    label: Priority
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: paginate
+  label: Paginate
+  type: field_group
+  fields:
+  - name: root
+    label: Root
+    type: text
+    hidden: false
+    default: ''
+  - name: limit
+    label: Limit
+    type: boolean
+    hidden: false
+    default: ''
+  - name: page_amount
+    label: Page amount
+    type: text
+    hidden: false
+    default: ''
+  - name: title_label
+    label: Title label
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''

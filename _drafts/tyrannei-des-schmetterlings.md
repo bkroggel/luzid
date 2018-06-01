@@ -34,7 +34,7 @@ Schätzing-typisch platziert sich das Buch mitten im Genre des Wissenschaft-Thri
 
 Was anfänglich anmutet ein großartiger—gänzlich geerdeter—Thriller zu werden, verlässt alsbald die erwarteten Schienen und beginnt eine Reise zwischen Science-Fiction und bestehender Technologie.
 
-**Zunächst aber zum Inhalt:**
+## Zum Inhalt
 
 Kalifornien, Sierra Nevada. Luther Opoku, Sheriff der verschlafenen Goldgräberregion Sierra in Kaliforniens Bergwelt, hat mit Kleindelikten, illegalem Drogenanbau und steter Personalknappheit zu kämpfen. Doch der Einsatz an diesem Morgen ändert alles. Eine Frau ist unter rätselhaften Umständen in eine Schlucht gestürzt. Unfall? Mord?  
 Die Ermittlungen führen Luther zu einer Forschungsanlage, einsam gelegen im Hochgebirge und betrieben von der mächtigen Nordvisk Inc., einem Hightech-Konzern des zweihundert Meilen entfernten Silicon Valley. Zusammen mit Deputy Sheriff Ruth Underwood gerät Luther bei den Ermittlungen in den Sog aberwitziger Ereignisse und beginnt schon bald an seinem Verstand zu zweifeln. Die Zeit selbst gerät aus den Fugen. Das Geheimnis im Berg führt ihn an die Grenzen des Vorstellbaren – und darüber hinaus.[^3]
@@ -50,8 +50,8 @@ Es muss dem Autor zu Gute gehalten werden, dass die Szenerie der Anfangsseiten d
 Kapitel II von VI ist damit der Punkt des eigentlich Einsteigs ins Geschehen und meiner subjektiven Meinung nach auch die wesentlich gelungenere Variante, die den Zuseher in die Mitte der Abläufe katapultiert. 
 
 
-**Die Tyrannei des Schmetterlings** von Frank Schätzing — verlegt bei [Kiepenheuer & Witsch](https://www.kiwi-verlag.de/buch/die-tyrannei-des-schmetterlings/978-3-462-05084-4/) — 736 Seiten, gebunden mit SU — erschienen am 24.04.2018 — ISBN: 978-3-462-05084-4
-{: style="transform: scale(0.6); transform-origin: 0;"}
+**Die Tyrannei des Schmetterlings** von Frank Schätzing — erschienen bei [Kiepenheuer & Witsch](https://www.kiwi-verlag.de/buch/die-tyrannei-des-schmetterlings/978-3-462-05084-4/) — 736 Seiten, gebunden mit SU — veröffentlicht am 24.04.2018 — ISBN: 978-3-462-05084-4
+{: style="transform: scale(0.7); transform-origin: 0;"}
 
 [^1]: [Frank Schätzing — Limit bei Kiepenheuer & Witsch](https://www.kiwi-verlag.de/buch/limit/978-3-462-03704-3/)
 [^2]: [Frank Schätzing — Der Schwarm bei Kiepenheuer & Witsch](https://www.kiwi-verlag.de/buch/der-schwarm/978-3-462-03374-8/)

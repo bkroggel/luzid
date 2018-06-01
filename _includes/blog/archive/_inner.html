@@ -49,8 +49,13 @@
               {% endfor %}
             {% endcapture %}
             {% assign sortedtags = tags | split:' ' | sort %}
-            {% for tag in sortedtags %}
-              <span class="tag">{{tag}}</span>
+            {% for post_tag in sortedtags %}
+              {% for data_tag in site.data.tags.tags %}
+                {% if data_tag.slug == post_tag %}
+                  {% assign tag = data_tag %}
+                {% endif %}
+              {% endfor %}
+              <span class="tag">{{ tag.name }}</span>
             {% endfor %}
           </div>
           {% endif %}

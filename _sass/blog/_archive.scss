@@ -1,6 +1,6 @@
 .bk-blog__section-title {
   @include display_flex;
-  @include align-items(center);
+  flex-wrap: wrap;
 }
 
 .bk-blog__archive {

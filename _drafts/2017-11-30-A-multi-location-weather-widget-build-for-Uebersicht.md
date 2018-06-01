@@ -14,7 +14,7 @@ sitemap:
   changefreq:
   exclude:
 sign: false
-published: false
+published: true
 featured: true
 ---
 

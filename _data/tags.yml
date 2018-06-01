@@ -17,3 +17,9 @@ tags:
     name: imap
   - slug: macos
     name: macos
+  - slug: review
+    name: review
+  - slug: book
+    name: book
+  - slug: thoughts_about
+    name: thoughts about

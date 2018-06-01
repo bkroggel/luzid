@@ -3,8 +3,8 @@ published: true
 featured: 
 layout: post
 permalink:
-title: 'Frank Schätzing – Die Tyrannei des Schmetterlings'
-sub_title: '[Thoughts about] Zukunftsvisionen eines Romanautors'
+title: Der Zukunftswahn eines Roman-Autors
+sub_title: '[Thoughts about]<br>Frank Schätzing – Die Tyrannei des Schmetterlings'
 date: 2018-06-01 16:01:45 +0200
 author: Bastian Kroggel
 tags:

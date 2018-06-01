@@ -1,0 +1,19 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: layout
+  config:
+    required: true
+- type: text
+  name: title
+  config:
+    required: true
+- type: text
+  label: permalink
+  name: permalink
+- type: include
+  template: sitemap
+  label: sitemap
+  name: sitemap

@@ -1,0 +1,127 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+  description: The main title of the blog post
+  config:
+    required: true
+- name: sub_title
+  label: Sub title
+  type: text
+  hidden: false
+  default: ''
+  description: "(optional)"
+  config:
+    required: true
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: post
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+  config:
+    required: true
+- type: select
+  config:
+    source:
+      type: datafiles
+      file: _data-author-yml
+      path: author
+    required: true
+  name: author
+  label: Author
+  default: Bastian Kroggel
+- name: tags
+  label: Tags
+  type: tag_list
+  hidden: false
+  default: ''
+- name: thumbnail
+  label: Thumbnail
+  type: field_group
+  fields:
+  - name: img
+    label: Img
+    type: file
+    hidden: false
+    default: ''
+  - name: overview
+    label: Overview
+    type: textarea
+    hidden: false
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+    description: description for the thumbnail (if left blank the first 250 words
+      will be used)
+  hidden: false
+  default: ''
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: "/blog/:year/:title/"
+- name: sitemap
+  label: Sitemap
+  type: field_group
+  fields:
+  - type: datetime
+    name: lastmod
+  - type: number
+    config:
+      min: '0.0'
+      max: '1.0'
+      step: '0.1'
+    name: priority
+    default: '0'
+    label: ''
+  - type: select
+    config:
+      source:
+        type: simple
+      options:
+      - always
+      - hourly
+      - daily
+      - weekly
+      - monthly
+      - yearly
+      - never
+    label: changefreq
+    name: changefreq
+  - type: boolean
+    name: exclude
+    label: Exclude
+  hidden: false
+  default: ''
+- name: sign
+  label: Signed
+  type: boolean
+  hidden: false
+  default: ''
+- name: featured
+  label: Featured
+  type: boolean
+  hidden: false
+  default: ''
+- name: published
+  label: Published
+  type: boolean
+  hidden: false
+  default: ''
+pages:
+- _posts/2018-05-09-Time-to-start-over-again.md
+- _posts/2016-03-25-The-static-way-of-presenting-your-tweets.md
+- _posts/2015-12-24-Website.md
+- _posts/2015-12-23-ppe-conference.md
+- _posts/2015-12-23-Hallo-Welt-und-ein-README.md

@@ -6,23 +6,7 @@ fields:
   label: Layout
   type: text
   hidden: false
-  default: ''
-- name: sitemap
-  label: Sitemap
-  type: field_group
-  fields:
-  - name: exclude
-    label: Exclude
-    type: text
-    hidden: false
-    default: ''
-  - name: priority
-    label: Priority
-    type: text
-    hidden: false
-    default: ''
-  hidden: false
-  default: ''
+  default: home
 - name: paginate
   label: Paginate
   type: field_group
@@ -37,11 +21,13 @@ fields:
     type: boolean
     hidden: false
     default: ''
-  - name: page_amount
-    label: Page amount
-    type: text
-    hidden: false
-    default: ''
+  - type: number
+    config:
+      min: '1'
+      max: '7'
+      step: '1'
+    name: page_amount
+    description: max. 7
   - name: title_label
     label: Title label
     type: text
@@ -49,3 +35,7 @@ fields:
     default: ''
   hidden: false
   default: ''
+- type: include
+  name: sitemap
+  label: ''
+  template: sitemap

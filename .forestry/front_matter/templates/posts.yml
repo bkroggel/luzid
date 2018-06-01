@@ -71,39 +71,10 @@ fields:
   type: text
   hidden: false
   default: ''
-- name: sitemap
-  label: Sitemap
-  type: field_group
-  fields:
-  - type: datetime
-    name: lastmod
-  - type: number
-    config:
-      min: '0.0'
-      max: '1.0'
-      step: '0.1'
-    name: priority
-    default: ''
-    label: ''
-  - type: select
-    config:
-      source:
-        type: simple
-      options:
-      - always
-      - hourly
-      - daily
-      - weekly
-      - monthly
-      - yearly
-      - never
-    label: changefreq
-    name: changefreq
-  - type: boolean
-    name: exclude
-    label: Exclude
-  hidden: false
-  default: ''
+- type: include
+  name: sitemap
+  label: ''
+  template: sitemap
 - name: sign
   label: Signed
   type: boolean

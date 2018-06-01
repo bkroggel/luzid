@@ -91,7 +91,7 @@ fields:
   hidden: false
   default: ''
 pages:
-- _posts/a-test-for-forestry-io.md
+- _posts/2018-06-01-a-test-for-forestry-io.md
 - _posts/2018-05-09-Time-to-start-over-again.md
 - _posts/2016-03-25-The-static-way-of-presenting-your-tweets.md
 - _posts/2015-12-24-Website.md

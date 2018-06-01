@@ -2,7 +2,7 @@
 published: true
 featured: false
 layout: post
-url:
+permalink:
 title: Time to start over again
 sub_title: www.bastiankroggel.com
 date: 2018-05-30 18:32:12 +0200

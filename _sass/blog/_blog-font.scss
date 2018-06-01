@@ -753,6 +753,9 @@ p.intro a:after {
       font-size: 1em;
       @include underline($blog-font-color, white);
     }
+    em, strong {
+      font-size: inherit;
+    }
   }
   @include media-query($medium){
     margin-left: -3rem;

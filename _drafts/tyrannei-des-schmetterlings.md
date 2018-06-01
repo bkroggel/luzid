@@ -36,7 +36,7 @@ Was anfänglich anmutet ein großartiger—gänzlich geerdeter—Thriller zu wer
 
 ## Zum Inhalt
 
-Kalifornien, Sierra Nevada. Luther Opoku, Sheriff der verschlafenen Goldgräberregion Sierra in Kaliforniens Bergwelt, hat mit Kleindelikten, illegalem Drogenanbau und steter Personalknappheit zu kämpfen. Doch der Einsatz an diesem Morgen ändert alles. Eine Frau ist unter rätselhaften Umständen in eine Schlucht gestürzt. Unfall? Mord?  
+<span style="font-family: 'Open Sans', 'Source Sans', Helvetica, Arial, sans serif; font-size: .7em; text-transform: uppercase ">Kalifornien, Sierra Nevada.</span> Luther Opoku, Sheriff der verschlafenen Goldgräberregion Sierra in Kaliforniens Bergwelt, hat mit Kleindelikten, illegalem Drogenanbau und steter Personalknappheit zu kämpfen. Doch der Einsatz an diesem Morgen ändert alles. Eine Frau ist unter rätselhaften Umständen in eine Schlucht gestürzt. Unfall? Mord?  
 Die Ermittlungen führen Luther zu einer Forschungsanlage, einsam gelegen im Hochgebirge und betrieben von der mächtigen Nordvisk Inc., einem Hightech-Konzern des zweihundert Meilen entfernten Silicon Valley. Zusammen mit Deputy Sheriff Ruth Underwood gerät Luther bei den Ermittlungen in den Sog aberwitziger Ereignisse und beginnt schon bald an seinem Verstand zu zweifeln. Die Zeit selbst gerät aus den Fugen. Das Geheimnis im Berg führt ihn an die Grenzen des Vorstellbaren – und darüber hinaus.[^3]
 {:style="opacity:.6; font-family: "Charter", "Times New Roman", Times, serif; font-size: 1.2em; line-height: 1.6em"}
 

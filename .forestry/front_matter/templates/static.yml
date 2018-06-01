@@ -18,4 +18,5 @@ fields:
   label: sitemap
   name: sitemap
 pages:
+- imprint.md
 - privacy_policy.md

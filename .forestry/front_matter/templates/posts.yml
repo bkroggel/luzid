@@ -70,7 +70,7 @@ fields:
   label: Permalink
   type: text
   hidden: false
-  default: "/blog/:year/:title/"
+  default: ''
 - name: sitemap
   label: Sitemap
   type: field_group
@@ -83,7 +83,7 @@ fields:
       max: '1.0'
       step: '0.1'
     name: priority
-    default: '0'
+    default: ''
     label: ''
   - type: select
     config:

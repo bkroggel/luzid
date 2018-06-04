@@ -894,6 +894,9 @@ section#contact {
   margin-left: -5px;
   @include media-query($small){
     position: absolute;
+    bottom: 0;
+    left: calc(50% + 1.5em);
+    transform: translateY(55%);
   };
 }
 

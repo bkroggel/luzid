@@ -2,7 +2,7 @@
 title: A multi-location weather widget build for Übersicht
 sub_title: Wttr Forecast Widget
 author: Bastian Kroggel
-date: 2018-05-31 17:05:56 +0200
+date: 2018-06-04 09:49:01 +0200
 tags: [work, english, tutorial, macos]
 permalink:
 thumbnail:
@@ -28,10 +28,10 @@ That said it is actually pretty easy to write a widgets for and by yourself—at
 Initially this blogpost was intended to be published right along with the release of Wttr Forecast widget for Uebersicht. Since I was quite busy with the redesign and rebuilding of my new website—which you are looking at right now—I had to postpone the final push to my main domain in order to be able to release this writeup with all of the features my newly developed site provides.  
 So while the actual release of this post might have been at the end of November 2017 the publishing date reflects the actual release on my website instead of its first appearance on my—public yet not easy to catch—beta section.
 Just for the record:  
-{:info="Update" info_sub="2018-04-29 19:14:59 +0200"}
+{:info="Update" info_sub="2018-06-04 09:49:36 +0200"}
 
 <span class="highlighted">Initial Release:&nbsp;&nbsp;&nbsp; `2017-11-30 14:04:00 +0100`</span>
-{:info="Update" info_sub="2018-04-29 19:14:59 +0200"}
+{:info="Update" info_sub="2018-06-04 09:49:36 +0200"}
 <br>
 
 ## Wttr Widget for Übersicht

@@ -1,3 +1,13 @@
+function about_intro_line_before(){
+  var intro_link = $('#intro_link')
+  var intro_link_left = intro_link.offset().left
+  $('#intro_link .line_before').css({
+    'width': intro_link_left,
+    'transition': 'width ease-in-out .6s',
+    'left': -(intro_link_left)
+  });
+}
+
 function about_intro_line(){
   var intro_link = $('#intro_link')
   var anchor = $('#anchor')
@@ -8,7 +18,7 @@ function about_intro_line(){
 
   $('#intro_link .link_line').css({
     'width': (anchor_left - intro_link_right),
-    'transition': 'width ease-in-out .6s'
+    'transition': 'width ease-in-out .6s .6s'
   });
 
   var intro_link_top = intro_link.offset().top
@@ -20,18 +30,21 @@ function about_intro_line(){
   $('.anchor__line').css({
     'height': line_height,
     'top': line_top,
-    'transition': 'height ease-in-out 1.6s .6s'
+    'transition': 'height ease-in-out 1.6s 1.2s'
   });
   $('#anchor .anchor__el').css({
     'opacity': 1,
-    'transition': 'opacity ease-in-out .2s 2.2s'
+    'transition': 'opacity ease-in-out .2s 2.8s'
   })
   $('#anchor').addClass('active');
 }
 
 $('#intro_link').first().waypoint(function(direction) {
   if (direction === 'down') {
-    about_intro_line();
+    about_intro_line_before();
+    if ( $(window).width() > 991 ) {
+      about_intro_line();
+    }
     this.destroy()
    }
 }, {
@@ -41,18 +54,22 @@ $('#intro_link').first().waypoint(function(direction) {
 $( window ).resize(function() {
   if( $(window).width() > 991 ){
     about_intro_line();
-  } else if ( $(window).width() < 991 && $('#anchor').hasClass('active') ){
-    $('.anchor__line').css({
-      'height': '0px',
-      'top': 'unset'
-    });
-    $('#intro_link .link_line').css({
-      'width': '0px'
-    });
-    $('#anchor .anchor__el').css({
-      'opacity': 0
-    })
-    $('#anchor').removeClass('active')
+    about_intro_line_before();
+  } else if ( $(window).width() < 991 ){
+    about_intro_line_before();
+    if ( $('#anchor').hasClass('active') ) {
+      $('.anchor__line').css({
+        'height': '0px',
+        'top': 'unset'
+      });
+      $('#intro_link .link_line').css({
+        'width': '0px'
+      });
+      $('#anchor .anchor__el').css({
+        'opacity': 0
+      })
+      $('#anchor').removeClass('active')
+    }
   }
 })
 

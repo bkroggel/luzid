@@ -709,13 +709,20 @@ a.link_button.-white {
       a {
         font-family: $sans-serif;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 900;
         text-shadow: none;
         background: none;
-        font-size: 1.9rem;
+        font-size: 1.4rem;
         line-height: 1.25em;
+        letter-spacing: 0;
         @include media-query($medium){
-          font-size: 2.3rem
+          font-size: 2rem
+        }
+      }
+      &#intro_link {
+        a {
+         color: $accent-two;
+         position: relative;
         }
       }
     }
@@ -765,7 +772,7 @@ a.link_button.-white {
   }
   p.desc {
     margin: 30px 0 0;
-    max-width: 550px;
+    max-width: 650px;
     font-family: $reading;
     color: $blog-font-color;
     font-weight: 400;

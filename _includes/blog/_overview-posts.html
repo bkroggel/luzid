@@ -23,7 +23,7 @@
   {% assign tags_content = '' %}
 {% endif %}
 
-<div class="blog-posts overview-posts">
+<div class="blog-posts overview-posts{% if post.draft %} bk-draft{% endif %}">
   <div class="overview-posts__inner">
     {% include blog/overview-posts/_img-element.html %}
     <div class="bk-overview-posts__frame">

@@ -322,6 +322,15 @@
       line-height: 1.1em;
     };
   }
+  &.bk-draft {
+    h1.posts-title {
+      color: red;
+    }
+    .overview-img {
+      border: 10px solid red;
+      box-sizing: border-box;
+    }
+  }
   a.blog-posts--title {
     display: inline-block;
     margin: 20px 0 20px 0;

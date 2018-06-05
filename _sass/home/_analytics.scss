@@ -25,7 +25,7 @@
   }
   &.stuck {
     position: absolute;
-    bottom: calc(100% - 80px);
+    bottom: 100%;
     top: unset;
     transform-origin: left bottom;
     transform: rotate(-90deg) translate(0%, 100%);

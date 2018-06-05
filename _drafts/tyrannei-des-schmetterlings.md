@@ -49,6 +49,12 @@ Es muss dem Autor zu Gute gehalten werden, dass die Szenerie der Anfangsseiten d
 
 Kapitel II von VI ist damit der Punkt des eigentlich Einsteigs ins Geschehen und meiner subjektiven Meinung nach auch die wesentlich gelungenere Variante, die den Zuseher in die Mitte der Abläufe katapultiert. 
 
+Luther Opoku—seines Zeichens designierter Sherrif einer Kleinstadt mitten in der us-amerikanischen Sierra Nevada—wird an dem Schauplatz einer Tragödie beordert, die sich bereits nach kurzer Zeit in die Kategorie des Tötungsdeliktes mit Fremdeinwirkung einordnen lässt. Die Ermittlungen führen ihn alsbald in den Dunstkreis der Nordvisk-Gruppe, einer Unternehmung, die so klassisch für die Zeit aus der Garage heraus den Weg einschlug die Welt zu verändern und in Schätzings Händen nicht nur eine Google-ähnliche Kultur an den Tag legt sondern auch inhaltlich dem Mantra "Don't be evil" folgt und sich der Entwicklung künstlicher Intelligenz verschrieben hat.  
+Letzteres ist es auch mit dem Opoku sich im weiteren Verlauf intensiv auseinandersetzen muss—häufig kreativ und doch oberflächlich, immer aber mit dem für den Autor typischen Hang zum Science-Fiction.  
+Wünschenswert wäre es doch gewesen das Genre weit möglichst im real-erscheinenden Umfeld zu belassen, zielt Schätzing doch unübersehbar darauf ab aktuelle Entwicklungen zu beleuchten und (seine eigenen) Ängste, Sorgen und Kritikpunkte aufzunehmen und widerzuspiegeln.
+
+Was anschließt sind verschiedene Stationen des Hauptcharakters der sich jetzt tiefer in den—buchstäblichen—Fängen der Technology verstrickt—durchaus vergleichbar mit den immer auswuchernden verbalen Ausschweifungen in denen Frank Schätzing sich verheddert. 
+
 
 **Die Tyrannei des Schmetterlings** von Frank Schätzing — erschienen bei [Kiepenheuer & Witsch](https://www.kiwi-verlag.de/buch/die-tyrannei-des-schmetterlings/978-3-462-05084-4/) — 736 Seiten, gebunden mit SU — veröffentlicht am 24.04.2018 — ISBN: 978-3-462-05084-4
 {: style="transform: scale(0.7); transform-origin: 0;"}

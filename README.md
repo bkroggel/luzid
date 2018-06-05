@@ -82,6 +82,5 @@ sign:
 - [Slick](http://kenwheeler.github.io/slick/) - the last carousel you'll ever need
 - [timeago.js](http://timeago.yarp.com/) - Timeago is a jQuery plugin that makes it easy to support automatically updating fuzzy timestamps (e.g. "4 minutes ago" or "about 1 day ago")
 - [Twitter-Post-Fetcher](http://www.jasonmayes.com/projects/twitterApi/) - Allows you to get your tweets displaying on your website using JavaScript, without using new Twitter 1.1 API
-- [UIkit](https://getuikit.com/) - A lightweight and modular front-end framework for developing fast and powerful web interfaces.
 - [Waypoints](http://imakewebthings.com/waypoints/) - Waypoints is the easiest way to trigger a function when you scroll to an element.
 - [Zooming](http://desmonding.me/zooming/) - Image zoom that makes sense.

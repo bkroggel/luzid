@@ -11,8 +11,14 @@ footer {
     @include pure-link(black);
   }
   &.dark {
-    background: none;
-    margin-top: 125px;
+    background: $main-color;
+    margin-top: 205px;
+  }
+  &.straight {
+    margin-top: 0px;
+    @include media-query($medium){
+      margin-top: 80px;
+    };
   }
 }
 

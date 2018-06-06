@@ -957,7 +957,7 @@ section#contact {
           width: calc(100% - 220px);
           height: 1px;
           bottom: 50px;
-          background: $darkest-color;
+          background: linear-gradient(to right, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0.972) 14.3%, hsla(0, 0%, 0%, 0.896) 26.9%, hsla(0, 0%, 0%, 0.784) 38%, hsla(0, 0%, 0%, 0.648) 48%, hsla(0, 0%, 0%, 0.5) 57.1%, hsla(0, 0%, 0%, 0.352) 65.7%, hsla(0, 0%, 0%, 0.216) 73.9%, hsla(0, 0%, 0%, 0.104) 82.2%, hsla(0, 0%, 0%, 0.028) 90.8%, hsla(0, 0%, 0%, 0) 100%);;
         }
       };
       img {

@@ -585,6 +585,11 @@ a.link_button.-white {
   color: white;
 }
 
+#storewindow__text h3 {
+  line-height: 1.6em;
+  display: inline-block;
+}
+
 #storewindow__text a {
   @include link-mix(white);
 }

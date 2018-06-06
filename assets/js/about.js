@@ -87,7 +87,7 @@ expansion_button();
 
 function timeline_container() {
 
-  var deactivated = $(window).height() * 0.85;
+  var deactivated = $(window).height() * 0.95;
   var activated = $('#bk-timeline .timeline__inner').outerHeight(true);
 
   $('#bk-timeline').css('height', deactivated);

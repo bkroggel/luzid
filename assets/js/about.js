@@ -163,10 +163,11 @@ timeline_container()
 
 function intro_image() {
   var image_div = $('.bk-blog__intro_img')
-  var height = $(window).height() - $('.bk-blog-nav--frame').outerHeight();
+  var intro_height = $('.bk-about__intro').outerHeight()
+  var height = $(window).height() - intro_height;
   if ($(window).width() > 991) {
     var vertical_blog_link = $('.vertical-transform-frame').outerWidth() + $('.vertical-transform-frame').position().top + 40
-    if (vertical_blog_link > height) {
+    if ( vertical_blog_link > $(window).height() ) {
       var height = vertical_blog_link
     }
   }

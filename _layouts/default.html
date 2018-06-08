@@ -40,6 +40,9 @@ layout: compress
       $("time.timeago").timeago().prepend("\u00A0").append("\u00A0");
     </script>
     {% endif %}
+    {% if page.layout == 'readinglist' %}
+      <script type="text/javascript" src="{{ "/assets/js/readinglist.js" | prepend: site.baseurl}}"></script>
+    {% endif %}
  </body>
 
 </html>

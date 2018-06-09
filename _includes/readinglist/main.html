@@ -2,15 +2,20 @@
   <div class="bk-blog__navigation">
     {% include navigation/_blog-nav.html %}
   </div>
-  <div class="bk-blog__content bk-blog__archive">
-    <div class="bk-blog__archive__inner">
+  <div class="bk-blog__content bk-blog__archive bk-blog__readinglist">
+    <div class="bk-blog__archive__inner bk-readinglist__inner">
       <div class="bk-blog__section-title">
         <h1>{{ page.title }}</h1>
       </div>
 
-      <div id="reading_list">
-
+      <div id="reading_list__disclaimer">
+        <h2>Disclaimer</h2>
+        {{ page.disclaimer | markdownify }}
       </div>
+      <div id="reading_list"></div>
+      <!-- <div id="reading_list_button">
+        <p>Load more</p>
+      </div> -->
 
 
 

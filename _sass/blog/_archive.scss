@@ -1,13 +1,17 @@
 .bk-blog__section-title {
   @include display_flex;
   flex-wrap: wrap;
+  margin: 0 10px;
+  @include media-query($xtra-small){
+    margin: 0
+  };
 }
 
 .bk-blog__archive {
   @include display_flex;
   @include direction_column;
-  @media(max-width: 575px){
-    padding: 20px 15px 50px;
+  @media(max-width: 574px){
+    padding: 20px 5px 50px;
     margin: 0;
   }
   @include media-query($medium){
@@ -36,6 +40,12 @@
   };
 }
 
+.archive__element {
+  margin: 0 10px;
+  @include media-query($xtra-small){
+    margin: 0;
+  };
+}
 
 .archive__element p.year {
   position: relative;
@@ -66,11 +76,14 @@
     content: '';
     position: absolute;
     background: $darkest-color;
-    left: 24px;
+    left: 34px;
     width: 1px;
     height: 25px;
     transform: translateX(-50%);
     top: 100%;
+    @include media-query($xtra-small){
+      left: 24px;
+    };
   }
 }
 
@@ -83,11 +96,13 @@
   @include align-items(center);
   //box-shadow: 2px 2px $accent-two;
   @include media-query($medium){
-    width: calc(50% - 10px);
     margin-right: 10px;
     min-width: 450px;
     height: 120px;
     position: relative;
+  };
+  @include media-query($xtra-large){
+    width: calc(50% - 10px);
   };
 }
 
@@ -150,7 +165,10 @@
 // }
 
 .archive__bc {
-  margin-bottom: 10px;
+  margin: 0 10px 10px;
+  @include media-query($xtra-small){
+    margin: 0 0 10px;
+  };
   ul {
     padding: 0;
     &>:nth-child(n+2):before {

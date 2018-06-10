@@ -55,6 +55,13 @@
     @include direction_row;
     margin-bottom: 30px;
   };
+  transform: translateY(100px);
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all ease-in-out .4s;
+  }
 }
 
 .readinglist_el .image_frame {
@@ -166,7 +173,7 @@ p.excerpt {
 #reading_list__disclaimer {
   background: white;
   max-width: 650px;
-  margin-top: 10px;
+  margin-top: 50px;
   border-radius: 2px;
   padding: 20px;
   h2 {
@@ -183,24 +190,31 @@ p.excerpt {
   }
 }
 
-#reading_list_button {
-  cursor: pointer;
-  margin: 60px 15px 40px;
+#load_btn {
+  cursor: not-allowed;
+  margin: 20px 15px 40px;
   p {
-    color: $accent-two;
+    color: $dark-color;
     margin: 0;
     text-transform: uppercase;
     display: inline-block;
     padding: 10px 25px;
     border-radius: 2px;
-    border: 2px solid $accent-two;
+    border: 2px solid $dark-color;
     font-size: 0.65rem;
     font-weight: 700;
   }
   @include media-query($xtra-small){
-    margin: 60px 0 40px;
+    margin: 20px 0 40px;
   };
   @include media-query($medium){
-    margin: 60px 0 0;
+    margin: 20px 0 0;
   };
+  &.active {
+    cursor: pointer;
+    p {
+      color: $accent-two;
+      border: 2px solid $accent-two;
+    }
+  }
 }

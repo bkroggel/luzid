@@ -8,18 +8,16 @@
         <h1>{{ page.title }}</h1>
       </div>
 
+      <div id="reading_list"></div>
+
       <div id="reading_list__disclaimer">
         <h2>Disclaimer</h2>
         {{ page.disclaimer | markdownify }}
       </div>
-      <div id="reading_list"></div>
-      <!-- <div id="reading_list_button">
+
+      <div id="load_btn" onclick="load_reading()">
         <p>Load more</p>
-      </div> -->
-
-
-
-
+      </div>
 
     </div>
 

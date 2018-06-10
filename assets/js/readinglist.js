@@ -220,3 +220,22 @@ function reveal_animation( run, call ){
     })
   }, run * 400)
 }
+
+function intro_more() {
+  var el = $('.bk-readinglist__intro');
+  var inner_height = $('.bk-readinglist__intro .intro__inner').height();
+  var more_height = $('.bk-readinglist__intro #intro__more').outerHeight();
+  var active_height = inner_height + more_height;
+
+  if ( el.hasClass('active') ) {
+    el.css('height', '0').removeClass('active');
+  } else {
+    el.css('height', active_height).addClass('active');
+  }
+}
+$( window ).resize(function() {
+  var el = $('.bk-readinglist__intro');
+  if ( el.hasClass('active') ) {
+    el.css('height', '0').removeClass('active');
+  }
+})

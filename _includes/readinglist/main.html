@@ -8,8 +8,13 @@
         <h1>{{ page.title }}</h1>
       </div>
       <div class="bk-readinglist__intro">
-        <h2>Introduction</h2>
-        {{ page.intro | markdownify }}
+        <div class="intro__inner">
+          <h2>Introduction</h2>
+          {{ page.intro | markdownify }}
+        </div>
+        <div id="intro__more" onclick="intro_more()">
+          <p>Read more <i class="fas fa-chevron-right" data-fa-transform="shrink-4"></i></p>
+        </div>
       </div>
 
       <div id="reading_list"></div>

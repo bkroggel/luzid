@@ -214,7 +214,7 @@ p.excerpt {
   position: relative;
   min-height: 150px;
   height: 0;
-  transition: height ease-in-out .6s;
+  transition: height ease-in-out .8s;
   @include media-query($medium){
     margin-bottom: 50px;
   };
@@ -243,12 +243,12 @@ p.excerpt {
     }
     svg {
       transform: rotate(0deg);
-      transition: transform ease-in-out .5s;
+      transition: transform ease-in-out .8s;
     }
   }
   &.active #intro__more svg {
     transform: rotate(-90deg);
-    transition: transform ease-in-out .5s;
+    transition: transform ease-in-out .8s;
   }
 }
 

@@ -164,7 +164,7 @@ function reading_placement( read ){
       + '<div class="image_frame">' + (image && !( image.includes('no_image_card') ) ? '<div data-bg="' + image + '" class="lazyload reading_img"></div>'  : '') + '</div>'
       + '<div class="content_action">'
         + '<div class="reading_content">'
-          + '<p class="time_element">added <time class="timeago" datetime="' + timestamp + '"></time> on ' + time + '</p>'
+          + '<p class="time_element">added <time class="timeago" datetime="' + timestamp + '"></time>&nbsp<span>on ' + time + '</span></p>'
           + '<a' + (url ? ' href="' + url + '"' : '') + '><h2>' + title + '</h2></a>'
           + '<p class="authors">via ' + author + ((author && origin_url) ? ', ' : '') + origin_url +'</p>'
           + '<p class="excerpt">' + content + '</p>'

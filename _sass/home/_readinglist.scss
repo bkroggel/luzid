@@ -12,7 +12,10 @@
 }
 
 #reading_list {
-  margin: 25px 0;
+  margin: 25px 0 0;
+  @include media-query($medium){
+    margin: 25px 0;
+  };
   h2 {
     font-family: $serif;
     font-weight: 600;
@@ -26,14 +29,14 @@
     &.authors,
     &.time_element {
       margin: 0;
-      font-size: .6rem;
+      font-size: .65rem;
       text-transform: uppercase;
       opacity: .5;
-      line-height: 1em;
-    }
-    &.time_element {
-      font-size: .5rem;
-      letter-spacing: 1px;
+      line-height: 1.4em;
+      letter-spacing: .7px;
+      @include media-query($small){
+        font-size: .6rem;
+      };
     }
   }
   a {
@@ -107,6 +110,9 @@
 
 #reading_list p.time_element {
   margin: 20px 0 5px;
+  span {
+    display: inline-block;
+  }
 }
 
 #reading_list .comment {
@@ -170,10 +176,11 @@ p.excerpt {
   margin-bottom: 0;
 }
 
-#reading_list__disclaimer {
+#reading_list__disclaimer,
+.bk-readinglist__intro {
   background: white;
   max-width: 650px;
-  margin-top: 50px;
+  margin-top: 0px;
   border-radius: 2px;
   padding: 20px;
   h2 {
@@ -188,6 +195,16 @@ p.excerpt {
     line-height: 1.6em;
     margin: 0;
   }
+  @include media-query($medium){
+    margin-top: 50px;
+  };
+}
+
+.bk-readinglist__intro {
+  @include media-query($medium){
+    margin-top: 10px;
+    margin-bottom: 50px;
+  };
 }
 
 #load_btn {

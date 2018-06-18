@@ -215,7 +215,10 @@ var news = {
       }
     });
 
-    $('.slick-slide').css('min-height', $('.news_header').outerHeight() + 2);
+    if ( $('.news_header').outerHeight() > 150 ) {
+      $('.slick-slide').css('min-height', $('.news_header').outerHeight() + 2);
+    }
+
   };
 
 

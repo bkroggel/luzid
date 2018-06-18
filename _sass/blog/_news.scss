@@ -107,6 +107,10 @@ section#news {
   };
 }
 
+#news .slick-slide {
+  min-height: 152px;
+}
+
 #news__twitter .twitter_el {
   @include display_flex;
   @include direction_column;

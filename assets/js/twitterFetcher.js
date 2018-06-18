@@ -214,6 +214,8 @@ var news = {
         Waypoint.refreshAll();
       }
     });
+
+    $('.slick-slide').css('min-height', $('.news_header').outerHeight() + 2);
   };
 
 

@@ -632,6 +632,7 @@ a.link_button.-white {
   hyphens: auto;
   @include media-query($small){
     font-size: 5rem;
+    width: calc(100% - 125px);
   };
   &:before {
     content: '';

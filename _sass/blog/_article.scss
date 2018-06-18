@@ -161,6 +161,7 @@
 .bk-article-title .bk-blog-posts--tags {
   margin-bottom: 20px;
   margin-top: 20px;
+  @include justify-content(center);
   @include media-query($small){
     margin-top: 45px;
   };

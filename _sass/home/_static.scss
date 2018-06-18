@@ -907,72 +907,104 @@ section#contact {
     @include direction_column;
     @include align-items(center);
     max-width: unset;
-    padding: 0px 0 60px;
+    width: 100%;
+    padding: 0 0 60px;
     @include media-query($small){
-      @include align-items(flex-start);
-      @include justify-content(center);
+      @include align-items(stretch);
+      @include justify-content(flex-start);
+      @include direction_row;
       padding: 0;
       width: 100%;
       min-height: 700px;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50px;
+        z-index: 1;
+      }
+      &:before {
+        border: 1px solid $darkest-color;
+        border-right: none;
+        border-bottom: none;
+        width: calc(100% - 50px);
+        height: calc(100% - 100px);
+        top: 50px;
+        box-sizing: border-box;
+      }
+      &:after {
+        width: calc(100% - 220px);
+        height: 1px;
+        bottom: 50px;
+        background: linear-gradient(to right, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0.972) 14.3%, hsla(0, 0%, 0%, 0.896) 26.9%, hsla(0, 0%, 0%, 0.784) 38%, hsla(0, 0%, 0%, 0.648) 48%, hsla(0, 0%, 0%, 0.5) 57.1%, hsla(0, 0%, 0%, 0.352) 65.7%, hsla(0, 0%, 0%, 0.216) 73.9%, hsla(0, 0%, 0%, 0.104) 82.2%, hsla(0, 0%, 0%, 0.028) 90.8%, hsla(0, 0%, 0%, 0) 100%);;
+      }
     };
     .bk-sec__text {
       width: calc(100% - 50px);
       margin: 90px auto;
       @include media-query($small){
-        width: calc(60% - 150px);
+        width: 60%;
         max-width: 550px;
-        margin: 100px 0 200px 100px;
-        //text-align: left;
+        margin: 130px 50px 160px -10%;
+        z-index: 1;
       };
     }
     .bk-sec__img {
+      position: relative;
       width: 100%;
       height: 300px;
       opacity: 0.9;
+      background: $accent-three;
       @include media-query($xtra-small){
         height: 350px;
       };
       @include media-query($small) {
-        width: 40%;
-        position: absolute;
-        height: 100%;
+        width: 60%;
+        height: unset;
         right: 0;
-        &:before,
-        &:after {
-          content: '';
-          position: absolute;
-          left: 50px;
-          z-index: 1;
-        }
         &:before {
-          border: 1px solid $darkest-color;
-          border-right: none;
-          border-bottom: none;
-          width: calc(100% - 50px);
-          height: calc(100% - 100px);
-          top: 50px;
-          box-sizing: border-box;
-        }
-        &:after {
-          width: calc(100% - 220px);
-          height: 1px;
-          bottom: 50px;
-          background: linear-gradient(to right, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0.972) 14.3%, hsla(0, 0%, 0%, 0.896) 26.9%, hsla(0, 0%, 0%, 0.784) 38%, hsla(0, 0%, 0%, 0.648) 48%, hsla(0, 0%, 0%, 0.5) 57.1%, hsla(0, 0%, 0%, 0.352) 65.7%, hsla(0, 0%, 0%, 0.216) 73.9%, hsla(0, 0%, 0%, 0.104) 82.2%, hsla(0, 0%, 0%, 0.028) 90.8%, hsla(0, 0%, 0%, 0) 100%);;
+          content: '';
+          z-index: 1;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            95deg,
+            hsla(0, 0%, 100%, 0) 0%,
+            hsla(0, 0%, 100%, 0.013) 15.8%,
+            hsla(0, 0%, 100%, 0.049) 28.7%,
+            hsla(0, 0%, 100%, 0.104) 39%,
+            hsla(0, 0%, 100%, 0.175) 47.1%,
+            hsla(0, 0%, 100%, 0.259) 53.5%,
+            hsla(0, 0%, 100%, 0.352) 58.4%,
+            hsla(0, 0%, 100%, 0.45) 62.2%,
+            hsla(0, 0%, 100%, 0.55) 65.4%,
+            hsla(0, 0%, 100%, 0.648) 68.3%,
+            hsla(0, 0%, 100%, 0.741) 71.2%,
+            hsla(0, 0%, 100%, 0.825) 74.6%,
+            hsla(0, 0%, 100%, 0.896) 78.8%,
+            hsla(0, 0%, 100%, 0.951) 84.1%,
+            hsla(0, 0%, 100%, 0.987) 91.1%,
+            hsl(0, 0%, 100%) 100%
+          );
         }
       };
-      img {
+      .bk-sec__img_el {
+        background-position: 10% 38%;
+        background-size: cover;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        object-position: 10% 38%;
-      }
-      img.lazyload,
-      img.lazyloading {
-        opacity: 0;
-      }
-      img.lazyloaded {
-        opacity: 1;
-        transition: opacity .6s;
+        &,
+        &.lazyload,
+        &.lazyloading {
+          opacity: 0;
+        }
+        &.lazyloaded {
+          opacity: 1;
+          transition: opacity .6s;
+        }
       }
     }
     .bk-sec__quote {

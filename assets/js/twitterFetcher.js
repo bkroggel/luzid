@@ -105,7 +105,8 @@ var news = {
     while (n < x) {
       var tweetObject = tweets[n];
       var time_length = (tweetObject.time).replace(/\s/g,'').replace(/\n /g,'').length
-      var tweet_text = (tweetObject.tweet).replace(/<br>[<br>]+/g, '<span class="small_height"></span>');
+      var tweet_text = (tweetObject.tweet).replace(/<br>(<br>)+/g, '<span class="small_height"></span>').replace(/:(?!<br>)(?!<\/br>)(?!<span class="small_height"><\/span>)(?!hashtag)(?!mention)(?!url)(?=[^\t\n\r /])/g, ':<span class="small_height"></span>');
+      console.log(tweet_text);
       function tpf_time(){
         if (time_length <= 3) {
           return 'Posted ' + tweetObject.time + ' ago'

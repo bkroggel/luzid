@@ -121,8 +121,8 @@ section#news {
     margin-right: 30px;
   };
   @include media-query($medium){
-    max-width: 250px;
-    padding-right: 30px;
+    max-width: 280px;
+    padding-right: 0px;
   };
 }
 

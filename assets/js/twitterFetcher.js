@@ -105,8 +105,7 @@ var news = {
     while (n < x) {
       var tweetObject = tweets[n];
       var time_length = (tweetObject.time).replace(/\s/g,'').replace(/\n /g,'').length
-      var tweet_text = (tweetObject.tweet).replace(/<br>(<br>)+/g, '<span class="small_height"></span>').replace(/:(?!<br>)(?!<\/br>)(?!<span class="small_height"><\/span>)(?!hashtag)(?!mention)(?!url)(?=[^\t\n\r /])/g, ':<span class="small_height"></span>');
-      console.log(tweet_text);
+      var tweet_text = (tweetObject.tweet).replace(/<br>(<br>)+/g, '<span class="small_height"></span>').replace(/:(?!<br>)(?!<\/br>)(?!<span class="small_height"><\/span>)(?!hashtag)(?!mention)(?!url)(?=[^\t\n\r /])/g, ':<br>');
       function tpf_time(){
         if (time_length <= 3) {
           return 'Posted ' + tweetObject.time + ' ago'
@@ -123,13 +122,17 @@ var news = {
            + 'Twitter<span class="time">' + tpf_time() + '</span></h1>'
           + '</a></div>'
           // + (tweetObject.image ? '<div class="tweet-img"><img src="'+tweetObject.image+'" /></div>' : '')
-          + '<div class="tweet_content"><p>' + tweet_text + '</p></div>'
+          + '<div class="tweet_content">'
+            + (tweetObject.image ? '<div class="content_frame">' : '')
+              + '<p>' + tweet_text + '</p>'
+            + (tweetObject.image ? '</div>' : '')
+            + (tweetObject.image ? '<div class="tweet-img">'
+              + '<a href="' + tweetObject.permalinkURL + '"><img data-src="'+tweetObject.image+'"/></a>'
+            + '</div>' : '')
+          + '</div>'
           // + (tweetObject.author_data.screen_name == username ? '' : '<div class="tweet_link">' + tweetObject.author_data.screen_name + '</div>')
         + '</div>'
         //+ '</div>'
-        + (tweetObject.image ? '<div class="tweet-img">'
-          + '<a href="' + tweetObject.permalinkURL + '"><img data-src="'+tweetObject.image+'"/></a>'
-        + '</div>' : '')
         + '<div class="tweet__interactions' + (tweetObject.image ? ' tweet__interactions_img' : '' ) + '">'
           + '<div class="interactions__el">'
             +  '<a href="https://twitter.com/intent/tweet?in_reply_to=' + tweetObject.tid + '" target="_blank">Reply</a>'
@@ -216,7 +219,7 @@ var news = {
       }
     });
 
-    if ( $('.news_header').outerHeight() > 150 ) {
+    if ( ( $('.news__title').outerHeight() + $('.news__ctrls').outerHeight() ) > 150 ) {
       $('.slick-slide').css('min-height', $('.news_header').outerHeight() + 2);
     }
 

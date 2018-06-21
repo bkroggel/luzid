@@ -554,6 +554,9 @@ a.link_button.-white {
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     background: rgba(255, 255, 255, .9);
+    @include media-query($medium){
+      background: rgba(255, 255, 255, 1);
+    };
     .u-hiddenVisually {
       display: none;
     }

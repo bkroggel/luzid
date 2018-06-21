@@ -180,12 +180,12 @@ section#news {
   z-index: -1;
   min-height: 110px;
   height: calc(40% + 70px);
+  width: 100%;
   top: 60%;
   background: $accent-color;
   overflow: hidden;
   @include media-query($medium) {
     height: 100%;
-    width: 100%;
     top: 0;
     &:before {
       position: absolute;

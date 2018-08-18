@@ -52,6 +52,16 @@ timeline_intro: |
     If you would like to know how to get added to that list feel free to head over to my [Contact Section](#contact) and get in touch with me.
 timeline:
   - description: >
+      uniting global young tech companies with the unrivalled tech expertise of Silicon Valley and the best of German engineering
+    bullets:
+    from_date: 07/2018
+    info: >
+      Stuttgart, Germany</br>part of the Startup Autobahn division
+    name: Plug & Play</br>Germany GmbH
+    position: Junior Marketing Manager
+    to_date: now
+    website:
+  - description: >
     bullets:
       - conception and modeling of the business model
       - strategic concept and implementation of website re-design

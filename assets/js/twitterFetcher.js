@@ -67,7 +67,7 @@ handleTweets(arrayTweets);inProgress=false;if(queue.length>0){twitterFetcher.fet
 Object.defineProperty(item,'prepend',{configurable:true,enumerable:true,writable:true,value:function prepend(){var argArr=Array.prototype.slice.call(arguments),docFrag=document.createDocumentFragment();argArr.forEach(function(argItem){var isNode=argItem instanceof Node;docFrag.appendChild(isNode?argItem:document.createTextNode(String(argItem)));});this.insertBefore(docFrag,this.firstChild);}});});})([Element.prototype,Document.prototype,DocumentFragment.prototype]);
 
 var news = {
-  "id": '646979504716533760',
+  "profile": {"screenName": 'derKroggel'},
   "domId": 'news__twitter',
   //"lazyLoad": 'ondemand',
   "maxTweets": 6,
@@ -78,7 +78,8 @@ var news = {
   "dataOnly": true,
   //"dateFunction": dateFormatter,
   "showRetweet": false,
-  "customCallback": handleTweets
+  "customCallback": handleTweets,
+  "lang": 'en'
 };
 
 
@@ -105,6 +106,7 @@ var news = {
     while (n < x) {
       var tweetObject = tweets[n];
       var time_length = (tweetObject.time).replace(/\s/g,'').replace(/\n /g,'').length
+      console.log(tweetObject);
       var tweet_text = (tweetObject.tweet).replace(/<br>(<br>)+/g, '<span class="small_height"></span>').replace(/:(?!<br>)(?!<\/br>)(?!<span class="small_height"><\/span>)(?!hashtag)(?!mention)(?!url)(?=[^\t\n\r /])/g, ':<br>');
       function tpf_time(){
         if (time_length <= 3) {

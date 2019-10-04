@@ -543,6 +543,7 @@ a.link_button.-white {
   h1 span.time {
     font-size: 0.6rem;
     font-weight: 400;
+    overflow-wrap: break-word;
     @include link-mix(rgba(0,0,0,0.5));
     line-height: calc(1em + 6px);
     @include media-query($small){

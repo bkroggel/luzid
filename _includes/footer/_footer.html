@@ -46,7 +46,7 @@
       </div>
       <div class="logo__info">
         {% assign build_year = site.time | date: "%Y" %}
-        <p>personal website — &copy;{{ site.cr_date }}{% if build_year > 2015 %} – {{ build_year }}{% endif %}</p>
+        <p>personal website — &copy;{{ site.cr_date }}{% if build_year > '2015' %} – {{ build_year }}{% endif %}</p>
       </div>
     </div>
     <div class="footer__thought">

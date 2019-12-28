@@ -3,9 +3,9 @@ title: Bastian Kroggel
 admin_user: Bastian Kroggel
 author: Bastian Kroggel
 email: contact@bastiankroggel.com
-cr_date: 2015 – 2019
+cr_date: 2015
 description: > # this means to ignore newlines until "baseurl:"
-  Bastian Kroggel | Recently graduated with a Corporate Management & Economics degree at Zeppelin University on the shores of Lake Constance. Besides that a tech enthusiast interested in all things concerning great design, millennial and born digital native. Proud member of the CodeCats, an initiative attempting to excite pupils and students to enter the world of code.
+  Bastian Kroggel | Graduated with a Corporate Management & Economics degree at <a href="https://www.zu.de" target="_blank">Zeppelin University</a> on the shores of Lake Constance and is currently working on tomorrows future at STARTUP AUTOBAHN powered by Plug and Play. Besides that a tech enthusiast interested in all things concerning great design, millennial and born digital native. Proud member of the CodeCats, an initiative attempting to excite pupils and students to enter the world of code.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
 twitter: derkroggel

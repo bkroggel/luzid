@@ -63,12 +63,36 @@ section#news {
     width: calc(252px * 2);
     margin-right: -30px;
   };
-  @include media-query($medium){
-    width: calc(312px * 2);
+  @include media-query(1200px){
+    width: calc(270px * 3);
     margin-right: -30px;
   };
-  @include media-query($large){
+  @include media-query(1300px){
     width: calc(312px * 3);
+    margin-right: -30px;
+  };
+  @include media-query(1500px){
+    width: calc(312px * 3);
+    margin-right: -30px;
+  };
+  @include media-query(1800px){
+    width: calc(312px * 4);
+    margin-right: -30px;
+  };
+  @include media-query(2200px){
+    width: calc(312px * 5);
+    margin-right: -30px;
+  };
+  @include media-query(2500px){
+    width: calc(312px * 6);
+    margin-right: -30px;
+  };
+  @include media-query(2900px){
+    width: calc(312px * 7);
+    margin-right: -30px;
+  };
+  @include media-query(3200px){
+    width: calc(312px * 8);
     margin-right: -30px;
   };
 }

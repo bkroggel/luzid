@@ -45,11 +45,11 @@
         {% include svg/_name.html %}
       </div>
       <div class="logo__info">
-        <p>personal website — &copy;{{ site.cr_date }}</p>
+        <p>personal website — &copy;{{ site.cr_date }}{% if build_year > '2015' %} – {{ build_year }}{% endif %}</p>
       </div>
     </div>
     <div class="footer__thought">
-      <p><span>Life is a journey </span><span>— be part of it.</span> </p>
+      <p><span>Every moment</span><span> is a fresh beginning.</span> </p>
     </div>
   </div>
 </footer>

@@ -58,7 +58,7 @@ timeline:
     info: >
       Stuttgart, Germany</br>part of the Startup Autobahn division
     name: Plug & Play</br>Germany GmbH
-    position: Junior Marketing Manager
+    position: '<strike style="opacity: .5">Junior</strike> Marketing Manager'
     to_date: now
     website:
   - description: >

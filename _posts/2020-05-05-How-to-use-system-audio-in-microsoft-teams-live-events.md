@@ -5,7 +5,7 @@ layout: post
 permalink:
 title: How to share System Audio in Microsoft Teams
 sub_title: Making a Zoom Competitor finally usable
-date: 2020-05-05 15:32:12 +0200
+date: 2020-05-08 17:49:12 +0200
 author: Bastian Kroggel
 tags:
   - tutorial

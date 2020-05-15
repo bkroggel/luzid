@@ -13,7 +13,7 @@ tags:
   - work
   - macos
 thumbnail:
-  img: /assets/img/page/blog/msteams_header_full_thumbnail.webp
+  img: /assets/img/page/blog/msteams_header_full_thumbnail.jpg
   overview: |
     After the recent news about privacy concerns and trust issues with the US company behind the Zoom video conferencing solutions users are facing the challange to find adequate replacement in order to keep up the quality of their webinars and broadcasts.  
     This article disusses a potential improvement for Microsoft Teams which natively lacks the ability of including system audio in screen sharing sessions. Based on the virtual audio driver "BlackHole" a workaround is set up which equips Microsoft Teams but also (all) other video conferencing tools with this feature.

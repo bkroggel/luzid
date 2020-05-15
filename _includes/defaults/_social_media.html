@@ -2,7 +2,7 @@
 
 {% capture social-img %}{% if page.thumbnail.img %}{{ page.thumbnail.img | prepend: site.url }}{% else %}{{site.url}}/assets/img/dev/main_social_img.jpg{% endif %}{% endcapture %}
 
-{% capture social-desc %}{% if page.title == "index" %}Bastian Kroggel | {{ site.description | strip_html | strip_newlines | strip }}{% elsif page.showcase %}{{ page.showcase | strip_html | strip_newlines | stip | truncate: 190 }}{% elsif page.content %}{{ page.content | strip_html | strip_newlines | stip | truncate: 190 }}{% else %}Bastian Kroggel | {{ site.description | strip_html | strip_newlines | stip }}{% endif %}{% endcapture %}
+{% capture social-desc %}{% if page.title == "index" %}Bastian Kroggel | {{ site.description | strip_html | strip_newlines | strip }}{% elsif page.showcase %}{{ page.showcase | strip_html | strip_newlines | stip | truncate: 158 }}{% elsif page.content %}{{ page.content | strip_html | strip_newlines | stip | truncate: 158 }}{% else %}Bastian Kroggel | {{ site.description | strip_html | strip_newlines | stip }}{% endif %}{% endcapture %}
 
 {% capture social-url %}{{ page.url | prepend: site.url }}{% endcapture %}
 
@@ -15,11 +15,11 @@
 
 
 <!-- Facebook -->
-<meta property="og:url" content="{{social-url}}">
+<meta property="og:url" rel="publisher" name="twitter:url" content="{{social-url}}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ social-title }}">
-<meta property="og:image" content="{{ social-img }}">
-<meta property="og:description" content="{{ social-desc }}">
+<meta property="og:title" itemprop="name" name="twitter:title" content="{{ social-title }}">
+<meta property="og:image" itemprop="image" name="twitter:image" content="{{ social-img }}">
+<meta property="og:description" itemprop="description" name="description" content="{{ social-desc }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{{ social-language }}">
 <meta property="article:author" content="{{social-author}}">
@@ -31,15 +31,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@{{site.twitter}}">
 <meta name="twitter:creator" content="@{{site.data.author.[social-author].twitter}}">
-<meta name="twitter:url" content="{{social-url}}">
-<meta name="twitter:title" content="{{ social-title }}">
 <meta name="twitter:description" content="{{ social-desc }}">
-<meta name="twitter:image" content="{{ social-img }}">
 
 <!-- Google+ / Schema.org -->
-<link href="{{social-url}}" rel="publisher">
-<meta itemprop="name" content="{{ social-title }}">
-<meta itemprop="description" name="description" content="{{ social-desc }}">
-<meta itemprop="image" content="{{ social-img }}">
-
 <link rel="author" href="humans.txt" />

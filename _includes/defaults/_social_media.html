@@ -10,6 +10,8 @@
 
 {% capture social-language %}{% if page.tags contains 'english' %}en_US{% else %}de_DE{% endif %}{% endcapture %}
 
+{% capture social-date %}{% if page.date %}{{ page.date | date_to_xmlschema }}{% endif %}{% endcapture %}
+
 
 
 <!-- Facebook -->
@@ -21,6 +23,9 @@
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{{ social-language }}">
 <meta property="article:author" content="{{social-author}}">
+{% if page.date %}
+<meta property="og:publish_date" content="{{social-date}}">
+{% endif %}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">

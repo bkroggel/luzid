@@ -7,7 +7,9 @@ tags: [work, english, tutorial, macos]
 permalink:
 thumbnail:
   img: /assets/img/page/blog/wttr_thumb.jpg
-  overview:  
+  overview:
+meta:
+  description: Widgets done right in macOS with Übersicht plus hands-on, feature overview and setup guide for the Wttr Forecast Widget.
 sitemap:
   lastmod:
   priority:

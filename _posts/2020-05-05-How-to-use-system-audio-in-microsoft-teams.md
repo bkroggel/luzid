@@ -127,6 +127,18 @@ This post could probably go and on and on with some much more to discover in the
 
 That said if you do have some more ideas about what I should look into in regards to virtual audio routing on macOS I am gladly waiting for a ping on my [twitter account](https://twitter.bastiankroggel.com/).
 
+Quick update to the roughly one and half weeks ago published blog post:   
+Since above software solutions are only focussing towards *macOS based* system <i class="fab fa-apple"></i> (except *Jack* which was mainly developed with Linux in mind) I wanted to briefly update this article with just a few links and additional software packages, that might grant you a much more comprehensive overview about possible routes or guide you to the right direction if you are looking for an alternative solution that focusses on the Microsoft Windows <i class="fab fa-windows"></i> environment:
+{:info="Addition" info_sub="2020-05-18T13:58+02"}
+* **[Dante Via](https://www.audinate.com/products/software/dante-via)** ($49.99, proprietary) – <i class="fab fa-windows"></i> <i class="fab fa-apple"></i> – Dante Via is easy-to-use software that delivers unprecedented multi-channel routing of computer-based audio, allowing a wide range of applications and devices to be networked and interconnected, easily and inexpensively.
+* **[Sound Siphon by Static Z Software](https://staticz.com/soundsiphon/)** ($49, proprietary) – <i class="fab fa-apple"></i> – Sound Siphon makes it easy to capture your Mac’s audio. Use it to create virtual input audio devices that send audio from one app to another. Or, record right in the Sound Siphon app.
+* **[Synchronous Audio Router](https://github.com/eiz/SynchronousAudioRouter)** (free, open-source) – <i class="fab fa-windows"></i> – Synchronous Audio Router is a Windows audio driver which allows you to route application audio through your digital audio workstation software.
+* **[VB-Audio](https://www.vb-audio.com/Cable/)** (donation, proprietary) – <i class="fab fa-windows"></i> <i class="fab fa-apple"></i> – VB-CABLE is a virtual audio device working as virtual audio cable. All audio coming in the CABLE input is simply forwarded to the CABLE output.
+* **[Virtual Audio Cable](https://vac.muzychenko.net/en/)** ($30, proprietary) – <i class="fab fa-windows"></i> – Virtual Audio Cable (VAC) is an audio bridge between applications that transmits sounds (audio streams) from app to app, from device to device.
+{:info="Addition" info_sub="2020-05-18T13:58+02"}
+*Note:* Descriptions have been taken directly from the distributors‘ respective website.
+{:info="Addition" info_sub="2020-05-18T13:58+02" style="transform:scale(.7); transform-origin: 0"}
+
 Take care – and #StaySafe.
 
 

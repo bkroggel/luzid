@@ -220,7 +220,7 @@ ul {
       @include underline($darkest-color, $highlighted-color-solid);
     }
   }
-  strong {
+  strong, strong a {
     font-weight: 700;
     @include media-query($xtra-small){
       font-weight: 500;
@@ -756,6 +756,10 @@ p.intro a:after {
     em, strong {
       font-size: inherit;
     }
+  }
+  a {
+    font-size: 1em;
+    @include underline($blog-font-color, white);
   }
   @include media-query($medium){
     margin-left: -3rem;

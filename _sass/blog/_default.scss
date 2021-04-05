@@ -429,18 +429,18 @@
     background: $overview-accent;
     margin: 2px 1px;
     margin-left: 0;
-    width: calc(100% - 35px * 6 - 13 * 1px);
+    width: calc(100% - 35px * 5 - 10 * 1px);
     opacity: 0.4;
     @include display_flex;
     @include align-items(center);
     @include justify-content(center);
     @include media-query($xtra-small){
       background: white;
-      width: calc(100% - 40px * 6 - 13 * 1px);
+      width: calc(100% - 40px * 5 - 10 * 1px);
       opacity: 1;
     };
     @include media-query($large){
-      height: calc(100% - 40px * 6 - 13 * 1px);
+      height: calc(100% - 40px * 5 - 10 * 1px);
       width: unset;
       margin: 1px 2px;
       margin-top: 0;

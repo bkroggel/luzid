@@ -14,7 +14,8 @@
   <ul class="bk-blog-info bk-blog-info--mini js-hover bk-rights">
     <li><a id="back-button" onclick="{{site.url}}">&#8592; back to hompage</a></li>
     <!-- modify so that it will redirect to the previous blog site if bastiankroggel.com/blog otherwise to bastiankroggel.com -->
-    <li class="copyright"><p>&#169; {{site.cr_date}} | Bastian Kroggel</p></li>
+    {% assign build_year = site.time | date: "%Y" %}
+    <li class="copyright"><p>&#169; {{site.cr_date}}{% if build_year > '2015' %} – {{ build_year }}{% endif %} | Bastian Kroggel</p></li>
   </ul>
 
   <!-- <ul class="bk-blog-info">

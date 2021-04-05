@@ -50,7 +50,7 @@ var news = {
     while (n < x) {
       var tweetObject = tweets[n];
       var time_length = (tweetObject.time).replace(/\s/g,'').replace(/\n /g,'').length
-      console.log(tweetObject);
+      //console.log(tweetObject);
       // console.log(tweetObject.author_data.screen_name);
       var tweet_text = (tweetObject.tweet).replace(/<br>(<br>)+/g, '<span class="small_height"></span>').replace(/:(?!<br>)(?!<\/br>)(?!<span class="small_height"><\/span>)(?!hashtag)(?!mention)(?!url)(?=[^\t\n\r /])/g, ':<br>');
       var author_rt = (tweetObject.rt ? ' tweet_frame_img' : '');
